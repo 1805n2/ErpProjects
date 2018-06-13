@@ -218,7 +218,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="ErpData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ErpData.Designer.cs</LastGenOutput>
