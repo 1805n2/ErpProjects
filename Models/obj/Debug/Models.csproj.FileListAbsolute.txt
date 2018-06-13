@@ -1,0 +1,9 @@
+E:\ErpProject\Models\bin\Debug\Models.dll.config
+E:\ErpProject\Models\bin\Debug\Models.dll
+E:\ErpProject\Models\bin\Debug\Models.pdb
+E:\ErpProject\Models\bin\Debug\EntityFramework.dll
+E:\ErpProject\Models\bin\Debug\EntityFramework.xml
+E:\ErpProject\Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ErpProject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\ErpProject\Models\obj\Debug\Models.dll
+E:\ErpProject\Models\obj\Debug\Models.pdb

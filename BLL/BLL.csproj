@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD2E52DE-045F-4C04-902D-6637EDADDE21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="basicInfo\ckmanager.cs" />
+    <Compile Include="basicInfo\deptmanager.cs" />
+    <Compile Include="basicInfo\gyslbmanager.cs" />
+    <Compile Include="basicInfo\gyszwjmanager.cs" />
+    <Compile Include="basicInfo\khlbmanager.cs" />
+    <Compile Include="basicInfo\khzwjmanager.cs" />
+    <Compile Include="basicInfo\ryzwjmanager.cs" />
+    <Compile Include="basicInfo\wllbmanager.cs" />
+    <Compile Include="basicInfo\wlzwjmanager.cs" />
+    <Compile Include="bxManager\xsbjdmanager.cs" />
+    <Compile Include="bxManager\xsckdmanager.cs" />
+    <Compile Include="bxManager\xsddmanager.cs" />
+    <Compile Include="bxManager\xslrpgcxmanager.cs" />
+    <Compile Include="bxManager\xslsjycxmanager.cs" />
+    <Compile Include="bxManager\xsthdmanager.cs" />
+    <Compile Include="bxManager\xsysckdmanager.cs" />
+    <Compile Include="cgManager\cgddlscxmanager.cs" />
+    <Compile Include="cgManager\cgddmanager.cs" />
+    <Compile Include="cgManager\cgftmanager.cs" />
+    <Compile Include="cgManager\cgqgmanager.cs" />
+    <Compile Include="cgManager\cgrkmanager.cs" />
+    <Compile Include="cgManager\cgthmanager.cs" />
+    <Compile Include="cgManager\cgxjlscxmanager.cs" />
+    <Compile Include="cgManager\cgxjmanager.cs" />
+    <Compile Include="cgManager\cgyfckdmanager.cs" />
+    <Compile Include="cgManager\cgyfkmanager.cs" />
+    <Compile Include="kcManager\dbdmanager.cs" />
+    <Compile Include="kcManager\pddmanager.cs" />
+    <Compile Include="kcManager\tjdmanager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{dca5afe6-5d26-4df0-b1c9-5ed2e4ce25bf}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{7b10e227-a45e-4930-b57b-8d130d7c9e0e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

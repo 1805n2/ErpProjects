@@ -1,0 +1,12 @@
+E:\ErpProject\BLL\bin\Debug\BLL.dll
+E:\ErpProject\BLL\bin\Debug\BLL.pdb
+E:\ErpProject\BLL\bin\Debug\DAL.dll
+E:\ErpProject\BLL\bin\Debug\Models.dll
+E:\ErpProject\BLL\bin\Debug\EntityFramework.dll
+E:\ErpProject\BLL\bin\Debug\DAL.pdb
+E:\ErpProject\BLL\bin\Debug\Models.pdb
+E:\ErpProject\BLL\bin\Debug\EntityFramework.xml
+E:\ErpProject\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ErpProject\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\ErpProject\BLL\obj\Debug\BLL.dll
+E:\ErpProject\BLL\obj\Debug\BLL.pdb

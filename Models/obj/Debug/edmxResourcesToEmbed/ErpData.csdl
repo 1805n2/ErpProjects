@@ -1,0 +1,2178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="erpsystemModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="erpsystemEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="assignstyle" EntityType="erpsystemModel.assignstyle" />
+    <EntitySet Name="billtui" EntityType="erpsystemModel.billtui" />
+    <EntitySet Name="billtutype" EntityType="erpsystemModel.billtutype" />
+    <EntitySet Name="branch" EntityType="erpsystemModel.branch" />
+    <EntitySet Name="buysearchdetails" EntityType="erpsystemModel.buysearchdetails" />
+    <EntitySet Name="buysearchmaster" EntityType="erpsystemModel.buysearchmaster" />
+    <EntitySet Name="buytype" EntityType="erpsystemModel.buytype" />
+    <EntitySet Name="caigoumingxi" EntityType="erpsystemModel.caigoumingxi" />
+    <EntitySet Name="caigouqinggou" EntityType="erpsystemModel.caigouqinggou" />
+    <EntitySet Name="clientmaster" EntityType="erpsystemModel.clientmaster" />
+    <EntitySet Name="closstype" EntityType="erpsystemModel.closstype" />
+    <EntitySet Name="daassigbuymain" EntityType="erpsystemModel.daassigbuymain" />
+    <EntitySet Name="detailorderpay" EntityType="erpsystemModel.detailorderpay" />
+    <EntitySet Name="dingdancong" EntityType="erpsystemModel.dingdancong" />
+    <EntitySet Name="dingdanzhu" EntityType="erpsystemModel.dingdanzhu" />
+    <EntitySet Name="dsassignbuysub" EntityType="erpsystemModel.dsassignbuysub" />
+    <EntitySet Name="dsassignfee" EntityType="erpsystemModel.dsassignfee" />
+    <EntitySet Name="dsdsadjustmain" EntityType="erpsystemModel.dsdsadjustmain" />
+    <EntitySet Name="dsdsadjustsub" EntityType="erpsystemModel.dsdsadjustsub" />
+    <EntitySet Name="feeclass" EntityType="erpsystemModel.feeclass" />
+    <EntitySet Name="gfmeansoay" EntityType="erpsystemModel.gfmeansoay" />
+    <EntitySet Name="gmeans" EntityType="erpsystemModel.gmeans" />
+    <EntitySet Name="gmeansadeinite" EntityType="erpsystemModel.gmeansadeinite" />
+    <EntitySet Name="orderdetails" EntityType="erpsystemModel.orderdetails" />
+    <EntitySet Name="orderpay" EntityType="erpsystemModel.orderpay" />
+    <EntitySet Name="orders" EntityType="erpsystemModel.orders" />
+    <EntitySet Name="pandian" EntityType="erpsystemModel.pandian" />
+    <EntitySet Name="pandianmingxi" EntityType="erpsystemModel.pandianmingxi" />
+    <EntitySet Name="pay" EntityType="erpsystemModel.pay" />
+    <EntitySet Name="providertype" EntityType="erpsystemModel.providertype" />
+    <EntitySet Name="qydetail" EntityType="erpsystemModel.qydetail" />
+    <EntitySet Name="returnods" EntityType="erpsystemModel.returnods" />
+    <EntitySet Name="rk_minxi" EntityType="erpsystemModel.rk_minxi" />
+    <EntitySet Name="rk_zhubiao" EntityType="erpsystemModel.rk_zhubiao" />
+    <EntitySet Name="saleck" EntityType="erpsystemModel.saleck" />
+    <EntitySet Name="salemx" EntityType="erpsystemModel.salemx" />
+    <EntitySet Name="shopdetail" EntityType="erpsystemModel.shopdetail" />
+    <EntitySet Name="staff" EntityType="erpsystemModel.staff" />
+    <EntitySet Name="storage" EntityType="erpsystemModel.storage" />
+    <EntitySet Name="takeorderpay" EntityType="erpsystemModel.takeorderpay" />
+    <EntitySet Name="unit" EntityType="erpsystemModel.unit" />
+    <EntitySet Name="user" EntityType="erpsystemModel.user" />
+    <EntitySet Name="wllb" EntityType="erpsystemModel.wllb" />
+    <EntitySet Name="wlzwj" EntityType="erpsystemModel.wlzwj" />
+    <EntitySet Name="x_documents" EntityType="erpsystemModel.x_documents" />
+    <EntitySet Name="x_sal" EntityType="erpsystemModel.x_sal" />
+    <EntitySet Name="ysbill" EntityType="erpsystemModel.ysbill" />
+    <EntitySet Name="ysckbill" EntityType="erpsystemModel.ysckbill" />
+    <EntitySet Name="ysckdetail" EntityType="erpsystemModel.ysckdetail" />
+    <EntitySet Name="ysdetail" EntityType="erpsystemModel.ysdetail" />
+    <AssociationSet Name="FK_daassigbuymain" Association="erpsystemModel.FK_daassigbuymain">
+      <End Role="assignstyle" EntitySet="assignstyle" />
+      <End Role="daassigbuymain" EntitySet="daassigbuymain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtui" Association="erpsystemModel.FK_billtui">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="billtui" EntitySet="billtui" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtui1" Association="erpsystemModel.FK_billtui1">
+      <End Role="user" EntitySet="user" />
+      <End Role="billtui" EntitySet="billtui" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtui2" Association="erpsystemModel.FK_billtui2">
+      <End Role="user" EntitySet="user" />
+      <End Role="billtui" EntitySet="billtui" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtui3" Association="erpsystemModel.FK_billtui3">
+      <End Role="storage" EntitySet="storage" />
+      <End Role="billtui" EntitySet="billtui" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtutype" Association="erpsystemModel.FK_billtutype">
+      <End Role="billtui" EntitySet="billtui" />
+      <End Role="billtutype" EntitySet="billtutype" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtutype1" Association="erpsystemModel.FK_billtutype1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="billtutype" EntitySet="billtutype" />
+    </AssociationSet>
+    <AssociationSet Name="FK_billtutype2" Association="erpsystemModel.FK_billtutype2">
+      <End Role="saleck" EntitySet="saleck" />
+      <End Role="billtutype" EntitySet="billtutype" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buysearchmaster3" Association="erpsystemModel.FK_buysearchmaster3">
+      <End Role="branch" EntitySet="branch" />
+      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_caigouqinggou2" Association="erpsystemModel.FK_caigouqinggou2">
+      <End Role="branch" EntitySet="branch" />
+      <End Role="caigouqinggou" EntitySet="caigouqinggou" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders3" Association="erpsystemModel.FK_orders3">
+      <End Role="branch" EntitySet="branch" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_returnods1" Association="erpsystemModel.FK_returnods1">
+      <End Role="branch" EntitySet="branch" />
+      <End Role="returnods" EntitySet="returnods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_staff" Association="erpsystemModel.FK_staff">
+      <End Role="branch" EntitySet="branch" />
+      <End Role="staff" EntitySet="staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buysearchdetails" Association="erpsystemModel.FK_buysearchdetails">
+      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
+      <End Role="buysearchdetails" EntitySet="buysearchdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buysearchdetails1" Association="erpsystemModel.FK_buysearchdetails1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="buysearchdetails" EntitySet="buysearchdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buysearchmaster" Association="erpsystemModel.FK_buysearchmaster">
+      <End Role="gmeans" EntitySet="gmeans" />
+      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_buysearchmaster1" Association="erpsystemModel.FK_buysearchmaster1">
+      <End Role="user" EntitySet="user" />
+      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_caigouqinggou3" Association="erpsystemModel.FK_caigouqinggou3">
+      <End Role="buytype" EntitySet="buytype" />
+      <End Role="caigouqinggou" EntitySet="caigouqinggou" />
+    </AssociationSet>
+    <AssociationSet Name="FK_caigoumingxi" Association="erpsystemModel.FK_caigoumingxi">
+      <End Role="caigouqinggou" EntitySet="caigouqinggou" />
+      <End Role="caigoumingxi" EntitySet="caigoumingxi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_caigoumingxi2" Association="erpsystemModel.FK_caigoumingxi2">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="caigoumingxi" EntitySet="caigoumingxi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_caigouqinggou" Association="erpsystemModel.FK_caigouqinggou">
+      <End Role="user" EntitySet="user" />
+      <End Role="caigouqinggou" EntitySet="caigouqinggou" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdanzhu" Association="erpsystemModel.FK_dingdanzhu">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="dingdanzhu" EntitySet="dingdanzhu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saleck" Association="erpsystemModel.FK_saleck">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="saleck" EntitySet="saleck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_x_documents" Association="erpsystemModel.FK_x_documents">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="x_documents" EntitySet="x_documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysbill" Association="erpsystemModel.FK_ysbill">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckbill" Association="erpsystemModel.FK_ysckbill">
+      <End Role="clientmaster" EntitySet="clientmaster" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsassignbuysub" Association="erpsystemModel.FK_dsassignbuysub">
+      <End Role="daassigbuymain" EntitySet="daassigbuymain" />
+      <End Role="dsassignbuysub" EntitySet="dsassignbuysub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsassignfee" Association="erpsystemModel.FK_dsassignfee">
+      <End Role="daassigbuymain" EntitySet="daassigbuymain" />
+      <End Role="dsassignfee" EntitySet="dsassignfee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detailorderpay" Association="erpsystemModel.FK_detailorderpay">
+      <End Role="orderpay" EntitySet="orderpay" />
+      <End Role="detailorderpay" EntitySet="detailorderpay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdancong" Association="erpsystemModel.FK_dingdancong">
+      <End Role="dingdanzhu" EntitySet="dingdanzhu" />
+      <End Role="dingdancong" EntitySet="dingdancong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdancong1" Association="erpsystemModel.FK_dingdancong1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="dingdancong" EntitySet="dingdancong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdancong2" Association="erpsystemModel.FK_dingdancong2">
+      <End Role="x_documents" EntitySet="x_documents" />
+      <End Role="dingdancong" EntitySet="dingdancong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdanzhu1" Association="erpsystemModel.FK_dingdanzhu1">
+      <End Role="user" EntitySet="user" />
+      <End Role="dingdanzhu" EntitySet="dingdanzhu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dingdanzhu2" Association="erpsystemModel.FK_dingdanzhu2">
+      <End Role="user" EntitySet="user" />
+      <End Role="dingdanzhu" EntitySet="dingdanzhu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salemx3" Association="erpsystemModel.FK_salemx3">
+      <End Role="dingdanzhu" EntitySet="dingdanzhu" />
+      <End Role="salemx" EntitySet="salemx" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsassignbuysub1" Association="erpsystemModel.FK_dsassignbuysub1">
+      <End Role="rk_zhubiao" EntitySet="rk_zhubiao" />
+      <End Role="dsassignbuysub" EntitySet="dsassignbuysub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsassignbuysub2" Association="erpsystemModel.FK_dsassignbuysub2">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="dsassignbuysub" EntitySet="dsassignbuysub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsassignfee1" Association="erpsystemModel.FK_dsassignfee1">
+      <End Role="feeclass" EntitySet="feeclass" />
+      <End Role="dsassignfee" EntitySet="dsassignfee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsdsadjustsub" Association="erpsystemModel.FK_dsdsadjustsub">
+      <End Role="dsdsadjustmain" EntitySet="dsdsadjustmain" />
+      <End Role="dsdsadjustsub" EntitySet="dsdsadjustsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dsdsadjustsub1" Association="erpsystemModel.FK_dsdsadjustsub1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="dsdsadjustsub" EntitySet="dsdsadjustsub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_gfmeansoay" Association="erpsystemModel.FK_gfmeansoay">
+      <End Role="gmeans" EntitySet="gmeans" />
+      <End Role="gfmeansoay" EntitySet="gfmeansoay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_gmeansadeinite" Association="erpsystemModel.FK_gmeansadeinite">
+      <End Role="gmeans" EntitySet="gmeans" />
+      <End Role="gmeansadeinite" EntitySet="gmeansadeinite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders" Association="erpsystemModel.FK_orders">
+      <End Role="gmeans" EntitySet="gmeans" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orderdetails" Association="erpsystemModel.FK_orderdetails">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orderdetails2" Association="erpsystemModel.FK_orderdetails2">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pay" Association="erpsystemModel.FK_pay">
+      <End Role="orderpay" EntitySet="orderpay" />
+      <End Role="pay" EntitySet="pay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_orders2" Association="erpsystemModel.FK_orders2">
+      <End Role="user" EntitySet="user" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qydetail" Association="erpsystemModel.FK_qydetail">
+      <End Role="ysbill" EntitySet="ysbill" />
+      <End Role="qydetail" EntitySet="qydetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qydetail1" Association="erpsystemModel.FK_qydetail1">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="qydetail" EntitySet="qydetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_returnods" Association="erpsystemModel.FK_returnods">
+      <End Role="storage" EntitySet="storage" />
+      <End Role="returnods" EntitySet="returnods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_returnods2" Association="erpsystemModel.FK_returnods2">
+      <End Role="user" EntitySet="user" />
+      <End Role="returnods" EntitySet="returnods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rk_minxi" Association="erpsystemModel.FK_rk_minxi">
+      <End Role="rk_zhubiao" EntitySet="rk_zhubiao" />
+      <End Role="rk_minxi" EntitySet="rk_minxi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rk_zhubiao" Association="erpsystemModel.FK_rk_zhubiao">
+      <End Role="storage" EntitySet="storage" />
+      <End Role="rk_zhubiao" EntitySet="rk_zhubiao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saleck1" Association="erpsystemModel.FK_saleck1">
+      <End Role="storage" EntitySet="storage" />
+      <End Role="saleck" EntitySet="saleck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saleck2" Association="erpsystemModel.FK_saleck2">
+      <End Role="user" EntitySet="user" />
+      <End Role="saleck" EntitySet="saleck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saleck3" Association="erpsystemModel.FK_saleck3">
+      <End Role="user" EntitySet="user" />
+      <End Role="saleck" EntitySet="saleck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salemx" Association="erpsystemModel.FK_salemx">
+      <End Role="saleck" EntitySet="saleck" />
+      <End Role="salemx" EntitySet="salemx" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckdetail1" Association="erpsystemModel.FK_ysckdetail1">
+      <End Role="saleck" EntitySet="saleck" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysdetail" Association="erpsystemModel.FK_ysdetail">
+      <End Role="saleck" EntitySet="saleck" />
+      <End Role="ysdetail" EntitySet="ysdetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salemx1" Association="erpsystemModel.FK_salemx1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="salemx" EntitySet="salemx" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salemx2" Association="erpsystemModel.FK_salemx2">
+      <End Role="x_documents" EntitySet="x_documents" />
+      <End Role="salemx" EntitySet="salemx" />
+    </AssociationSet>
+    <AssociationSet Name="FK_x_documents1" Association="erpsystemModel.FK_x_documents1">
+      <End Role="user" EntitySet="user" />
+      <End Role="x_documents" EntitySet="x_documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_x_documents2" Association="erpsystemModel.FK_x_documents2">
+      <End Role="user" EntitySet="user" />
+      <End Role="x_documents" EntitySet="x_documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysbil2" Association="erpsystemModel.FK_ysbil2">
+      <End Role="user" EntitySet="user" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysbill1" Association="erpsystemModel.FK_ysbill1">
+      <End Role="user" EntitySet="user" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckbill1" Association="erpsystemModel.FK_ysckbill1">
+      <End Role="user" EntitySet="user" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckbill2" Association="erpsystemModel.FK_ysckbill2">
+      <End Role="user" EntitySet="user" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_x_sal1" Association="erpsystemModel.FK_x_sal1">
+      <End Role="wlzwj" EntitySet="wlzwj" />
+      <End Role="x_sal" EntitySet="x_sal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_x_sal" Association="erpsystemModel.FK_x_sal">
+      <End Role="x_documents" EntitySet="x_documents" />
+      <End Role="x_sal" EntitySet="x_sal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckdetail" Association="erpsystemModel.FK_ysckdetail">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="assignstyle">
+    <Key>
+      <PropertyRef Name="assignstyleid" />
+    </Key>
+    <Property Name="assignstyleid" Type="Int32" Nullable="false" />
+    <Property Name="assignstylename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="assignstyle" ToRole="daassigbuymain" />
+  </EntityType>
+  <EntityType Name="billtui">
+    <Key>
+      <PropertyRef Name="billno" />
+    </Key>
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="billdate" Type="DateTime" />
+    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="moneystyle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="includerate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="huilv" Type="Single" />
+    <Property Name="marker" Type="Int32" Nullable="false" />
+    <Property Name="permitter" Type="Int32" />
+    <Property Name="ware" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_billtui" FromRole="billtui" ToRole="clientmaster" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_billtui1" FromRole="billtui" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_billtui2" FromRole="billtui" ToRole="user" />
+    <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_billtui3" FromRole="billtui" ToRole="storage" />
+    <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype" FromRole="billtui" ToRole="billtutype" />
+  </EntityType>
+  <EntityType Name="billtutype">
+    <Key>
+      <PropertyRef Name="billno" />
+      <PropertyRef Name="lineid" />
+    </Key>
+    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lineid" Type="Int32" Nullable="false" />
+    <Property Name="wuliaoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="num" Type="Int32" Nullable="false" />
+    <Property Name="oidprice" Type="Single" Nullable="false" />
+    <Property Name="discount" Type="Single" Nullable="false" />
+    <Property Name="sprice" Type="Single" Nullable="false" />
+    <Property Name="taxrate" Type="Single" Nullable="false" />
+    <Property Name="taxamt" Type="Single" Nullable="false" />
+    <Property Name="amountatax" Type="Single" Nullable="false" />
+    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fromrow" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtutype" FromRole="billtutype" ToRole="billtui" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_billtutype1" FromRole="billtutype" ToRole="wlzwj" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_billtutype2" FromRole="billtutype" ToRole="saleck" />
+  </EntityType>
+  <EntityType Name="branch">
+    <Key>
+      <PropertyRef Name="bm_id" />
+    </Key>
+    <Property Name="bm_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bm_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bm_ywname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bm_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster3" FromRole="branch" ToRole="buysearchmaster" />
+    <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou2" FromRole="branch" ToRole="caigouqinggou" />
+    <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orders3" FromRole="branch" ToRole="orders" />
+    <NavigationProperty Name="returnods" Relationship="erpsystemModel.FK_returnods1" FromRole="branch" ToRole="returnods" />
+    <NavigationProperty Name="staff" Relationship="erpsystemModel.FK_staff" FromRole="branch" ToRole="staff" />
+  </EntityType>
+  <EntityType Name="buysearchdetails">
+    <Key>
+      <PropertyRef Name="sid" />
+      <PropertyRef Name="line" />
+    </Key>
+    <Property Name="sid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="line" Type="Int32" Nullable="false" />
+    <Property Name="swuid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="swuname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="smodel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sunit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="snum" Type="Int32" />
+    <Property Name="szprice" Type="Single" />
+    <Property Name="szheshu" Type="Single" />
+    <Property Name="sprice" Type="Single" />
+    <Property Name="smoney" Type="Single" />
+    <Property Name="sdacess" Type="Single" />
+    <Property Name="sdtaxmoney" Type="Single" />
+    <Property Name="sdtaxmoneys" Type="Single" />
+    <Property Name="szengping" Type="Int32" />
+    <Property Name="soriginid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sorigintype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sfenremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sisdel" Type="Int32" />
+    <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchdetails" ToRole="buysearchmaster" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="buysearchdetails" ToRole="wlzwj" />
+  </EntityType>
+  <EntityType Name="buysearchmaster">
+    <Key>
+      <PropertyRef Name="stoid" />
+    </Key>
+    <Property Name="stoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stopname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stopid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="saddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stodate" Type="DateTime" />
+    <Property Name="stunum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoydate" Type="DateTime" Nullable="false" />
+    <Property Name="stoshort" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sotaxrate" Type="Single" />
+    <Property Name="stoistax" Type="Single" />
+    <Property Name="stosaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stomake" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoshen" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stobuy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stodep" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stostate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stopbid" Type="Int32" />
+    <Property Name="sheader" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sfooter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="szione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="szitwo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stodid" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="store" Type="Int32" />
+    <Property Name="sdel" Type="Int32" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_buysearchmaster3" FromRole="buysearchmaster" ToRole="branch" />
+    <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchmaster" ToRole="buysearchdetails" />
+    <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_buysearchmaster" FromRole="buysearchmaster" ToRole="gmeans" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="buysearchmaster" ToRole="user" />
+  </EntityType>
+  <EntityType Name="buytype">
+    <Key>
+      <PropertyRef Name="Buytypeid" />
+    </Key>
+    <Property Name="Buytypeid" Type="Int32" Nullable="false" />
+    <Property Name="BuytypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou3" FromRole="buytype" ToRole="caigouqinggou" />
+  </EntityType>
+  <EntityType Name="caigoumingxi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="matterid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mattername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="specifications" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="unitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sums" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="reqirementdate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="proposedate" Type="DateTime" Nullable="false" />
+    <Property Name="journalizing" Type="DateTime" Nullable="false" />
+    <Property Name="sourceoneleave" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="sourceonenumbers" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="standardbidcurrencyleave" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="standardbid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="standardbidmoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastholepurchasecurrencyleave" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastholepurchaseunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastholepurchasebidmoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="weisum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigoumingxi" FromRole="caigoumingxi" ToRole="caigouqinggou" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_caigoumingxi2" FromRole="caigoumingxi" ToRole="wlzwj" />
+  </EntityType>
+  <EntityType Name="caigouqinggou">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="billdate" Type="DateTime" Nullable="false" />
+    <Property Name="billstyleid" Type="Int32" Nullable="false" />
+    <Property Name="billstatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="remark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sumqty" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="qinggourenyuan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="qinggoubumen" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="qinggoudepid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="qinggoubuyid" Type="Int32" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_caigouqinggou2" FromRole="caigouqinggou" ToRole="branch" />
+    <NavigationProperty Name="buytype" Relationship="erpsystemModel.FK_caigouqinggou3" FromRole="caigouqinggou" ToRole="buytype" />
+    <NavigationProperty Name="caigoumingxi" Relationship="erpsystemModel.FK_caigoumingxi" FromRole="caigouqinggou" ToRole="caigoumingxi" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_caigouqinggou" FromRole="caigouqinggou" ToRole="user" />
+  </EntityType>
+  <EntityType Name="clientmaster">
+    <Key>
+      <PropertyRef Name="corpid" />
+    </Key>
+    <Property Name="corpid" Type="Int32" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="shortname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="classname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="chiefname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="personname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="taxno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fundsattribfullname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="businessname" Type="Int32" Nullable="false" />
+    <Property Name="fundslimit" Type="Single" Nullable="false" />
+    <Property Name="startadvrecv" Type="Single" Nullable="false" />
+    <Property Name="surpluslimit" Type="Single" Nullable="false" />
+    <Property Name="statreceivable" Type="Single" Nullable="false" />
+    <Property Name="curadvreceivable" Type="Single" Nullable="false" />
+    <Property Name="deliveraddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="remainquota" Type="Single" Nullable="false" />
+    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui" FromRole="clientmaster" ToRole="billtui" />
+    <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdanzhu" FromRole="clientmaster" ToRole="dingdanzhu" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck" FromRole="clientmaster" ToRole="saleck" />
+    <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_documents" FromRole="clientmaster" ToRole="x_documents" />
+    <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysbill" FromRole="clientmaster" ToRole="ysbill" />
+    <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckbill" FromRole="clientmaster" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="closstype">
+    <Key>
+      <PropertyRef Name="clossid" />
+      <PropertyRef Name="clossname" />
+    </Key>
+    <Property Name="clossid" Type="Int32" Nullable="false" />
+    <Property Name="clossname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="englishname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="daassigbuymain">
+    <Key>
+      <PropertyRef Name="billnoid" />
+    </Key>
+    <Property Name="billnoid" Type="Int32" Nullable="false" />
+    <Property Name="billno" Type="Int32" Nullable="false" />
+    <Property Name="billdete" Type="DateTime" Nullable="false" />
+    <Property Name="assignstyleid" Type="Int32" Nullable="false" />
+    <Property Name="voucheck" Type="Int32" />
+    <Property Name="mlamount" Type="Single" Nullable="false" />
+    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="auditstatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="assignstyle" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="daassigbuymain" ToRole="assignstyle" />
+    <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub" FromRole="daassigbuymain" ToRole="dsassignbuysub" />
+    <NavigationProperty Name="dsassignfee" Relationship="erpsystemModel.FK_dsassignfee" FromRole="daassigbuymain" ToRole="dsassignfee" />
+  </EntityType>
+  <EntityType Name="detailorderpay">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="oid" Type="Int32" Nullable="false" />
+    <Property Name="ypay" Type="Single" Nullable="false" />
+    <Property Name="froms" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="details" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="info" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="orderpay" Relationship="erpsystemModel.FK_detailorderpay" FromRole="detailorderpay" ToRole="orderpay" />
+  </EntityType>
+  <EntityType Name="dingdancong">
+    <Key>
+      <PropertyRef Name="orderbillid" />
+      <PropertyRef Name="lineid" />
+    </Key>
+    <Property Name="orderbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lineid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="num" Type="Int32" Nullable="false" />
+    <Property Name="unitpricebefore" Type="Single" Nullable="false" />
+    <Property Name="discountrate" Type="Single" Nullable="false" />
+    <Property Name="unitprice" Type="Single" Nullable="false" />
+    <Property Name="amount" Type="Single" Nullable="false" />
+    <Property Name="taxate" Type="Single" Nullable="false" />
+    <Property Name="tax" Type="Single" Nullable="false" />
+    <Property Name="taxamount" Type="Single" Nullable="false" />
+    <Property Name="predeleasedate" Type="DateTime" Nullable="false" />
+    <Property Name="singlesource" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="did" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdancong" FromRole="dingdancong" ToRole="dingdanzhu" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dingdancong1" FromRole="dingdancong" ToRole="wlzwj" />
+    <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_dingdancong2" FromRole="dingdancong" ToRole="x_documents" />
+  </EntityType>
+  <EntityType Name="dingdanzhu">
+    <Key>
+      <PropertyRef Name="orderbillid" />
+    </Key>
+    <Property Name="orderbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="billdate" Type="DateTime" Nullable="false" />
+    <Property Name="custaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="priceoftax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="currname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="billstatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="exchrate" Type="Single" />
+    <Property Name="maker" Type="Int32" Nullable="false" />
+    <Property Name="fuhe" Type="Int32" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_dingdanzhu" FromRole="dingdanzhu" ToRole="clientmaster" />
+    <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong" FromRole="dingdanzhu" ToRole="dingdancong" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_dingdanzhu1" FromRole="dingdanzhu" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_dingdanzhu2" FromRole="dingdanzhu" ToRole="user" />
+    <NavigationProperty Name="salemx" Relationship="erpsystemModel.FK_salemx3" FromRole="dingdanzhu" ToRole="salemx" />
+  </EntityType>
+  <EntityType Name="dsassignbuysub">
+    <Key>
+      <PropertyRef Name="billnoid" />
+      <PropertyRef Name="billnoline" />
+    </Key>
+    <Property Name="billnoid" Type="Int32" Nullable="false" />
+    <Property Name="billnoline" Type="Int32" Nullable="false" />
+    <Property Name="serno" Type="Int32" Nullable="false" />
+    <Property Name="fromnoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="proid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="prodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="prodsize" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mlamountmy" Type="Single" Nullable="false" />
+    <Property Name="vquantity" Type="Int32" Nullable="false" />
+    <Property Name="sunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="weight" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="measm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ftmlamountmy" Type="Single" Nullable="false" />
+    <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_dsassignbuysub" FromRole="dsassignbuysub" ToRole="daassigbuymain" />
+    <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_dsassignbuysub1" FromRole="dsassignbuysub" ToRole="rk_zhubiao" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dsassignbuysub2" FromRole="dsassignbuysub" ToRole="wlzwj" />
+  </EntityType>
+  <EntityType Name="dsassignfee">
+    <Key>
+      <PropertyRef Name="billnoid" />
+      <PropertyRef Name="billnoline" />
+    </Key>
+    <Property Name="billnoid" Type="Int32" Nullable="false" />
+    <Property Name="billnoline" Type="Int32" Nullable="false" />
+    <Property Name="serno" Type="Int32" Nullable="false" />
+    <Property Name="feeclassid" Type="Int32" Nullable="false" />
+    <Property Name="farcclassname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dsdetailcurr" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="exchrete" Type="Single" Nullable="false" />
+    <Property Name="amount" Type="Single" Nullable="false" />
+    <Property Name="mlamount" Type="Single" Nullable="false" />
+    <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_dsassignfee" FromRole="dsassignfee" ToRole="daassigbuymain" />
+    <NavigationProperty Name="feeclass" Relationship="erpsystemModel.FK_dsassignfee1" FromRole="dsassignfee" ToRole="feeclass" />
+  </EntityType>
+  <EntityType Name="dsdsadjustmain">
+    <Key>
+      <PropertyRef Name="tjbillnoid" />
+    </Key>
+    <Property Name="tjbillnoid" Type="Int32" Nullable="false" />
+    <Property Name="tjbillno" Type="Int32" Nullable="false" />
+    <Property Name="billdete" Type="DateTime" Nullable="false" />
+    <Property Name="iscsubject" Type="Int32" />
+    <Property Name="decsubject" Type="Int32" />
+    <Property Name="voucheckno" Type="Int32" />
+    <Property Name="adjust" Type="Int32" Nullable="false" />
+    <Property Name="meno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="udefyi" Type="Int32" />
+    <Property Name="udefer" Type="Int32" />
+    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="auditstatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dsdsadjustsub" Relationship="erpsystemModel.FK_dsdsadjustsub" FromRole="dsdsadjustmain" ToRole="dsdsadjustsub" />
+  </EntityType>
+  <EntityType Name="dsdsadjustsub">
+    <Key>
+      <PropertyRef Name="tjbillnoid" />
+      <PropertyRef Name="tjbillnoline" />
+    </Key>
+    <Property Name="tjbillnoid" Type="Int32" Nullable="false" />
+    <Property Name="tjbillnoline" Type="Int32" Nullable="false" />
+    <Property Name="serno" Type="Int32" Nullable="false" />
+    <Property Name="proid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="prodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="prodsize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="curqty" Type="Int32" />
+    <Property Name="lcostavh" Type="Single" />
+    <Property Name="price" Type="Single" />
+    <Property Name="amount" Type="Single" Nullable="false" />
+    <Property Name="itemremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dsdsadjustmain" Relationship="erpsystemModel.FK_dsdsadjustsub" FromRole="dsdsadjustsub" ToRole="dsdsadjustmain" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dsdsadjustsub1" FromRole="dsdsadjustsub" ToRole="wlzwj" />
+  </EntityType>
+  <EntityType Name="feeclass">
+    <Key>
+      <PropertyRef Name="feeclassid" />
+    </Key>
+    <Property Name="feeclassid" Type="Int32" Nullable="false" />
+    <Property Name="farcclassname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dsassignfee" Relationship="erpsystemModel.FK_dsassignfee1" FromRole="feeclass" ToRole="dsassignfee" />
+  </EntityType>
+  <EntityType Name="gfmeansoay">
+    <Key>
+      <PropertyRef Name="gfid" />
+      <PropertyRef Name="line" />
+    </Key>
+    <Property Name="gfid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfamount" Type="Int32" Nullable="false" />
+    <Property Name="gfremain" Type="Int32" Nullable="false" />
+    <Property Name="gfrecv" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfdayofclose" Type="Int32" Nullable="false" />
+    <Property Name="gfcredi" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfinvotypeid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfstartadv" Type="Int32" Nullable="false" />
+    <Property Name="gfstartrev" Type="Int32" Nullable="false" />
+    <Property Name="gfcuradv" Type="Int32" Nullable="false" />
+    <Property Name="gfcurrev" Type="Int32" Nullable="false" />
+    <Property Name="gfunbilled" Type="Int32" Nullable="false" />
+    <Property Name="gfadvance" Type="Int32" Nullable="false" />
+    <Property Name="gfpauable" Type="Int32" Nullable="false" />
+    <Property Name="gfaccrev" Type="Int32" Nullable="false" />
+    <Property Name="line" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_gfmeansoay" FromRole="gfmeansoay" ToRole="gmeans" />
+  </EntityType>
+  <EntityType Name="gmeans">
+    <Key>
+      <PropertyRef Name="gid" />
+    </Key>
+    <Property Name="gid" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="gnname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfullname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="genglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gfullenglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gattribution" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gtypeid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gcurrency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster" FromRole="gmeans" ToRole="buysearchmaster" />
+    <NavigationProperty Name="gfmeansoay" Relationship="erpsystemModel.FK_gfmeansoay" FromRole="gmeans" ToRole="gfmeansoay" />
+    <NavigationProperty Name="gmeansadeinite" Relationship="erpsystemModel.FK_gmeansadeinite" FromRole="gmeans" ToRole="gmeansadeinite" />
+    <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orders" FromRole="gmeans" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="gmeansadeinite">
+    <Key>
+      <PropertyRef Name="gzid" />
+      <PropertyRef Name="line" />
+    </Key>
+    <Property Name="gzid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzlinkman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gztele1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gztele2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gztele3" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzmobiletel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzbank" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzbankid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzpersonname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gztaxno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzcap" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzindustry" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzemail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzweb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gzfaxno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="line" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_gmeansadeinite" FromRole="gmeansadeinite" ToRole="gmeans" />
+  </EntityType>
+  <EntityType Name="orderdetails">
+    <Key>
+      <PropertyRef Name="orderid" />
+      <PropertyRef Name="oline" />
+    </Key>
+    <Property Name="orderid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oline" Type="Int32" Nullable="false" />
+    <Property Name="osperid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ospername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oprodsize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ounitname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="onum" Type="Int32" />
+    <Property Name="osperprice" Type="Single" />
+    <Property Name="oszheshu" Type="Single" />
+    <Property Name="oprice" Type="Single" />
+    <Property Name="omoney" Type="Single" />
+    <Property Name="otaxrate" Type="Single" />
+    <Property Name="otaxmoney" Type="Single" />
+    <Property Name="otaxmoneys" Type="Single" />
+    <Property Name="ostoragedate" Type="DateTime" Nullable="false" />
+    <Property Name="oisprent" Type="Int32" />
+    <Property Name="oremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="origintype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="originno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orderdetails" FromRole="orderdetails" ToRole="orders" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_orderdetails2" FromRole="orderdetails" ToRole="wlzwj" />
+  </EntityType>
+  <EntityType Name="orderpay">
+    <Key>
+      <PropertyRef Name="orid" />
+    </Key>
+    <Property Name="orid" Type="Int32" Nullable="false" />
+    <Property Name="nodate" Type="DateTime" Nullable="false" />
+    <Property Name="suppildname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="firstway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="firstmoney" Type="Single" />
+    <Property Name="secondway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="secondmoney" Type="Single" />
+    <Property Name="thirdway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="thirdmoney" Type="Single" />
+    <Property Name="currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="exchangerate" Type="Single" Nullable="false" />
+    <Property Name="style" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="enddate" Type="DateTime" Nullable="false" />
+    <Property Name="department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="exceter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="project" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="checkman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="detailorderpay" Relationship="erpsystemModel.FK_detailorderpay" FromRole="orderpay" ToRole="detailorderpay" />
+    <NavigationProperty Name="pay" Relationship="erpsystemModel.FK_pay" FromRole="orderpay" ToRole="pay" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostoid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostodate" Type="DateTime" Nullable="false" />
+    <Property Name="osperid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ospername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="osperaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="osunittax" Type="Single" />
+    <Property Name="otype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="obibie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ossongaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ospercai" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ospercaiid" Type="Int32" />
+    <Property Name="oscaidep" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oscaidepid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oxiangmu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostomemake" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostoemcheck" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="osremarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oshestate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="oheader" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ofooter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ozione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ozitwo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ostoreorder" Type="Int32" />
+    <Property Name="osisdel" Type="Int32" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orders3" FromRole="orders" ToRole="branch" />
+    <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_orders" FromRole="orders" ToRole="gmeans" />
+    <NavigationProperty Name="orderdetails" Relationship="erpsystemModel.FK_orderdetails" FromRole="orders" ToRole="orderdetails" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_orders2" FromRole="orders" ToRole="user" />
+  </EntityType>
+  <EntityType Name="pandian">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="checkstorehouse" Type="DateTime" Nullable="false" />
+    <Property Name="checkdocumentsdate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appreciationsubject" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="documentsnumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="decreasesubject" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="vouchernumer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="checkpersonnel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="touchingpersonnel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="department" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pandianmingxi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pandianlh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matterid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mattername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="guige" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="danwei" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="zhangmiansum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pandiansum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="yingkuisum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="danjia" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="yingkuimoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pihao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="yuanyin" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pay">
+    <Key>
+      <PropertyRef Name="dno" />
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="dno" Type="Int32" Nullable="false" />
+    <Property Name="oid" Type="Int32" Nullable="false" />
+    <Property Name="listkind" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nodate" Type="DateTime" Nullable="false" />
+    <Property Name="oldno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="invoicenumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dealman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dealmanname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="departmentno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="purchaseman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="projectname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="exchangerate" Type="Single" Nullable="false" />
+    <Property Name="oldnomoney" Type="Single" Nullable="false" />
+    <Property Name="money" Type="Single" Nullable="false" />
+    <Property Name="discountmoney" Type="Single" />
+    <Property Name="offsetmoney" Type="Single" />
+    <NavigationProperty Name="orderpay" Relationship="erpsystemModel.FK_pay" FromRole="pay" ToRole="orderpay" />
+  </EntityType>
+  <EntityType Name="providertype">
+    <Key>
+      <PropertyRef Name="ptypeid" />
+      <PropertyRef Name="ptypename" />
+      <PropertyRef Name="penglishname" />
+      <PropertyRef Name="premark" />
+    </Key>
+    <Property Name="ptypeid" Type="Int32" Nullable="false" />
+    <Property Name="ptypename" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="penglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="premark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="qydetail">
+    <Key>
+      <PropertyRef Name="lineid" />
+      <PropertyRef Name="ysckbillid" />
+    </Key>
+    <Property Name="lineid" Type="Int32" Nullable="false" />
+    <Property Name="ly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bz" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="qymoneydetail" Type="Single" Nullable="false" />
+    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_qydetail" FromRole="qydetail" ToRole="ysbill" />
+    <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_qydetail1" FromRole="qydetail" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="returnods">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rcustname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="raddrid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rbillrq" Type="DateTime" Nullable="false" />
+    <Property Name="rbillno" Type="Int32" Nullable="false" />
+    <Property Name="rpriceoftax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rcurrent" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rwareid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rexchrate" Type="Int32" Nullable="false" />
+    <Property Name="risdeduct" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rhesforeigntrade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rdocument" Type="Int32" Nullable="false" />
+    <Property Name="rpurchasingname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rproducername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rdepartid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rrreviewername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rprojectid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rbid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rqgid" Type="Int32" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_returnods1" FromRole="returnods" ToRole="branch" />
+    <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_returnods" FromRole="returnods" ToRole="storage" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_returnods2" FromRole="returnods" ToRole="user" />
+  </EntityType>
+  <EntityType Name="rk_minxi">
+    <Key>
+      <PropertyRef Name="rk_id" />
+      <PropertyRef Name="mx_spalten" />
+    </Key>
+    <Property Name="rk_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_spalten" Type="Int32" Nullable="false" />
+    <Property Name="mx_number" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_version" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_dwname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_num" Type="Int32" />
+    <Property Name="mx_zkqprice" Type="Int32" />
+    <Property Name="mx_broken" Type="Int32" />
+    <Property Name="mx_price" Type="Int32" />
+    <Property Name="mx_money" Type="Int32" />
+    <Property Name="mx_rate" Type="Int32" />
+    <Property Name="mx_amount" Type="Int32" />
+    <Property Name="mx_batch" Type="Int32" />
+    <Property Name="mx_gift" Type="Int32" />
+    <Property Name="mx_remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_lydanbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mx_lydanhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ft_id" Type="Int32" />
+    <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_rk_minxi" FromRole="rk_minxi" ToRole="rk_zhubiao" />
+  </EntityType>
+  <EntityType Name="rk_zhubiao">
+    <Key>
+      <PropertyRef Name="rk_id" />
+    </Key>
+    <Property Name="rk_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_danjuid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_date" Type="DateTime" Nullable="false" />
+    <Property Name="rk_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_are" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_depot" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_exchange" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_cgbuyer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_branch" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_zdbuyer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_fhbuyer" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_project" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="rk_zhuantai" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub1" FromRole="rk_zhubiao" ToRole="dsassignbuysub" />
+    <NavigationProperty Name="rk_minxi" Relationship="erpsystemModel.FK_rk_minxi" FromRole="rk_zhubiao" ToRole="rk_minxi" />
+    <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_rk_zhubiao" FromRole="rk_zhubiao" ToRole="storage" />
+  </EntityType>
+  <EntityType Name="saleck">
+    <Key>
+      <PropertyRef Name="saleckdh" />
+    </Key>
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="saledate" Type="DateTime" />
+    <Property Name="salenumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="saleaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="saletype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="salecurrency" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="saleshui" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="salerate" Type="Single" />
+    <Property Name="salewarehouse" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="saletouch" Type="Int32" Nullable="false" />
+    <Property Name="salecheck" Type="Int32" Nullable="false" />
+    <Property Name="saleckdh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype2" FromRole="saleck" ToRole="billtutype" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_saleck" FromRole="saleck" ToRole="clientmaster" />
+    <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_saleck1" FromRole="saleck" ToRole="storage" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_saleck2" FromRole="saleck" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_saleck3" FromRole="saleck" ToRole="user" />
+    <NavigationProperty Name="salemx" Relationship="erpsystemModel.FK_salemx" FromRole="saleck" ToRole="salemx" />
+    <NavigationProperty Name="ysckdetail" Relationship="erpsystemModel.FK_ysckdetail1" FromRole="saleck" ToRole="ysckdetail" />
+    <NavigationProperty Name="ysdetail" Relationship="erpsystemModel.FK_ysdetail" FromRole="saleck" ToRole="ysdetail" />
+  </EntityType>
+  <EntityType Name="salemx">
+    <Key>
+      <PropertyRef Name="foldid" />
+      <PropertyRef Name="matckdh" />
+    </Key>
+    <Property Name="foldid" Type="Int32" Nullable="false" />
+    <Property Name="matckdh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matnum" Type="Int32" Nullable="false" />
+    <Property Name="matzkq" Type="Single" />
+    <Property Name="matbroken" Type="Single" />
+    <Property Name="matprice" Type="Single" />
+    <Property Name="matmoeny" Type="Single" />
+    <Property Name="matratio" Type="Single" />
+    <Property Name="matse" Type="Single" />
+    <Property Name="mathsje" Type="Single" />
+    <Property Name="matbz" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matlydb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matlydh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_salemx3" FromRole="salemx" ToRole="dingdanzhu" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_salemx" FromRole="salemx" ToRole="saleck" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_salemx1" FromRole="salemx" ToRole="wlzwj" />
+    <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_salemx2" FromRole="salemx" ToRole="x_documents" />
+  </EntityType>
+  <EntityType Name="shopdetail">
+    <Key>
+      <PropertyRef Name="sid" />
+      <PropertyRef Name="line" />
+    </Key>
+    <Property Name="scolumn" Type="Int32" Nullable="false" />
+    <Property Name="sprodid" Type="Int32" />
+    <Property Name="sprodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sprodsize" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sunitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="snumber" Type="Int32" Nullable="false" />
+    <Property Name="spricebefore" Type="Int32" Nullable="false" />
+    <Property Name="sfolding" Type="Int32" Nullable="false" />
+    <Property Name="sprece" Type="Int32" Nullable="false" />
+    <Property Name="samount" Type="Int32" Nullable="false" />
+    <Property Name="srate" Type="Int32" Nullable="false" />
+    <Property Name="stax" Type="Int32" Nullable="false" />
+    <Property Name="sincluded" Type="Int32" Nullable="false" />
+    <Property Name="sbatch" Type="Int32" Nullable="false" />
+    <Property Name="sgifts" Type="Int32" Nullable="false" />
+    <Property Name="sdetalis" Type="Int32" Nullable="false" />
+    <Property Name="sundilled" Type="Int32" Nullable="false" />
+    <Property Name="sentrynote" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="souce" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="soucenumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="line" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="staff">
+    <Key>
+      <PropertyRef Name="bm_id" />
+      <PropertyRef Name="ry_shenfen" />
+    </Key>
+    <Property Name="ry_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="bm_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_xinbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_ywname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_shenfen" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_csdate" Type="DateTime" />
+    <Property Name="ry_hunyin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ry_rzdate" Type="DateTime" />
+    <Property Name="ry_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_staff" FromRole="staff" ToRole="branch" />
+  </EntityType>
+  <EntityType Name="storage">
+    <Key>
+      <PropertyRef Name="stoid" />
+    </Key>
+    <Property Name="stoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stosimplename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoenglishname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoconnecter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stophone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stoaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="storemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sdel" Type="Int32" />
+    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui3" FromRole="storage" ToRole="billtui" />
+    <NavigationProperty Name="returnods" Relationship="erpsystemModel.FK_returnods" FromRole="storage" ToRole="returnods" />
+    <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_rk_zhubiao" FromRole="storage" ToRole="rk_zhubiao" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck1" FromRole="storage" ToRole="saleck" />
+  </EntityType>
+  <EntityType Name="takeorderpay">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="froms" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ordermoney" Type="Single" />
+    <Property Name="departmentno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="takeomoney" Type="Single" />
+    <Property Name="details" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="unit">
+    <Key>
+      <PropertyRef Name="unitid" />
+    </Key>
+    <Property Name="unitid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="unitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="unitengname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="unitremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="unitdel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="pwd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="userno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui1" FromRole="user" ToRole="billtui" />
+    <NavigationProperty Name="billtui1" Relationship="erpsystemModel.FK_billtui2" FromRole="user" ToRole="billtui" />
+    <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="user" ToRole="buysearchmaster" />
+    <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou" FromRole="user" ToRole="caigouqinggou" />
+    <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdanzhu1" FromRole="user" ToRole="dingdanzhu" />
+    <NavigationProperty Name="dingdanzhu1" Relationship="erpsystemModel.FK_dingdanzhu2" FromRole="user" ToRole="dingdanzhu" />
+    <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orders2" FromRole="user" ToRole="orders" />
+    <NavigationProperty Name="returnods" Relationship="erpsystemModel.FK_returnods2" FromRole="user" ToRole="returnods" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck2" FromRole="user" ToRole="saleck" />
+    <NavigationProperty Name="saleck1" Relationship="erpsystemModel.FK_saleck3" FromRole="user" ToRole="saleck" />
+    <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_documents1" FromRole="user" ToRole="x_documents" />
+    <NavigationProperty Name="x_documents1" Relationship="erpsystemModel.FK_x_documents2" FromRole="user" ToRole="x_documents" />
+    <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysbil2" FromRole="user" ToRole="ysbill" />
+    <NavigationProperty Name="ysbill1" Relationship="erpsystemModel.FK_ysbill1" FromRole="user" ToRole="ysbill" />
+    <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckbill1" FromRole="user" ToRole="ysckbill" />
+    <NavigationProperty Name="ysckbill1" Relationship="erpsystemModel.FK_ysckbill2" FromRole="user" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="wllb">
+    <Key>
+      <PropertyRef Name="lbid" />
+      <PropertyRef Name="lbname" />
+    </Key>
+    <Property Name="lbid" Type="Int32" Nullable="false" />
+    <Property Name="lbname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="chkm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="xssr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="xscb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fcsp" Type="Single" />
+    <Property Name="zpfy" Type="Single" />
+  </EntityType>
+  <EntityType Name="wlzwj">
+    <Key>
+      <PropertyRef Name="matid" />
+    </Key>
+    <Property Name="matid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mattype" Type="Int32" Nullable="false" />
+    <Property Name="matname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matjldw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matywpm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matjysj" Type="Single" />
+    <Property Name="mata" Type="Single" />
+    <Property Name="matb" Type="Single" />
+    <Property Name="matbb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matsfhs" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matsl" Type="Single" />
+    <Property Name="matcgdate" Type="DateTime" />
+    <Property Name="matbzjj" Type="Single" />
+    <Property Name="matgys" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype1" FromRole="wlzwj" ToRole="billtutype" />
+    <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="wlzwj" ToRole="buysearchdetails" />
+    <NavigationProperty Name="caigoumingxi" Relationship="erpsystemModel.FK_caigoumingxi2" FromRole="wlzwj" ToRole="caigoumingxi" />
+    <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong1" FromRole="wlzwj" ToRole="dingdancong" />
+    <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub2" FromRole="wlzwj" ToRole="dsassignbuysub" />
+    <NavigationProperty Name="dsdsadjustsub" Relationship="erpsystemModel.FK_dsdsadjustsub1" FromRole="wlzwj" ToRole="dsdsadjustsub" />
+    <NavigationProperty Name="orderdetails" Relationship="erpsystemModel.FK_orderdetails2" FromRole="wlzwj" ToRole="orderdetails" />
+    <NavigationProperty Name="salemx" Relationship="erpsystemModel.FK_salemx1" FromRole="wlzwj" ToRole="salemx" />
+    <NavigationProperty Name="x_sal" Relationship="erpsystemModel.FK_x_sal1" FromRole="wlzwj" ToRole="x_sal" />
+  </EntityType>
+  <EntityType Name="x_documents">
+    <Key>
+      <PropertyRef Name="x_documentsid" />
+    </Key>
+    <Property Name="x_documentsid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="deliverodsdate" Type="DateTime" Nullable="false" />
+    <Property Name="effective" Type="DateTime" Nullable="false" />
+    <Property Name="currname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="priceincluded" Type="Int32" Nullable="false" />
+    <Property Name="exchange" Type="Single" Nullable="false" />
+    <Property Name="touching" Type="Int32" Nullable="false" />
+    <Property Name="fuhe" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_x_documents" FromRole="x_documents" ToRole="clientmaster" />
+    <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong2" FromRole="x_documents" ToRole="dingdancong" />
+    <NavigationProperty Name="salemx" Relationship="erpsystemModel.FK_salemx2" FromRole="x_documents" ToRole="salemx" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_x_documents1" FromRole="x_documents" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_x_documents2" FromRole="x_documents" ToRole="user" />
+    <NavigationProperty Name="x_sal" Relationship="erpsystemModel.FK_x_sal" FromRole="x_documents" ToRole="x_sal" />
+  </EntityType>
+  <EntityType Name="x_sal">
+    <Key>
+      <PropertyRef Name="lineid" />
+      <PropertyRef Name="x_documentsid" />
+    </Key>
+    <Property Name="lineid" Type="Int32" Nullable="false" />
+    <Property Name="x_documentsid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="discountprice" Type="Single" Nullable="false" />
+    <Property Name="broken" Type="Single" Nullable="false" />
+    <Property Name="price" Type="Single" Nullable="false" />
+    <Property Name="amount" Type="Single" Nullable="false" />
+    <Property Name="taxrate" Type="Single" Nullable="false" />
+    <Property Name="tax" Type="Single" Nullable="false" />
+    <Property Name="taxincludedprice" Type="Single" Nullable="false" />
+    <Property Name="complimentary" Type="Single" Nullable="false" />
+    <Property Name="remarks" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="matter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_x_sal1" FromRole="x_sal" ToRole="wlzwj" />
+    <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_sal" FromRole="x_sal" ToRole="x_documents" />
+  </EntityType>
+  <EntityType Name="ysbill">
+    <Key>
+      <PropertyRef Name="ysbillid" />
+    </Key>
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="ysbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fsbilldate" Type="DateTime" Nullable="false" />
+    <Property Name="yscurrname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysexchrate" Type="Single" Nullable="false" />
+    <Property Name="ysone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ystwo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysthree" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysmoney1" Type="Single" Nullable="false" />
+    <Property Name="ysmoney2" Type="Single" Nullable="false" />
+    <Property Name="ysmoney3" Type="Single" />
+    <Property Name="yszd" Type="Int32" Nullable="false" />
+    <Property Name="yssh" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_ysbill" FromRole="ysbill" ToRole="clientmaster" />
+    <NavigationProperty Name="qydetail" Relationship="erpsystemModel.FK_qydetail" FromRole="ysbill" ToRole="qydetail" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_ysbil2" FromRole="ysbill" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_ysbill1" FromRole="ysbill" ToRole="user" />
+  </EntityType>
+  <EntityType Name="ysckbill">
+    <Key>
+      <PropertyRef Name="ysckbillid" />
+    </Key>
+    <Property Name="customerid" Type="Int32" Nullable="false" />
+    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysckbilldate" Type="DateTime" Nullable="false" />
+    <Property Name="ysckcurrname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysckexchrate" Type="Single" Nullable="false" />
+    <Property Name="ysckone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="yscktwo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysthree" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysckmoney1" Type="Single" Nullable="false" />
+    <Property Name="ysckmoney2" Type="Single" Nullable="false" />
+    <Property Name="ysckmoney3" Type="Single" />
+    <Property Name="ysckzd" Type="Int32" Nullable="false" />
+    <Property Name="yscksh" Type="Int32" Nullable="false" />
+    <Property Name="ysckzhe" Type="Single" />
+    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_ysckbill" FromRole="ysckbill" ToRole="clientmaster" />
+    <NavigationProperty Name="qydetail" Relationship="erpsystemModel.FK_qydetail1" FromRole="ysckbill" ToRole="qydetail" />
+    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_ysckbill1" FromRole="ysckbill" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_ysckbill2" FromRole="ysckbill" ToRole="user" />
+    <NavigationProperty Name="ysckdetail" Relationship="erpsystemModel.FK_ysckdetail" FromRole="ysckbill" ToRole="ysckdetail" />
+  </EntityType>
+  <EntityType Name="ysckdetail">
+    <Key>
+      <PropertyRef Name="ysckbillid" />
+      <PropertyRef Name="lineid" />
+    </Key>
+    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lineid" Type="Int32" Nullable="false" />
+    <Property Name="ysckdetailly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysckdetaillyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="yuandanmoney" Type="Single" Nullable="false" />
+    <Property Name="zherangmoney" Type="Single" />
+    <Property Name="chongkuanmoney" Type="Single" Nullable="false" />
+    <Property Name="chongdimoney" Type="Single" Nullable="false" />
+    <Property Name="xianxingmoney" Type="Single" Nullable="false" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysckdetail1" FromRole="ysckdetail" ToRole="saleck" />
+    <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckdetail" FromRole="ysckdetail" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="ysdetail">
+    <Key>
+      <PropertyRef Name="ysbillid" />
+      <PropertyRef Name="lineid" />
+    </Key>
+    <Property Name="ysbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lineid" Type="Int32" Nullable="false" />
+    <Property Name="ly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ysmoney" Type="Single" Nullable="false" />
+    <Property Name="ysyue" Type="Single" Nullable="false" />
+    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysdetail" FromRole="ysdetail" ToRole="saleck" />
+  </EntityType>
+  <Association Name="FK_daassigbuymain">
+    <End Role="assignstyle" Type="erpsystemModel.assignstyle" Multiplicity="1" />
+    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="assignstyle">
+        <PropertyRef Name="assignstyleid" />
+      </Principal>
+      <Dependent Role="daassigbuymain">
+        <PropertyRef Name="assignstyleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtui">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="billtui">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtui1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="billtui">
+        <PropertyRef Name="marker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtui2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="billtui">
+        <PropertyRef Name="permitter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtui3">
+    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
+    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="storage">
+        <PropertyRef Name="stoid" />
+      </Principal>
+      <Dependent Role="billtui">
+        <PropertyRef Name="ware" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtutype">
+    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="1" />
+    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="billtui">
+        <PropertyRef Name="billno" />
+      </Principal>
+      <Dependent Role="billtutype">
+        <PropertyRef Name="billno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtutype1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="billtutype">
+        <PropertyRef Name="wuliaoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_billtutype2">
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
+    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saleck">
+        <PropertyRef Name="saleckdh" />
+      </Principal>
+      <Dependent Role="billtutype">
+        <PropertyRef Name="fromno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchmaster3">
+    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
+    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branch">
+        <PropertyRef Name="bm_id" />
+      </Principal>
+      <Dependent Role="buysearchmaster">
+        <PropertyRef Name="stodid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_caigouqinggou2">
+    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
+    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branch">
+        <PropertyRef Name="bm_id" />
+      </Principal>
+      <Dependent Role="caigouqinggou">
+        <PropertyRef Name="qinggoudepid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders3">
+    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
+    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branch">
+        <PropertyRef Name="bm_id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="oscaidepid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_returnods1">
+    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
+    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branch">
+        <PropertyRef Name="bm_id" />
+      </Principal>
+      <Dependent Role="returnods">
+        <PropertyRef Name="rbid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_staff">
+    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
+    <End Role="staff" Type="erpsystemModel.staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branch">
+        <PropertyRef Name="bm_id" />
+      </Principal>
+      <Dependent Role="staff">
+        <PropertyRef Name="bm_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchdetails">
+    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="1" />
+    <End Role="buysearchdetails" Type="erpsystemModel.buysearchdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="buysearchmaster">
+        <PropertyRef Name="stoid" />
+      </Principal>
+      <Dependent Role="buysearchdetails">
+        <PropertyRef Name="sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchdetails1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="0..1" />
+    <End Role="buysearchdetails" Type="erpsystemModel.buysearchdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="buysearchdetails">
+        <PropertyRef Name="swuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchmaster">
+    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="0..1" />
+    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gmeans">
+        <PropertyRef Name="gid" />
+      </Principal>
+      <Dependent Role="buysearchmaster">
+        <PropertyRef Name="stopid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchmaster1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="buysearchmaster">
+        <PropertyRef Name="stopbid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_caigouqinggou3">
+    <End Role="buytype" Type="erpsystemModel.buytype" Multiplicity="1" />
+    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="buytype">
+        <PropertyRef Name="Buytypeid" />
+      </Principal>
+      <Dependent Role="caigouqinggou">
+        <PropertyRef Name="billstyleid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_caigoumingxi">
+    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="1" />
+    <End Role="caigoumingxi" Type="erpsystemModel.caigoumingxi" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="caigouqinggou">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="caigoumingxi">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_caigoumingxi2">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="caigoumingxi" Type="erpsystemModel.caigoumingxi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="caigoumingxi">
+        <PropertyRef Name="matterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_caigouqinggou">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="caigouqinggou">
+        <PropertyRef Name="qinggoubuyid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdanzhu">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="dingdanzhu">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saleck">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="saleck">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_x_documents">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="x_documents">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysbill">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckbill">
+    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
+    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientmaster">
+        <PropertyRef Name="corpid" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsassignbuysub">
+    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="1" />
+    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="daassigbuymain">
+        <PropertyRef Name="billnoid" />
+      </Principal>
+      <Dependent Role="dsassignbuysub">
+        <PropertyRef Name="billnoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsassignfee">
+    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="1" />
+    <End Role="dsassignfee" Type="erpsystemModel.dsassignfee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="daassigbuymain">
+        <PropertyRef Name="billnoid" />
+      </Principal>
+      <Dependent Role="dsassignfee">
+        <PropertyRef Name="billnoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detailorderpay">
+    <End Role="orderpay" Type="erpsystemModel.orderpay" Multiplicity="1" />
+    <End Role="detailorderpay" Type="erpsystemModel.detailorderpay" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="orderpay">
+        <PropertyRef Name="orid" />
+      </Principal>
+      <Dependent Role="detailorderpay">
+        <PropertyRef Name="oid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdancong">
+    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="1" />
+    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dingdanzhu">
+        <PropertyRef Name="orderbillid" />
+      </Principal>
+      <Dependent Role="dingdancong">
+        <PropertyRef Name="orderbillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdancong1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="dingdancong">
+        <PropertyRef Name="matter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdancong2">
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="0..1" />
+    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="x_documents">
+        <PropertyRef Name="x_documentsid" />
+      </Principal>
+      <Dependent Role="dingdancong">
+        <PropertyRef Name="did" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdanzhu1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="dingdanzhu">
+        <PropertyRef Name="fuhe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dingdanzhu2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="dingdanzhu">
+        <PropertyRef Name="maker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salemx3">
+    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="1" />
+    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dingdanzhu">
+        <PropertyRef Name="orderbillid" />
+      </Principal>
+      <Dependent Role="salemx">
+        <PropertyRef Name="matlydh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsassignbuysub1">
+    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="1" />
+    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rk_zhubiao">
+        <PropertyRef Name="rk_id" />
+      </Principal>
+      <Dependent Role="dsassignbuysub">
+        <PropertyRef Name="fromnoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsassignbuysub2">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="dsassignbuysub">
+        <PropertyRef Name="proid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsassignfee1">
+    <End Role="feeclass" Type="erpsystemModel.feeclass" Multiplicity="1" />
+    <End Role="dsassignfee" Type="erpsystemModel.dsassignfee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="feeclass">
+        <PropertyRef Name="feeclassid" />
+      </Principal>
+      <Dependent Role="dsassignfee">
+        <PropertyRef Name="feeclassid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsdsadjustsub">
+    <End Role="dsdsadjustmain" Type="erpsystemModel.dsdsadjustmain" Multiplicity="1" />
+    <End Role="dsdsadjustsub" Type="erpsystemModel.dsdsadjustsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dsdsadjustmain">
+        <PropertyRef Name="tjbillnoid" />
+      </Principal>
+      <Dependent Role="dsdsadjustsub">
+        <PropertyRef Name="tjbillnoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dsdsadjustsub1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="dsdsadjustsub" Type="erpsystemModel.dsdsadjustsub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="dsdsadjustsub">
+        <PropertyRef Name="proid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_gfmeansoay">
+    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="1" />
+    <End Role="gfmeansoay" Type="erpsystemModel.gfmeansoay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gmeans">
+        <PropertyRef Name="gid" />
+      </Principal>
+      <Dependent Role="gfmeansoay">
+        <PropertyRef Name="gfid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_gmeansadeinite">
+    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="1" />
+    <End Role="gmeansadeinite" Type="erpsystemModel.gmeansadeinite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gmeans">
+        <PropertyRef Name="gid" />
+      </Principal>
+      <Dependent Role="gmeansadeinite">
+        <PropertyRef Name="gzid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders">
+    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="0..1" />
+    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gmeans">
+        <PropertyRef Name="gid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="osperid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orderdetails">
+    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="1" />
+    <End Role="orderdetails" Type="erpsystemModel.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="orderid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orderdetails2">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="0..1" />
+    <End Role="orderdetails" Type="erpsystemModel.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="osperid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pay">
+    <End Role="orderpay" Type="erpsystemModel.orderpay" Multiplicity="1" />
+    <End Role="pay" Type="erpsystemModel.pay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orderpay">
+        <PropertyRef Name="orid" />
+      </Principal>
+      <Dependent Role="pay">
+        <PropertyRef Name="dno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_orders2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="ospercaiid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qydetail">
+    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="1" />
+    <End Role="qydetail" Type="erpsystemModel.qydetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysbill">
+        <PropertyRef Name="ysbillid" />
+      </Principal>
+      <Dependent Role="qydetail">
+        <PropertyRef Name="lyno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qydetail1">
+    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="1" />
+    <End Role="qydetail" Type="erpsystemModel.qydetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="ysckbillid" />
+      </Principal>
+      <Dependent Role="qydetail">
+        <PropertyRef Name="ysckbillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_returnods">
+    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
+    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="storage">
+        <PropertyRef Name="stoid" />
+      </Principal>
+      <Dependent Role="returnods">
+        <PropertyRef Name="rwareid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_returnods2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
+    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="returnods">
+        <PropertyRef Name="rqgid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rk_minxi">
+    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="1" />
+    <End Role="rk_minxi" Type="erpsystemModel.rk_minxi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rk_zhubiao">
+        <PropertyRef Name="rk_id" />
+      </Principal>
+      <Dependent Role="rk_minxi">
+        <PropertyRef Name="rk_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rk_zhubiao">
+    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
+    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="storage">
+        <PropertyRef Name="stoid" />
+      </Principal>
+      <Dependent Role="rk_zhubiao">
+        <PropertyRef Name="rk_depot" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saleck1">
+    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="storage">
+        <PropertyRef Name="stoid" />
+      </Principal>
+      <Dependent Role="saleck">
+        <PropertyRef Name="salewarehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saleck2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="saleck">
+        <PropertyRef Name="saletouch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saleck3">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="saleck">
+        <PropertyRef Name="salecheck" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salemx">
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
+    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saleck">
+        <PropertyRef Name="saleckdh" />
+      </Principal>
+      <Dependent Role="salemx">
+        <PropertyRef Name="matckdh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckdetail1">
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
+    <End Role="ysckdetail" Type="erpsystemModel.ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saleck">
+        <PropertyRef Name="saleckdh" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="ysckdetaillyno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysdetail">
+    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
+    <End Role="ysdetail" Type="erpsystemModel.ysdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saleck">
+        <PropertyRef Name="saleckdh" />
+      </Principal>
+      <Dependent Role="ysdetail">
+        <PropertyRef Name="lyno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salemx1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="salemx">
+        <PropertyRef Name="matid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salemx2">
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="1" />
+    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="x_documents">
+        <PropertyRef Name="x_documentsid" />
+      </Principal>
+      <Dependent Role="salemx">
+        <PropertyRef Name="matlydh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_x_documents1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="x_documents">
+        <PropertyRef Name="fuhe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_x_documents2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="x_documents">
+        <PropertyRef Name="touching" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysbil2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="yssh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysbill1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="yszd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckbill1">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="ysckzd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckbill2">
+    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
+    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="yscksh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_x_sal1">
+    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
+    <End Role="x_sal" Type="erpsystemModel.x_sal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="wlzwj">
+        <PropertyRef Name="matid" />
+      </Principal>
+      <Dependent Role="x_sal">
+        <PropertyRef Name="matter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_x_sal">
+    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="1" />
+    <End Role="x_sal" Type="erpsystemModel.x_sal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="x_documents">
+        <PropertyRef Name="x_documentsid" />
+      </Principal>
+      <Dependent Role="x_sal">
+        <PropertyRef Name="x_documentsid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckdetail">
+    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="1" />
+    <End Role="ysckdetail" Type="erpsystemModel.ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="ysckbillid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="ysckbillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

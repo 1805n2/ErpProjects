@@ -1,0 +1,10 @@
+E:\ErpProject\DAL\bin\Debug\DAL.dll
+E:\ErpProject\DAL\bin\Debug\DAL.pdb
+E:\ErpProject\DAL\bin\Debug\Models.dll
+E:\ErpProject\DAL\bin\Debug\EntityFramework.dll
+E:\ErpProject\DAL\bin\Debug\Models.pdb
+E:\ErpProject\DAL\bin\Debug\EntityFramework.xml
+E:\ErpProject\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ErpProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\ErpProject\DAL\obj\Debug\DAL.dll
+E:\ErpProject\DAL\obj\Debug\DAL.pdb

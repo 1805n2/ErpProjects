@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCA5AFE6-5D26-4DF0-B1C9-5ED2E4CE25BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="basicInfo\ckservice.cs" />
+    <Compile Include="basicInfo\deptservice.cs" />
+    <Compile Include="basicInfo\gyslbservice.cs" />
+    <Compile Include="basicInfo\gyszwjservice.cs" />
+    <Compile Include="basicInfo\khlbservice.cs" />
+    <Compile Include="basicInfo\khzwjservice.cs" />
+    <Compile Include="basicInfo\ryzwjservice.cs" />
+    <Compile Include="basicInfo\wllbservice.cs" />
+    <Compile Include="basicInfo\wlzwjservice.cs" />
+    <Compile Include="bxManager\xsbjdservice.cs" />
+    <Compile Include="bxManager\xsckdservice.cs" />
+    <Compile Include="bxManager\xsddservice.cs" />
+    <Compile Include="bxManager\xslrpgcxservice.cs" />
+    <Compile Include="bxManager\xslsjycxservice.cs" />
+    <Compile Include="bxManager\xsthdservice.cs" />
+    <Compile Include="bxManager\xsysckdservice.cs" />
+    <Compile Include="cgManager\cgddservice.cs" />
+    <Compile Include="cgManager\cgddlscxservice.cs" />
+    <Compile Include="cgManager\cgftservice.cs" />
+    <Compile Include="cgManager\cgqgservice.cs" />
+    <Compile Include="cgManager\cgrkservice.cs" />
+    <Compile Include="cgManager\cgthservice.cs" />
+    <Compile Include="cgManager\cgxjservice.cs" />
+    <Compile Include="cgManager\cgxjlscxservice.cs" />
+    <Compile Include="cgManager\cgyfckdservice.cs" />
+    <Compile Include="cgManager\cgyfkservice.cs" />
+    <Compile Include="kcManager\dbdservice.cs" />
+    <Compile Include="kcManager\pddservice.cs" />
+    <Compile Include="kcManager\tjdservice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{7b10e227-a45e-4930-b57b-8d130d7c9e0e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

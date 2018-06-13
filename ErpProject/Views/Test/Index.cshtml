@@ -1,0 +1,214 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/extjs/resources/css/ext-all.css" />
+    <script type="text/javascript" src="~/extjs/ext-all.js"></script>
+    <script type="text/javascript" src="~/extjs/ext-lang-zh_CN.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/js/cgdd.js"></script>
+    <script src="~/js/cgqg.js"></script>
+    <script src="~/js/bumen.js"></script>
+    <script src="~/js/cangku.js"></script>
+    <script src="~/js/cgddls.js"></script>
+    <script src="~/js/cgft.js"></script>
+    <script src="~/js/cgrk.js"></script>
+    <script src="~/js/cgth.js"></script>
+    <script src="~/js/cgxj.js"></script>
+    <script src="~/js/cgxjls.js"></script>
+    <script src="~/js/cgyfk.js"></script>
+    <script src="~/js/cgyfckd.js"></script>
+    <script src="~/js/dbd.js"></script>
+    <script src="~/js/gyslb.js"></script>
+    <script src="~/js/gyszwj.js"></script>
+    <script src="~/js/jldw.js"></script>
+    <script src="~/js/khlb.js"></script>
+    <script src="~/js/khzwj.js"></script>
+    <script src="~/js/lrpgcx.js"></script>
+    <script src="~/js/ryzwj.js"></script>
+    <script src="~/js/tiaojia.js"></script>
+    <script src="~/js/piandian.js"></script>
+    <script src="~/js/wllb.js"></script>
+    <script src="~/js/xsbjd.js"></script>
+    <script src="~/js/xsckd.js"></script>
+    <script src="~/js/xsdd.js"></script>
+    <script src="~/js/wlzwj.js"></script>
+    <script src="~/js/xslscx.js"></script>
+    <script src="~/js/xsysckd.js"></script>
+    <script src="~/js/xsthd.js"></script>
+    <style>
+        .x-tree-panel .x-grid-row .x-grid-cell-inner
+        {
+            height: 30px;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            vertical-align: middle;
+            width: 100%;
+            line-height: 20px;
+        }
+    </style>
+    <script>
+        Ext.onReady(function () {
+            var store = Ext.create('Ext.data.TreeStore', {
+                root: {
+                    text: "导航者",
+                    expanded: true,
+                    children: [{
+                        text: "采购管理",
+                        id: "order",
+                        expanded: false, //True如果节点是展开的。 
+                        children: [{ id: "orderqinggou", text: "采购请购单", leaf: true },
+                            { id: "orderdingdan", text: "采购订单", leaf: true },
+                            { id: "orderfentan", text: "采购分摊", leaf: true },
+                            { id: "orderruku", text: "采购入库单", leaf: true },
+                            { id: "ordertuihuo", text: "采购退货单", leaf: true },
+                            { id: "orderxunjia", text: "采购询价单", leaf: true },
+                            { id: "orderyfk", text: "预付款", leaf: true },
+                            { id: "orderscour", text: "应付冲款单", leaf: true }
+                        ]
+                    }, {
+                        text: "销售管理",
+                        expanded: false, //True如果节点是展开的。 .
+                        children: [{ id: "salebaojia", text: "销售报价单", leaf: true },
+                                { id: "saleorder", text: "销售订单", leaf: true },
+                                { id: "salechuku", text: "销售出库单", leaf: true },
+                                { id: "saletuihuo", text: "销售退货单", leaf: true },
+                                { id: "salescour", text: "应收冲款单", leaf: true }
+                        ]
+                    }, {
+                        text: "库存管理", expanded: false, //True如果节点是展开的。 .
+                        children: [
+            //						{text: "销售出库单", leaf: true },
+            //		                {text: "销售退货单", leaf: true},
+            //		                { text: "采购入库单", leaf: true},
+            //		                { text: "采购退货单", leaf: true},
+                                    { id: "diaobo", text: "调拨单", leaf: true },
+                                    { id: "pandian", text: "盘点单", leaf: true },
+                                    { id: "tiaojia", text: "调价单", leaf: true }
+                        ]
+                    }, {
+                        text: "基本资料",
+                        expanded: false, //True如果节点是展开的。 .
+                        children: [{ id: "cangku", text: "仓库", leaf: true },
+                                { id: "bumen", text: "部门", leaf: true },
+                                { id: "wuliaotype", text: "物料类别", leaf: true },
+                                { id: "wuliaoflies", text: "物料主文件", leaf: true },
+                                { id: "kuhutype", text: "客户类别", leaf: true },
+                                { id: "kuhuflies", text: "客户主文件", leaf: true },
+                                { id: "gyshtype", text: "供应商类别", leaf: true },
+                                { id: "gyshflies", text: "供应商主文件", leaf: true },
+                                { id: "jldw", text: "计量单位", leaf: true },
+                                { id: "peopleflies", text: "人员主文件", leaf: true }]
+                    }]
+                }
+            });
+
+            new Ext.Viewport({
+                layout: 'border',
+                tltle: 'Border Layout',
+                defaults: {
+                    collapsible: true, // 支持该区域的展开和折叠  
+                    split: true, // 支持用户拖放改变该区域的大小  
+                }, items: [{
+                    titlr: 'ext-all.js',
+                    region: 'center',
+                    collapsible: false,
+                    id: "Test",
+                    html: ''
+                }, {
+                    title: '菜单栏',
+                    region: 'west',
+                    width: 260,
+                    items: Ext.create('Ext.tree.Panel', {
+                        id: "tree",
+                        lines: true, //树线，默认为true。 
+                        height: "100%",
+                        border: 0,
+                        store: store, //数据源
+                        renderTo: Ext.getBody(), //指定元素的id, 一个DOM元素或现有的元素，这个组件将被渲染成.
+                        autoScroll: true, //自动滚动条  
+                        animate: true, //动画效果  
+                        rootVisible: true,
+                        listeners: {
+                            itemclick: function (view, rec, el, index, e) {
+                                var selNodes = Ext.getCmp('tree');
+                                console.info(selNodes)
+                                if (rec.internalId == "orderqinggou") {
+                                    cgqg().show();
+                                } else if (rec.internalId == "orderdingdan")
+                                    cgdd().show();
+                                else if (rec.internalId == "orderxunjia")
+                                    cgxj().show();
+                                else if (rec.internalId == "orderruku")
+                                    cgrk().show();
+                                else if (rec.internalId == "orderfentan")
+                                    cgft().show();
+                                else if (rec.internalId == "ordertuihuo")
+                                    cgth().show();
+                                else if (rec.internalId == "orderyfk")
+                                    cgyfk().show();
+                                else if (rec.internalId == "orderscour")
+                                    cgyfckd().show();
+                                else if (rec.internalId == "salebaojia")
+                                    xsbjd().show();
+                                else if (rec.internalId == "saleorder")
+                                    xsdd().show();
+                                else if (rec.internalId == "salechuku")
+                                    xsckd().show();
+                                else if (rec.internalId == "saletuihuo")
+                                    xsthd().show();
+                                else if (rec.internalId == "salescour")
+                                    xsysckd().show();
+                                else if (rec.internalId == "diaobo")
+                                    dbd().show();
+                                else if (rec.internalId == "tiaojia")
+                                    tiaojia().show();
+                                else if (rec.internalId == "pandian")
+                                    piandian().show();
+                                else if (rec.internalId == "cangku")
+                                    cangku().show();
+                                else if (rec.internalId == "bumen")
+                                    bumen().show();
+                                else if (rec.internalId == "jldw")
+                                    jldw().show();
+                                else if (rec.internalId == "gyshtype")
+                                    gyslb().show();
+                                else if (rec.internalId == "gyshflies")
+                                    gyszwj().show();
+                                else if (rec.internalId == "kuhutype")
+                                    khlb().show();
+                                else if (rec.internalId == "kuhuflies")
+                                    khzwj().show();
+                                else if (rec.internalId == "peopleflies")
+                                    ryzwj().show();
+                                else if (rec.internalId == "wuliaotype")
+                                    wllb().show();
+                                else if (rec.internalId == "wuliaoflies")
+                                    wlzwj().show();
+
+                            }
+                        }
+                    })
+                }, {
+                    title: 'ERP系统',
+                    region: 'north',
+                    height: 100,
+                    html: ''
+                }]
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

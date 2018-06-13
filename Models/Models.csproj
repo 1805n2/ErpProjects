@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B10E227-A45E-4930-B57B-8D130D7C9E0E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="assignstyle.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="billtui.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="billtutype.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="branch.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buysearchdetails.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buysearchmaster.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buytype.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="caigoumingxi.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="caigouqinggou.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="clientmaster.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="closstype.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="daassigbuymain.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detailorderpay.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dingdancong.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dingdanzhu.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dsassignbuysub.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dsassignfee.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dsdsadjustmain.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dsdsadjustsub.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErpData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErpData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErpData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErpData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErpData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="feeclass.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gfmeansoay.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gmeans.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gmeansadeinite.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="khls.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orderdetails.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orderpay.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="orders.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pandian.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pandianmingxi.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pay.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="providertype.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qydetail.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="returnods.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rk_minxi.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rk_zhubiao.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="saleck.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="salemx.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shopdetail.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="staff.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="storage.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="takeorderpay.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="unit.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wllb.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wlzwj.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="x_documents.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="x_sal.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ysbill.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ysckbill.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ysckdetail.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ysdetail.cs">
+      <DependentUpon>ErpData.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="ErpData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ErpData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ErpData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ErpData.edmx</DependentUpon>
+      <LastGenOutput>ErpData.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ErpData.edmx.diagram">
+      <DependentUpon>ErpData.edmx</DependentUpon>
+    </None>
+    <None Include="ErpData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ErpData.edmx</DependentUpon>
+      <LastGenOutput>ErpData.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
