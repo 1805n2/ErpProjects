@@ -44,35 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="basicInfo\ckservice.cs" />
-    <Compile Include="basicInfo\deptservice.cs" />
-    <Compile Include="basicInfo\gyslbservice.cs" />
-    <Compile Include="basicInfo\gyszwjservice.cs" />
-    <Compile Include="basicInfo\khlbservice.cs" />
-    <Compile Include="basicInfo\khzwjservice.cs" />
-    <Compile Include="basicInfo\ryzwjservice.cs" />
-    <Compile Include="basicInfo\wllbservice.cs" />
-    <Compile Include="basicInfo\wlzwjservice.cs" />
-    <Compile Include="bxManager\xsbjdservice.cs" />
-    <Compile Include="bxManager\xsckdservice.cs" />
-    <Compile Include="bxManager\xsddservice.cs" />
-    <Compile Include="bxManager\xslrpgcxservice.cs" />
-    <Compile Include="bxManager\xslsjycxservice.cs" />
-    <Compile Include="bxManager\xsthdservice.cs" />
-    <Compile Include="bxManager\xsysckdservice.cs" />
-    <Compile Include="cgManager\cgddservice.cs" />
-    <Compile Include="cgManager\cgddlscxservice.cs" />
-    <Compile Include="cgManager\cgftservice.cs" />
-    <Compile Include="cgManager\cgqgservice.cs" />
-    <Compile Include="cgManager\cgrkservice.cs" />
-    <Compile Include="cgManager\cgthservice.cs" />
-    <Compile Include="cgManager\cgxjservice.cs" />
-    <Compile Include="cgManager\cgxjlscxservice.cs" />
-    <Compile Include="cgManager\cgyfckdservice.cs" />
-    <Compile Include="cgManager\cgyfkservice.cs" />
-    <Compile Include="kcManager\dbdservice.cs" />
-    <Compile Include="kcManager\pddservice.cs" />
-    <Compile Include="kcManager\tjdservice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +51,19 @@
       <Project>{7b10e227-a45e-4930-b57b-8d130d7c9e0e}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CJ\" />
+    <Folder Include="FYJ\" />
+    <Folder Include="HB\" />
+    <Folder Include="KW\" />
+    <Folder Include="LB\" />
+    <Folder Include="LSH\" />
+    <Folder Include="LYF\" />
+    <Folder Include="LZX\" />
+    <Folder Include="SHL\" />
+    <Folder Include="YJH\" />
+    <Folder Include="YXW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
