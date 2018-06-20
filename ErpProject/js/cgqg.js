@@ -1,5 +1,4 @@
 ﻿function cgqg() {
-
     var fielmenu = new Ext.menu.Menu({
         items: [{
             text: '历史交易查询', handler: function () {
@@ -14,38 +13,13 @@
     var fielmenu3 = new Ext.menu.Menu({
         items: [{ text: '单况状态切换' }]
     });
-
-    var stroedt = Ext.create('Ext.data.Store', {
-        model: 'User',
-        fields: ['name', 'dizhi', 'bianma', 'bianma', 'lianxi'],
-        data: {
-            'items': [
-                { 'name': '10111', "dizhi": "北京", "bianma": "40016", "lianxi": "李忠" },
-                { 'name': '10112', "dizhi": "上海", "bianma": "68016", "lianxi": "朱经理" },
-                { 'name': '10113', "dizhi": "天津", "bianma": "408973", "lianxi": "周总" },
-                { 'name': '10114', "dizhi": "重庆", "bianma": "404567", "lianxi": "刘经理" }
-            ]
-        },
-        proxy: {
-            type: 'memory',
-            reader: {
-                type: 'json',
-                root: 'items'
-            }
-        }
-    });
-
-
-
-    var grids = Ext.create('Ext.grid.Panel', {
-
+    var grids = Ext.create('Ext.grid.Panel', {//创建一个grid将数据显示出来
         listeners: {
             containerdblclick: function (grid, e, eOpts) { //单击事件
-                grid.getStore().add({ 'name': '12', 'dizhi': '', 'bianma': '', 'lianxi': '' });
+                grid.getStore().add({ 'name': '12', 'dizhi': '', 'bianma': '', 'lianxi': '' });//新增一条信息
 
             },
             itemcontextmenu: function () {
-
                 e.preventDefault();
                 new Ext.menu.Menu({
                     items: [{
@@ -80,7 +54,7 @@
                              xtype: 'textfield',
                              listeners: {
                                  focus: function (grid, e, eOpts) {
-                                     windows2.show();
+                                     windows3.show();
                                  }
 
                              }
@@ -120,12 +94,13 @@
         { xtype: "textfield", disabled: true, width: 90, margin: '0 0 0 0', value: '0.00' }],
     });
 
-    var tableds = Ext.create('Ext.TabPanel', {
+    var tableds = Ext.create('Ext.TabPanel', {//选项卡
         width: "100%",
         height: 230,
         autoScroll: true,
         bodyPadding: 5,
-        items: [{ title: '内容', autoScroll: true, items: [filterPanel] }, { title: '备注', xtype: 'textarea', name: 'Remark', fieldLabel: '备注', labelWidth: 30, }],
+        items: [{ title: '内容', autoScroll: true, items: [filterPanel] },
+            { title: '备注', xtype: 'textarea', name: 'Remark', fieldLabel: '备注', labelWidth: 30, }],
     });
 
 
@@ -170,6 +145,7 @@
 
 
     var forms = Ext.create('Ext.form.Panel', {
+        id: 'form',
         bodyPadding: 5,
         height: '100%',
         layout: "column",
@@ -182,14 +158,29 @@
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'typeName',
+            listeners: {//点击弹出一个窗口
+                focus: function (grid, e, eOpts) {
+                    GetBuyType().show();//窗口显示
+                }
+            }
+        }, {
+            xtype: 'textfield',
+            fieldLabel: '类型id',
+            width: 250,
+            hidden: true,
+            labelWidth: 80,
+            anchor: '100%',
+            id: 'typeid',
         }, {
             style: 'margin-left:9px;color:blue',
             xtype: 'datefield',
             name: 'BillDate',
             fieldLabel: '单据日期',
-
             width: 250,
             labelWidth: 70,
+            value: new Date(),
+            id:'djDate',
             anchor: '100%',
         }, {
             xtype: 'textfield',
@@ -204,6 +195,7 @@
             name: 'BillNo',
             style: "color:blue;margin-left:9px",
             fieldLabel: '单据号码',
+            id:'djnumber',
             width: 250,
             labelWidth: 70,
             anchor: '100%',
@@ -221,19 +213,98 @@
         draggable: true,
         anchor: '100%',
         items: [forms],
-        bbar: [{ xtype: "splitbutton", text: '转单', width: 90, menu: fielmenu2 }, { xtype: "splitbutton", text: '功能', width: 90, menu: fielmenu3 }],
+        bbar: [{ xtype: "splitbutton", text: '转单', width: 90, menu: fielmenu2 },
+            { xtype: "splitbutton", text: '功能', width: 90, menu: fielmenu3 }],
     });
 
     var windows2 = new Ext.Window({
         width: 400,
         height: 300,
-        title: "物料选择",
+        title: "采购请购类型设定",
         closable: true,
         resizable: false, //设置是否可以改变大小
         draggable: true,
         closeAction: "hide",
-    });
 
+    });
+    var windows3 = new Ext.Window({
+        width: 400,
+        height: 300,
+        title: "物料主文件设定",
+        closable: true,
+        resizable: false, //设置是否可以改变大小
+        draggable: true,
+        closeAction: "hide",
+
+    });
+    function GetBuyType() {
+        var obj = {};//将数据绑定到对象中
+        $.ajax({//使用ajax将数据查出来
+            type: "POST",
+            dataType:"json",
+            url: "/Test/GetBuyType",
+            data: "{}",
+            contentType: "application/json",
+            async: false,
+            success: function (result) {
+                obj = result;
+            }, error: function (ex) {
+                alert("Error:" + ex.responseText);
+            }
+        });
+        var userStore = Ext.create('Ext.data.Store', {//将obj中的数据取出来
+            data: obj,
+            fields: ['Buytypeid', 'BuytypeName']//填写数据库中需要查出的字段
+        });
+        var buyType = Ext.create('Ext.grid.Panel', {//创建一个grid，将查询出来的数据绑定在其中
+            renderTo: Ext.getBody(),//固定的，不可修改
+            columns: [
+                { header: '(类型编号)', dataIndex: 'Buytypeid', width: 80,},
+                { header: '(类型名称)', dataIndex: 'BuytypeName', width: 130,}
+            ], listeners: {
+                itemdblclick: function (dataview,
+               record, item, index, e) {//点击事件，将值传到文本框中
+                    Ext.getCmp("typeid").setValue(record.get("Buytypeid"));
+                    Ext.getCmp("typeName").setValue(record.get("BuytypeName"));
+                    caigouType.close();//当选中一条值之后关闭窗口
+                //    $.ajax({//使用ajax将数据查出来
+                //        type: "POST",
+                //        dataType: "json",
+                //        url: "/Test/GetBuyTypeId",
+                //        data: "{id:" + record.get("Buytypeid") + "}",
+                //        contentType: "application/json",
+                //        success: function (result) {
+                //            $.each(result, function (index, data) {
+                //                alert(data.BuytypeName);
+                //                Ext.getCmp("typeid").setValue(data.Buytypeid);
+                //                Ext.getCmp("typeName").setValue(data.BuytypeName);
+                //            })
+                           
+                //        }, error: function (ex) {
+                //            alert("Error:" + ex.responseText);
+                //        }
+                //    });
+                }
+            },
+            store: userStore,
+            height: 130,
+            width: 480,
+            autoScroll: false
+        });
+        var caigouType = new Ext.Window({//创建一个窗口
+            width: 300,
+            height: 225,
+            title: "采购请购类型",
+            closable: true,
+            resizable: false, //设置是否可以改变大小
+            draggable: true,
+            anchor: '100%',
+            autoScroll: true,
+            items: [buyType],//将创建好的内容绑定在窗口中
+        });
+
+        return caigouType;
+    }
     function afronction() {
         var song = Ext.encode(forms.getForm().getValues());
         Ext.Ajax.request(
@@ -257,4 +328,5 @@
         alert(song);// 序列化表单
     }
     return windowst;
+
 }

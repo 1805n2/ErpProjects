@@ -7,3 +7,12 @@ E:\ErpProject\Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ErpProject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\ErpProject\Models\obj\Debug\Models.dll
 E:\ErpProject\Models\obj\Debug\Models.pdb
+D:\work\ErpProjects\Models\bin\Debug\Models.dll.config
+D:\work\ErpProjects\Models\bin\Debug\Models.dll
+D:\work\ErpProjects\Models\bin\Debug\Models.pdb
+D:\work\ErpProjects\Models\bin\Debug\EntityFramework.dll
+D:\work\ErpProjects\Models\bin\Debug\EntityFramework.xml
+D:\work\ErpProjects\Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\work\ErpProjects\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\work\ErpProjects\Models\obj\Debug\Models.dll
+D:\work\ErpProjects\Models\obj\Debug\Models.pdb

@@ -8,3 +8,13 @@ E:\ErpProject\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ErpProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\ErpProject\DAL\obj\Debug\DAL.dll
 E:\ErpProject\DAL\obj\Debug\DAL.pdb
+D:\work\ErpProjects\DAL\bin\Debug\DAL.dll
+D:\work\ErpProjects\DAL\bin\Debug\DAL.pdb
+D:\work\ErpProjects\DAL\bin\Debug\EntityFramework.dll
+D:\work\ErpProjects\DAL\bin\Debug\Models.dll
+D:\work\ErpProjects\DAL\bin\Debug\Models.pdb
+D:\work\ErpProjects\DAL\bin\Debug\EntityFramework.xml
+D:\work\ErpProjects\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\work\ErpProjects\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\work\ErpProjects\DAL\obj\Debug\DAL.dll
+D:\work\ErpProjects\DAL\obj\Debug\DAL.pdb

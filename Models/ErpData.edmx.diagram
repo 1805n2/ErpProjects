@@ -133,6 +133,8 @@
         <AssociationConnector Association="erpsystemModel.FK_x_sal1" ManuallyRouted="false" />
         <AssociationConnector Association="erpsystemModel.FK_x_sal" ManuallyRouted="false" />
         <AssociationConnector Association="erpsystemModel.FK_ysckdetail" ManuallyRouted="false" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchdetails2" />
+        <AssociationConnector Association="erpsystemModel.FK_ysdetail1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1451,6 +1451,7 @@
     <Content Include="extjs\resources\themes\templates\resources\sass\config.rb" />
     <Content Include="extjs\resources\themes\templates\resources\sass\my-ext-theme.scss" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="js\asd.js" />
     <Content Include="js\bumen.js" />
     <Content Include="js\cangku.js" />
     <Content Include="js\cgdd.js" />
@@ -1464,6 +1465,7 @@
     <Content Include="js\cgyfckd.js" />
     <Content Include="js\cgyfk.js" />
     <Content Include="js\dbd.js" />
+    <Content Include="js\DEmo.js" />
     <Content Include="js\gyslb.js" />
     <Content Include="js\gyszwj.js" />
     <Content Include="js\jldw.js" />

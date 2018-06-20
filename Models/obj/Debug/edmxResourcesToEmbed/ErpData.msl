@@ -21,6 +21,7 @@
           <ScalarProperty Name="marker" ColumnName="marker" />
           <ScalarProperty Name="permitter" ColumnName="permitter" />
           <ScalarProperty Name="ware" ColumnName="ware" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -137,6 +138,7 @@
           <ScalarProperty Name="lastholepurchaseunit" ColumnName="lastholepurchaseunit" />
           <ScalarProperty Name="lastholepurchasebidmoney" ColumnName="lastholepurchasebidmoney" />
           <ScalarProperty Name="weisum" ColumnName="weisum" />
+          <ScalarProperty Name="lanhao" ColumnName="lanhao" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -156,6 +158,7 @@
           <ScalarProperty Name="qinggoubumen" ColumnName="qinggoubumen" />
           <ScalarProperty Name="qinggoudepid" ColumnName="qinggoudepid" />
           <ScalarProperty Name="qinggoubuyid" ColumnName="qinggoubuyid" />
+          <ScalarProperty Name="checkshh" ColumnName="checkshh" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -215,6 +218,7 @@
           <ScalarProperty Name="fromno" ColumnName="fromno" />
           <ScalarProperty Name="details" ColumnName="details" />
           <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -251,6 +255,7 @@
           <ScalarProperty Name="exchrate" ColumnName="exchrate" />
           <ScalarProperty Name="maker" ColumnName="maker" />
           <ScalarProperty Name="fuhe" ColumnName="fuhe" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -392,6 +397,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="khls">
+      <EntityTypeMapping TypeName="erpsystemModel.khls">
+        <MappingFragment StoreEntitySet="khls">
+          <ScalarProperty Name="lsid" ColumnName="lsid" />
+          <ScalarProperty Name="khid" ColumnName="khid" />
+          <ScalarProperty Name="lydb" ColumnName="lydb" />
+          <ScalarProperty Name="lydh" ColumnName="lydh" />
+          <ScalarProperty Name="xxje" ColumnName="xxje" />
+          <ScalarProperty Name="sjje" ColumnName="sjje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="orderdetails">
       <EntityTypeMapping TypeName="erpsystemModel.orderdetails">
         <MappingFragment StoreEntitySet="orderdetails">
@@ -433,10 +450,12 @@
           <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
           <ScalarProperty Name="style" ColumnName="style" />
           <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
           <ScalarProperty Name="department" ColumnName="department" />
           <ScalarProperty Name="exceter" ColumnName="exceter" />
           <ScalarProperty Name="project" ColumnName="project" />
           <ScalarProperty Name="checkman" ColumnName="checkman" />
+          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -528,6 +547,7 @@
           <ScalarProperty Name="money" ColumnName="money" />
           <ScalarProperty Name="discountmoney" ColumnName="discountmoney" />
           <ScalarProperty Name="offsetmoney" ColumnName="offsetmoney" />
+          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -575,6 +595,7 @@
           <ScalarProperty Name="rid" ColumnName="rid" />
           <ScalarProperty Name="rbid" ColumnName="rbid" />
           <ScalarProperty Name="rqgid" ColumnName="rqgid" />
+          <ScalarProperty Name="recheck" ColumnName="recheck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -641,6 +662,7 @@
           <ScalarProperty Name="saletouch" ColumnName="saletouch" />
           <ScalarProperty Name="salecheck" ColumnName="salecheck" />
           <ScalarProperty Name="saleckdh" ColumnName="saleckdh" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -734,6 +756,7 @@
           <ScalarProperty Name="department" ColumnName="department" />
           <ScalarProperty Name="takeomoney" ColumnName="takeomoney" />
           <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -803,6 +826,7 @@
           <ScalarProperty Name="exchange" ColumnName="exchange" />
           <ScalarProperty Name="touching" ColumnName="touching" />
           <ScalarProperty Name="fuhe" ColumnName="fuhe" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -841,6 +865,7 @@
           <ScalarProperty Name="ysmoney3" ColumnName="ysmoney3" />
           <ScalarProperty Name="yszd" ColumnName="yszd" />
           <ScalarProperty Name="yssh" ColumnName="yssh" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -861,6 +886,7 @@
           <ScalarProperty Name="ysckzd" ColumnName="ysckzd" />
           <ScalarProperty Name="yscksh" ColumnName="yscksh" />
           <ScalarProperty Name="ysckzhe" ColumnName="ysckzhe" />
+          <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
