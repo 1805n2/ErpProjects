@@ -32,15 +32,15 @@ namespace DAL
                     };
             return v;
         }
-        public static string GetByBillno(DateTime date)
-        {
-            erpsystemEntities e = new erpsystemEntities();
-            var v = from p in e.caigouqinggou
-                    select new
-                    {
+        //public static string GetByBillno(DateTime date)
+        //{
+        //    erpsystemEntities e = new erpsystemEntities();
+        //    var v = from p in e.caigouqinggou
+        //            select new
+        //            {
 
-                    };
-            return v;
-        }
+        //            };
+        //    return v;
+        //}
     }
 }

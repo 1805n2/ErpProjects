@@ -878,6 +878,7 @@
     <Property Name="ozitwo" Type="varchar" MaxLength="50" />
     <Property Name="ostoreorder" Type="int" />
     <Property Name="osisdel" Type="int" />
+    <Property Name="otax" Type="float" />
   </EntityType>
   <EntityType Name="pandian">
     <Key>

@@ -5,7 +5,134 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3ccdef85d6034bc4ac95ad302ec0b6d8" Name="关系图1">
-        </Diagram>
+        <EntityTypeShape EntityType="erpsystemModel.assignstyle" Width="1.5" PointX="0.40893850494592382" PointY="3.4724514053540543" />
+        <EntityTypeShape EntityType="erpsystemModel.billtui" Width="1.5" PointX="7.7577892913286526" PointY="23.23596602270192" />
+        <EntityTypeShape EntityType="erpsystemModel.billtutype" Width="1.5" PointX="2.9068692228323174" PointY="19.235898846404581" />
+        <EntityTypeShape EntityType="erpsystemModel.branch" Width="1.5" PointX="2.1259077014987859" PointY="16.555356197317764" />
+        <EntityTypeShape EntityType="erpsystemModel.buysearchdetails" Width="1.5" PointX="0.92054165570090607" PointY="20.457859749187651" />
+        <EntityTypeShape EntityType="erpsystemModel.buysearchmaster" Width="1.5" PointX="3.0996937095651838" PointY="20.789603853965925" />
+        <EntityTypeShape EntityType="erpsystemModel.buytype" Width="1.5" PointX="7.2002180624754253" PointY="27.345431415059338" />
+        <EntityTypeShape EntityType="erpsystemModel.caigoumingxi" Width="1.5" PointX="10.721672281027619" PointY="4.75828755123461" />
+        <EntityTypeShape EntityType="erpsystemModel.caigouqinggou" Width="1.5" PointX="4.0092099942309831" PointY="28.292281581225005" />
+        <EntityTypeShape EntityType="erpsystemModel.clientmaster" Width="1.5" PointX="2.7404664283341109" PointY="21.226811538090377" />
+        <EntityTypeShape EntityType="erpsystemModel.closstype" Width="1.5" PointX="1.2340090764844831" PointY="14.778212792602467" />
+        <EntityTypeShape EntityType="erpsystemModel.daassigbuymain" Width="1.5" PointX="5.5436312805598744" PointY="6.6034341336243942" />
+        <EntityTypeShape EntityType="erpsystemModel.detailorderpay" Width="1.5" PointX="8.0348863657726373" PointY="11.614503523155349" />
+        <EntityTypeShape EntityType="erpsystemModel.dingdancong" Width="1.5" PointX="0.18661730745184108" PointY="26.990548861674288" />
+        <EntityTypeShape EntityType="erpsystemModel.dingdanzhu" Width="1.5" PointX="6.2931006170311479" PointY="21.758290330766837" />
+        <EntityTypeShape EntityType="erpsystemModel.dsassignbuysub" Width="1.5" PointX="5.289966202010385" PointY="31.6388825474488" />
+        <EntityTypeShape EntityType="erpsystemModel.dsassignfee" Width="1.5" PointX="2.3260931756003265" PointY="21.2544590035707" />
+        <EntityTypeShape EntityType="erpsystemModel.dsdsadjustmain" Width="1.5" PointX="5.4696407120067816" PointY="18.456657060634651" />
+        <EntityTypeShape EntityType="erpsystemModel.dsdsadjustsub" Width="1.5" PointX="8.66785605469153" PointY="8.5577572624002389" />
+        <EntityTypeShape EntityType="erpsystemModel.feeclass" Width="1.5" PointX="4.223270541160959" PointY="27.628158850422203" />
+        <EntityTypeShape EntityType="erpsystemModel.gfmeansoay" Width="1.5" PointX="8.1652812921280429" PointY="9.1689526779432562" />
+        <EntityTypeShape EntityType="erpsystemModel.gmeans" Width="1.5" PointX="7.8764108959009924" PointY="15.228970743356724" />
+        <EntityTypeShape EntityType="erpsystemModel.gmeansadeinite" Width="1.5" PointX="2.8873208588395829" PointY="18.392873668294808" />
+        <EntityTypeShape EntityType="erpsystemModel.khls" Width="1.5" PointX="0.41446656007993343" PointY="6.5019929737327589" />
+        <EntityTypeShape EntityType="erpsystemModel.orderdetails" Width="1.5" PointX="2.6637305238580939" PointY="18.151456856239335" />
+        <EntityTypeShape EntityType="erpsystemModel.orderpay" Width="1.5" PointX="4.4275452384853473" PointY="29.01597766439243" />
+        <EntityTypeShape EntityType="erpsystemModel.orders" Width="1.5" PointX="7.1104448619812946" PointY="26.268634376241188" />
+        <EntityTypeShape EntityType="erpsystemModel.pandian" Width="1.5" PointX="1.3711131966538321" PointY="18.312289887253328" />
+        <EntityTypeShape EntityType="erpsystemModel.pandianmingxi" Width="1.5" PointX="7.7585379964478962" PointY="14.084003976585345" />
+        <EntityTypeShape EntityType="erpsystemModel.pay" Width="1.5" PointX="0.67860089274058155" PointY="28.137147737730828" />
+        <EntityTypeShape EntityType="erpsystemModel.providertype" Width="1.5" PointX="7.026844759949876" PointY="10.678538342322474" />
+        <EntityTypeShape EntityType="erpsystemModel.qydetail" Width="1.5" PointX="11.915157956963014" PointY="12.696487417768914" />
+        <EntityTypeShape EntityType="erpsystemModel.returnods" Width="1.5" PointX="2.3817312039349838" PointY="8.6269673447250241" />
+        <EntityTypeShape EntityType="erpsystemModel.rk_minxi" Width="1.5" PointX="5.4700082696368959" PointY="29.946122496363763" />
+        <EntityTypeShape EntityType="erpsystemModel.rk_zhubiao" Width="1.5" PointX="4.7848960686404709" PointY="10.134469022105666" />
+        <EntityTypeShape EntityType="erpsystemModel.saleck" Width="1.5" PointX="5.1165017770214476" PointY="2.1334693888823826" />
+        <EntityTypeShape EntityType="erpsystemModel.salemx" Width="1.5" PointX="6.3863350517984179" PointY="11.679751625135426" />
+        <EntityTypeShape EntityType="erpsystemModel.shopdetail" Width="1.5" PointX="11.794773034655849" PointY="26.121738192682031" />
+        <EntityTypeShape EntityType="erpsystemModel.staff" Width="1.5" PointX="9.6654189013249336" PointY="31.554046004802942" />
+        <EntityTypeShape EntityType="erpsystemModel.storage" Width="1.5" PointX="11.588966941269565" PointY="3.0334899737655605" />
+        <EntityTypeShape EntityType="erpsystemModel.takeorderpay" Width="1.5" PointX="3.9409722611033224" PointY="25.99565317947215" />
+        <EntityTypeShape EntityType="erpsystemModel.unit" Width="1.5" PointX="7.4577252992697645" PointY="30.630144789177059" />
+        <EntityTypeShape EntityType="erpsystemModel.user" Width="1.5" PointX="3.7318136355522151" PointY="17.090598874301929" />
+        <EntityTypeShape EntityType="erpsystemModel.wllb" Width="1.5" PointX="4.754136093312006" PointY="11.934280758693014" />
+        <EntityTypeShape EntityType="erpsystemModel.wlzwj" Width="1.5" PointX="6.5993089296851819" PointY="28.273418678098089" />
+        <EntityTypeShape EntityType="erpsystemModel.x_documents" Width="1.5" PointX="11.162708401290098" PointY="9.0302788359254027" />
+        <EntityTypeShape EntityType="erpsystemModel.x_sal" Width="1.5" PointX="2.530558080659508" PointY="15.124907038698396" />
+        <EntityTypeShape EntityType="erpsystemModel.ysbill" Width="1.5" PointX="3.33371480895845" PointY="11.095545103352306" />
+        <EntityTypeShape EntityType="erpsystemModel.ysckbill" Width="1.5" PointX="3.523199297265708" PointY="8.3072749713003979" />
+        <EntityTypeShape EntityType="erpsystemModel.ysckdetail" Width="1.5" PointX="3.3291328248237884" PointY="31.072554945513865" />
+        <EntityTypeShape EntityType="erpsystemModel.ysdetail" Width="1.5" PointX="1.427319355973657" PointY="3.1591216638493917" />
+        <AssociationConnector Association="erpsystemModel.FK_daassigbuymain" />
+        <AssociationConnector Association="erpsystemModel.FK_billtui" />
+        <AssociationConnector Association="erpsystemModel.FK_billtui1" />
+        <AssociationConnector Association="erpsystemModel.FK_billtui2" />
+        <AssociationConnector Association="erpsystemModel.FK_billtui3" />
+        <AssociationConnector Association="erpsystemModel.FK_billtutype" />
+        <AssociationConnector Association="erpsystemModel.FK_khls3" />
+        <AssociationConnector Association="erpsystemModel.FK_billtutype1" />
+        <AssociationConnector Association="erpsystemModel.FK_billtutype2" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchmaster3" />
+        <AssociationConnector Association="erpsystemModel.FK_caigouqinggou2" />
+        <AssociationConnector Association="erpsystemModel.FK_orderpay" />
+        <AssociationConnector Association="erpsystemModel.FK_orders3" />
+        <AssociationConnector Association="erpsystemModel.FK_pay1" />
+        <AssociationConnector Association="erpsystemModel.FK_returnods1" />
+        <AssociationConnector Association="erpsystemModel.FK_staff" />
+        <AssociationConnector Association="erpsystemModel.FK_takeorderpay" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchdetails" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchdetails1" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchmaster" />
+        <AssociationConnector Association="erpsystemModel.FK_buysearchmaster1" />
+        <AssociationConnector Association="erpsystemModel.FK_caigouqinggou3" />
+        <AssociationConnector Association="erpsystemModel.FK_caigoumingxi" />
+        <AssociationConnector Association="erpsystemModel.FK_caigoumingxi2" />
+        <AssociationConnector Association="erpsystemModel.FK_caigouqinggou" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdanzhu" />
+        <AssociationConnector Association="erpsystemModel.FK_saleck" />
+        <AssociationConnector Association="erpsystemModel.FK_x_documents" />
+        <AssociationConnector Association="erpsystemModel.FK_ysbill" />
+        <AssociationConnector Association="erpsystemModel.FK_ysckbill" />
+        <AssociationConnector Association="erpsystemModel.FK_dsassignbuysub" />
+        <AssociationConnector Association="erpsystemModel.FK_dsassignfee" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdancong" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdancong1" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdancong2" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdanzhu1" />
+        <AssociationConnector Association="erpsystemModel.FK_dingdanzhu2" />
+        <AssociationConnector Association="erpsystemModel.FK_salemx3" />
+        <AssociationConnector Association="erpsystemModel.FK_dsassignbuysub1" />
+        <AssociationConnector Association="erpsystemModel.FK_dsassignbuysub2" />
+        <AssociationConnector Association="erpsystemModel.FK_dsassignfee1" />
+        <AssociationConnector Association="erpsystemModel.FK_dsdsadjustsub" />
+        <AssociationConnector Association="erpsystemModel.FK_dsdsadjustsub1" />
+        <AssociationConnector Association="erpsystemModel.FK_gfmeansoay" />
+        <AssociationConnector Association="erpsystemModel.FK_gmeansadeinite" />
+        <AssociationConnector Association="erpsystemModel.FK_orders" />
+        <AssociationConnector Association="erpsystemModel.FK_khls" />
+        <AssociationConnector Association="erpsystemModel.FK_khls1" />
+        <AssociationConnector Association="erpsystemModel.FK_khls2" />
+        <AssociationConnector Association="erpsystemModel.FK_orderdetails" />
+        <AssociationConnector Association="erpsystemModel.FK_orderdetails2" />
+        <AssociationConnector Association="erpsystemModel.FK_orders2" />
+        <AssociationConnector Association="erpsystemModel.FK_qydetail" />
+        <AssociationConnector Association="erpsystemModel.FK_qydetail1" />
+        <AssociationConnector Association="erpsystemModel.FK_returnods" />
+        <AssociationConnector Association="erpsystemModel.FK_returnods2" />
+        <AssociationConnector Association="erpsystemModel.FK_rk_minxi" />
+        <AssociationConnector Association="erpsystemModel.FK_rk_zhubiao" />
+        <AssociationConnector Association="erpsystemModel.FK_saleck1" />
+        <AssociationConnector Association="erpsystemModel.FK_saleck2" />
+        <AssociationConnector Association="erpsystemModel.FK_saleck3" />
+        <AssociationConnector Association="erpsystemModel.FK_salemx" />
+        <AssociationConnector Association="erpsystemModel.FK_ysckdetail1" />
+        <AssociationConnector Association="erpsystemModel.FK_ysdetail" />
+        <AssociationConnector Association="erpsystemModel.FK_salemx1" />
+        <AssociationConnector Association="erpsystemModel.FK_salemx2" />
+        <AssociationConnector Association="erpsystemModel.FK_x_documents1" />
+        <AssociationConnector Association="erpsystemModel.FK_x_documents2" />
+        <AssociationConnector Association="erpsystemModel.FK_ysbil2" />
+        <AssociationConnector Association="erpsystemModel.FK_ysbill1" />
+        <AssociationConnector Association="erpsystemModel.FK_ysckbill1" />
+        <AssociationConnector Association="erpsystemModel.FK_ysckbill2" />
+        <AssociationConnector Association="erpsystemModel.FK_x_sal1" />
+        <AssociationConnector Association="erpsystemModel.FK_x_sal" />
+        <AssociationConnector Association="erpsystemModel.FK_ysdetail1" />
+        <AssociationConnector Association="erpsystemModel.FK_ysckdetail" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

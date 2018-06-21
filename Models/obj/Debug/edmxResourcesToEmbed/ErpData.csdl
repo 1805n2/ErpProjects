@@ -180,10 +180,6 @@
       <End Role="daassigbuymain" EntitySet="daassigbuymain" />
       <End Role="dsassignfee" EntitySet="dsassignfee" />
     </AssociationSet>
-    <AssociationSet Name="FK_detailorderpay" Association="erpsystemModel.FK_detailorderpay">
-      <End Role="orderpay" EntitySet="orderpay" />
-      <End Role="detailorderpay" EntitySet="detailorderpay" />
-    </AssociationSet>
     <AssociationSet Name="FK_dingdancong" Association="erpsystemModel.FK_dingdancong">
       <End Role="dingdanzhu" EntitySet="dingdanzhu" />
       <End Role="dingdancong" EntitySet="dingdancong" />
@@ -259,10 +255,6 @@
     <AssociationSet Name="FK_orderdetails2" Association="erpsystemModel.FK_orderdetails2">
       <End Role="wlzwj" EntitySet="wlzwj" />
       <End Role="orderdetails" EntitySet="orderdetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_pay" Association="erpsystemModel.FK_pay">
-      <End Role="orderpay" EntitySet="orderpay" />
-      <End Role="pay" EntitySet="pay" />
     </AssociationSet>
     <AssociationSet Name="FK_orders2" Association="erpsystemModel.FK_orders2">
       <End Role="user" EntitySet="user" />
@@ -356,41 +348,37 @@
       <End Role="x_documents" EntitySet="x_documents" />
       <End Role="x_sal" EntitySet="x_sal" />
     </AssociationSet>
-    <AssociationSet Name="FK_ysckdetail" Association="erpsystemModel.FK_ysckdetail">
-      <End Role="ysckbill" EntitySet="ysckbill" />
-      <End Role="ysckdetail" EntitySet="ysckdetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_buysearchdetails2" Association="erpsystemModel.FK_buysearchdetails2">
-      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
-      <End Role="buysearchdetails" EntitySet="buysearchdetails" />
-    </AssociationSet>
     <AssociationSet Name="FK_ysdetail1" Association="erpsystemModel.FK_ysdetail1">
       <End Role="ysbill" EntitySet="ysbill" />
       <End Role="ysdetail" EntitySet="ysdetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysckdetail" Association="erpsystemModel.FK_ysckdetail">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="assignstyle">
     <Key>
       <PropertyRef Name="assignstyleid" />
     </Key>
-    <Property Name="assignstyleid" Type="Int32" Nullable="false" />
-    <Property Name="assignstylename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="assignstyleid" Nullable="false" />
+    <Property Type="String" Name="assignstylename" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="assignstyle" ToRole="daassigbuymain" />
   </EntityType>
   <EntityType Name="billtui">
     <Key>
       <PropertyRef Name="billno" />
     </Key>
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="billdate" Type="DateTime" />
-    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="moneystyle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="includerate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="huilv" Type="Single" />
-    <Property Name="marker" Type="Int32" Nullable="false" />
-    <Property Name="permitter" Type="Int32" />
-    <Property Name="ware" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="DateTime" Name="billdate" />
+    <Property Type="String" Name="billno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="moneystyle" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="includerate" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="huilv" />
+    <Property Type="Int32" Name="marker" Nullable="false" />
+    <Property Type="Int32" Name="permitter" />
+    <Property Type="String" Name="ware" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_billtui" FromRole="billtui" ToRole="clientmaster" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_billtui1" FromRole="billtui" ToRole="user" />
     <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_billtui2" FromRole="billtui" ToRole="user" />
@@ -403,18 +391,18 @@
       <PropertyRef Name="billno" />
       <PropertyRef Name="lineid" />
     </Key>
-    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lineid" Type="Int32" Nullable="false" />
-    <Property Name="wuliaoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="num" Type="Int32" Nullable="false" />
-    <Property Name="oidprice" Type="Single" Nullable="false" />
-    <Property Name="discount" Type="Single" Nullable="false" />
-    <Property Name="sprice" Type="Single" Nullable="false" />
-    <Property Name="taxrate" Type="Single" Nullable="false" />
-    <Property Name="taxamt" Type="Single" Nullable="false" />
-    <Property Name="amountatax" Type="Single" Nullable="false" />
-    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fromrow" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="billno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="wuliaoid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="num" Nullable="false" />
+    <Property Type="Single" Name="oidprice" Nullable="false" />
+    <Property Type="Single" Name="discount" Nullable="false" />
+    <Property Type="Single" Name="sprice" Nullable="false" />
+    <Property Type="Single" Name="taxrate" Nullable="false" />
+    <Property Type="Single" Name="taxamt" Nullable="false" />
+    <Property Type="Single" Name="amountatax" Nullable="false" />
+    <Property Type="String" Name="fromno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="fromrow" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtutype" FromRole="billtutype" ToRole="billtui" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_billtutype1" FromRole="billtutype" ToRole="wlzwj" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_billtutype2" FromRole="billtutype" ToRole="saleck" />
@@ -423,10 +411,10 @@
     <Key>
       <PropertyRef Name="bm_id" />
     </Key>
-    <Property Name="bm_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="bm_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="bm_ywname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="bm_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="bm_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bm_name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bm_ywname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bm_beizhu" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster3" FromRole="branch" ToRole="buysearchmaster" />
     <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou2" FromRole="branch" ToRole="caigouqinggou" />
     <NavigationProperty Name="orderpay" Relationship="erpsystemModel.FK_orderpay" FromRole="branch" ToRole="orderpay" />
@@ -441,70 +429,68 @@
       <PropertyRef Name="sid" />
       <PropertyRef Name="line" />
     </Key>
-    <Property Name="sid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="line" Type="Int32" Nullable="false" />
-    <Property Name="swuid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="swuname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="smodel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sunit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="snum" Type="Int32" />
-    <Property Name="szprice" Type="Single" />
-    <Property Name="szheshu" Type="Single" />
-    <Property Name="sprice" Type="Single" />
-    <Property Name="smoney" Type="Single" />
-    <Property Name="sdacess" Type="Single" />
-    <Property Name="sdtaxmoney" Type="Single" />
-    <Property Name="sdtaxmoneys" Type="Single" />
-    <Property Name="szengping" Type="Int32" />
-    <Property Name="soriginid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sorigintype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sfenremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sisdel" Type="Int32" />
+    <Property Type="String" Name="sid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="line" Nullable="false" />
+    <Property Type="String" Name="swuid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="swuname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="smodel" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sunit" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="snum" />
+    <Property Type="Single" Name="szprice" />
+    <Property Type="Single" Name="szheshu" />
+    <Property Type="Single" Name="sprice" />
+    <Property Type="Single" Name="smoney" />
+    <Property Type="Single" Name="sdacess" />
+    <Property Type="Single" Name="sdtaxmoney" />
+    <Property Type="Single" Name="sdtaxmoneys" />
+    <Property Type="Int32" Name="szengping" />
+    <Property Type="String" Name="soriginid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sorigintype" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sfenremark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="sisdel" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchdetails" ToRole="buysearchmaster" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="buysearchdetails" ToRole="wlzwj" />
-    <NavigationProperty Name="buysearchmaster1" Relationship="erpsystemModel.FK_buysearchdetails2" FromRole="buysearchdetails" ToRole="buysearchmaster" />
   </EntityType>
   <EntityType Name="buysearchmaster">
     <Key>
-      <PropertyRef Name="stoid" />
+      <PropertyRef Name="stunum" />
     </Key>
-    <Property Name="stoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stopname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stopid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="saddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stodate" Type="DateTime" />
-    <Property Name="stunum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoydate" Type="DateTime" Nullable="false" />
-    <Property Name="stoshort" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sotaxrate" Type="Single" />
-    <Property Name="stoistax" Type="Single" />
-    <Property Name="stosaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stomake" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoshen" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stobuy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stodep" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stostate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stopbid" Type="Int32" />
-    <Property Name="sheader" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sfooter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="szione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="szitwo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stodid" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
-    <Property Name="store" Type="Int32" />
-    <Property Name="sdel" Type="Int32" />
+    <Property Type="String" Name="stoid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stopname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stopid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="saddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stodate" />
+    <Property Type="String" Name="stunum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stoydate" Nullable="false" />
+    <Property Type="String" Name="stoshort" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="sotaxrate" />
+    <Property Type="Single" Name="stoistax" />
+    <Property Type="String" Name="stosaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stomake" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stoshen" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stobuy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stodep" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stostate" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="stopbid" />
+    <Property Type="String" Name="sheader" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sfooter" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="szione" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="szitwo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sremark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stodid" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="store" />
+    <Property Type="Int32" Name="sdel" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_buysearchmaster3" FromRole="buysearchmaster" ToRole="branch" />
     <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchmaster" ToRole="buysearchdetails" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_buysearchmaster" FromRole="buysearchmaster" ToRole="gmeans" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="buysearchmaster" ToRole="user" />
-    <NavigationProperty Name="buysearchdetails1" Relationship="erpsystemModel.FK_buysearchdetails2" FromRole="buysearchmaster" ToRole="buysearchdetails" />
   </EntityType>
   <EntityType Name="buytype">
     <Key>
       <PropertyRef Name="Buytypeid" />
     </Key>
-    <Property Name="Buytypeid" Type="Int32" Nullable="false" />
-    <Property Name="BuytypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="Buytypeid" Nullable="false" />
+    <Property Type="String" Name="BuytypeName" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou3" FromRole="buytype" ToRole="caigouqinggou" />
   </EntityType>
   <EntityType Name="caigoumingxi">
@@ -512,25 +498,25 @@
       <PropertyRef Name="id" />
       <PropertyRef Name="lanhao" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="matterid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mattername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="specifications" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="unitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sums" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="reqirementdate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="proposedate" Type="DateTime" Nullable="false" />
-    <Property Name="journalizing" Type="DateTime" Nullable="false" />
-    <Property Name="sourceoneleave" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="sourceonenumbers" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="standardbidcurrencyleave" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="standardbid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="standardbidmoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lastholepurchasecurrencyleave" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lastholepurchaseunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lastholepurchasebidmoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="weisum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lanhao" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="matterid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mattername" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="specifications" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unitname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sums" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="reqirementdate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="proposedate" Nullable="false" />
+    <Property Type="DateTime" Name="journalizing" Nullable="false" />
+    <Property Type="String" Name="sourceoneleave" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceonenumbers" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="standardbidcurrencyleave" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="standardbid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="standardbidmoney" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastholepurchasecurrencyleave" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastholepurchaseunit" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastholepurchasebidmoney" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="weisum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lanhao" Nullable="false" />
     <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigoumingxi" FromRole="caigoumingxi" ToRole="caigouqinggou" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_caigoumingxi2" FromRole="caigoumingxi" ToRole="wlzwj" />
   </EntityType>
@@ -538,20 +524,20 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="billno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="billdate" Type="DateTime" Nullable="false" />
-    <Property Name="billstyleid" Type="Int32" Nullable="false" />
-    <Property Name="billstatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="remark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sumqty" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="qinggourenyuan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="qinggoubumen" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="qinggoudepid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="qinggoubuyid" Type="Int32" />
-    <Property Name="checkshh" Type="Int32" />
+    <Property Type="String" Name="billno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="billdate" Nullable="false" />
+    <Property Type="Int32" Name="billstyleid" Nullable="false" />
+    <Property Type="String" Name="billstatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="maker" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="permitter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remark" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sumqty" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="qinggourenyuan" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="qinggoubumen" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="qinggoudepid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="qinggoubuyid" />
+    <Property Type="Int32" Name="checkshh" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_caigouqinggou2" FromRole="caigouqinggou" ToRole="branch" />
     <NavigationProperty Name="buytype" Relationship="erpsystemModel.FK_caigouqinggou3" FromRole="caigouqinggou" ToRole="buytype" />
     <NavigationProperty Name="caigoumingxi" Relationship="erpsystemModel.FK_caigoumingxi" FromRole="caigouqinggou" ToRole="caigoumingxi" />
@@ -561,53 +547,52 @@
     <Key>
       <PropertyRef Name="corpid" />
     </Key>
-    <Property Name="corpid" Type="Int32" Nullable="false" />
-    <Property Name="fullname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="shortname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="classname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="chiefname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="personname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="taxno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fundsattribfullname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="businessname" Type="Int32" Nullable="false" />
-    <Property Name="fundslimit" Type="Single" Nullable="false" />
-    <Property Name="startadvrecv" Type="Single" Nullable="false" />
-    <Property Name="surpluslimit" Type="Single" Nullable="false" />
-    <Property Name="statreceivable" Type="Single" Nullable="false" />
-    <Property Name="curadvreceivable" Type="Single" Nullable="false" />
-    <Property Name="deliveraddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="remainquota" Type="Single" Nullable="false" />
+    <Property Type="Int32" Name="corpid" Nullable="false" />
+    <Property Type="String" Name="fullname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="shortname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="classid" />
+    <Property Type="String" Name="chiefname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="personname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="taxno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="fundsattribfullname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="businessname" Nullable="false" />
+    <Property Type="Single" Name="fundslimit" Nullable="false" />
+    <Property Type="Single" Name="startadvrecv" Nullable="false" />
+    <Property Type="Single" Name="surpluslimit" Nullable="false" />
+    <Property Type="Single" Name="statreceivable" Nullable="false" />
+    <Property Type="Single" Name="curadvreceivable" Nullable="false" />
+    <Property Type="String" Name="deliveraddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="remainquota" Nullable="false" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui" FromRole="clientmaster" ToRole="billtui" />
     <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdanzhu" FromRole="clientmaster" ToRole="dingdanzhu" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck" FromRole="clientmaster" ToRole="saleck" />
     <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_documents" FromRole="clientmaster" ToRole="x_documents" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysbill" FromRole="clientmaster" ToRole="ysbill" />
     <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckbill" FromRole="clientmaster" ToRole="ysckbill" />
-    <Property Type="Int32" Name="classid" />
   </EntityType>
   <EntityType Name="closstype">
     <Key>
       <PropertyRef Name="clossid" />
       <PropertyRef Name="clossname" />
     </Key>
-    <Property Name="clossid" Type="Int32" Nullable="false" />
-    <Property Name="clossname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="englishname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="clossid" Nullable="false" />
+    <Property Type="String" Name="clossname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="englishname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="daassigbuymain">
     <Key>
       <PropertyRef Name="billnoid" />
     </Key>
-    <Property Name="billnoid" Type="Int32" Nullable="false" />
-    <Property Name="billno" Type="Int32" Nullable="false" />
-    <Property Name="billdete" Type="DateTime" Nullable="false" />
-    <Property Name="assignstyleid" Type="Int32" Nullable="false" />
-    <Property Name="voucheck" Type="Int32" />
-    <Property Name="mlamount" Type="Single" Nullable="false" />
-    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="permitter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="auditstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="billnoid" Nullable="false" />
+    <Property Type="Int32" Name="billno" Nullable="false" />
+    <Property Type="DateTime" Name="billdete" Nullable="false" />
+    <Property Type="Int32" Name="assignstyleid" Nullable="false" />
+    <Property Type="Int32" Name="voucheck" />
+    <Property Type="Single" Name="mlamount" Nullable="false" />
+    <Property Type="String" Name="maker" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="permitter" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="auditstatus" Nullable="false" />
     <NavigationProperty Name="assignstyle" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="daassigbuymain" ToRole="assignstyle" />
     <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub" FromRole="daassigbuymain" ToRole="dsassignbuysub" />
     <NavigationProperty Name="dsassignfee" Relationship="erpsystemModel.FK_dsassignfee" FromRole="daassigbuymain" ToRole="dsassignfee" />
@@ -616,34 +601,33 @@
     <Key>
       <PropertyRef Name="oid" />
     </Key>
-    <Property Name="oid" Type="Int32" Nullable="false" />
-    <Property Name="ypay" Type="Single" Nullable="false" />
-    <Property Name="froms" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="details" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="info" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Ischeck" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="orderpay" Relationship="erpsystemModel.FK_detailorderpay" FromRole="detailorderpay" ToRole="orderpay" />
+    <Property Type="Int32" Name="oid" Nullable="false" />
+    <Property Type="Single" Name="ypay" />
+    <Property Type="String" Name="froms" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="fromno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="details" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="info" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Ischeck" Nullable="false" />
   </EntityType>
   <EntityType Name="dingdancong">
     <Key>
       <PropertyRef Name="orderbillid" />
       <PropertyRef Name="lineid" />
     </Key>
-    <Property Name="orderbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lineid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="num" Type="Int32" Nullable="false" />
-    <Property Name="unitpricebefore" Type="Single" Nullable="false" />
-    <Property Name="discountrate" Type="Single" Nullable="false" />
-    <Property Name="unitprice" Type="Single" Nullable="false" />
-    <Property Name="amount" Type="Single" Nullable="false" />
-    <Property Name="taxate" Type="Single" Nullable="false" />
-    <Property Name="tax" Type="Single" Nullable="false" />
-    <Property Name="taxamount" Type="Single" Nullable="false" />
-    <Property Name="predeleasedate" Type="DateTime" Nullable="false" />
-    <Property Name="singlesource" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="did" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="orderbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="matter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="num" Nullable="false" />
+    <Property Type="Single" Name="unitpricebefore" Nullable="false" />
+    <Property Type="Single" Name="discountrate" Nullable="false" />
+    <Property Type="Single" Name="unitprice" Nullable="false" />
+    <Property Type="Single" Name="amount" Nullable="false" />
+    <Property Type="Single" Name="taxate" Nullable="false" />
+    <Property Type="Single" Name="tax" Nullable="false" />
+    <Property Type="Single" Name="taxamount" Nullable="false" />
+    <Property Type="DateTime" Name="predeleasedate" Nullable="false" />
+    <Property Type="String" Name="singlesource" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="did" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdancong" FromRole="dingdancong" ToRole="dingdanzhu" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dingdancong1" FromRole="dingdancong" ToRole="wlzwj" />
     <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_dingdancong2" FromRole="dingdancong" ToRole="x_documents" />
@@ -652,17 +636,17 @@
     <Key>
       <PropertyRef Name="orderbillid" />
     </Key>
-    <Property Name="orderbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="billdate" Type="DateTime" Nullable="false" />
-    <Property Name="custaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="priceoftax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="currname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="billstatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="exchrate" Type="Single" />
-    <Property Name="maker" Type="Int32" Nullable="false" />
-    <Property Name="fuhe" Type="Int32" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="orderbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="DateTime" Name="billdate" Nullable="false" />
+    <Property Type="String" Name="custaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="priceoftax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="currname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="billstatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="exchrate" />
+    <Property Type="Int32" Name="maker" Nullable="false" />
+    <Property Type="Int32" Name="fuhe" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_dingdanzhu" FromRole="dingdanzhu" ToRole="clientmaster" />
     <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong" FromRole="dingdanzhu" ToRole="dingdancong" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_dingdanzhu1" FromRole="dingdanzhu" ToRole="user" />
@@ -674,19 +658,19 @@
       <PropertyRef Name="billnoid" />
       <PropertyRef Name="billnoline" />
     </Key>
-    <Property Name="billnoid" Type="Int32" Nullable="false" />
-    <Property Name="billnoline" Type="Int32" Nullable="false" />
-    <Property Name="serno" Type="Int32" Nullable="false" />
-    <Property Name="fromnoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="proid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="prodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="prodsize" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mlamountmy" Type="Single" Nullable="false" />
-    <Property Name="vquantity" Type="Int32" Nullable="false" />
-    <Property Name="sunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="weight" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="measm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ftmlamountmy" Type="Single" Nullable="false" />
+    <Property Type="Int32" Name="billnoid" Nullable="false" />
+    <Property Type="Int32" Name="billnoline" Nullable="false" />
+    <Property Type="Int32" Name="serno" Nullable="false" />
+    <Property Type="String" Name="fromnoid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="proid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="prodname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="prodsize" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="mlamountmy" Nullable="false" />
+    <Property Type="Int32" Name="vquantity" Nullable="false" />
+    <Property Type="String" Name="sunit" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="weight" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="measm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ftmlamountmy" Nullable="false" />
     <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_dsassignbuysub" FromRole="dsassignbuysub" ToRole="daassigbuymain" />
     <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_dsassignbuysub1" FromRole="dsassignbuysub" ToRole="rk_zhubiao" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dsassignbuysub2" FromRole="dsassignbuysub" ToRole="wlzwj" />
@@ -696,15 +680,15 @@
       <PropertyRef Name="billnoid" />
       <PropertyRef Name="billnoline" />
     </Key>
-    <Property Name="billnoid" Type="Int32" Nullable="false" />
-    <Property Name="billnoline" Type="Int32" Nullable="false" />
-    <Property Name="serno" Type="Int32" Nullable="false" />
-    <Property Name="feeclassid" Type="Int32" Nullable="false" />
-    <Property Name="farcclassname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="dsdetailcurr" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="exchrete" Type="Single" Nullable="false" />
-    <Property Name="amount" Type="Single" Nullable="false" />
-    <Property Name="mlamount" Type="Single" Nullable="false" />
+    <Property Type="Int32" Name="billnoid" Nullable="false" />
+    <Property Type="Int32" Name="billnoline" Nullable="false" />
+    <Property Type="Int32" Name="serno" Nullable="false" />
+    <Property Type="Int32" Name="feeclassid" Nullable="false" />
+    <Property Type="String" Name="farcclassname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dsdetailcurr" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="exchrete" Nullable="false" />
+    <Property Type="Single" Name="amount" Nullable="false" />
+    <Property Type="Single" Name="mlamount" Nullable="false" />
     <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_dsassignfee" FromRole="dsassignfee" ToRole="daassigbuymain" />
     <NavigationProperty Name="feeclass" Relationship="erpsystemModel.FK_dsassignfee1" FromRole="dsassignfee" ToRole="feeclass" />
   </EntityType>
@@ -712,19 +696,19 @@
     <Key>
       <PropertyRef Name="tjbillnoid" />
     </Key>
-    <Property Name="tjbillnoid" Type="Int32" Nullable="false" />
-    <Property Name="tjbillno" Type="Int32" Nullable="false" />
-    <Property Name="billdete" Type="DateTime" Nullable="false" />
-    <Property Name="iscsubject" Type="Int32" />
-    <Property Name="decsubject" Type="Int32" />
-    <Property Name="voucheckno" Type="Int32" />
-    <Property Name="adjust" Type="Int32" Nullable="false" />
-    <Property Name="meno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="udefyi" Type="Int32" />
-    <Property Name="udefer" Type="Int32" />
-    <Property Name="maker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="permitter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="auditstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="tjbillnoid" Nullable="false" />
+    <Property Type="Int32" Name="tjbillno" Nullable="false" />
+    <Property Type="DateTime" Name="billdete" Nullable="false" />
+    <Property Type="Int32" Name="iscsubject" />
+    <Property Type="Int32" Name="decsubject" />
+    <Property Type="Int32" Name="voucheckno" />
+    <Property Type="Int32" Name="adjust" Nullable="false" />
+    <Property Type="String" Name="meno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="udefyi" />
+    <Property Type="Int32" Name="udefer" />
+    <Property Type="String" Name="maker" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="permitter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="auditstatus" Nullable="false" />
     <NavigationProperty Name="dsdsadjustsub" Relationship="erpsystemModel.FK_dsdsadjustsub" FromRole="dsdsadjustmain" ToRole="dsdsadjustsub" />
   </EntityType>
   <EntityType Name="dsdsadjustsub">
@@ -732,18 +716,18 @@
       <PropertyRef Name="tjbillnoid" />
       <PropertyRef Name="tjbillnoline" />
     </Key>
-    <Property Name="tjbillnoid" Type="Int32" Nullable="false" />
-    <Property Name="tjbillnoline" Type="Int32" Nullable="false" />
-    <Property Name="serno" Type="Int32" Nullable="false" />
-    <Property Name="proid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="prodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="prodsize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sunit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="curqty" Type="Int32" />
-    <Property Name="lcostavh" Type="Single" />
-    <Property Name="price" Type="Single" />
-    <Property Name="amount" Type="Single" Nullable="false" />
-    <Property Name="itemremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="tjbillnoid" Nullable="false" />
+    <Property Type="Int32" Name="tjbillnoline" Nullable="false" />
+    <Property Type="Int32" Name="serno" Nullable="false" />
+    <Property Type="String" Name="proid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="prodname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="prodsize" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sunit" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="curqty" />
+    <Property Type="Single" Name="lcostavh" />
+    <Property Type="Single" Name="price" />
+    <Property Type="Single" Name="amount" Nullable="false" />
+    <Property Type="String" Name="itemremark" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="dsdsadjustmain" Relationship="erpsystemModel.FK_dsdsadjustsub" FromRole="dsdsadjustsub" ToRole="dsdsadjustmain" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_dsdsadjustsub1" FromRole="dsdsadjustsub" ToRole="wlzwj" />
   </EntityType>
@@ -751,8 +735,8 @@
     <Key>
       <PropertyRef Name="feeclassid" />
     </Key>
-    <Property Name="feeclassid" Type="Int32" Nullable="false" />
-    <Property Name="farcclassname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="feeclassid" Nullable="false" />
+    <Property Type="String" Name="farcclassname" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="dsassignfee" Relationship="erpsystemModel.FK_dsassignfee1" FromRole="feeclass" ToRole="dsassignfee" />
   </EntityType>
   <EntityType Name="gfmeansoay">
@@ -760,36 +744,36 @@
       <PropertyRef Name="gfid" />
       <PropertyRef Name="line" />
     </Key>
-    <Property Name="gfid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfamount" Type="Int32" Nullable="false" />
-    <Property Name="gfremain" Type="Int32" Nullable="false" />
-    <Property Name="gfrecv" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfdayofclose" Type="Int32" Nullable="false" />
-    <Property Name="gfcredi" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfinvotypeid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfstartadv" Type="Int32" Nullable="false" />
-    <Property Name="gfstartrev" Type="Int32" Nullable="false" />
-    <Property Name="gfcuradv" Type="Int32" Nullable="false" />
-    <Property Name="gfcurrev" Type="Int32" Nullable="false" />
-    <Property Name="gfunbilled" Type="Int32" Nullable="false" />
-    <Property Name="gfadvance" Type="Int32" Nullable="false" />
-    <Property Name="gfpauable" Type="Int32" Nullable="false" />
-    <Property Name="gfaccrev" Type="Int32" Nullable="false" />
-    <Property Name="line" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="gfid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="gfamount" Nullable="false" />
+    <Property Type="Int32" Name="gfremain" Nullable="false" />
+    <Property Type="String" Name="gfrecv" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="gfdayofclose" Nullable="false" />
+    <Property Type="String" Name="gfcredi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gfinvotypeid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="gfstartadv" Nullable="false" />
+    <Property Type="Int32" Name="gfstartrev" Nullable="false" />
+    <Property Type="Int32" Name="gfcuradv" Nullable="false" />
+    <Property Type="Int32" Name="gfcurrev" Nullable="false" />
+    <Property Type="Int32" Name="gfunbilled" Nullable="false" />
+    <Property Type="Int32" Name="gfadvance" Nullable="false" />
+    <Property Type="Int32" Name="gfpauable" Nullable="false" />
+    <Property Type="Int32" Name="gfaccrev" Nullable="false" />
+    <Property Type="Int32" Name="line" Nullable="false" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_gfmeansoay" FromRole="gfmeansoay" ToRole="gmeans" />
   </EntityType>
   <EntityType Name="gmeans">
     <Key>
       <PropertyRef Name="gid" />
     </Key>
-    <Property Name="gid" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
-    <Property Name="gnname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfullname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="genglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gfullenglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gattribution" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gtypeid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gcurrency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="gid" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gnname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gfullname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="genglishname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gfullenglishname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gattribution" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gtypeid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gcurrency" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster" FromRole="gmeans" ToRole="buysearchmaster" />
     <NavigationProperty Name="gfmeansoay" Relationship="erpsystemModel.FK_gfmeansoay" FromRole="gmeans" ToRole="gfmeansoay" />
     <NavigationProperty Name="gmeansadeinite" Relationship="erpsystemModel.FK_gmeansadeinite" FromRole="gmeans" ToRole="gmeansadeinite" />
@@ -800,35 +784,35 @@
       <PropertyRef Name="gzid" />
       <PropertyRef Name="line" />
     </Key>
-    <Property Name="gzid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzlinkman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gztele1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gztele2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gztele3" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzmobiletel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzbank" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzbankid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzpersonname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gztaxno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzcap" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzindustry" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzemail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzweb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="gzfaxno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="line" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="gzid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzlinkman" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gztele1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gztele2" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gztele3" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzmobiletel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzbank" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzbankid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzpersonname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gztaxno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzcap" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzindustry" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzemail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzweb" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="gzfaxno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="line" Nullable="false" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_gmeansadeinite" FromRole="gmeansadeinite" ToRole="gmeans" />
   </EntityType>
   <EntityType Name="khls">
     <Key>
       <PropertyRef Name="lsid" />
     </Key>
-    <Property Name="lsid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="khid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lydb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lydh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="xxje" Type="Single" Nullable="false" />
-    <Property Name="sjje" Type="Single" Nullable="false" />
+    <Property Type="String" Name="lsid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="khid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lydb" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lydh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="xxje" Nullable="false" />
+    <Property Type="Single" Name="sjje" Nullable="false" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_khls3" FromRole="khls" ToRole="billtui" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_khls" FromRole="khls" ToRole="saleck" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_khls1" FromRole="khls" ToRole="ysbill" />
@@ -839,25 +823,25 @@
       <PropertyRef Name="orderid" />
       <PropertyRef Name="oline" />
     </Key>
-    <Property Name="orderid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oline" Type="Int32" Nullable="false" />
-    <Property Name="osperid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ospername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oprodsize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ounitname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="onum" Type="Int32" />
-    <Property Name="osperprice" Type="Single" />
-    <Property Name="oszheshu" Type="Single" />
-    <Property Name="oprice" Type="Single" />
-    <Property Name="omoney" Type="Single" />
-    <Property Name="otaxrate" Type="Single" />
-    <Property Name="otaxmoney" Type="Single" />
-    <Property Name="otaxmoneys" Type="Single" />
-    <Property Name="ostoragedate" Type="DateTime" Nullable="false" />
-    <Property Name="oisprent" Type="Int32" />
-    <Property Name="oremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="origintype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="originno" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="oline" Nullable="false" />
+    <Property Type="String" Name="osperid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ospername" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oprodsize" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ounitname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="onum" />
+    <Property Type="Single" Name="osperprice" />
+    <Property Type="Single" Name="oszheshu" />
+    <Property Type="Single" Name="oprice" />
+    <Property Type="Single" Name="omoney" />
+    <Property Type="Single" Name="otaxrate" />
+    <Property Type="Single" Name="otaxmoney" />
+    <Property Type="Single" Name="otaxmoneys" />
+    <Property Type="DateTime" Name="ostoragedate" Nullable="false" />
+    <Property Type="Int32" Name="oisprent" />
+    <Property Type="String" Name="oremark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="origintype" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="originno" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orderdetails" FromRole="orderdetails" ToRole="orders" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_orderdetails2" FromRole="orderdetails" ToRole="wlzwj" />
   </EntityType>
@@ -866,62 +850,61 @@
       <PropertyRef Name="orid" />
       <PropertyRef Name="ono" />
     </Key>
-    <Property Name="orid" Type="Int32" Nullable="false" />
-    <Property Name="nodate" Type="DateTime" Nullable="false" />
-    <Property Name="suppildname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="firstway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="firstmoney" Type="Single" />
-    <Property Name="secondway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="secondmoney" Type="Single" />
-    <Property Name="thirdway" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="thirdmoney" Type="Single" />
-    <Property Name="currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="exchangerate" Type="Single" Nullable="false" />
-    <Property Name="style" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="enddate" Type="DateTime" Nullable="false" />
-    <Property Name="departmentno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="exceter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="project" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="checkman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Ischeck" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orderpay" FromRole="orderpay" ToRole="branch" />
-    <NavigationProperty Name="detailorderpay" Relationship="erpsystemModel.FK_detailorderpay" FromRole="orderpay" ToRole="detailorderpay" />
-    <NavigationProperty Name="pay" Relationship="erpsystemModel.FK_pay" FromRole="orderpay" ToRole="pay" />
+    <Property Type="Int32" Name="orid" Nullable="false" />
     <Property Type="String" Name="ono" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="nodate" />
     <Property Type="Int32" Name="suppildno" Nullable="false" />
+    <Property Type="String" Name="suppildname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstway" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="firstmoney" />
+    <Property Type="String" Name="secondway" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="secondmoney" />
+    <Property Type="String" Name="thirdway" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="thirdmoney" />
+    <Property Type="String" Name="currency" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="exchangerate" />
+    <Property Type="String" Name="style" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="enddate" />
+    <Property Type="String" Name="departmentno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="department" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="exceter" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="project" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="checkman" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Ischeck" Nullable="false" />
     <Property Type="Single" Name="TotalMoney" Nullable="false" />
+    <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orderpay" FromRole="orderpay" ToRole="branch" />
   </EntityType>
   <EntityType Name="orders">
     <Key>
       <PropertyRef Name="orderid" />
     </Key>
-    <Property Name="orderid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostoid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostodate" Type="DateTime" Nullable="false" />
-    <Property Name="osperid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ospername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="osperaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="osunittax" Type="Single" />
-    <Property Name="otype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="obibie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ossongaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ospercai" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ospercaiid" Type="Int32" />
-    <Property Name="oscaidep" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oscaidepid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oxiangmu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostomemake" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostoemcheck" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="osremarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oshestate" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="oheader" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ofooter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ozione" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ozitwo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ostoreorder" Type="Int32" />
-    <Property Name="osisdel" Type="Int32" />
+    <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ostoid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ostodate" Nullable="false" />
+    <Property Type="String" Name="osperid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ospername" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="osperaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="osunittax" />
+    <Property Type="String" Name="otype" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="obibie" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ostate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ossongaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ospercai" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ospercaiid" />
+    <Property Type="String" Name="oscaidep" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oscaidepid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oxiangmu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ostomemake" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ostoemcheck" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="osremarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oshestate" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oheader" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ofooter" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ozione" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ozitwo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ostoreorder" />
+    <Property Type="Int32" Name="osisdel" />
+    <Property Type="Single" Name="otax" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orders3" FromRole="orders" ToRole="branch" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_orders" FromRole="orders" ToRole="gmeans" />
     <NavigationProperty Name="orderdetails" Relationship="erpsystemModel.FK_orderdetails" FromRole="orders" ToRole="orderdetails" />
@@ -931,61 +914,60 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="checkstorehouse" Type="DateTime" Nullable="false" />
-    <Property Name="checkdocumentsdate" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="appreciationsubject" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="documentsnumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="decreasesubject" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="vouchernumer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="checkpersonnel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="touchingpersonnel" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="department" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="checkstorehouse" Nullable="false" />
+    <Property Type="String" Name="checkdocumentsdate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="appreciationsubject" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="documentsnumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="decreasesubject" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="vouchernumer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="checkpersonnel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="touchingpersonnel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="department" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="pandianmingxi">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="pandianlh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matterid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mattername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="guige" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="danwei" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="zhangmiansum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="pandiansum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="yingkuisum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="danjia" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="yingkuimoney" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="pihao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="yuanyin" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="pandianlh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matterid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mattername" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="guige" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="danwei" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zhangmiansum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pandiansum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yingkuisum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="danjia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yingkuimoney" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pihao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yuanyin" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="pay">
     <Key>
       <PropertyRef Name="dno" />
       <PropertyRef Name="oid" />
     </Key>
-    <Property Name="dno" Type="Int32" Nullable="false" />
-    <Property Name="oid" Type="Int32" Nullable="false" />
-    <Property Name="listkind" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="nodate" Type="DateTime" Nullable="false" />
-    <Property Name="oldno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="invoicenumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="dealman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="dealmanname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="departmentno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="purchaseman" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="projectname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="exchangerate" Type="Single" Nullable="false" />
-    <Property Name="oldnomoney" Type="Single" Nullable="false" />
-    <Property Name="money" Type="Single" Nullable="false" />
-    <Property Name="discountmoney" Type="Single" />
-    <Property Name="offsetmoney" Type="Single" />
-    <Property Name="Ischeck" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="dno" Nullable="false" />
+    <Property Type="Int32" Name="oid" Nullable="false" />
+    <Property Type="String" Name="listkind" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="nodate" />
+    <Property Type="String" Name="oldno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="invoicenumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dealman" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dealmanname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="departmentno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="department" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="purchaseman" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="projectname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="currency" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="exchangerate" />
+    <Property Type="Single" Name="oldnomoney" />
+    <Property Type="Single" Name="money" />
+    <Property Type="Single" Name="discountmoney" />
+    <Property Type="Single" Name="offsetmoney" />
+    <Property Type="Int32" Name="Ischeck" Nullable="false" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_pay1" FromRole="pay" ToRole="branch" />
-    <NavigationProperty Name="orderpay" Relationship="erpsystemModel.FK_pay" FromRole="pay" ToRole="orderpay" />
   </EntityType>
   <EntityType Name="providertype">
     <Key>
@@ -994,22 +976,22 @@
       <PropertyRef Name="penglishname" />
       <PropertyRef Name="premark" />
     </Key>
-    <Property Name="ptypeid" Type="Int32" Nullable="false" />
-    <Property Name="ptypename" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="penglishname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="premark" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="ptypeid" Nullable="false" />
+    <Property Type="String" Name="ptypename" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="penglishname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="premark" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="qydetail">
     <Key>
       <PropertyRef Name="lineid" />
       <PropertyRef Name="ysckbillid" />
     </Key>
-    <Property Name="lineid" Type="Int32" Nullable="false" />
-    <Property Name="ly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="bz" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="qymoneydetail" Type="Single" Nullable="false" />
-    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="ly" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lyno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bz" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="qymoneydetail" Nullable="false" />
+    <Property Type="String" Name="ysckbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_qydetail" FromRole="qydetail" ToRole="ysbill" />
     <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_qydetail1" FromRole="qydetail" ToRole="ysckbill" />
   </EntityType>
@@ -1017,26 +999,26 @@
     <Key>
       <PropertyRef Name="rid" />
     </Key>
-    <Property Name="rcustname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="raddrid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rbillrq" Type="DateTime" Nullable="false" />
-    <Property Name="rbillno" Type="Int32" Nullable="false" />
-    <Property Name="rpriceoftax" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rcurrent" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rwareid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rexchrate" Type="Int32" Nullable="false" />
-    <Property Name="risdeduct" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rhesforeigntrade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rdocument" Type="Int32" Nullable="false" />
-    <Property Name="rpurchasingname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rproducername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rdepartid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rrreviewername" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rprojectid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rbid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rqgid" Type="Int32" />
-    <Property Name="recheck" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="rcustname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="raddrid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="rbillrq" Nullable="false" />
+    <Property Type="Int32" Name="rbillno" Nullable="false" />
+    <Property Type="String" Name="rpriceoftax" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rcurrent" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rwareid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rexchrate" Nullable="false" />
+    <Property Type="String" Name="risdeduct" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rhesforeigntrade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rdocument" Nullable="false" />
+    <Property Type="String" Name="rpurchasingname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rproducername" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rdepartid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rrreviewername" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rprojectid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rbid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rqgid" />
+    <Property Type="Int32" Name="recheck" Nullable="false" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_returnods1" FromRole="returnods" ToRole="branch" />
     <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_returnods" FromRole="returnods" ToRole="storage" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_returnods2" FromRole="returnods" ToRole="user" />
@@ -1046,48 +1028,48 @@
       <PropertyRef Name="rk_id" />
       <PropertyRef Name="mx_spalten" />
     </Key>
-    <Property Name="rk_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_spalten" Type="Int32" Nullable="false" />
-    <Property Name="mx_number" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_version" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_dwname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_num" Type="Int32" />
-    <Property Name="mx_zkqprice" Type="Int32" />
-    <Property Name="mx_broken" Type="Int32" />
-    <Property Name="mx_price" Type="Int32" />
-    <Property Name="mx_money" Type="Int32" />
-    <Property Name="mx_rate" Type="Int32" />
-    <Property Name="mx_amount" Type="Int32" />
-    <Property Name="mx_batch" Type="Int32" />
-    <Property Name="mx_gift" Type="Int32" />
-    <Property Name="mx_remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_lydanbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mx_lydanhao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ft_id" Type="Int32" />
+    <Property Type="String" Name="rk_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="mx_spalten" Nullable="false" />
+    <Property Type="String" Name="mx_number" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mx_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mx_version" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mx_dwname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="mx_num" />
+    <Property Type="Int32" Name="mx_zkqprice" />
+    <Property Type="Int32" Name="mx_broken" />
+    <Property Type="Int32" Name="mx_price" />
+    <Property Type="Int32" Name="mx_money" />
+    <Property Type="Int32" Name="mx_rate" />
+    <Property Type="Int32" Name="mx_amount" />
+    <Property Type="Int32" Name="mx_batch" />
+    <Property Type="Int32" Name="mx_gift" />
+    <Property Type="String" Name="mx_remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mx_lydanbie" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mx_lydanhao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ft_id" />
     <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_rk_minxi" FromRole="rk_minxi" ToRole="rk_zhubiao" />
   </EntityType>
   <EntityType Name="rk_zhubiao">
     <Key>
       <PropertyRef Name="rk_id" />
     </Key>
-    <Property Name="rk_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_danjuid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_date" Type="DateTime" Nullable="false" />
-    <Property Name="rk_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_are" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_depot" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_currency" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_exchange" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_cgbuyer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_branch" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_zdbuyer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_fhbuyer" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_project" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="rk_zhuantai" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="rk_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_danjuid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="rk_date" Nullable="false" />
+    <Property Type="String" Name="rk_name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_address" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_type" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_are" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_depot" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_currency" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_exchange" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_cgbuyer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_branch" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_zdbuyer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_fhbuyer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_project" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="rk_beizhu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rk_zhuantai" Nullable="false" />
     <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub1" FromRole="rk_zhubiao" ToRole="dsassignbuysub" />
     <NavigationProperty Name="rk_minxi" Relationship="erpsystemModel.FK_rk_minxi" FromRole="rk_zhubiao" ToRole="rk_minxi" />
     <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_rk_zhubiao" FromRole="rk_zhubiao" ToRole="storage" />
@@ -1096,19 +1078,19 @@
     <Key>
       <PropertyRef Name="saleckdh" />
     </Key>
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="saledate" Type="DateTime" />
-    <Property Name="salenumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="saleaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="saletype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="salecurrency" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="saleshui" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="salerate" Type="Single" />
-    <Property Name="salewarehouse" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="saletouch" Type="Int32" Nullable="false" />
-    <Property Name="salecheck" Type="Int32" Nullable="false" />
-    <Property Name="saleckdh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="DateTime" Name="saledate" />
+    <Property Type="String" Name="salenumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="saleaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="saletype" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="salecurrency" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="saleshui" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="salerate" />
+    <Property Type="String" Name="salewarehouse" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="saletouch" Nullable="false" />
+    <Property Type="Int32" Name="salecheck" Nullable="false" />
+    <Property Type="String" Name="saleckdh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype2" FromRole="saleck" ToRole="billtutype" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_saleck" FromRole="saleck" ToRole="clientmaster" />
     <NavigationProperty Name="khls" Relationship="erpsystemModel.FK_khls" FromRole="saleck" ToRole="khls" />
@@ -1124,20 +1106,20 @@
       <PropertyRef Name="foldid" />
       <PropertyRef Name="matckdh" />
     </Key>
-    <Property Name="foldid" Type="Int32" Nullable="false" />
-    <Property Name="matckdh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matnum" Type="Int32" Nullable="false" />
-    <Property Name="matzkq" Type="Single" />
-    <Property Name="matbroken" Type="Single" />
-    <Property Name="matprice" Type="Single" />
-    <Property Name="matmoeny" Type="Single" />
-    <Property Name="matratio" Type="Single" />
-    <Property Name="matse" Type="Single" />
-    <Property Name="mathsje" Type="Single" />
-    <Property Name="matbz" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matlydb" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matlydh" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="foldid" Nullable="false" />
+    <Property Type="String" Name="matckdh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="matnum" Nullable="false" />
+    <Property Type="Single" Name="matzkq" />
+    <Property Type="Single" Name="matbroken" />
+    <Property Type="Single" Name="matprice" />
+    <Property Type="Single" Name="matmoeny" />
+    <Property Type="Single" Name="matratio" />
+    <Property Type="Single" Name="matse" />
+    <Property Type="Single" Name="mathsje" />
+    <Property Type="String" Name="matbz" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matlydb" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matlydh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_salemx3" FromRole="salemx" ToRole="dingdanzhu" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_salemx" FromRole="salemx" ToRole="saleck" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_salemx1" FromRole="salemx" ToRole="wlzwj" />
@@ -1148,59 +1130,59 @@
       <PropertyRef Name="sid" />
       <PropertyRef Name="line" />
     </Key>
-    <Property Name="scolumn" Type="Int32" Nullable="false" />
-    <Property Name="sprodid" Type="Int32" />
-    <Property Name="sprodname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sprodsize" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sunitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="snumber" Type="Int32" Nullable="false" />
-    <Property Name="spricebefore" Type="Int32" Nullable="false" />
-    <Property Name="sfolding" Type="Int32" Nullable="false" />
-    <Property Name="sprece" Type="Int32" Nullable="false" />
-    <Property Name="samount" Type="Int32" Nullable="false" />
-    <Property Name="srate" Type="Int32" Nullable="false" />
-    <Property Name="stax" Type="Int32" Nullable="false" />
-    <Property Name="sincluded" Type="Int32" Nullable="false" />
-    <Property Name="sbatch" Type="Int32" Nullable="false" />
-    <Property Name="sgifts" Type="Int32" Nullable="false" />
-    <Property Name="sdetalis" Type="Int32" Nullable="false" />
-    <Property Name="sundilled" Type="Int32" Nullable="false" />
-    <Property Name="sentrynote" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="souce" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="soucenumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="line" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="scolumn" Nullable="false" />
+    <Property Type="Int32" Name="sprodid" />
+    <Property Type="String" Name="sprodname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sprodsize" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sunitname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="snumber" Nullable="false" />
+    <Property Type="Int32" Name="spricebefore" Nullable="false" />
+    <Property Type="Int32" Name="sfolding" Nullable="false" />
+    <Property Type="Int32" Name="sprece" Nullable="false" />
+    <Property Type="Int32" Name="samount" Nullable="false" />
+    <Property Type="Int32" Name="srate" Nullable="false" />
+    <Property Type="Int32" Name="stax" Nullable="false" />
+    <Property Type="Int32" Name="sincluded" Nullable="false" />
+    <Property Type="Int32" Name="sbatch" Nullable="false" />
+    <Property Type="Int32" Name="sgifts" Nullable="false" />
+    <Property Type="Int32" Name="sdetalis" Nullable="false" />
+    <Property Type="Int32" Name="sundilled" Nullable="false" />
+    <Property Type="String" Name="sentrynote" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="souce" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="soucenumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="line" Nullable="false" />
   </EntityType>
   <EntityType Name="staff">
     <Key>
       <PropertyRef Name="bm_id" />
       <PropertyRef Name="ry_shenfen" />
     </Key>
-    <Property Name="ry_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="bm_id" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_xinbie" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_ywname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_shenfen" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_csdate" Type="DateTime" />
-    <Property Name="ry_hunyin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ry_rzdate" Type="DateTime" />
-    <Property Name="ry_beizhu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="ry_id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ry_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bm_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ry_xinbie" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ry_ywname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ry_shenfen" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ry_csdate" />
+    <Property Type="String" Name="ry_hunyin" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ry_rzdate" />
+    <Property Type="String" Name="ry_beizhu" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_staff" FromRole="staff" ToRole="branch" />
   </EntityType>
   <EntityType Name="storage">
     <Key>
       <PropertyRef Name="stoid" />
     </Key>
-    <Property Name="stoid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stosimplename" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoenglishname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoconnecter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stophone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="stoaddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="storemark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="sdel" Type="Int32" />
+    <Property Type="String" Name="stoid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stoname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stosimplename" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stoenglishname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stoconnecter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stophone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stoaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="storemark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="sdel" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui3" FromRole="storage" ToRole="billtui" />
     <NavigationProperty Name="returnods" Relationship="erpsystemModel.FK_returnods" FromRole="storage" ToRole="returnods" />
     <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_rk_zhubiao" FromRole="storage" ToRole="rk_zhubiao" />
@@ -1210,34 +1192,34 @@
     <Key>
       <PropertyRef Name="no" />
     </Key>
-    <Property Name="no" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="froms" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fromno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ordermoney" Type="Single" />
-    <Property Name="departmentno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="department" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="takeomoney" Type="Single" />
-    <Property Name="details" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Ischeck" Type="Int32" />
+    <Property Type="String" Name="no" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="froms" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="fromno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ordermoney" />
+    <Property Type="String" Name="departmentno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="department" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="takeomoney" />
+    <Property Type="String" Name="details" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Ischeck" Nullable="false" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_takeorderpay" FromRole="takeorderpay" ToRole="branch" />
   </EntityType>
   <EntityType Name="unit">
     <Key>
       <PropertyRef Name="unitid" />
     </Key>
-    <Property Name="unitid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="unitname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="unitengname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="unitremark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="unitdel" Type="Int32" />
+    <Property Type="String" Name="unitid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unitname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unitengname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unitremark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="unitdel" />
   </EntityType>
   <EntityType Name="user">
     <Key>
       <PropertyRef Name="userid" />
     </Key>
-    <Property Name="userid" Type="Int32" Nullable="false" />
-    <Property Name="pwd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="userno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="userid" Nullable="false" />
+    <Property Type="String" Name="pwd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui1" FromRole="user" ToRole="billtui" />
     <NavigationProperty Name="billtui1" Relationship="erpsystemModel.FK_billtui2" FromRole="user" ToRole="billtui" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="user" ToRole="buysearchmaster" />
@@ -1260,32 +1242,32 @@
       <PropertyRef Name="lbid" />
       <PropertyRef Name="lbname" />
     </Key>
-    <Property Name="lbid" Type="Int32" Nullable="false" />
-    <Property Name="lbname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="chkm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="xssr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="xscb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fcsp" Type="Single" />
-    <Property Name="zpfy" Type="Single" />
+    <Property Type="Int32" Name="lbid" Nullable="false" />
+    <Property Type="String" Name="lbname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="chkm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="xssr" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="xscb" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="fcsp" />
+    <Property Type="Single" Name="zpfy" />
   </EntityType>
   <EntityType Name="wlzwj">
     <Key>
       <PropertyRef Name="matid" />
     </Key>
-    <Property Name="matid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="mattype" Type="Int32" Nullable="false" />
-    <Property Name="matname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matjldw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matywpm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matjysj" Type="Single" />
-    <Property Name="mata" Type="Single" />
-    <Property Name="matb" Type="Single" />
-    <Property Name="matbb" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matsfhs" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matsl" Type="Single" />
-    <Property Name="matcgdate" Type="DateTime" />
-    <Property Name="matbzjj" Type="Single" />
-    <Property Name="matgys" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="matid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="mattype" Nullable="false" />
+    <Property Type="String" Name="matname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matjldw" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matywpm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="matjysj" />
+    <Property Type="Single" Name="mata" />
+    <Property Type="Single" Name="matb" />
+    <Property Type="String" Name="matbb" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matsfhs" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="matsl" />
+    <Property Type="DateTime" Name="matcgdate" />
+    <Property Type="Single" Name="matbzjj" />
+    <Property Type="String" Name="matgys" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype1" FromRole="wlzwj" ToRole="billtutype" />
     <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="wlzwj" ToRole="buysearchdetails" />
     <NavigationProperty Name="caigoumingxi" Relationship="erpsystemModel.FK_caigoumingxi2" FromRole="wlzwj" ToRole="caigoumingxi" />
@@ -1300,17 +1282,17 @@
     <Key>
       <PropertyRef Name="x_documentsid" />
     </Key>
-    <Property Name="x_documentsid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="date" Type="DateTime" Nullable="false" />
-    <Property Name="deliverodsdate" Type="DateTime" Nullable="false" />
-    <Property Name="effective" Type="DateTime" Nullable="false" />
-    <Property Name="currname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="priceincluded" Type="Int32" Nullable="false" />
-    <Property Name="exchange" Type="Single" Nullable="false" />
-    <Property Name="touching" Type="Int32" Nullable="false" />
-    <Property Name="fuhe" Type="Int32" Nullable="false" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="String" Name="x_documentsid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="DateTime" Name="deliverodsdate" Nullable="false" />
+    <Property Type="DateTime" Name="effective" Nullable="false" />
+    <Property Type="String" Name="currname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="priceincluded" Nullable="false" />
+    <Property Type="Single" Name="exchange" Nullable="false" />
+    <Property Type="Int32" Name="touching" Nullable="false" />
+    <Property Type="Int32" Name="fuhe" Nullable="false" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_x_documents" FromRole="x_documents" ToRole="clientmaster" />
     <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong2" FromRole="x_documents" ToRole="dingdancong" />
     <NavigationProperty Name="salemx" Relationship="erpsystemModel.FK_salemx2" FromRole="x_documents" ToRole="salemx" />
@@ -1323,19 +1305,19 @@
       <PropertyRef Name="lineid" />
       <PropertyRef Name="x_documentsid" />
     </Key>
-    <Property Name="lineid" Type="Int32" Nullable="false" />
-    <Property Name="x_documentsid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="quantity" Type="Int32" Nullable="false" />
-    <Property Name="discountprice" Type="Single" Nullable="false" />
-    <Property Name="broken" Type="Single" Nullable="false" />
-    <Property Name="price" Type="Single" Nullable="false" />
-    <Property Name="amount" Type="Single" Nullable="false" />
-    <Property Name="taxrate" Type="Single" Nullable="false" />
-    <Property Name="tax" Type="Single" Nullable="false" />
-    <Property Name="taxincludedprice" Type="Single" Nullable="false" />
-    <Property Name="complimentary" Type="Single" Nullable="false" />
-    <Property Name="remarks" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="matter" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="x_documentsid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" Nullable="false" />
+    <Property Type="Single" Name="discountprice" Nullable="false" />
+    <Property Type="Single" Name="broken" Nullable="false" />
+    <Property Type="Single" Name="price" Nullable="false" />
+    <Property Type="Single" Name="amount" Nullable="false" />
+    <Property Type="Single" Name="taxrate" Nullable="false" />
+    <Property Type="Single" Name="tax" Nullable="false" />
+    <Property Type="Single" Name="taxincludedprice" Nullable="false" />
+    <Property Type="Single" Name="complimentary" Nullable="false" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_x_sal1" FromRole="x_sal" ToRole="wlzwj" />
     <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_sal" FromRole="x_sal" ToRole="x_documents" />
   </EntityType>
@@ -1343,20 +1325,20 @@
     <Key>
       <PropertyRef Name="ysbillid" />
     </Key>
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="ysbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="fsbilldate" Type="DateTime" Nullable="false" />
-    <Property Name="yscurrname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysexchrate" Type="Single" Nullable="false" />
-    <Property Name="ysone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ystwo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysthree" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysmoney1" Type="Single" Nullable="false" />
-    <Property Name="ysmoney2" Type="Single" Nullable="false" />
-    <Property Name="ysmoney3" Type="Single" />
-    <Property Name="yszd" Type="Int32" Nullable="false" />
-    <Property Name="yssh" Type="Int32" Nullable="false" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="String" Name="ysbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fsbilldate" Nullable="false" />
+    <Property Type="String" Name="yscurrname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ysexchrate" Nullable="false" />
+    <Property Type="String" Name="ysone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ystwo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ysthree" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ysmoney1" Nullable="false" />
+    <Property Type="Single" Name="ysmoney2" Nullable="false" />
+    <Property Type="Single" Name="ysmoney3" />
+    <Property Type="Int32" Name="yszd" Nullable="false" />
+    <Property Type="Int32" Name="yssh" Nullable="false" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_ysbill" FromRole="ysbill" ToRole="clientmaster" />
     <NavigationProperty Name="khls" Relationship="erpsystemModel.FK_khls1" FromRole="ysbill" ToRole="khls" />
     <NavigationProperty Name="qydetail" Relationship="erpsystemModel.FK_qydetail" FromRole="ysbill" ToRole="qydetail" />
@@ -1368,21 +1350,21 @@
     <Key>
       <PropertyRef Name="ysckbillid" />
     </Key>
-    <Property Name="customerid" Type="Int32" Nullable="false" />
-    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysckbilldate" Type="DateTime" Nullable="false" />
-    <Property Name="ysckcurrname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysckexchrate" Type="Single" Nullable="false" />
-    <Property Name="ysckone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="yscktwo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysthree" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysckmoney1" Type="Single" Nullable="false" />
-    <Property Name="ysckmoney2" Type="Single" Nullable="false" />
-    <Property Name="ysckmoney3" Type="Single" />
-    <Property Name="ysckzd" Type="Int32" Nullable="false" />
-    <Property Name="yscksh" Type="Int32" Nullable="false" />
-    <Property Name="ysckzhe" Type="Single" />
-    <Property Name="checkstatus" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="String" Name="ysckbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ysckbilldate" Nullable="false" />
+    <Property Type="String" Name="ysckcurrname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ysckexchrate" Nullable="false" />
+    <Property Type="String" Name="ysckone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yscktwo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ysthree" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ysckmoney1" Nullable="false" />
+    <Property Type="Single" Name="ysckmoney2" Nullable="false" />
+    <Property Type="Single" Name="ysckmoney3" />
+    <Property Type="Int32" Name="ysckzd" Nullable="false" />
+    <Property Type="Int32" Name="yscksh" Nullable="false" />
+    <Property Type="Single" Name="ysckzhe" />
+    <Property Type="Int32" Name="checkstatus" Nullable="false" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_ysckbill" FromRole="ysckbill" ToRole="clientmaster" />
     <NavigationProperty Name="khls" Relationship="erpsystemModel.FK_khls2" FromRole="ysckbill" ToRole="khls" />
     <NavigationProperty Name="qydetail" Relationship="erpsystemModel.FK_qydetail1" FromRole="ysckbill" ToRole="qydetail" />
@@ -1395,15 +1377,15 @@
       <PropertyRef Name="ysckbillid" />
       <PropertyRef Name="lineid" />
     </Key>
-    <Property Name="ysckbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lineid" Type="Int32" Nullable="false" />
-    <Property Name="ysckdetailly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysckdetaillyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="yuandanmoney" Type="Single" Nullable="false" />
-    <Property Name="zherangmoney" Type="Single" />
-    <Property Name="chongkuanmoney" Type="Single" Nullable="false" />
-    <Property Name="chongdimoney" Type="Single" Nullable="false" />
-    <Property Name="xianxingmoney" Type="Single" Nullable="false" />
+    <Property Type="String" Name="ysckbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="ysckdetailly" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ysckdetaillyno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="yuandanmoney" Nullable="false" />
+    <Property Type="Single" Name="zherangmoney" />
+    <Property Type="Single" Name="chongkuanmoney" Nullable="false" />
+    <Property Type="Single" Name="chongdimoney" Nullable="false" />
+    <Property Type="Single" Name="xianxingmoney" Nullable="false" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysckdetail1" FromRole="ysckdetail" ToRole="saleck" />
     <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckdetail" FromRole="ysckdetail" ToRole="ysckbill" />
   </EntityType>
@@ -1412,18 +1394,18 @@
       <PropertyRef Name="ysbillid" />
       <PropertyRef Name="lineid" />
     </Key>
-    <Property Name="ysbillid" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lineid" Type="Int32" Nullable="false" />
-    <Property Name="ly" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="lyno" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="ysmoney" Type="Single" Nullable="false" />
-    <Property Name="ysyue" Type="Single" Nullable="false" />
+    <Property Type="String" Name="ysbillid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lineid" Nullable="false" />
+    <Property Type="String" Name="ly" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lyno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ysmoney" Nullable="false" />
+    <Property Type="Single" Name="ysyue" Nullable="false" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysdetail" FromRole="ysdetail" ToRole="saleck" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysdetail1" FromRole="ysdetail" ToRole="ysbill" />
   </EntityType>
   <Association Name="FK_daassigbuymain">
-    <End Role="assignstyle" Type="erpsystemModel.assignstyle" Multiplicity="1" />
-    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="*" />
+    <End Type="erpsystemModel.assignstyle" Role="assignstyle" Multiplicity="1" />
+    <End Type="erpsystemModel.daassigbuymain" Role="daassigbuymain" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="assignstyle">
         <PropertyRef Name="assignstyleid" />
@@ -1434,8 +1416,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtui">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1446,8 +1428,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtui1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1458,8 +1440,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtui2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1470,8 +1452,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtui3">
-    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="*" />
+    <End Type="erpsystemModel.storage" Role="storage" Multiplicity="1" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="storage">
         <PropertyRef Name="stoid" />
@@ -1482,8 +1464,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtutype">
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="1" />
-    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="1" />
+    <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="billtui">
         <PropertyRef Name="billno" />
@@ -1494,8 +1476,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_khls3">
-    <End Role="billtui" Type="erpsystemModel.billtui" Multiplicity="1" />
-    <End Role="khls" Type="erpsystemModel.khls" Multiplicity="*" />
+    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="1" />
+    <End Type="erpsystemModel.khls" Role="khls" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="billtui">
         <PropertyRef Name="billno" />
@@ -1506,8 +1488,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtutype1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1518,8 +1500,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_billtutype2">
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
-    <End Role="billtutype" Type="erpsystemModel.billtutype" Multiplicity="*" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
+    <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="saleck">
         <PropertyRef Name="saleckdh" />
@@ -1530,8 +1512,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_buysearchmaster3">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
-    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1542,8 +1524,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_caigouqinggou2">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
-    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.caigouqinggou" Role="caigouqinggou" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1554,8 +1536,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orderpay">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
-    <End Role="orderpay" Type="erpsystemModel.orderpay" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.orderpay" Role="orderpay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1566,8 +1548,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orders3">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="0..1" />
-    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.orders" Role="orders" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1578,8 +1560,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_pay1">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
-    <End Role="pay" Type="erpsystemModel.pay" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.pay" Role="pay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1590,8 +1572,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_returnods1">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
-    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="1" />
+    <End Type="erpsystemModel.returnods" Role="returnods" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1602,8 +1584,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_staff">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
-    <End Role="staff" Type="erpsystemModel.staff" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="1" />
+    <End Type="erpsystemModel.staff" Role="staff" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1614,8 +1596,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_takeorderpay">
-    <End Role="branch" Type="erpsystemModel.branch" Multiplicity="1" />
-    <End Role="takeorderpay" Type="erpsystemModel.takeorderpay" Multiplicity="*" />
+    <End Type="erpsystemModel.branch" Role="branch" Multiplicity="0..1" />
+    <End Type="erpsystemModel.takeorderpay" Role="takeorderpay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
         <PropertyRef Name="bm_id" />
@@ -1626,11 +1608,11 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_buysearchdetails">
-    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="1" />
-    <End Role="buysearchdetails" Type="erpsystemModel.buysearchdetails" Multiplicity="*" />
+    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.buysearchdetails" Role="buysearchdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="buysearchmaster">
-        <PropertyRef Name="stoid" />
+        <PropertyRef Name="stunum" />
       </Principal>
       <Dependent Role="buysearchdetails">
         <PropertyRef Name="sid" />
@@ -1638,8 +1620,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_buysearchdetails1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="0..1" />
-    <End Role="buysearchdetails" Type="erpsystemModel.buysearchdetails" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="0..1" />
+    <End Type="erpsystemModel.buysearchdetails" Role="buysearchdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1650,8 +1632,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_buysearchmaster">
-    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="0..1" />
-    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <End Type="erpsystemModel.gmeans" Role="gmeans" Multiplicity="0..1" />
+    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="gmeans">
         <PropertyRef Name="gid" />
@@ -1662,8 +1644,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_buysearchmaster1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="buysearchmaster" Type="erpsystemModel.buysearchmaster" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1674,8 +1656,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_caigouqinggou3">
-    <End Role="buytype" Type="erpsystemModel.buytype" Multiplicity="1" />
-    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <End Type="erpsystemModel.buytype" Role="buytype" Multiplicity="1" />
+    <End Type="erpsystemModel.caigouqinggou" Role="caigouqinggou" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="buytype">
         <PropertyRef Name="Buytypeid" />
@@ -1686,8 +1668,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_caigoumingxi">
-    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="1" />
-    <End Role="caigoumingxi" Type="erpsystemModel.caigoumingxi" Multiplicity="*" />
+    <End Type="erpsystemModel.caigouqinggou" Role="caigouqinggou" Multiplicity="1" />
+    <End Type="erpsystemModel.caigoumingxi" Role="caigoumingxi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="caigouqinggou">
         <PropertyRef Name="id" />
@@ -1698,8 +1680,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_caigoumingxi2">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="caigoumingxi" Type="erpsystemModel.caigoumingxi" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.caigoumingxi" Role="caigoumingxi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1710,8 +1692,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_caigouqinggou">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="caigouqinggou" Type="erpsystemModel.caigouqinggou" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.caigouqinggou" Role="caigouqinggou" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1722,8 +1704,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dingdanzhu">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.dingdanzhu" Role="dingdanzhu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1734,8 +1716,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_saleck">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1746,8 +1728,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_x_documents">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1758,8 +1740,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysbill">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1770,8 +1752,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysckbill">
-    <End Role="clientmaster" Type="erpsystemModel.clientmaster" Multiplicity="1" />
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="clientmaster">
         <PropertyRef Name="corpid" />
@@ -1782,8 +1764,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsassignbuysub">
-    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="1" />
-    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <End Type="erpsystemModel.daassigbuymain" Role="daassigbuymain" Multiplicity="1" />
+    <End Type="erpsystemModel.dsassignbuysub" Role="dsassignbuysub" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="daassigbuymain">
         <PropertyRef Name="billnoid" />
@@ -1794,8 +1776,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsassignfee">
-    <End Role="daassigbuymain" Type="erpsystemModel.daassigbuymain" Multiplicity="1" />
-    <End Role="dsassignfee" Type="erpsystemModel.dsassignfee" Multiplicity="*" />
+    <End Type="erpsystemModel.daassigbuymain" Role="daassigbuymain" Multiplicity="1" />
+    <End Type="erpsystemModel.dsassignfee" Role="dsassignfee" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="daassigbuymain">
         <PropertyRef Name="billnoid" />
@@ -1805,21 +1787,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_detailorderpay">
-    <End Role="orderpay" Type="erpsystemModel.orderpay" Multiplicity="1" />
-    <End Role="detailorderpay" Type="erpsystemModel.detailorderpay" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="orderpay">
-        <PropertyRef Name="orid" />
-      </Principal>
-      <Dependent Role="detailorderpay">
-        <PropertyRef Name="oid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_dingdancong">
-    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="1" />
-    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <End Type="erpsystemModel.dingdanzhu" Role="dingdanzhu" Multiplicity="1" />
+    <End Type="erpsystemModel.dingdancong" Role="dingdancong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dingdanzhu">
         <PropertyRef Name="orderbillid" />
@@ -1830,8 +1800,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dingdancong1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.dingdancong" Role="dingdancong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1842,8 +1812,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dingdancong2">
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="0..1" />
-    <End Role="dingdancong" Type="erpsystemModel.dingdancong" Multiplicity="*" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="0..1" />
+    <End Type="erpsystemModel.dingdancong" Role="dingdancong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="x_documents">
         <PropertyRef Name="x_documentsid" />
@@ -1854,8 +1824,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dingdanzhu1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.dingdanzhu" Role="dingdanzhu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1866,8 +1836,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dingdanzhu2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.dingdanzhu" Role="dingdanzhu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -1878,8 +1848,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_salemx3">
-    <End Role="dingdanzhu" Type="erpsystemModel.dingdanzhu" Multiplicity="1" />
-    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <End Type="erpsystemModel.dingdanzhu" Role="dingdanzhu" Multiplicity="1" />
+    <End Type="erpsystemModel.salemx" Role="salemx" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dingdanzhu">
         <PropertyRef Name="orderbillid" />
@@ -1890,8 +1860,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsassignbuysub1">
-    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="1" />
-    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <End Type="erpsystemModel.rk_zhubiao" Role="rk_zhubiao" Multiplicity="1" />
+    <End Type="erpsystemModel.dsassignbuysub" Role="dsassignbuysub" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="rk_zhubiao">
         <PropertyRef Name="rk_id" />
@@ -1902,8 +1872,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsassignbuysub2">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="dsassignbuysub" Type="erpsystemModel.dsassignbuysub" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.dsassignbuysub" Role="dsassignbuysub" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1914,8 +1884,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsassignfee1">
-    <End Role="feeclass" Type="erpsystemModel.feeclass" Multiplicity="1" />
-    <End Role="dsassignfee" Type="erpsystemModel.dsassignfee" Multiplicity="*" />
+    <End Type="erpsystemModel.feeclass" Role="feeclass" Multiplicity="1" />
+    <End Type="erpsystemModel.dsassignfee" Role="dsassignfee" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="feeclass">
         <PropertyRef Name="feeclassid" />
@@ -1926,8 +1896,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsdsadjustsub">
-    <End Role="dsdsadjustmain" Type="erpsystemModel.dsdsadjustmain" Multiplicity="1" />
-    <End Role="dsdsadjustsub" Type="erpsystemModel.dsdsadjustsub" Multiplicity="*" />
+    <End Type="erpsystemModel.dsdsadjustmain" Role="dsdsadjustmain" Multiplicity="1" />
+    <End Type="erpsystemModel.dsdsadjustsub" Role="dsdsadjustsub" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dsdsadjustmain">
         <PropertyRef Name="tjbillnoid" />
@@ -1938,8 +1908,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_dsdsadjustsub1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="dsdsadjustsub" Type="erpsystemModel.dsdsadjustsub" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.dsdsadjustsub" Role="dsdsadjustsub" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -1950,8 +1920,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_gfmeansoay">
-    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="1" />
-    <End Role="gfmeansoay" Type="erpsystemModel.gfmeansoay" Multiplicity="*" />
+    <End Type="erpsystemModel.gmeans" Role="gmeans" Multiplicity="1" />
+    <End Type="erpsystemModel.gfmeansoay" Role="gfmeansoay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="gmeans">
         <PropertyRef Name="gid" />
@@ -1962,8 +1932,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_gmeansadeinite">
-    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="1" />
-    <End Role="gmeansadeinite" Type="erpsystemModel.gmeansadeinite" Multiplicity="*" />
+    <End Type="erpsystemModel.gmeans" Role="gmeans" Multiplicity="1" />
+    <End Type="erpsystemModel.gmeansadeinite" Role="gmeansadeinite" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="gmeans">
         <PropertyRef Name="gid" />
@@ -1974,8 +1944,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orders">
-    <End Role="gmeans" Type="erpsystemModel.gmeans" Multiplicity="0..1" />
-    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <End Type="erpsystemModel.gmeans" Role="gmeans" Multiplicity="0..1" />
+    <End Type="erpsystemModel.orders" Role="orders" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="gmeans">
         <PropertyRef Name="gid" />
@@ -1986,8 +1956,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_khls">
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
-    <End Role="khls" Type="erpsystemModel.khls" Multiplicity="*" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
+    <End Type="erpsystemModel.khls" Role="khls" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="saleck">
         <PropertyRef Name="saleckdh" />
@@ -1998,8 +1968,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_khls1">
-    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="1" />
-    <End Role="khls" Type="erpsystemModel.khls" Multiplicity="*" />
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="1" />
+    <End Type="erpsystemModel.khls" Role="khls" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ysbill">
         <PropertyRef Name="ysbillid" />
@@ -2010,8 +1980,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_khls2">
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="1" />
-    <End Role="khls" Type="erpsystemModel.khls" Multiplicity="*" />
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="1" />
+    <End Type="erpsystemModel.khls" Role="khls" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ysckbill">
         <PropertyRef Name="ysckbillid" />
@@ -2022,8 +1992,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orderdetails">
-    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="1" />
-    <End Role="orderdetails" Type="erpsystemModel.orderdetails" Multiplicity="*" />
+    <End Type="erpsystemModel.orders" Role="orders" Multiplicity="1" />
+    <End Type="erpsystemModel.orderdetails" Role="orderdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="orders">
         <PropertyRef Name="orderid" />
@@ -2034,8 +2004,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orderdetails2">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="0..1" />
-    <End Role="orderdetails" Type="erpsystemModel.orderdetails" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="0..1" />
+    <End Type="erpsystemModel.orderdetails" Role="orderdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -2045,21 +2015,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_pay">
-    <End Role="orderpay" Type="erpsystemModel.orderpay" Multiplicity="1" />
-    <End Role="pay" Type="erpsystemModel.pay" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="orderpay">
-        <PropertyRef Name="orid" />
-      </Principal>
-      <Dependent Role="pay">
-        <PropertyRef Name="dno" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_orders2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="orders" Type="erpsystemModel.orders" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.orders" Role="orders" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2070,8 +2028,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_qydetail">
-    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="1" />
-    <End Role="qydetail" Type="erpsystemModel.qydetail" Multiplicity="*" />
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="1" />
+    <End Type="erpsystemModel.qydetail" Role="qydetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ysbill">
         <PropertyRef Name="ysbillid" />
@@ -2082,8 +2040,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_qydetail1">
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="1" />
-    <End Role="qydetail" Type="erpsystemModel.qydetail" Multiplicity="*" />
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="1" />
+    <End Type="erpsystemModel.qydetail" Role="qydetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ysckbill">
         <PropertyRef Name="ysckbillid" />
@@ -2094,8 +2052,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_returnods">
-    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
-    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <End Type="erpsystemModel.storage" Role="storage" Multiplicity="1" />
+    <End Type="erpsystemModel.returnods" Role="returnods" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="storage">
         <PropertyRef Name="stoid" />
@@ -2106,8 +2064,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_returnods2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="0..1" />
-    <End Role="returnods" Type="erpsystemModel.returnods" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="erpsystemModel.returnods" Role="returnods" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2118,8 +2076,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_rk_minxi">
-    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="1" />
-    <End Role="rk_minxi" Type="erpsystemModel.rk_minxi" Multiplicity="*" />
+    <End Type="erpsystemModel.rk_zhubiao" Role="rk_zhubiao" Multiplicity="1" />
+    <End Type="erpsystemModel.rk_minxi" Role="rk_minxi" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="rk_zhubiao">
         <PropertyRef Name="rk_id" />
@@ -2130,8 +2088,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_rk_zhubiao">
-    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
-    <End Role="rk_zhubiao" Type="erpsystemModel.rk_zhubiao" Multiplicity="*" />
+    <End Type="erpsystemModel.storage" Role="storage" Multiplicity="1" />
+    <End Type="erpsystemModel.rk_zhubiao" Role="rk_zhubiao" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="storage">
         <PropertyRef Name="stoid" />
@@ -2142,8 +2100,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_saleck1">
-    <End Role="storage" Type="erpsystemModel.storage" Multiplicity="1" />
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <End Type="erpsystemModel.storage" Role="storage" Multiplicity="1" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="storage">
         <PropertyRef Name="stoid" />
@@ -2154,8 +2112,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_saleck2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2166,8 +2124,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_saleck3">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2178,8 +2136,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_salemx">
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
-    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
+    <End Type="erpsystemModel.salemx" Role="salemx" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="saleck">
         <PropertyRef Name="saleckdh" />
@@ -2190,8 +2148,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysckdetail1">
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
-    <End Role="ysckdetail" Type="erpsystemModel.ysckdetail" Multiplicity="*" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
+    <End Type="erpsystemModel.ysckdetail" Role="ysckdetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="saleck">
         <PropertyRef Name="saleckdh" />
@@ -2202,8 +2160,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysdetail">
-    <End Role="saleck" Type="erpsystemModel.saleck" Multiplicity="1" />
-    <End Role="ysdetail" Type="erpsystemModel.ysdetail" Multiplicity="*" />
+    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
+    <End Type="erpsystemModel.ysdetail" Role="ysdetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="saleck">
         <PropertyRef Name="saleckdh" />
@@ -2214,8 +2172,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_salemx1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.salemx" Role="salemx" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -2226,8 +2184,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_salemx2">
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="1" />
-    <End Role="salemx" Type="erpsystemModel.salemx" Multiplicity="*" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="1" />
+    <End Type="erpsystemModel.salemx" Role="salemx" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="x_documents">
         <PropertyRef Name="x_documentsid" />
@@ -2238,8 +2196,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_x_documents1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2250,8 +2208,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_x_documents2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2262,8 +2220,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysbil2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2274,8 +2232,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysbill1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="ysbill" Type="erpsystemModel.ysbill" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2286,8 +2244,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysckbill1">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2298,8 +2256,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ysckbill2">
-    <End Role="user" Type="erpsystemModel.user" Multiplicity="1" />
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="*" />
+    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user">
         <PropertyRef Name="userid" />
@@ -2310,8 +2268,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_x_sal1">
-    <End Role="wlzwj" Type="erpsystemModel.wlzwj" Multiplicity="1" />
-    <End Role="x_sal" Type="erpsystemModel.x_sal" Multiplicity="*" />
+    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
+    <End Type="erpsystemModel.x_sal" Role="x_sal" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="wlzwj">
         <PropertyRef Name="matid" />
@@ -2322,38 +2280,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_x_sal">
-    <End Role="x_documents" Type="erpsystemModel.x_documents" Multiplicity="1" />
-    <End Role="x_sal" Type="erpsystemModel.x_sal" Multiplicity="*" />
+    <End Type="erpsystemModel.x_documents" Role="x_documents" Multiplicity="1" />
+    <End Type="erpsystemModel.x_sal" Role="x_sal" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="x_documents">
         <PropertyRef Name="x_documentsid" />
       </Principal>
       <Dependent Role="x_sal">
         <PropertyRef Name="x_documentsid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ysckdetail">
-    <End Role="ysckbill" Type="erpsystemModel.ysckbill" Multiplicity="1" />
-    <End Role="ysckdetail" Type="erpsystemModel.ysckdetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ysckbill">
-        <PropertyRef Name="ysckbillid" />
-      </Principal>
-      <Dependent Role="ysckdetail">
-        <PropertyRef Name="ysckbillid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_buysearchdetails2">
-    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="1" />
-    <End Type="erpsystemModel.buysearchdetails" Role="buysearchdetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="buysearchmaster">
-        <PropertyRef Name="stunum" />
-      </Principal>
-      <Dependent Role="buysearchdetails">
-        <PropertyRef Name="sid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2366,6 +2300,18 @@
       </Principal>
       <Dependent Role="ysdetail">
         <PropertyRef Name="ysbillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysckdetail">
+    <End Type="erpsystemModel.ysckbill" Role="ysckbill" Multiplicity="1" />
+    <End Type="erpsystemModel.ysckdetail" Role="ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="ysckbillid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="ysckbillid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

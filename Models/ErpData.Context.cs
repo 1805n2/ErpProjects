@@ -25,5 +25,56 @@ namespace Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<assignstyle> assignstyle { get; set; }
+        public DbSet<billtui> billtui { get; set; }
+        public DbSet<billtutype> billtutype { get; set; }
+        public DbSet<branch> branch { get; set; }
+        public DbSet<buysearchdetails> buysearchdetails { get; set; }
+        public DbSet<buysearchmaster> buysearchmaster { get; set; }
+        public DbSet<buytype> buytype { get; set; }
+        public DbSet<caigoumingxi> caigoumingxi { get; set; }
+        public DbSet<caigouqinggou> caigouqinggou { get; set; }
+        public DbSet<clientmaster> clientmaster { get; set; }
+        public DbSet<closstype> closstype { get; set; }
+        public DbSet<daassigbuymain> daassigbuymain { get; set; }
+        public DbSet<detailorderpay> detailorderpay { get; set; }
+        public DbSet<dingdancong> dingdancong { get; set; }
+        public DbSet<dingdanzhu> dingdanzhu { get; set; }
+        public DbSet<dsassignbuysub> dsassignbuysub { get; set; }
+        public DbSet<dsassignfee> dsassignfee { get; set; }
+        public DbSet<dsdsadjustmain> dsdsadjustmain { get; set; }
+        public DbSet<dsdsadjustsub> dsdsadjustsub { get; set; }
+        public DbSet<feeclass> feeclass { get; set; }
+        public DbSet<gfmeansoay> gfmeansoay { get; set; }
+        public DbSet<gmeans> gmeans { get; set; }
+        public DbSet<gmeansadeinite> gmeansadeinite { get; set; }
+        public DbSet<khls> khls { get; set; }
+        public DbSet<orderdetails> orderdetails { get; set; }
+        public DbSet<orderpay> orderpay { get; set; }
+        public DbSet<orders> orders { get; set; }
+        public DbSet<pandian> pandian { get; set; }
+        public DbSet<pandianmingxi> pandianmingxi { get; set; }
+        public DbSet<pay> pay { get; set; }
+        public DbSet<providertype> providertype { get; set; }
+        public DbSet<qydetail> qydetail { get; set; }
+        public DbSet<returnods> returnods { get; set; }
+        public DbSet<rk_minxi> rk_minxi { get; set; }
+        public DbSet<rk_zhubiao> rk_zhubiao { get; set; }
+        public DbSet<saleck> saleck { get; set; }
+        public DbSet<salemx> salemx { get; set; }
+        public DbSet<shopdetail> shopdetail { get; set; }
+        public DbSet<staff> staff { get; set; }
+        public DbSet<storage> storage { get; set; }
+        public DbSet<takeorderpay> takeorderpay { get; set; }
+        public DbSet<unit> unit { get; set; }
+        public DbSet<user> user { get; set; }
+        public DbSet<wllb> wllb { get; set; }
+        public DbSet<wlzwj> wlzwj { get; set; }
+        public DbSet<x_documents> x_documents { get; set; }
+        public DbSet<x_sal> x_sal { get; set; }
+        public DbSet<ysbill> ysbill { get; set; }
+        public DbSet<ysckbill> ysckbill { get; set; }
+        public DbSet<ysckdetail> ysckdetail { get; set; }
+        public DbSet<ysdetail> ysdetail { get; set; }
     }
 }

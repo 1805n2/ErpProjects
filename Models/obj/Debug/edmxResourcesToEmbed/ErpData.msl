@@ -4,433 +4,433 @@
     <EntitySetMapping Name="assignstyle">
       <EntityTypeMapping TypeName="erpsystemModel.assignstyle">
         <MappingFragment StoreEntitySet="assignstyle">
-          <ScalarProperty Name="assignstyleid" ColumnName="assignstyleid" />
           <ScalarProperty Name="assignstylename" ColumnName="assignstylename" />
+          <ScalarProperty Name="assignstyleid" ColumnName="assignstyleid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="billtui">
       <EntityTypeMapping TypeName="erpsystemModel.billtui">
         <MappingFragment StoreEntitySet="billtui">
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="billdate" ColumnName="billdate" />
-          <ScalarProperty Name="billno" ColumnName="billno" />
-          <ScalarProperty Name="moneystyle" ColumnName="moneystyle" />
-          <ScalarProperty Name="includerate" ColumnName="includerate" />
-          <ScalarProperty Name="huilv" ColumnName="huilv" />
-          <ScalarProperty Name="marker" ColumnName="marker" />
-          <ScalarProperty Name="permitter" ColumnName="permitter" />
-          <ScalarProperty Name="ware" ColumnName="ware" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="ware" ColumnName="ware" />
+          <ScalarProperty Name="permitter" ColumnName="permitter" />
+          <ScalarProperty Name="marker" ColumnName="marker" />
+          <ScalarProperty Name="huilv" ColumnName="huilv" />
+          <ScalarProperty Name="includerate" ColumnName="includerate" />
+          <ScalarProperty Name="moneystyle" ColumnName="moneystyle" />
+          <ScalarProperty Name="billno" ColumnName="billno" />
+          <ScalarProperty Name="billdate" ColumnName="billdate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="billtutype">
       <EntityTypeMapping TypeName="erpsystemModel.billtutype">
         <MappingFragment StoreEntitySet="billtutype">
-          <ScalarProperty Name="billno" ColumnName="billno" />
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="wuliaoid" ColumnName="wuliaoid" />
-          <ScalarProperty Name="num" ColumnName="num" />
-          <ScalarProperty Name="oidprice" ColumnName="oidprice" />
-          <ScalarProperty Name="discount" ColumnName="discount" />
-          <ScalarProperty Name="sprice" ColumnName="sprice" />
-          <ScalarProperty Name="taxrate" ColumnName="taxrate" />
-          <ScalarProperty Name="taxamt" ColumnName="taxamt" />
-          <ScalarProperty Name="amountatax" ColumnName="amountatax" />
-          <ScalarProperty Name="fromno" ColumnName="fromno" />
           <ScalarProperty Name="fromrow" ColumnName="fromrow" />
+          <ScalarProperty Name="fromno" ColumnName="fromno" />
+          <ScalarProperty Name="amountatax" ColumnName="amountatax" />
+          <ScalarProperty Name="taxamt" ColumnName="taxamt" />
+          <ScalarProperty Name="taxrate" ColumnName="taxrate" />
+          <ScalarProperty Name="sprice" ColumnName="sprice" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="oidprice" ColumnName="oidprice" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="wuliaoid" ColumnName="wuliaoid" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
+          <ScalarProperty Name="billno" ColumnName="billno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="branch">
       <EntityTypeMapping TypeName="erpsystemModel.branch">
         <MappingFragment StoreEntitySet="branch">
-          <ScalarProperty Name="bm_id" ColumnName="bm_id" />
-          <ScalarProperty Name="bm_name" ColumnName="bm_name" />
-          <ScalarProperty Name="bm_ywname" ColumnName="bm_ywname" />
           <ScalarProperty Name="bm_beizhu" ColumnName="bm_beizhu" />
+          <ScalarProperty Name="bm_ywname" ColumnName="bm_ywname" />
+          <ScalarProperty Name="bm_name" ColumnName="bm_name" />
+          <ScalarProperty Name="bm_id" ColumnName="bm_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="buysearchdetails">
       <EntityTypeMapping TypeName="erpsystemModel.buysearchdetails">
         <MappingFragment StoreEntitySet="buysearchdetails">
-          <ScalarProperty Name="sid" ColumnName="sid" />
-          <ScalarProperty Name="line" ColumnName="line" />
-          <ScalarProperty Name="swuid" ColumnName="swuid" />
-          <ScalarProperty Name="swuname" ColumnName="swuname" />
-          <ScalarProperty Name="smodel" ColumnName="smodel" />
-          <ScalarProperty Name="sunit" ColumnName="sunit" />
-          <ScalarProperty Name="snum" ColumnName="snum" />
-          <ScalarProperty Name="szprice" ColumnName="szprice" />
-          <ScalarProperty Name="szheshu" ColumnName="szheshu" />
-          <ScalarProperty Name="sprice" ColumnName="sprice" />
-          <ScalarProperty Name="smoney" ColumnName="smoney" />
-          <ScalarProperty Name="sdacess" ColumnName="sdacess" />
-          <ScalarProperty Name="sdtaxmoney" ColumnName="sdtaxmoney" />
-          <ScalarProperty Name="sdtaxmoneys" ColumnName="sdtaxmoneys" />
-          <ScalarProperty Name="szengping" ColumnName="szengping" />
-          <ScalarProperty Name="soriginid" ColumnName="soriginid" />
-          <ScalarProperty Name="sorigintype" ColumnName="sorigintype" />
-          <ScalarProperty Name="sfenremark" ColumnName="sfenremark" />
           <ScalarProperty Name="sisdel" ColumnName="sisdel" />
+          <ScalarProperty Name="sfenremark" ColumnName="sfenremark" />
+          <ScalarProperty Name="sorigintype" ColumnName="sorigintype" />
+          <ScalarProperty Name="soriginid" ColumnName="soriginid" />
+          <ScalarProperty Name="szengping" ColumnName="szengping" />
+          <ScalarProperty Name="sdtaxmoneys" ColumnName="sdtaxmoneys" />
+          <ScalarProperty Name="sdtaxmoney" ColumnName="sdtaxmoney" />
+          <ScalarProperty Name="sdacess" ColumnName="sdacess" />
+          <ScalarProperty Name="smoney" ColumnName="smoney" />
+          <ScalarProperty Name="sprice" ColumnName="sprice" />
+          <ScalarProperty Name="szheshu" ColumnName="szheshu" />
+          <ScalarProperty Name="szprice" ColumnName="szprice" />
+          <ScalarProperty Name="snum" ColumnName="snum" />
+          <ScalarProperty Name="sunit" ColumnName="sunit" />
+          <ScalarProperty Name="smodel" ColumnName="smodel" />
+          <ScalarProperty Name="swuname" ColumnName="swuname" />
+          <ScalarProperty Name="swuid" ColumnName="swuid" />
+          <ScalarProperty Name="line" ColumnName="line" />
+          <ScalarProperty Name="sid" ColumnName="sid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="buysearchmaster">
       <EntityTypeMapping TypeName="erpsystemModel.buysearchmaster">
         <MappingFragment StoreEntitySet="buysearchmaster">
-          <ScalarProperty Name="stoid" ColumnName="stoid" />
-          <ScalarProperty Name="stopname" ColumnName="stopname" />
-          <ScalarProperty Name="stopid" ColumnName="stopid" />
-          <ScalarProperty Name="saddress" ColumnName="saddress" />
-          <ScalarProperty Name="stodate" ColumnName="stodate" />
-          <ScalarProperty Name="stunum" ColumnName="stunum" />
-          <ScalarProperty Name="stoydate" ColumnName="stoydate" />
-          <ScalarProperty Name="stoshort" ColumnName="stoshort" />
-          <ScalarProperty Name="sotaxrate" ColumnName="sotaxrate" />
-          <ScalarProperty Name="stoistax" ColumnName="stoistax" />
-          <ScalarProperty Name="stosaddress" ColumnName="stosaddress" />
-          <ScalarProperty Name="stomake" ColumnName="stomake" />
-          <ScalarProperty Name="stoshen" ColumnName="stoshen" />
-          <ScalarProperty Name="stobuy" ColumnName="stobuy" />
-          <ScalarProperty Name="stodep" ColumnName="stodep" />
-          <ScalarProperty Name="stostate" ColumnName="stostate" />
-          <ScalarProperty Name="stopbid" ColumnName="stopbid" />
-          <ScalarProperty Name="sheader" ColumnName="sheader" />
-          <ScalarProperty Name="sfooter" ColumnName="sfooter" />
-          <ScalarProperty Name="szione" ColumnName="szione" />
-          <ScalarProperty Name="szitwo" ColumnName="szitwo" />
-          <ScalarProperty Name="sremark" ColumnName="sremark" />
-          <ScalarProperty Name="stodid" ColumnName="stodid" />
-          <ScalarProperty Name="store" ColumnName="store" />
           <ScalarProperty Name="sdel" ColumnName="sdel" />
+          <ScalarProperty Name="store" ColumnName="store" />
+          <ScalarProperty Name="stodid" ColumnName="stodid" />
+          <ScalarProperty Name="sremark" ColumnName="sremark" />
+          <ScalarProperty Name="szitwo" ColumnName="szitwo" />
+          <ScalarProperty Name="szione" ColumnName="szione" />
+          <ScalarProperty Name="sfooter" ColumnName="sfooter" />
+          <ScalarProperty Name="sheader" ColumnName="sheader" />
+          <ScalarProperty Name="stopbid" ColumnName="stopbid" />
+          <ScalarProperty Name="stostate" ColumnName="stostate" />
+          <ScalarProperty Name="stodep" ColumnName="stodep" />
+          <ScalarProperty Name="stobuy" ColumnName="stobuy" />
+          <ScalarProperty Name="stoshen" ColumnName="stoshen" />
+          <ScalarProperty Name="stomake" ColumnName="stomake" />
+          <ScalarProperty Name="stosaddress" ColumnName="stosaddress" />
+          <ScalarProperty Name="stoistax" ColumnName="stoistax" />
+          <ScalarProperty Name="sotaxrate" ColumnName="sotaxrate" />
+          <ScalarProperty Name="stoshort" ColumnName="stoshort" />
+          <ScalarProperty Name="stoydate" ColumnName="stoydate" />
+          <ScalarProperty Name="stunum" ColumnName="stunum" />
+          <ScalarProperty Name="stodate" ColumnName="stodate" />
+          <ScalarProperty Name="saddress" ColumnName="saddress" />
+          <ScalarProperty Name="stopid" ColumnName="stopid" />
+          <ScalarProperty Name="stopname" ColumnName="stopname" />
+          <ScalarProperty Name="stoid" ColumnName="stoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="buytype">
       <EntityTypeMapping TypeName="erpsystemModel.buytype">
         <MappingFragment StoreEntitySet="buytype">
-          <ScalarProperty Name="Buytypeid" ColumnName="Buytypeid" />
           <ScalarProperty Name="BuytypeName" ColumnName="BuytypeName" />
+          <ScalarProperty Name="Buytypeid" ColumnName="Buytypeid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="caigoumingxi">
       <EntityTypeMapping TypeName="erpsystemModel.caigoumingxi">
         <MappingFragment StoreEntitySet="caigoumingxi">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="matterid" ColumnName="matterid" />
-          <ScalarProperty Name="mattername" ColumnName="mattername" />
-          <ScalarProperty Name="specifications" ColumnName="specifications" />
-          <ScalarProperty Name="unitname" ColumnName="unitname" />
-          <ScalarProperty Name="sums" ColumnName="sums" />
-          <ScalarProperty Name="reqirementdate" ColumnName="reqirementdate" />
-          <ScalarProperty Name="proposedate" ColumnName="proposedate" />
-          <ScalarProperty Name="journalizing" ColumnName="journalizing" />
-          <ScalarProperty Name="sourceoneleave" ColumnName="sourceoneleave" />
-          <ScalarProperty Name="sourceonenumbers" ColumnName="sourceonenumbers" />
-          <ScalarProperty Name="standardbidcurrencyleave" ColumnName="standardbidcurrencyleave" />
-          <ScalarProperty Name="standardbid" ColumnName="standardbid" />
-          <ScalarProperty Name="standardbidmoney" ColumnName="standardbidmoney" />
-          <ScalarProperty Name="lastholepurchasecurrencyleave" ColumnName="lastholepurchasecurrencyleave" />
-          <ScalarProperty Name="lastholepurchaseunit" ColumnName="lastholepurchaseunit" />
-          <ScalarProperty Name="lastholepurchasebidmoney" ColumnName="lastholepurchasebidmoney" />
-          <ScalarProperty Name="weisum" ColumnName="weisum" />
           <ScalarProperty Name="lanhao" ColumnName="lanhao" />
+          <ScalarProperty Name="weisum" ColumnName="weisum" />
+          <ScalarProperty Name="lastholepurchasebidmoney" ColumnName="lastholepurchasebidmoney" />
+          <ScalarProperty Name="lastholepurchaseunit" ColumnName="lastholepurchaseunit" />
+          <ScalarProperty Name="lastholepurchasecurrencyleave" ColumnName="lastholepurchasecurrencyleave" />
+          <ScalarProperty Name="standardbidmoney" ColumnName="standardbidmoney" />
+          <ScalarProperty Name="standardbid" ColumnName="standardbid" />
+          <ScalarProperty Name="standardbidcurrencyleave" ColumnName="standardbidcurrencyleave" />
+          <ScalarProperty Name="sourceonenumbers" ColumnName="sourceonenumbers" />
+          <ScalarProperty Name="sourceoneleave" ColumnName="sourceoneleave" />
+          <ScalarProperty Name="journalizing" ColumnName="journalizing" />
+          <ScalarProperty Name="proposedate" ColumnName="proposedate" />
+          <ScalarProperty Name="reqirementdate" ColumnName="reqirementdate" />
+          <ScalarProperty Name="sums" ColumnName="sums" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+          <ScalarProperty Name="mattername" ColumnName="mattername" />
+          <ScalarProperty Name="matterid" ColumnName="matterid" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="caigouqinggou">
       <EntityTypeMapping TypeName="erpsystemModel.caigouqinggou">
         <MappingFragment StoreEntitySet="caigouqinggou">
-          <ScalarProperty Name="billno" ColumnName="billno" />
-          <ScalarProperty Name="billdate" ColumnName="billdate" />
-          <ScalarProperty Name="billstyleid" ColumnName="billstyleid" />
-          <ScalarProperty Name="billstatus" ColumnName="billstatus" />
-          <ScalarProperty Name="maker" ColumnName="maker" />
-          <ScalarProperty Name="permitter" ColumnName="permitter" />
-          <ScalarProperty Name="remark" ColumnName="remark" />
-          <ScalarProperty Name="sumqty" ColumnName="sumqty" />
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="qinggourenyuan" ColumnName="qinggourenyuan" />
-          <ScalarProperty Name="qinggoubumen" ColumnName="qinggoubumen" />
-          <ScalarProperty Name="qinggoudepid" ColumnName="qinggoudepid" />
-          <ScalarProperty Name="qinggoubuyid" ColumnName="qinggoubuyid" />
           <ScalarProperty Name="checkshh" ColumnName="checkshh" />
+          <ScalarProperty Name="qinggoubuyid" ColumnName="qinggoubuyid" />
+          <ScalarProperty Name="qinggoudepid" ColumnName="qinggoudepid" />
+          <ScalarProperty Name="qinggoubumen" ColumnName="qinggoubumen" />
+          <ScalarProperty Name="qinggourenyuan" ColumnName="qinggourenyuan" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sumqty" ColumnName="sumqty" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="permitter" ColumnName="permitter" />
+          <ScalarProperty Name="maker" ColumnName="maker" />
+          <ScalarProperty Name="billstatus" ColumnName="billstatus" />
+          <ScalarProperty Name="billstyleid" ColumnName="billstyleid" />
+          <ScalarProperty Name="billdate" ColumnName="billdate" />
+          <ScalarProperty Name="billno" ColumnName="billno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="clientmaster">
       <EntityTypeMapping TypeName="erpsystemModel.clientmaster">
         <MappingFragment StoreEntitySet="clientmaster">
-          <ScalarProperty Name="classid" ColumnName="classid" />
-          <ScalarProperty Name="corpid" ColumnName="corpid" />
-          <ScalarProperty Name="fullname" ColumnName="fullname" />
-          <ScalarProperty Name="shortname" ColumnName="shortname" />
-          <ScalarProperty Name="chiefname" ColumnName="chiefname" />
-          <ScalarProperty Name="personname" ColumnName="personname" />
-          <ScalarProperty Name="taxno" ColumnName="taxno" />
-          <ScalarProperty Name="fundsattribfullname" ColumnName="fundsattribfullname" />
-          <ScalarProperty Name="businessname" ColumnName="businessname" />
-          <ScalarProperty Name="fundslimit" ColumnName="fundslimit" />
-          <ScalarProperty Name="startadvrecv" ColumnName="startadvrecv" />
-          <ScalarProperty Name="surpluslimit" ColumnName="surpluslimit" />
-          <ScalarProperty Name="statreceivable" ColumnName="statreceivable" />
-          <ScalarProperty Name="curadvreceivable" ColumnName="curadvreceivable" />
-          <ScalarProperty Name="deliveraddress" ColumnName="deliveraddress" />
           <ScalarProperty Name="remainquota" ColumnName="remainquota" />
+          <ScalarProperty Name="deliveraddress" ColumnName="deliveraddress" />
+          <ScalarProperty Name="curadvreceivable" ColumnName="curadvreceivable" />
+          <ScalarProperty Name="statreceivable" ColumnName="statreceivable" />
+          <ScalarProperty Name="surpluslimit" ColumnName="surpluslimit" />
+          <ScalarProperty Name="startadvrecv" ColumnName="startadvrecv" />
+          <ScalarProperty Name="fundslimit" ColumnName="fundslimit" />
+          <ScalarProperty Name="businessname" ColumnName="businessname" />
+          <ScalarProperty Name="fundsattribfullname" ColumnName="fundsattribfullname" />
+          <ScalarProperty Name="taxno" ColumnName="taxno" />
+          <ScalarProperty Name="personname" ColumnName="personname" />
+          <ScalarProperty Name="chiefname" ColumnName="chiefname" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="shortname" ColumnName="shortname" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="corpid" ColumnName="corpid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="closstype">
       <EntityTypeMapping TypeName="erpsystemModel.closstype">
         <MappingFragment StoreEntitySet="closstype">
-          <ScalarProperty Name="clossid" ColumnName="clossid" />
-          <ScalarProperty Name="clossname" ColumnName="clossname" />
-          <ScalarProperty Name="englishname" ColumnName="englishname" />
           <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="englishname" ColumnName="englishname" />
+          <ScalarProperty Name="clossname" ColumnName="clossname" />
+          <ScalarProperty Name="clossid" ColumnName="clossid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="daassigbuymain">
       <EntityTypeMapping TypeName="erpsystemModel.daassigbuymain">
         <MappingFragment StoreEntitySet="daassigbuymain">
-          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
-          <ScalarProperty Name="billno" ColumnName="billno" />
-          <ScalarProperty Name="billdete" ColumnName="billdete" />
-          <ScalarProperty Name="assignstyleid" ColumnName="assignstyleid" />
-          <ScalarProperty Name="voucheck" ColumnName="voucheck" />
-          <ScalarProperty Name="mlamount" ColumnName="mlamount" />
-          <ScalarProperty Name="maker" ColumnName="maker" />
-          <ScalarProperty Name="permitter" ColumnName="permitter" />
           <ScalarProperty Name="auditstatus" ColumnName="auditstatus" />
+          <ScalarProperty Name="permitter" ColumnName="permitter" />
+          <ScalarProperty Name="maker" ColumnName="maker" />
+          <ScalarProperty Name="mlamount" ColumnName="mlamount" />
+          <ScalarProperty Name="voucheck" ColumnName="voucheck" />
+          <ScalarProperty Name="assignstyleid" ColumnName="assignstyleid" />
+          <ScalarProperty Name="billdete" ColumnName="billdete" />
+          <ScalarProperty Name="billno" ColumnName="billno" />
+          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="detailorderpay">
       <EntityTypeMapping TypeName="erpsystemModel.detailorderpay">
         <MappingFragment StoreEntitySet="detailorderpay">
-          <ScalarProperty Name="oid" ColumnName="oid" />
-          <ScalarProperty Name="ypay" ColumnName="ypay" />
-          <ScalarProperty Name="froms" ColumnName="froms" />
-          <ScalarProperty Name="fromno" ColumnName="fromno" />
-          <ScalarProperty Name="details" ColumnName="details" />
-          <ScalarProperty Name="info" ColumnName="info" />
           <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="fromno" ColumnName="fromno" />
+          <ScalarProperty Name="froms" ColumnName="froms" />
+          <ScalarProperty Name="ypay" ColumnName="ypay" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dingdancong">
       <EntityTypeMapping TypeName="erpsystemModel.dingdancong">
         <MappingFragment StoreEntitySet="dingdancong">
-          <ScalarProperty Name="orderbillid" ColumnName="orderbillid" />
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="matter" ColumnName="matter" />
-          <ScalarProperty Name="num" ColumnName="num" />
-          <ScalarProperty Name="unitpricebefore" ColumnName="unitpricebefore" />
-          <ScalarProperty Name="discountrate" ColumnName="discountrate" />
-          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
-          <ScalarProperty Name="amount" ColumnName="amount" />
-          <ScalarProperty Name="taxate" ColumnName="taxate" />
-          <ScalarProperty Name="tax" ColumnName="tax" />
-          <ScalarProperty Name="taxamount" ColumnName="taxamount" />
-          <ScalarProperty Name="predeleasedate" ColumnName="predeleasedate" />
-          <ScalarProperty Name="singlesource" ColumnName="singlesource" />
           <ScalarProperty Name="did" ColumnName="did" />
+          <ScalarProperty Name="singlesource" ColumnName="singlesource" />
+          <ScalarProperty Name="predeleasedate" ColumnName="predeleasedate" />
+          <ScalarProperty Name="taxamount" ColumnName="taxamount" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="taxate" ColumnName="taxate" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+          <ScalarProperty Name="discountrate" ColumnName="discountrate" />
+          <ScalarProperty Name="unitpricebefore" ColumnName="unitpricebefore" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="matter" ColumnName="matter" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
+          <ScalarProperty Name="orderbillid" ColumnName="orderbillid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dingdanzhu">
       <EntityTypeMapping TypeName="erpsystemModel.dingdanzhu">
         <MappingFragment StoreEntitySet="dingdanzhu">
-          <ScalarProperty Name="orderbillid" ColumnName="orderbillid" />
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="billdate" ColumnName="billdate" />
-          <ScalarProperty Name="custaddress" ColumnName="custaddress" />
-          <ScalarProperty Name="priceoftax" ColumnName="priceoftax" />
-          <ScalarProperty Name="currname" ColumnName="currname" />
-          <ScalarProperty Name="billstatus" ColumnName="billstatus" />
-          <ScalarProperty Name="exchrate" ColumnName="exchrate" />
-          <ScalarProperty Name="maker" ColumnName="maker" />
-          <ScalarProperty Name="fuhe" ColumnName="fuhe" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="fuhe" ColumnName="fuhe" />
+          <ScalarProperty Name="maker" ColumnName="maker" />
+          <ScalarProperty Name="exchrate" ColumnName="exchrate" />
+          <ScalarProperty Name="billstatus" ColumnName="billstatus" />
+          <ScalarProperty Name="currname" ColumnName="currname" />
+          <ScalarProperty Name="priceoftax" ColumnName="priceoftax" />
+          <ScalarProperty Name="custaddress" ColumnName="custaddress" />
+          <ScalarProperty Name="billdate" ColumnName="billdate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="orderbillid" ColumnName="orderbillid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dsassignbuysub">
       <EntityTypeMapping TypeName="erpsystemModel.dsassignbuysub">
         <MappingFragment StoreEntitySet="dsassignbuysub">
-          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
-          <ScalarProperty Name="billnoline" ColumnName="billnoline" />
-          <ScalarProperty Name="serno" ColumnName="serno" />
-          <ScalarProperty Name="fromnoid" ColumnName="fromnoid" />
-          <ScalarProperty Name="proid" ColumnName="proid" />
-          <ScalarProperty Name="prodname" ColumnName="prodname" />
-          <ScalarProperty Name="prodsize" ColumnName="prodsize" />
-          <ScalarProperty Name="mlamountmy" ColumnName="mlamountmy" />
-          <ScalarProperty Name="vquantity" ColumnName="vquantity" />
-          <ScalarProperty Name="sunit" ColumnName="sunit" />
-          <ScalarProperty Name="weight" ColumnName="weight" />
-          <ScalarProperty Name="measm" ColumnName="measm" />
           <ScalarProperty Name="ftmlamountmy" ColumnName="ftmlamountmy" />
+          <ScalarProperty Name="measm" ColumnName="measm" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="sunit" ColumnName="sunit" />
+          <ScalarProperty Name="vquantity" ColumnName="vquantity" />
+          <ScalarProperty Name="mlamountmy" ColumnName="mlamountmy" />
+          <ScalarProperty Name="prodsize" ColumnName="prodsize" />
+          <ScalarProperty Name="prodname" ColumnName="prodname" />
+          <ScalarProperty Name="proid" ColumnName="proid" />
+          <ScalarProperty Name="fromnoid" ColumnName="fromnoid" />
+          <ScalarProperty Name="serno" ColumnName="serno" />
+          <ScalarProperty Name="billnoline" ColumnName="billnoline" />
+          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dsassignfee">
       <EntityTypeMapping TypeName="erpsystemModel.dsassignfee">
         <MappingFragment StoreEntitySet="dsassignfee">
-          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
-          <ScalarProperty Name="billnoline" ColumnName="billnoline" />
-          <ScalarProperty Name="serno" ColumnName="serno" />
-          <ScalarProperty Name="feeclassid" ColumnName="feeclassid" />
-          <ScalarProperty Name="farcclassname" ColumnName="farcclassname" />
-          <ScalarProperty Name="dsdetailcurr" ColumnName="dsdetailcurr" />
-          <ScalarProperty Name="exchrete" ColumnName="exchrete" />
-          <ScalarProperty Name="amount" ColumnName="amount" />
           <ScalarProperty Name="mlamount" ColumnName="mlamount" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="exchrete" ColumnName="exchrete" />
+          <ScalarProperty Name="dsdetailcurr" ColumnName="dsdetailcurr" />
+          <ScalarProperty Name="farcclassname" ColumnName="farcclassname" />
+          <ScalarProperty Name="feeclassid" ColumnName="feeclassid" />
+          <ScalarProperty Name="serno" ColumnName="serno" />
+          <ScalarProperty Name="billnoline" ColumnName="billnoline" />
+          <ScalarProperty Name="billnoid" ColumnName="billnoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dsdsadjustmain">
       <EntityTypeMapping TypeName="erpsystemModel.dsdsadjustmain">
         <MappingFragment StoreEntitySet="dsdsadjustmain">
-          <ScalarProperty Name="tjbillnoid" ColumnName="tjbillnoid" />
-          <ScalarProperty Name="tjbillno" ColumnName="tjbillno" />
-          <ScalarProperty Name="billdete" ColumnName="billdete" />
-          <ScalarProperty Name="iscsubject" ColumnName="iscsubject" />
-          <ScalarProperty Name="decsubject" ColumnName="decsubject" />
-          <ScalarProperty Name="voucheckno" ColumnName="voucheckno" />
-          <ScalarProperty Name="adjust" ColumnName="adjust" />
-          <ScalarProperty Name="meno" ColumnName="meno" />
-          <ScalarProperty Name="udefyi" ColumnName="udefyi" />
-          <ScalarProperty Name="udefer" ColumnName="udefer" />
-          <ScalarProperty Name="maker" ColumnName="maker" />
-          <ScalarProperty Name="permitter" ColumnName="permitter" />
           <ScalarProperty Name="auditstatus" ColumnName="auditstatus" />
+          <ScalarProperty Name="permitter" ColumnName="permitter" />
+          <ScalarProperty Name="maker" ColumnName="maker" />
+          <ScalarProperty Name="udefer" ColumnName="udefer" />
+          <ScalarProperty Name="udefyi" ColumnName="udefyi" />
+          <ScalarProperty Name="meno" ColumnName="meno" />
+          <ScalarProperty Name="adjust" ColumnName="adjust" />
+          <ScalarProperty Name="voucheckno" ColumnName="voucheckno" />
+          <ScalarProperty Name="decsubject" ColumnName="decsubject" />
+          <ScalarProperty Name="iscsubject" ColumnName="iscsubject" />
+          <ScalarProperty Name="billdete" ColumnName="billdete" />
+          <ScalarProperty Name="tjbillno" ColumnName="tjbillno" />
+          <ScalarProperty Name="tjbillnoid" ColumnName="tjbillnoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dsdsadjustsub">
       <EntityTypeMapping TypeName="erpsystemModel.dsdsadjustsub">
         <MappingFragment StoreEntitySet="dsdsadjustsub">
-          <ScalarProperty Name="tjbillnoid" ColumnName="tjbillnoid" />
-          <ScalarProperty Name="tjbillnoline" ColumnName="tjbillnoline" />
-          <ScalarProperty Name="serno" ColumnName="serno" />
-          <ScalarProperty Name="proid" ColumnName="proid" />
-          <ScalarProperty Name="prodname" ColumnName="prodname" />
-          <ScalarProperty Name="prodsize" ColumnName="prodsize" />
-          <ScalarProperty Name="sunit" ColumnName="sunit" />
-          <ScalarProperty Name="curqty" ColumnName="curqty" />
-          <ScalarProperty Name="lcostavh" ColumnName="lcostavh" />
-          <ScalarProperty Name="price" ColumnName="price" />
-          <ScalarProperty Name="amount" ColumnName="amount" />
           <ScalarProperty Name="itemremark" ColumnName="itemremark" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="lcostavh" ColumnName="lcostavh" />
+          <ScalarProperty Name="curqty" ColumnName="curqty" />
+          <ScalarProperty Name="sunit" ColumnName="sunit" />
+          <ScalarProperty Name="prodsize" ColumnName="prodsize" />
+          <ScalarProperty Name="prodname" ColumnName="prodname" />
+          <ScalarProperty Name="proid" ColumnName="proid" />
+          <ScalarProperty Name="serno" ColumnName="serno" />
+          <ScalarProperty Name="tjbillnoline" ColumnName="tjbillnoline" />
+          <ScalarProperty Name="tjbillnoid" ColumnName="tjbillnoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="feeclass">
       <EntityTypeMapping TypeName="erpsystemModel.feeclass">
         <MappingFragment StoreEntitySet="feeclass">
-          <ScalarProperty Name="feeclassid" ColumnName="feeclassid" />
           <ScalarProperty Name="farcclassname" ColumnName="farcclassname" />
+          <ScalarProperty Name="feeclassid" ColumnName="feeclassid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="gfmeansoay">
       <EntityTypeMapping TypeName="erpsystemModel.gfmeansoay">
         <MappingFragment StoreEntitySet="gfmeansoay">
-          <ScalarProperty Name="gfid" ColumnName="gfid" />
-          <ScalarProperty Name="gfamount" ColumnName="gfamount" />
-          <ScalarProperty Name="gfremain" ColumnName="gfremain" />
-          <ScalarProperty Name="gfrecv" ColumnName="gfrecv" />
-          <ScalarProperty Name="gfdayofclose" ColumnName="gfdayofclose" />
-          <ScalarProperty Name="gfcredi" ColumnName="gfcredi" />
-          <ScalarProperty Name="gfinvotypeid" ColumnName="gfinvotypeid" />
-          <ScalarProperty Name="gfstartadv" ColumnName="gfstartadv" />
-          <ScalarProperty Name="gfstartrev" ColumnName="gfstartrev" />
-          <ScalarProperty Name="gfcuradv" ColumnName="gfcuradv" />
-          <ScalarProperty Name="gfcurrev" ColumnName="gfcurrev" />
-          <ScalarProperty Name="gfunbilled" ColumnName="gfunbilled" />
-          <ScalarProperty Name="gfadvance" ColumnName="gfadvance" />
-          <ScalarProperty Name="gfpauable" ColumnName="gfpauable" />
-          <ScalarProperty Name="gfaccrev" ColumnName="gfaccrev" />
           <ScalarProperty Name="line" ColumnName="line" />
+          <ScalarProperty Name="gfaccrev" ColumnName="gfaccrev" />
+          <ScalarProperty Name="gfpauable" ColumnName="gfpauable" />
+          <ScalarProperty Name="gfadvance" ColumnName="gfadvance" />
+          <ScalarProperty Name="gfunbilled" ColumnName="gfunbilled" />
+          <ScalarProperty Name="gfcurrev" ColumnName="gfcurrev" />
+          <ScalarProperty Name="gfcuradv" ColumnName="gfcuradv" />
+          <ScalarProperty Name="gfstartrev" ColumnName="gfstartrev" />
+          <ScalarProperty Name="gfstartadv" ColumnName="gfstartadv" />
+          <ScalarProperty Name="gfinvotypeid" ColumnName="gfinvotypeid" />
+          <ScalarProperty Name="gfcredi" ColumnName="gfcredi" />
+          <ScalarProperty Name="gfdayofclose" ColumnName="gfdayofclose" />
+          <ScalarProperty Name="gfrecv" ColumnName="gfrecv" />
+          <ScalarProperty Name="gfremain" ColumnName="gfremain" />
+          <ScalarProperty Name="gfamount" ColumnName="gfamount" />
+          <ScalarProperty Name="gfid" ColumnName="gfid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="gmeans">
       <EntityTypeMapping TypeName="erpsystemModel.gmeans">
         <MappingFragment StoreEntitySet="gmeans">
-          <ScalarProperty Name="gid" ColumnName="gid" />
-          <ScalarProperty Name="gnname" ColumnName="gnname" />
-          <ScalarProperty Name="gfullname" ColumnName="gfullname" />
-          <ScalarProperty Name="genglishname" ColumnName="genglishname" />
-          <ScalarProperty Name="gfullenglishname" ColumnName="gfullenglishname" />
-          <ScalarProperty Name="gattribution" ColumnName="gattribution" />
-          <ScalarProperty Name="gtypeid" ColumnName="gtypeid" />
           <ScalarProperty Name="gcurrency" ColumnName="gcurrency" />
+          <ScalarProperty Name="gtypeid" ColumnName="gtypeid" />
+          <ScalarProperty Name="gattribution" ColumnName="gattribution" />
+          <ScalarProperty Name="gfullenglishname" ColumnName="gfullenglishname" />
+          <ScalarProperty Name="genglishname" ColumnName="genglishname" />
+          <ScalarProperty Name="gfullname" ColumnName="gfullname" />
+          <ScalarProperty Name="gnname" ColumnName="gnname" />
+          <ScalarProperty Name="gid" ColumnName="gid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="gmeansadeinite">
       <EntityTypeMapping TypeName="erpsystemModel.gmeansadeinite">
         <MappingFragment StoreEntitySet="gmeansadeinite">
-          <ScalarProperty Name="gzid" ColumnName="gzid" />
-          <ScalarProperty Name="gzname" ColumnName="gzname" />
-          <ScalarProperty Name="gzlinkman" ColumnName="gzlinkman" />
-          <ScalarProperty Name="gztele1" ColumnName="gztele1" />
-          <ScalarProperty Name="gztele2" ColumnName="gztele2" />
-          <ScalarProperty Name="gztele3" ColumnName="gztele3" />
-          <ScalarProperty Name="gzmobiletel" ColumnName="gzmobiletel" />
-          <ScalarProperty Name="gzbank" ColumnName="gzbank" />
-          <ScalarProperty Name="gzbankid" ColumnName="gzbankid" />
-          <ScalarProperty Name="gzpersonname" ColumnName="gzpersonname" />
-          <ScalarProperty Name="gztaxno" ColumnName="gztaxno" />
-          <ScalarProperty Name="gzcap" ColumnName="gzcap" />
-          <ScalarProperty Name="gzindustry" ColumnName="gzindustry" />
-          <ScalarProperty Name="gzemail" ColumnName="gzemail" />
-          <ScalarProperty Name="gzweb" ColumnName="gzweb" />
-          <ScalarProperty Name="gzfaxno" ColumnName="gzfaxno" />
           <ScalarProperty Name="line" ColumnName="line" />
+          <ScalarProperty Name="gzfaxno" ColumnName="gzfaxno" />
+          <ScalarProperty Name="gzweb" ColumnName="gzweb" />
+          <ScalarProperty Name="gzemail" ColumnName="gzemail" />
+          <ScalarProperty Name="gzindustry" ColumnName="gzindustry" />
+          <ScalarProperty Name="gzcap" ColumnName="gzcap" />
+          <ScalarProperty Name="gztaxno" ColumnName="gztaxno" />
+          <ScalarProperty Name="gzpersonname" ColumnName="gzpersonname" />
+          <ScalarProperty Name="gzbankid" ColumnName="gzbankid" />
+          <ScalarProperty Name="gzbank" ColumnName="gzbank" />
+          <ScalarProperty Name="gzmobiletel" ColumnName="gzmobiletel" />
+          <ScalarProperty Name="gztele3" ColumnName="gztele3" />
+          <ScalarProperty Name="gztele2" ColumnName="gztele2" />
+          <ScalarProperty Name="gztele1" ColumnName="gztele1" />
+          <ScalarProperty Name="gzlinkman" ColumnName="gzlinkman" />
+          <ScalarProperty Name="gzname" ColumnName="gzname" />
+          <ScalarProperty Name="gzid" ColumnName="gzid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="khls">
       <EntityTypeMapping TypeName="erpsystemModel.khls">
         <MappingFragment StoreEntitySet="khls">
-          <ScalarProperty Name="lsid" ColumnName="lsid" />
-          <ScalarProperty Name="khid" ColumnName="khid" />
-          <ScalarProperty Name="lydb" ColumnName="lydb" />
-          <ScalarProperty Name="lydh" ColumnName="lydh" />
-          <ScalarProperty Name="xxje" ColumnName="xxje" />
           <ScalarProperty Name="sjje" ColumnName="sjje" />
+          <ScalarProperty Name="xxje" ColumnName="xxje" />
+          <ScalarProperty Name="lydh" ColumnName="lydh" />
+          <ScalarProperty Name="lydb" ColumnName="lydb" />
+          <ScalarProperty Name="khid" ColumnName="khid" />
+          <ScalarProperty Name="lsid" ColumnName="lsid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="orderdetails">
       <EntityTypeMapping TypeName="erpsystemModel.orderdetails">
         <MappingFragment StoreEntitySet="orderdetails">
-          <ScalarProperty Name="orderid" ColumnName="orderid" />
-          <ScalarProperty Name="oline" ColumnName="oline" />
-          <ScalarProperty Name="osperid" ColumnName="osperid" />
-          <ScalarProperty Name="ospername" ColumnName="ospername" />
-          <ScalarProperty Name="oprodsize" ColumnName="oprodsize" />
-          <ScalarProperty Name="ounitname" ColumnName="ounitname" />
-          <ScalarProperty Name="onum" ColumnName="onum" />
-          <ScalarProperty Name="osperprice" ColumnName="osperprice" />
-          <ScalarProperty Name="oszheshu" ColumnName="oszheshu" />
-          <ScalarProperty Name="oprice" ColumnName="oprice" />
-          <ScalarProperty Name="omoney" ColumnName="omoney" />
-          <ScalarProperty Name="otaxrate" ColumnName="otaxrate" />
-          <ScalarProperty Name="otaxmoney" ColumnName="otaxmoney" />
-          <ScalarProperty Name="otaxmoneys" ColumnName="otaxmoneys" />
-          <ScalarProperty Name="ostoragedate" ColumnName="ostoragedate" />
-          <ScalarProperty Name="oisprent" ColumnName="oisprent" />
-          <ScalarProperty Name="oremark" ColumnName="oremark" />
-          <ScalarProperty Name="origintype" ColumnName="origintype" />
           <ScalarProperty Name="originno" ColumnName="originno" />
+          <ScalarProperty Name="origintype" ColumnName="origintype" />
+          <ScalarProperty Name="oremark" ColumnName="oremark" />
+          <ScalarProperty Name="oisprent" ColumnName="oisprent" />
+          <ScalarProperty Name="ostoragedate" ColumnName="ostoragedate" />
+          <ScalarProperty Name="otaxmoneys" ColumnName="otaxmoneys" />
+          <ScalarProperty Name="otaxmoney" ColumnName="otaxmoney" />
+          <ScalarProperty Name="otaxrate" ColumnName="otaxrate" />
+          <ScalarProperty Name="omoney" ColumnName="omoney" />
+          <ScalarProperty Name="oprice" ColumnName="oprice" />
+          <ScalarProperty Name="oszheshu" ColumnName="oszheshu" />
+          <ScalarProperty Name="osperprice" ColumnName="osperprice" />
+          <ScalarProperty Name="onum" ColumnName="onum" />
+          <ScalarProperty Name="ounitname" ColumnName="ounitname" />
+          <ScalarProperty Name="oprodsize" ColumnName="oprodsize" />
+          <ScalarProperty Name="ospername" ColumnName="ospername" />
+          <ScalarProperty Name="osperid" ColumnName="osperid" />
+          <ScalarProperty Name="oline" ColumnName="oline" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -438,485 +438,486 @@
       <EntityTypeMapping TypeName="erpsystemModel.orderpay">
         <MappingFragment StoreEntitySet="orderpay">
           <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
+          <ScalarProperty Name="checkman" ColumnName="checkman" />
+          <ScalarProperty Name="project" ColumnName="project" />
+          <ScalarProperty Name="exceter" ColumnName="exceter" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="style" ColumnName="style" />
+          <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="thirdmoney" ColumnName="thirdmoney" />
+          <ScalarProperty Name="thirdway" ColumnName="thirdway" />
+          <ScalarProperty Name="secondmoney" ColumnName="secondmoney" />
+          <ScalarProperty Name="secondway" ColumnName="secondway" />
+          <ScalarProperty Name="firstmoney" ColumnName="firstmoney" />
+          <ScalarProperty Name="firstway" ColumnName="firstway" />
+          <ScalarProperty Name="suppildname" ColumnName="suppildname" />
           <ScalarProperty Name="suppildno" ColumnName="suppildno" />
+          <ScalarProperty Name="nodate" ColumnName="nodate" />
           <ScalarProperty Name="ono" ColumnName="ono" />
           <ScalarProperty Name="orid" ColumnName="orid" />
-          <ScalarProperty Name="nodate" ColumnName="nodate" />
-          <ScalarProperty Name="suppildname" ColumnName="suppildname" />
-          <ScalarProperty Name="firstway" ColumnName="firstway" />
-          <ScalarProperty Name="firstmoney" ColumnName="firstmoney" />
-          <ScalarProperty Name="secondway" ColumnName="secondway" />
-          <ScalarProperty Name="secondmoney" ColumnName="secondmoney" />
-          <ScalarProperty Name="thirdway" ColumnName="thirdway" />
-          <ScalarProperty Name="thirdmoney" ColumnName="thirdmoney" />
-          <ScalarProperty Name="currency" ColumnName="currency" />
-          <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
-          <ScalarProperty Name="style" ColumnName="style" />
-          <ScalarProperty Name="enddate" ColumnName="enddate" />
-          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
-          <ScalarProperty Name="department" ColumnName="department" />
-          <ScalarProperty Name="exceter" ColumnName="exceter" />
-          <ScalarProperty Name="project" ColumnName="project" />
-          <ScalarProperty Name="checkman" ColumnName="checkman" />
-          <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="orders">
       <EntityTypeMapping TypeName="erpsystemModel.orders">
         <MappingFragment StoreEntitySet="orders">
-          <ScalarProperty Name="orderid" ColumnName="orderid" />
-          <ScalarProperty Name="ostoid" ColumnName="ostoid" />
-          <ScalarProperty Name="ostodate" ColumnName="ostodate" />
-          <ScalarProperty Name="osperid" ColumnName="osperid" />
-          <ScalarProperty Name="ospername" ColumnName="ospername" />
-          <ScalarProperty Name="osperaddress" ColumnName="osperaddress" />
-          <ScalarProperty Name="osunittax" ColumnName="osunittax" />
-          <ScalarProperty Name="otype" ColumnName="otype" />
-          <ScalarProperty Name="obibie" ColumnName="obibie" />
-          <ScalarProperty Name="ostate" ColumnName="ostate" />
-          <ScalarProperty Name="ossongaddress" ColumnName="ossongaddress" />
-          <ScalarProperty Name="ospercai" ColumnName="ospercai" />
-          <ScalarProperty Name="ospercaiid" ColumnName="ospercaiid" />
-          <ScalarProperty Name="oscaidep" ColumnName="oscaidep" />
-          <ScalarProperty Name="oscaidepid" ColumnName="oscaidepid" />
-          <ScalarProperty Name="oxiangmu" ColumnName="oxiangmu" />
-          <ScalarProperty Name="ostomemake" ColumnName="ostomemake" />
-          <ScalarProperty Name="ostoemcheck" ColumnName="ostoemcheck" />
-          <ScalarProperty Name="osremarks" ColumnName="osremarks" />
-          <ScalarProperty Name="oshestate" ColumnName="oshestate" />
-          <ScalarProperty Name="oheader" ColumnName="oheader" />
-          <ScalarProperty Name="ofooter" ColumnName="ofooter" />
-          <ScalarProperty Name="ozione" ColumnName="ozione" />
-          <ScalarProperty Name="ozitwo" ColumnName="ozitwo" />
-          <ScalarProperty Name="ostoreorder" ColumnName="ostoreorder" />
+          <ScalarProperty Name="otax" ColumnName="otax" />
           <ScalarProperty Name="osisdel" ColumnName="osisdel" />
+          <ScalarProperty Name="ostoreorder" ColumnName="ostoreorder" />
+          <ScalarProperty Name="ozitwo" ColumnName="ozitwo" />
+          <ScalarProperty Name="ozione" ColumnName="ozione" />
+          <ScalarProperty Name="ofooter" ColumnName="ofooter" />
+          <ScalarProperty Name="oheader" ColumnName="oheader" />
+          <ScalarProperty Name="oshestate" ColumnName="oshestate" />
+          <ScalarProperty Name="osremarks" ColumnName="osremarks" />
+          <ScalarProperty Name="ostoemcheck" ColumnName="ostoemcheck" />
+          <ScalarProperty Name="ostomemake" ColumnName="ostomemake" />
+          <ScalarProperty Name="oxiangmu" ColumnName="oxiangmu" />
+          <ScalarProperty Name="oscaidepid" ColumnName="oscaidepid" />
+          <ScalarProperty Name="oscaidep" ColumnName="oscaidep" />
+          <ScalarProperty Name="ospercaiid" ColumnName="ospercaiid" />
+          <ScalarProperty Name="ospercai" ColumnName="ospercai" />
+          <ScalarProperty Name="ossongaddress" ColumnName="ossongaddress" />
+          <ScalarProperty Name="ostate" ColumnName="ostate" />
+          <ScalarProperty Name="obibie" ColumnName="obibie" />
+          <ScalarProperty Name="otype" ColumnName="otype" />
+          <ScalarProperty Name="osunittax" ColumnName="osunittax" />
+          <ScalarProperty Name="osperaddress" ColumnName="osperaddress" />
+          <ScalarProperty Name="ospername" ColumnName="ospername" />
+          <ScalarProperty Name="osperid" ColumnName="osperid" />
+          <ScalarProperty Name="ostodate" ColumnName="ostodate" />
+          <ScalarProperty Name="ostoid" ColumnName="ostoid" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="pandian">
       <EntityTypeMapping TypeName="erpsystemModel.pandian">
         <MappingFragment StoreEntitySet="pandian">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="checkstorehouse" ColumnName="checkstorehouse" />
-          <ScalarProperty Name="checkdocumentsdate" ColumnName="checkdocumentsdate" />
-          <ScalarProperty Name="appreciationsubject" ColumnName="appreciationsubject" />
-          <ScalarProperty Name="documentsnumber" ColumnName="documentsnumber" />
-          <ScalarProperty Name="decreasesubject" ColumnName="decreasesubject" />
-          <ScalarProperty Name="vouchernumer" ColumnName="vouchernumer" />
-          <ScalarProperty Name="checkpersonnel" ColumnName="checkpersonnel" />
-          <ScalarProperty Name="touchingpersonnel" ColumnName="touchingpersonnel" />
           <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="touchingpersonnel" ColumnName="touchingpersonnel" />
+          <ScalarProperty Name="checkpersonnel" ColumnName="checkpersonnel" />
+          <ScalarProperty Name="vouchernumer" ColumnName="vouchernumer" />
+          <ScalarProperty Name="decreasesubject" ColumnName="decreasesubject" />
+          <ScalarProperty Name="documentsnumber" ColumnName="documentsnumber" />
+          <ScalarProperty Name="appreciationsubject" ColumnName="appreciationsubject" />
+          <ScalarProperty Name="checkdocumentsdate" ColumnName="checkdocumentsdate" />
+          <ScalarProperty Name="checkstorehouse" ColumnName="checkstorehouse" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="pandianmingxi">
       <EntityTypeMapping TypeName="erpsystemModel.pandianmingxi">
         <MappingFragment StoreEntitySet="pandianmingxi">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="pandianlh" ColumnName="pandianlh" />
-          <ScalarProperty Name="matterid" ColumnName="matterid" />
-          <ScalarProperty Name="mattername" ColumnName="mattername" />
-          <ScalarProperty Name="guige" ColumnName="guige" />
-          <ScalarProperty Name="danwei" ColumnName="danwei" />
-          <ScalarProperty Name="zhangmiansum" ColumnName="zhangmiansum" />
-          <ScalarProperty Name="pandiansum" ColumnName="pandiansum" />
-          <ScalarProperty Name="yingkuisum" ColumnName="yingkuisum" />
-          <ScalarProperty Name="danjia" ColumnName="danjia" />
-          <ScalarProperty Name="yingkuimoney" ColumnName="yingkuimoney" />
-          <ScalarProperty Name="pihao" ColumnName="pihao" />
           <ScalarProperty Name="yuanyin" ColumnName="yuanyin" />
+          <ScalarProperty Name="pihao" ColumnName="pihao" />
+          <ScalarProperty Name="yingkuimoney" ColumnName="yingkuimoney" />
+          <ScalarProperty Name="danjia" ColumnName="danjia" />
+          <ScalarProperty Name="yingkuisum" ColumnName="yingkuisum" />
+          <ScalarProperty Name="pandiansum" ColumnName="pandiansum" />
+          <ScalarProperty Name="zhangmiansum" ColumnName="zhangmiansum" />
+          <ScalarProperty Name="danwei" ColumnName="danwei" />
+          <ScalarProperty Name="guige" ColumnName="guige" />
+          <ScalarProperty Name="mattername" ColumnName="mattername" />
+          <ScalarProperty Name="matterid" ColumnName="matterid" />
+          <ScalarProperty Name="pandianlh" ColumnName="pandianlh" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="pay">
       <EntityTypeMapping TypeName="erpsystemModel.pay">
         <MappingFragment StoreEntitySet="pay">
-          <ScalarProperty Name="dno" ColumnName="dno" />
-          <ScalarProperty Name="oid" ColumnName="oid" />
-          <ScalarProperty Name="listkind" ColumnName="listkind" />
-          <ScalarProperty Name="nodate" ColumnName="nodate" />
-          <ScalarProperty Name="oldno" ColumnName="oldno" />
-          <ScalarProperty Name="invoicenumber" ColumnName="invoicenumber" />
-          <ScalarProperty Name="dealman" ColumnName="dealman" />
-          <ScalarProperty Name="dealmanname" ColumnName="dealmanname" />
-          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
-          <ScalarProperty Name="department" ColumnName="department" />
-          <ScalarProperty Name="purchaseman" ColumnName="purchaseman" />
-          <ScalarProperty Name="projectname" ColumnName="projectname" />
-          <ScalarProperty Name="currency" ColumnName="currency" />
-          <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
-          <ScalarProperty Name="oldnomoney" ColumnName="oldnomoney" />
-          <ScalarProperty Name="money" ColumnName="money" />
-          <ScalarProperty Name="discountmoney" ColumnName="discountmoney" />
-          <ScalarProperty Name="offsetmoney" ColumnName="offsetmoney" />
           <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
+          <ScalarProperty Name="offsetmoney" ColumnName="offsetmoney" />
+          <ScalarProperty Name="discountmoney" ColumnName="discountmoney" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="oldnomoney" ColumnName="oldnomoney" />
+          <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="purchaseman" ColumnName="purchaseman" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
+          <ScalarProperty Name="dealmanname" ColumnName="dealmanname" />
+          <ScalarProperty Name="dealman" ColumnName="dealman" />
+          <ScalarProperty Name="invoicenumber" ColumnName="invoicenumber" />
+          <ScalarProperty Name="oldno" ColumnName="oldno" />
+          <ScalarProperty Name="nodate" ColumnName="nodate" />
+          <ScalarProperty Name="listkind" ColumnName="listkind" />
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="dno" ColumnName="dno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="providertype">
       <EntityTypeMapping TypeName="erpsystemModel.providertype">
         <MappingFragment StoreEntitySet="providertype">
-          <ScalarProperty Name="ptypeid" ColumnName="ptypeid" />
-          <ScalarProperty Name="ptypename" ColumnName="ptypename" />
-          <ScalarProperty Name="penglishname" ColumnName="penglishname" />
           <ScalarProperty Name="premark" ColumnName="premark" />
+          <ScalarProperty Name="penglishname" ColumnName="penglishname" />
+          <ScalarProperty Name="ptypename" ColumnName="ptypename" />
+          <ScalarProperty Name="ptypeid" ColumnName="ptypeid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="qydetail">
       <EntityTypeMapping TypeName="erpsystemModel.qydetail">
         <MappingFragment StoreEntitySet="qydetail">
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="ly" ColumnName="ly" />
-          <ScalarProperty Name="lyno" ColumnName="lyno" />
-          <ScalarProperty Name="bz" ColumnName="bz" />
-          <ScalarProperty Name="qymoneydetail" ColumnName="qymoneydetail" />
           <ScalarProperty Name="ysckbillid" ColumnName="ysckbillid" />
+          <ScalarProperty Name="qymoneydetail" ColumnName="qymoneydetail" />
+          <ScalarProperty Name="bz" ColumnName="bz" />
+          <ScalarProperty Name="lyno" ColumnName="lyno" />
+          <ScalarProperty Name="ly" ColumnName="ly" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="returnods">
       <EntityTypeMapping TypeName="erpsystemModel.returnods">
         <MappingFragment StoreEntitySet="returnods">
-          <ScalarProperty Name="rcustname" ColumnName="rcustname" />
-          <ScalarProperty Name="raddrid" ColumnName="raddrid" />
-          <ScalarProperty Name="rbillrq" ColumnName="rbillrq" />
-          <ScalarProperty Name="rbillno" ColumnName="rbillno" />
-          <ScalarProperty Name="rpriceoftax" ColumnName="rpriceoftax" />
-          <ScalarProperty Name="rcurrent" ColumnName="rcurrent" />
-          <ScalarProperty Name="rwareid" ColumnName="rwareid" />
-          <ScalarProperty Name="rexchrate" ColumnName="rexchrate" />
-          <ScalarProperty Name="risdeduct" ColumnName="risdeduct" />
-          <ScalarProperty Name="rhesforeigntrade" ColumnName="rhesforeigntrade" />
-          <ScalarProperty Name="rdocument" ColumnName="rdocument" />
-          <ScalarProperty Name="rpurchasingname" ColumnName="rpurchasingname" />
-          <ScalarProperty Name="rproducername" ColumnName="rproducername" />
-          <ScalarProperty Name="rdepartid" ColumnName="rdepartid" />
-          <ScalarProperty Name="rrreviewername" ColumnName="rrreviewername" />
-          <ScalarProperty Name="rprojectid" ColumnName="rprojectid" />
-          <ScalarProperty Name="rid" ColumnName="rid" />
-          <ScalarProperty Name="rbid" ColumnName="rbid" />
-          <ScalarProperty Name="rqgid" ColumnName="rqgid" />
           <ScalarProperty Name="recheck" ColumnName="recheck" />
+          <ScalarProperty Name="rqgid" ColumnName="rqgid" />
+          <ScalarProperty Name="rbid" ColumnName="rbid" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="rprojectid" ColumnName="rprojectid" />
+          <ScalarProperty Name="rrreviewername" ColumnName="rrreviewername" />
+          <ScalarProperty Name="rdepartid" ColumnName="rdepartid" />
+          <ScalarProperty Name="rproducername" ColumnName="rproducername" />
+          <ScalarProperty Name="rpurchasingname" ColumnName="rpurchasingname" />
+          <ScalarProperty Name="rdocument" ColumnName="rdocument" />
+          <ScalarProperty Name="rhesforeigntrade" ColumnName="rhesforeigntrade" />
+          <ScalarProperty Name="risdeduct" ColumnName="risdeduct" />
+          <ScalarProperty Name="rexchrate" ColumnName="rexchrate" />
+          <ScalarProperty Name="rwareid" ColumnName="rwareid" />
+          <ScalarProperty Name="rcurrent" ColumnName="rcurrent" />
+          <ScalarProperty Name="rpriceoftax" ColumnName="rpriceoftax" />
+          <ScalarProperty Name="rbillno" ColumnName="rbillno" />
+          <ScalarProperty Name="rbillrq" ColumnName="rbillrq" />
+          <ScalarProperty Name="raddrid" ColumnName="raddrid" />
+          <ScalarProperty Name="rcustname" ColumnName="rcustname" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="rk_minxi">
       <EntityTypeMapping TypeName="erpsystemModel.rk_minxi">
         <MappingFragment StoreEntitySet="rk_minxi">
-          <ScalarProperty Name="rk_id" ColumnName="rk_id" />
-          <ScalarProperty Name="mx_spalten" ColumnName="mx_spalten" />
-          <ScalarProperty Name="mx_number" ColumnName="mx_number" />
-          <ScalarProperty Name="mx_name" ColumnName="mx_name" />
-          <ScalarProperty Name="mx_version" ColumnName="mx_version" />
-          <ScalarProperty Name="mx_dwname" ColumnName="mx_dwname" />
-          <ScalarProperty Name="mx_num" ColumnName="mx_num" />
-          <ScalarProperty Name="mx_zkqprice" ColumnName="mx_zkqprice" />
-          <ScalarProperty Name="mx_broken" ColumnName="mx_broken" />
-          <ScalarProperty Name="mx_price" ColumnName="mx_price" />
-          <ScalarProperty Name="mx_money" ColumnName="mx_money" />
-          <ScalarProperty Name="mx_rate" ColumnName="mx_rate" />
-          <ScalarProperty Name="mx_amount" ColumnName="mx_amount" />
-          <ScalarProperty Name="mx_batch" ColumnName="mx_batch" />
-          <ScalarProperty Name="mx_gift" ColumnName="mx_gift" />
-          <ScalarProperty Name="mx_remarks" ColumnName="mx_remarks" />
-          <ScalarProperty Name="mx_lydanbie" ColumnName="mx_lydanbie" />
-          <ScalarProperty Name="mx_lydanhao" ColumnName="mx_lydanhao" />
           <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="mx_lydanhao" ColumnName="mx_lydanhao" />
+          <ScalarProperty Name="mx_lydanbie" ColumnName="mx_lydanbie" />
+          <ScalarProperty Name="mx_remarks" ColumnName="mx_remarks" />
+          <ScalarProperty Name="mx_gift" ColumnName="mx_gift" />
+          <ScalarProperty Name="mx_batch" ColumnName="mx_batch" />
+          <ScalarProperty Name="mx_amount" ColumnName="mx_amount" />
+          <ScalarProperty Name="mx_rate" ColumnName="mx_rate" />
+          <ScalarProperty Name="mx_money" ColumnName="mx_money" />
+          <ScalarProperty Name="mx_price" ColumnName="mx_price" />
+          <ScalarProperty Name="mx_broken" ColumnName="mx_broken" />
+          <ScalarProperty Name="mx_zkqprice" ColumnName="mx_zkqprice" />
+          <ScalarProperty Name="mx_num" ColumnName="mx_num" />
+          <ScalarProperty Name="mx_dwname" ColumnName="mx_dwname" />
+          <ScalarProperty Name="mx_version" ColumnName="mx_version" />
+          <ScalarProperty Name="mx_name" ColumnName="mx_name" />
+          <ScalarProperty Name="mx_number" ColumnName="mx_number" />
+          <ScalarProperty Name="mx_spalten" ColumnName="mx_spalten" />
+          <ScalarProperty Name="rk_id" ColumnName="rk_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="rk_zhubiao">
       <EntityTypeMapping TypeName="erpsystemModel.rk_zhubiao">
         <MappingFragment StoreEntitySet="rk_zhubiao">
-          <ScalarProperty Name="rk_id" ColumnName="rk_id" />
-          <ScalarProperty Name="rk_danjuid" ColumnName="rk_danjuid" />
-          <ScalarProperty Name="rk_date" ColumnName="rk_date" />
-          <ScalarProperty Name="rk_name" ColumnName="rk_name" />
-          <ScalarProperty Name="rk_address" ColumnName="rk_address" />
-          <ScalarProperty Name="rk_type" ColumnName="rk_type" />
-          <ScalarProperty Name="rk_are" ColumnName="rk_are" />
-          <ScalarProperty Name="rk_depot" ColumnName="rk_depot" />
-          <ScalarProperty Name="rk_currency" ColumnName="rk_currency" />
-          <ScalarProperty Name="rk_exchange" ColumnName="rk_exchange" />
-          <ScalarProperty Name="rk_cgbuyer" ColumnName="rk_cgbuyer" />
-          <ScalarProperty Name="rk_branch" ColumnName="rk_branch" />
-          <ScalarProperty Name="rk_zdbuyer" ColumnName="rk_zdbuyer" />
-          <ScalarProperty Name="rk_fhbuyer" ColumnName="rk_fhbuyer" />
-          <ScalarProperty Name="rk_project" ColumnName="rk_project" />
-          <ScalarProperty Name="rk_beizhu" ColumnName="rk_beizhu" />
           <ScalarProperty Name="rk_zhuantai" ColumnName="rk_zhuantai" />
+          <ScalarProperty Name="rk_beizhu" ColumnName="rk_beizhu" />
+          <ScalarProperty Name="rk_project" ColumnName="rk_project" />
+          <ScalarProperty Name="rk_fhbuyer" ColumnName="rk_fhbuyer" />
+          <ScalarProperty Name="rk_zdbuyer" ColumnName="rk_zdbuyer" />
+          <ScalarProperty Name="rk_branch" ColumnName="rk_branch" />
+          <ScalarProperty Name="rk_cgbuyer" ColumnName="rk_cgbuyer" />
+          <ScalarProperty Name="rk_exchange" ColumnName="rk_exchange" />
+          <ScalarProperty Name="rk_currency" ColumnName="rk_currency" />
+          <ScalarProperty Name="rk_depot" ColumnName="rk_depot" />
+          <ScalarProperty Name="rk_are" ColumnName="rk_are" />
+          <ScalarProperty Name="rk_type" ColumnName="rk_type" />
+          <ScalarProperty Name="rk_address" ColumnName="rk_address" />
+          <ScalarProperty Name="rk_name" ColumnName="rk_name" />
+          <ScalarProperty Name="rk_date" ColumnName="rk_date" />
+          <ScalarProperty Name="rk_danjuid" ColumnName="rk_danjuid" />
+          <ScalarProperty Name="rk_id" ColumnName="rk_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="saleck">
       <EntityTypeMapping TypeName="erpsystemModel.saleck">
         <MappingFragment StoreEntitySet="saleck">
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="saledate" ColumnName="saledate" />
-          <ScalarProperty Name="salenumber" ColumnName="salenumber" />
-          <ScalarProperty Name="saleaddress" ColumnName="saleaddress" />
-          <ScalarProperty Name="saletype" ColumnName="saletype" />
-          <ScalarProperty Name="salecurrency" ColumnName="salecurrency" />
-          <ScalarProperty Name="saleshui" ColumnName="saleshui" />
-          <ScalarProperty Name="salerate" ColumnName="salerate" />
-          <ScalarProperty Name="salewarehouse" ColumnName="salewarehouse" />
-          <ScalarProperty Name="saletouch" ColumnName="saletouch" />
-          <ScalarProperty Name="salecheck" ColumnName="salecheck" />
-          <ScalarProperty Name="saleckdh" ColumnName="saleckdh" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="saleckdh" ColumnName="saleckdh" />
+          <ScalarProperty Name="salecheck" ColumnName="salecheck" />
+          <ScalarProperty Name="saletouch" ColumnName="saletouch" />
+          <ScalarProperty Name="salewarehouse" ColumnName="salewarehouse" />
+          <ScalarProperty Name="salerate" ColumnName="salerate" />
+          <ScalarProperty Name="saleshui" ColumnName="saleshui" />
+          <ScalarProperty Name="salecurrency" ColumnName="salecurrency" />
+          <ScalarProperty Name="saletype" ColumnName="saletype" />
+          <ScalarProperty Name="saleaddress" ColumnName="saleaddress" />
+          <ScalarProperty Name="salenumber" ColumnName="salenumber" />
+          <ScalarProperty Name="saledate" ColumnName="saledate" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="salemx">
       <EntityTypeMapping TypeName="erpsystemModel.salemx">
         <MappingFragment StoreEntitySet="salemx">
-          <ScalarProperty Name="foldid" ColumnName="foldid" />
-          <ScalarProperty Name="matckdh" ColumnName="matckdh" />
-          <ScalarProperty Name="matid" ColumnName="matid" />
-          <ScalarProperty Name="matnum" ColumnName="matnum" />
-          <ScalarProperty Name="matzkq" ColumnName="matzkq" />
-          <ScalarProperty Name="matbroken" ColumnName="matbroken" />
-          <ScalarProperty Name="matprice" ColumnName="matprice" />
-          <ScalarProperty Name="matmoeny" ColumnName="matmoeny" />
-          <ScalarProperty Name="matratio" ColumnName="matratio" />
-          <ScalarProperty Name="matse" ColumnName="matse" />
-          <ScalarProperty Name="mathsje" ColumnName="mathsje" />
-          <ScalarProperty Name="matbz" ColumnName="matbz" />
-          <ScalarProperty Name="matlydb" ColumnName="matlydb" />
           <ScalarProperty Name="matlydh" ColumnName="matlydh" />
+          <ScalarProperty Name="matlydb" ColumnName="matlydb" />
+          <ScalarProperty Name="matbz" ColumnName="matbz" />
+          <ScalarProperty Name="mathsje" ColumnName="mathsje" />
+          <ScalarProperty Name="matse" ColumnName="matse" />
+          <ScalarProperty Name="matratio" ColumnName="matratio" />
+          <ScalarProperty Name="matmoeny" ColumnName="matmoeny" />
+          <ScalarProperty Name="matprice" ColumnName="matprice" />
+          <ScalarProperty Name="matbroken" ColumnName="matbroken" />
+          <ScalarProperty Name="matzkq" ColumnName="matzkq" />
+          <ScalarProperty Name="matnum" ColumnName="matnum" />
+          <ScalarProperty Name="matid" ColumnName="matid" />
+          <ScalarProperty Name="matckdh" ColumnName="matckdh" />
+          <ScalarProperty Name="foldid" ColumnName="foldid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="shopdetail">
       <EntityTypeMapping TypeName="erpsystemModel.shopdetail">
         <MappingFragment StoreEntitySet="shopdetail">
-          <ScalarProperty Name="scolumn" ColumnName="scolumn" />
-          <ScalarProperty Name="sprodid" ColumnName="sprodid" />
-          <ScalarProperty Name="sprodname" ColumnName="sprodname" />
-          <ScalarProperty Name="sprodsize" ColumnName="sprodsize" />
-          <ScalarProperty Name="sunitname" ColumnName="sunitname" />
-          <ScalarProperty Name="snumber" ColumnName="snumber" />
-          <ScalarProperty Name="spricebefore" ColumnName="spricebefore" />
-          <ScalarProperty Name="sfolding" ColumnName="sfolding" />
-          <ScalarProperty Name="sprece" ColumnName="sprece" />
-          <ScalarProperty Name="samount" ColumnName="samount" />
-          <ScalarProperty Name="srate" ColumnName="srate" />
-          <ScalarProperty Name="stax" ColumnName="stax" />
-          <ScalarProperty Name="sincluded" ColumnName="sincluded" />
-          <ScalarProperty Name="sbatch" ColumnName="sbatch" />
-          <ScalarProperty Name="sgifts" ColumnName="sgifts" />
-          <ScalarProperty Name="sdetalis" ColumnName="sdetalis" />
-          <ScalarProperty Name="sundilled" ColumnName="sundilled" />
-          <ScalarProperty Name="sentrynote" ColumnName="sentrynote" />
-          <ScalarProperty Name="souce" ColumnName="souce" />
-          <ScalarProperty Name="soucenumber" ColumnName="soucenumber" />
-          <ScalarProperty Name="sid" ColumnName="sid" />
           <ScalarProperty Name="line" ColumnName="line" />
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="soucenumber" ColumnName="soucenumber" />
+          <ScalarProperty Name="souce" ColumnName="souce" />
+          <ScalarProperty Name="sentrynote" ColumnName="sentrynote" />
+          <ScalarProperty Name="sundilled" ColumnName="sundilled" />
+          <ScalarProperty Name="sdetalis" ColumnName="sdetalis" />
+          <ScalarProperty Name="sgifts" ColumnName="sgifts" />
+          <ScalarProperty Name="sbatch" ColumnName="sbatch" />
+          <ScalarProperty Name="sincluded" ColumnName="sincluded" />
+          <ScalarProperty Name="stax" ColumnName="stax" />
+          <ScalarProperty Name="srate" ColumnName="srate" />
+          <ScalarProperty Name="samount" ColumnName="samount" />
+          <ScalarProperty Name="sprece" ColumnName="sprece" />
+          <ScalarProperty Name="sfolding" ColumnName="sfolding" />
+          <ScalarProperty Name="spricebefore" ColumnName="spricebefore" />
+          <ScalarProperty Name="snumber" ColumnName="snumber" />
+          <ScalarProperty Name="sunitname" ColumnName="sunitname" />
+          <ScalarProperty Name="sprodsize" ColumnName="sprodsize" />
+          <ScalarProperty Name="sprodname" ColumnName="sprodname" />
+          <ScalarProperty Name="sprodid" ColumnName="sprodid" />
+          <ScalarProperty Name="scolumn" ColumnName="scolumn" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="staff">
       <EntityTypeMapping TypeName="erpsystemModel.staff">
         <MappingFragment StoreEntitySet="staff">
-          <ScalarProperty Name="ry_id" ColumnName="ry_id" />
-          <ScalarProperty Name="ry_name" ColumnName="ry_name" />
-          <ScalarProperty Name="bm_id" ColumnName="bm_id" />
-          <ScalarProperty Name="ry_xinbie" ColumnName="ry_xinbie" />
-          <ScalarProperty Name="ry_ywname" ColumnName="ry_ywname" />
-          <ScalarProperty Name="ry_shenfen" ColumnName="ry_shenfen" />
-          <ScalarProperty Name="ry_csdate" ColumnName="ry_csdate" />
-          <ScalarProperty Name="ry_hunyin" ColumnName="ry_hunyin" />
-          <ScalarProperty Name="ry_rzdate" ColumnName="ry_rzdate" />
           <ScalarProperty Name="ry_beizhu" ColumnName="ry_beizhu" />
+          <ScalarProperty Name="ry_rzdate" ColumnName="ry_rzdate" />
+          <ScalarProperty Name="ry_hunyin" ColumnName="ry_hunyin" />
+          <ScalarProperty Name="ry_csdate" ColumnName="ry_csdate" />
+          <ScalarProperty Name="ry_shenfen" ColumnName="ry_shenfen" />
+          <ScalarProperty Name="ry_ywname" ColumnName="ry_ywname" />
+          <ScalarProperty Name="ry_xinbie" ColumnName="ry_xinbie" />
+          <ScalarProperty Name="bm_id" ColumnName="bm_id" />
+          <ScalarProperty Name="ry_name" ColumnName="ry_name" />
+          <ScalarProperty Name="ry_id" ColumnName="ry_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="storage">
       <EntityTypeMapping TypeName="erpsystemModel.storage">
         <MappingFragment StoreEntitySet="storage">
-          <ScalarProperty Name="stoid" ColumnName="stoid" />
-          <ScalarProperty Name="stoname" ColumnName="stoname" />
-          <ScalarProperty Name="stosimplename" ColumnName="stosimplename" />
-          <ScalarProperty Name="stoenglishname" ColumnName="stoenglishname" />
-          <ScalarProperty Name="stoconnecter" ColumnName="stoconnecter" />
-          <ScalarProperty Name="stophone" ColumnName="stophone" />
-          <ScalarProperty Name="stoaddress" ColumnName="stoaddress" />
-          <ScalarProperty Name="storemark" ColumnName="storemark" />
           <ScalarProperty Name="sdel" ColumnName="sdel" />
+          <ScalarProperty Name="storemark" ColumnName="storemark" />
+          <ScalarProperty Name="stoaddress" ColumnName="stoaddress" />
+          <ScalarProperty Name="stophone" ColumnName="stophone" />
+          <ScalarProperty Name="stoconnecter" ColumnName="stoconnecter" />
+          <ScalarProperty Name="stoenglishname" ColumnName="stoenglishname" />
+          <ScalarProperty Name="stosimplename" ColumnName="stosimplename" />
+          <ScalarProperty Name="stoname" ColumnName="stoname" />
+          <ScalarProperty Name="stoid" ColumnName="stoid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="takeorderpay">
       <EntityTypeMapping TypeName="erpsystemModel.takeorderpay">
         <MappingFragment StoreEntitySet="takeorderpay">
-          <ScalarProperty Name="no" ColumnName="no" />
-          <ScalarProperty Name="froms" ColumnName="froms" />
-          <ScalarProperty Name="fromno" ColumnName="fromno" />
-          <ScalarProperty Name="ordermoney" ColumnName="ordermoney" />
-          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
-          <ScalarProperty Name="department" ColumnName="department" />
-          <ScalarProperty Name="takeomoney" ColumnName="takeomoney" />
-          <ScalarProperty Name="details" ColumnName="details" />
           <ScalarProperty Name="Ischeck" ColumnName="Ischeck" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="takeomoney" ColumnName="takeomoney" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="departmentno" ColumnName="departmentno" />
+          <ScalarProperty Name="ordermoney" ColumnName="ordermoney" />
+          <ScalarProperty Name="fromno" ColumnName="fromno" />
+          <ScalarProperty Name="froms" ColumnName="froms" />
+          <ScalarProperty Name="no" ColumnName="no" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="unit">
       <EntityTypeMapping TypeName="erpsystemModel.unit">
         <MappingFragment StoreEntitySet="unit">
-          <ScalarProperty Name="unitid" ColumnName="unitid" />
-          <ScalarProperty Name="unitname" ColumnName="unitname" />
-          <ScalarProperty Name="unitengname" ColumnName="unitengname" />
-          <ScalarProperty Name="unitremark" ColumnName="unitremark" />
           <ScalarProperty Name="unitdel" ColumnName="unitdel" />
+          <ScalarProperty Name="unitremark" ColumnName="unitremark" />
+          <ScalarProperty Name="unitengname" ColumnName="unitengname" />
+          <ScalarProperty Name="unitname" ColumnName="unitname" />
+          <ScalarProperty Name="unitid" ColumnName="unitid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="user">
       <EntityTypeMapping TypeName="erpsystemModel.user">
         <MappingFragment StoreEntitySet="user">
-          <ScalarProperty Name="userid" ColumnName="userid" />
-          <ScalarProperty Name="pwd" ColumnName="pwd" />
           <ScalarProperty Name="userno" ColumnName="userno" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="wllb">
       <EntityTypeMapping TypeName="erpsystemModel.wllb">
         <MappingFragment StoreEntitySet="wllb">
-          <ScalarProperty Name="lbid" ColumnName="lbid" />
-          <ScalarProperty Name="lbname" ColumnName="lbname" />
-          <ScalarProperty Name="chkm" ColumnName="chkm" />
-          <ScalarProperty Name="xssr" ColumnName="xssr" />
-          <ScalarProperty Name="xscb" ColumnName="xscb" />
-          <ScalarProperty Name="fcsp" ColumnName="fcsp" />
           <ScalarProperty Name="zpfy" ColumnName="zpfy" />
+          <ScalarProperty Name="fcsp" ColumnName="fcsp" />
+          <ScalarProperty Name="xscb" ColumnName="xscb" />
+          <ScalarProperty Name="xssr" ColumnName="xssr" />
+          <ScalarProperty Name="chkm" ColumnName="chkm" />
+          <ScalarProperty Name="lbname" ColumnName="lbname" />
+          <ScalarProperty Name="lbid" ColumnName="lbid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="wlzwj">
       <EntityTypeMapping TypeName="erpsystemModel.wlzwj">
         <MappingFragment StoreEntitySet="wlzwj">
-          <ScalarProperty Name="matid" ColumnName="matid" />
-          <ScalarProperty Name="mattype" ColumnName="mattype" />
-          <ScalarProperty Name="matname" ColumnName="matname" />
-          <ScalarProperty Name="matjldw" ColumnName="matjldw" />
-          <ScalarProperty Name="matywpm" ColumnName="matywpm" />
-          <ScalarProperty Name="matjysj" ColumnName="matjysj" />
-          <ScalarProperty Name="mata" ColumnName="mata" />
-          <ScalarProperty Name="matb" ColumnName="matb" />
-          <ScalarProperty Name="matbb" ColumnName="matbb" />
-          <ScalarProperty Name="matsfhs" ColumnName="matsfhs" />
-          <ScalarProperty Name="matsl" ColumnName="matsl" />
-          <ScalarProperty Name="matcgdate" ColumnName="matcgdate" />
-          <ScalarProperty Name="matbzjj" ColumnName="matbzjj" />
           <ScalarProperty Name="matgys" ColumnName="matgys" />
+          <ScalarProperty Name="matbzjj" ColumnName="matbzjj" />
+          <ScalarProperty Name="matcgdate" ColumnName="matcgdate" />
+          <ScalarProperty Name="matsl" ColumnName="matsl" />
+          <ScalarProperty Name="matsfhs" ColumnName="matsfhs" />
+          <ScalarProperty Name="matbb" ColumnName="matbb" />
+          <ScalarProperty Name="matb" ColumnName="matb" />
+          <ScalarProperty Name="mata" ColumnName="mata" />
+          <ScalarProperty Name="matjysj" ColumnName="matjysj" />
+          <ScalarProperty Name="matywpm" ColumnName="matywpm" />
+          <ScalarProperty Name="matjldw" ColumnName="matjldw" />
+          <ScalarProperty Name="matname" ColumnName="matname" />
+          <ScalarProperty Name="mattype" ColumnName="mattype" />
+          <ScalarProperty Name="matid" ColumnName="matid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="x_documents">
       <EntityTypeMapping TypeName="erpsystemModel.x_documents">
         <MappingFragment StoreEntitySet="x_documents">
-          <ScalarProperty Name="x_documentsid" ColumnName="x_documentsid" />
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="date" ColumnName="date" />
-          <ScalarProperty Name="deliverodsdate" ColumnName="deliverodsdate" />
-          <ScalarProperty Name="effective" ColumnName="effective" />
-          <ScalarProperty Name="currname" ColumnName="currname" />
-          <ScalarProperty Name="priceincluded" ColumnName="priceincluded" />
-          <ScalarProperty Name="exchange" ColumnName="exchange" />
-          <ScalarProperty Name="touching" ColumnName="touching" />
-          <ScalarProperty Name="fuhe" ColumnName="fuhe" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="fuhe" ColumnName="fuhe" />
+          <ScalarProperty Name="touching" ColumnName="touching" />
+          <ScalarProperty Name="exchange" ColumnName="exchange" />
+          <ScalarProperty Name="priceincluded" ColumnName="priceincluded" />
+          <ScalarProperty Name="currname" ColumnName="currname" />
+          <ScalarProperty Name="effective" ColumnName="effective" />
+          <ScalarProperty Name="deliverodsdate" ColumnName="deliverodsdate" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="x_documentsid" ColumnName="x_documentsid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="x_sal">
       <EntityTypeMapping TypeName="erpsystemModel.x_sal">
         <MappingFragment StoreEntitySet="x_sal">
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="x_documentsid" ColumnName="x_documentsid" />
-          <ScalarProperty Name="quantity" ColumnName="quantity" />
-          <ScalarProperty Name="discountprice" ColumnName="discountprice" />
-          <ScalarProperty Name="broken" ColumnName="broken" />
-          <ScalarProperty Name="price" ColumnName="price" />
-          <ScalarProperty Name="amount" ColumnName="amount" />
-          <ScalarProperty Name="taxrate" ColumnName="taxrate" />
-          <ScalarProperty Name="tax" ColumnName="tax" />
-          <ScalarProperty Name="taxincludedprice" ColumnName="taxincludedprice" />
-          <ScalarProperty Name="complimentary" ColumnName="complimentary" />
-          <ScalarProperty Name="remarks" ColumnName="remarks" />
           <ScalarProperty Name="matter" ColumnName="matter" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="complimentary" ColumnName="complimentary" />
+          <ScalarProperty Name="taxincludedprice" ColumnName="taxincludedprice" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="taxrate" ColumnName="taxrate" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="broken" ColumnName="broken" />
+          <ScalarProperty Name="discountprice" ColumnName="discountprice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="x_documentsid" ColumnName="x_documentsid" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ysbill">
       <EntityTypeMapping TypeName="erpsystemModel.ysbill">
         <MappingFragment StoreEntitySet="ysbill">
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="ysbillid" ColumnName="ysbillid" />
-          <ScalarProperty Name="fsbilldate" ColumnName="fsbilldate" />
-          <ScalarProperty Name="yscurrname" ColumnName="yscurrname" />
-          <ScalarProperty Name="ysexchrate" ColumnName="ysexchrate" />
-          <ScalarProperty Name="ysone" ColumnName="ysone" />
-          <ScalarProperty Name="ystwo" ColumnName="ystwo" />
-          <ScalarProperty Name="ysthree" ColumnName="ysthree" />
-          <ScalarProperty Name="ysmoney1" ColumnName="ysmoney1" />
-          <ScalarProperty Name="ysmoney2" ColumnName="ysmoney2" />
-          <ScalarProperty Name="ysmoney3" ColumnName="ysmoney3" />
-          <ScalarProperty Name="yszd" ColumnName="yszd" />
-          <ScalarProperty Name="yssh" ColumnName="yssh" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="yssh" ColumnName="yssh" />
+          <ScalarProperty Name="yszd" ColumnName="yszd" />
+          <ScalarProperty Name="ysmoney3" ColumnName="ysmoney3" />
+          <ScalarProperty Name="ysmoney2" ColumnName="ysmoney2" />
+          <ScalarProperty Name="ysmoney1" ColumnName="ysmoney1" />
+          <ScalarProperty Name="ysthree" ColumnName="ysthree" />
+          <ScalarProperty Name="ystwo" ColumnName="ystwo" />
+          <ScalarProperty Name="ysone" ColumnName="ysone" />
+          <ScalarProperty Name="ysexchrate" ColumnName="ysexchrate" />
+          <ScalarProperty Name="yscurrname" ColumnName="yscurrname" />
+          <ScalarProperty Name="fsbilldate" ColumnName="fsbilldate" />
+          <ScalarProperty Name="ysbillid" ColumnName="ysbillid" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ysckbill">
       <EntityTypeMapping TypeName="erpsystemModel.ysckbill">
         <MappingFragment StoreEntitySet="ysckbill">
-          <ScalarProperty Name="customerid" ColumnName="customerid" />
-          <ScalarProperty Name="ysckbillid" ColumnName="ysckbillid" />
-          <ScalarProperty Name="ysckbilldate" ColumnName="ysckbilldate" />
-          <ScalarProperty Name="ysckcurrname" ColumnName="ysckcurrname" />
-          <ScalarProperty Name="ysckexchrate" ColumnName="ysckexchrate" />
-          <ScalarProperty Name="ysckone" ColumnName="ysckone" />
-          <ScalarProperty Name="yscktwo" ColumnName="yscktwo" />
-          <ScalarProperty Name="ysthree" ColumnName="ysthree" />
-          <ScalarProperty Name="ysckmoney1" ColumnName="ysckmoney1" />
-          <ScalarProperty Name="ysckmoney2" ColumnName="ysckmoney2" />
-          <ScalarProperty Name="ysckmoney3" ColumnName="ysckmoney3" />
-          <ScalarProperty Name="ysckzd" ColumnName="ysckzd" />
-          <ScalarProperty Name="yscksh" ColumnName="yscksh" />
-          <ScalarProperty Name="ysckzhe" ColumnName="ysckzhe" />
           <ScalarProperty Name="checkstatus" ColumnName="checkstatus" />
+          <ScalarProperty Name="ysckzhe" ColumnName="ysckzhe" />
+          <ScalarProperty Name="yscksh" ColumnName="yscksh" />
+          <ScalarProperty Name="ysckzd" ColumnName="ysckzd" />
+          <ScalarProperty Name="ysckmoney3" ColumnName="ysckmoney3" />
+          <ScalarProperty Name="ysckmoney2" ColumnName="ysckmoney2" />
+          <ScalarProperty Name="ysckmoney1" ColumnName="ysckmoney1" />
+          <ScalarProperty Name="ysthree" ColumnName="ysthree" />
+          <ScalarProperty Name="yscktwo" ColumnName="yscktwo" />
+          <ScalarProperty Name="ysckone" ColumnName="ysckone" />
+          <ScalarProperty Name="ysckexchrate" ColumnName="ysckexchrate" />
+          <ScalarProperty Name="ysckcurrname" ColumnName="ysckcurrname" />
+          <ScalarProperty Name="ysckbilldate" ColumnName="ysckbilldate" />
+          <ScalarProperty Name="ysckbillid" ColumnName="ysckbillid" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ysckdetail">
       <EntityTypeMapping TypeName="erpsystemModel.ysckdetail">
         <MappingFragment StoreEntitySet="ysckdetail">
-          <ScalarProperty Name="ysckbillid" ColumnName="ysckbillid" />
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="ysckdetailly" ColumnName="ysckdetailly" />
-          <ScalarProperty Name="ysckdetaillyno" ColumnName="ysckdetaillyno" />
-          <ScalarProperty Name="yuandanmoney" ColumnName="yuandanmoney" />
-          <ScalarProperty Name="zherangmoney" ColumnName="zherangmoney" />
-          <ScalarProperty Name="chongkuanmoney" ColumnName="chongkuanmoney" />
-          <ScalarProperty Name="chongdimoney" ColumnName="chongdimoney" />
           <ScalarProperty Name="xianxingmoney" ColumnName="xianxingmoney" />
+          <ScalarProperty Name="chongdimoney" ColumnName="chongdimoney" />
+          <ScalarProperty Name="chongkuanmoney" ColumnName="chongkuanmoney" />
+          <ScalarProperty Name="zherangmoney" ColumnName="zherangmoney" />
+          <ScalarProperty Name="yuandanmoney" ColumnName="yuandanmoney" />
+          <ScalarProperty Name="ysckdetaillyno" ColumnName="ysckdetaillyno" />
+          <ScalarProperty Name="ysckdetailly" ColumnName="ysckdetailly" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
+          <ScalarProperty Name="ysckbillid" ColumnName="ysckbillid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ysdetail">
       <EntityTypeMapping TypeName="erpsystemModel.ysdetail">
         <MappingFragment StoreEntitySet="ysdetail">
-          <ScalarProperty Name="ysbillid" ColumnName="ysbillid" />
-          <ScalarProperty Name="lineid" ColumnName="lineid" />
-          <ScalarProperty Name="ly" ColumnName="ly" />
-          <ScalarProperty Name="lyno" ColumnName="lyno" />
-          <ScalarProperty Name="ysmoney" ColumnName="ysmoney" />
           <ScalarProperty Name="ysyue" ColumnName="ysyue" />
+          <ScalarProperty Name="ysmoney" ColumnName="ysmoney" />
+          <ScalarProperty Name="lyno" ColumnName="lyno" />
+          <ScalarProperty Name="ly" ColumnName="ly" />
+          <ScalarProperty Name="lineid" ColumnName="lineid" />
+          <ScalarProperty Name="ysbillid" ColumnName="ysbillid" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
