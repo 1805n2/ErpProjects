@@ -161,10 +161,6 @@
       <End Role="assignstyle" EntitySet="assignstyle" />
       <End Role="daassigbuymain" EntitySet="daassigbuymain" />
     </AssociationSet>
-    <AssociationSet Name="FK_detailorderpay" Association="erpsystemModel.Store.FK_detailorderpay">
-      <End Role="orderpay" EntitySet="orderpay" />
-      <End Role="detailorderpay" EntitySet="detailorderpay" />
-    </AssociationSet>
     <AssociationSet Name="FK_dingdancong" Association="erpsystemModel.Store.FK_dingdancong">
       <End Role="dingdanzhu" EntitySet="dingdanzhu" />
       <End Role="dingdancong" EntitySet="dingdancong" />
@@ -264,10 +260,6 @@
     <AssociationSet Name="FK_orders3" Association="erpsystemModel.Store.FK_orders3">
       <End Role="branch" EntitySet="branch" />
       <End Role="orders" EntitySet="orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_pay" Association="erpsystemModel.Store.FK_pay">
-      <End Role="orderpay" EntitySet="orderpay" />
-      <End Role="pay" EntitySet="pay" />
     </AssociationSet>
     <AssociationSet Name="FK_pay1" Association="erpsystemModel.Store.FK_pay1">
       <End Role="branch" EntitySet="branch" />
@@ -397,6 +389,10 @@
       <End Role="saleck" EntitySet="saleck" />
       <End Role="ysdetail" EntitySet="ysdetail" />
     </AssociationSet>
+    <AssociationSet Name="FK_ysdetail1" Association="erpsystemModel.Store.FK_ysdetail1">
+      <End Role="ysbill" EntitySet="ysbill" />
+      <End Role="ysdetail" EntitySet="ysdetail" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="assignstyle">
     <Key>
@@ -474,14 +470,14 @@
   </EntityType>
   <EntityType Name="buysearchmaster">
     <Key>
-      <PropertyRef Name="stoid" />
+      <PropertyRef Name="stunum" />
     </Key>
     <Property Name="stoid" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="stopname" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="stopid" Type="varchar" MaxLength="50" />
     <Property Name="saddress" Type="varchar" MaxLength="50" />
     <Property Name="stodate" Type="date" />
-    <Property Name="stunum" Type="varchar" MaxLength="50" />
+    <Property Name="stunum" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="stoydate" Type="date" Nullable="false" />
     <Property Name="stoshort" Type="varchar" MaxLength="50" />
     <Property Name="sotaxrate" Type="float" />
@@ -560,7 +556,7 @@
     <Property Name="corpid" Type="int" Nullable="false" />
     <Property Name="fullname" Type="varchar" MaxLength="50" />
     <Property Name="shortname" Type="varchar" MaxLength="50" />
-    <Property Name="classname" Type="varchar" MaxLength="50" />
+    <Property Name="classid" Type="int" />
     <Property Name="chiefname" Type="varchar" MaxLength="50" />
     <Property Name="personname" Type="varchar" MaxLength="50" />
     <Property Name="taxno" Type="varchar" MaxLength="50" />
@@ -606,9 +602,9 @@
       <PropertyRef Name="oid" />
     </Key>
     <Property Name="oid" Type="int" Nullable="false" />
-    <Property Name="ypay" Type="float" Nullable="false" />
-    <Property Name="froms" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="fromno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ypay" Type="float" />
+    <Property Name="froms" Type="varchar" MaxLength="50" />
+    <Property Name="fromno" Type="varchar" MaxLength="50" />
     <Property Name="details" Type="varchar" MaxLength="50" />
     <Property Name="info" Type="varchar" MaxLength="50" />
     <Property Name="Ischeck" Type="int" Nullable="false" />
@@ -619,7 +615,7 @@
       <PropertyRef Name="lineid" />
     </Key>
     <Property Name="orderbillid" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="lineid" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="lineid" Type="int" Nullable="false" />
     <Property Name="matter" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="num" Type="int" Nullable="false" />
     <Property Name="unitpricebefore" Type="float" Nullable="false" />
@@ -820,29 +816,37 @@
     <Property Name="origintype" Type="varchar" MaxLength="50" />
     <Property Name="originno" Type="varchar" MaxLength="50" />
   </EntityType>
+  <!--生成过程中发现错误:
+      警告 6035: 关系“FK_detailorderpay”在关系主端上有一些列不属于表的键的一部分。已排除了此关系。
+      警告 6035: 关系“FK_pay”在关系主端上有一些列不属于表的键的一部分。已排除了此关系。
+      -->
   <EntityType Name="orderpay">
     <Key>
       <PropertyRef Name="orid" />
+      <PropertyRef Name="ono" />
     </Key>
     <Property Name="orid" Type="int" Nullable="false" />
-    <Property Name="nodate" Type="date" Nullable="false" />
-    <Property Name="suppildname" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="firstway" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ono" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="nodate" Type="date" />
+    <Property Name="suppildno" Type="int" Nullable="false" />
+    <Property Name="suppildname" Type="varchar" MaxLength="50" />
+    <Property Name="firstway" Type="varchar" MaxLength="50" />
     <Property Name="firstmoney" Type="float" />
-    <Property Name="secondway" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="secondway" Type="varchar" MaxLength="50" />
     <Property Name="secondmoney" Type="float" />
-    <Property Name="thirdway" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="thirdway" Type="varchar" MaxLength="50" />
     <Property Name="thirdmoney" Type="float" />
-    <Property Name="currency" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="exchangerate" Type="float" Nullable="false" />
-    <Property Name="style" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="enddate" Type="date" Nullable="false" />
-    <Property Name="departmentno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="currency" Type="varchar" MaxLength="50" />
+    <Property Name="exchangerate" Type="float" />
+    <Property Name="style" Type="varchar" MaxLength="50" />
+    <Property Name="enddate" Type="date" />
+    <Property Name="departmentno" Type="varchar" MaxLength="50" />
     <Property Name="department" Type="varchar" MaxLength="50" />
     <Property Name="exceter" Type="varchar" MaxLength="50" />
     <Property Name="project" Type="varchar" MaxLength="50" />
-    <Property Name="checkman" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="checkman" Type="varchar" MaxLength="50" />
     <Property Name="Ischeck" Type="int" Nullable="false" />
+    <Property Name="TotalMoney" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="orders">
     <Key>
@@ -915,20 +919,20 @@
     </Key>
     <Property Name="dno" Type="int" Nullable="false" />
     <Property Name="oid" Type="int" Nullable="false" />
-    <Property Name="listkind" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="nodate" Type="date" Nullable="false" />
-    <Property Name="oldno" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="invoicenumber" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="dealman" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="dealmanname" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="departmentno" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="department" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="purchaseman" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="projectname" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="currency" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="exchangerate" Type="float" Nullable="false" />
-    <Property Name="oldnomoney" Type="float" Nullable="false" />
-    <Property Name="money" Type="float" Nullable="false" />
+    <Property Name="listkind" Type="varchar" MaxLength="50" />
+    <Property Name="nodate" Type="date" />
+    <Property Name="oldno" Type="varchar" MaxLength="50" />
+    <Property Name="invoicenumber" Type="varchar" MaxLength="50" />
+    <Property Name="dealman" Type="varchar" MaxLength="50" />
+    <Property Name="dealmanname" Type="varchar" MaxLength="50" />
+    <Property Name="departmentno" Type="varchar" MaxLength="50" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
+    <Property Name="purchaseman" Type="varchar" MaxLength="50" />
+    <Property Name="projectname" Type="varchar" MaxLength="50" />
+    <Property Name="currency" Type="varchar" MaxLength="50" />
+    <Property Name="exchangerate" Type="float" />
+    <Property Name="oldnomoney" Type="float" />
+    <Property Name="money" Type="float" />
     <Property Name="discountmoney" Type="float" />
     <Property Name="offsetmoney" Type="float" />
     <Property Name="Ischeck" Type="int" Nullable="false" />
@@ -1136,14 +1140,14 @@
       <PropertyRef Name="no" />
     </Key>
     <Property Name="no" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="froms" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="fromno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="froms" Type="varchar" MaxLength="50" />
+    <Property Name="fromno" Type="varchar" MaxLength="50" />
     <Property Name="ordermoney" Type="float" />
-    <Property Name="departmentno" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="department" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="departmentno" Type="varchar" MaxLength="50" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
     <Property Name="takeomoney" Type="float" />
     <Property Name="details" Type="varchar" MaxLength="50" />
-    <Property Name="Ischeck" Type="int" />
+    <Property Name="Ischeck" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="unit">
     <Key>
@@ -1388,7 +1392,7 @@
     <End Role="buysearchdetails" Type="erpsystemModel.Store.buysearchdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="buysearchmaster">
-        <PropertyRef Name="stoid" />
+        <PropertyRef Name="stunum" />
       </Principal>
       <Dependent Role="buysearchdetails">
         <PropertyRef Name="sid" />
@@ -1512,18 +1516,6 @@
       </Principal>
       <Dependent Role="daassigbuymain">
         <PropertyRef Name="assignstyleid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_detailorderpay">
-    <End Role="orderpay" Type="erpsystemModel.Store.orderpay" Multiplicity="1" />
-    <End Role="detailorderpay" Type="erpsystemModel.Store.detailorderpay" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="orderpay">
-        <PropertyRef Name="orid" />
-      </Principal>
-      <Dependent Role="detailorderpay">
-        <PropertyRef Name="oid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1780,7 +1772,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_orderpay">
-    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="1" />
+    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="0..1" />
     <End Role="orderpay" Type="erpsystemModel.Store.orderpay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
@@ -1827,20 +1819,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_pay">
-    <End Role="orderpay" Type="erpsystemModel.Store.orderpay" Multiplicity="1" />
-    <End Role="pay" Type="erpsystemModel.Store.pay" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="orderpay">
-        <PropertyRef Name="orid" />
-      </Principal>
-      <Dependent Role="pay">
-        <PropertyRef Name="dno" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_pay1">
-    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="1" />
+    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="0..1" />
     <End Role="pay" Type="erpsystemModel.Store.pay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
@@ -2044,7 +2024,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_takeorderpay">
-    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="1" />
+    <End Role="branch" Type="erpsystemModel.Store.branch" Multiplicity="0..1" />
     <End Role="takeorderpay" Type="erpsystemModel.Store.takeorderpay" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="branch">
@@ -2220,6 +2200,18 @@
       </Principal>
       <Dependent Role="ysdetail">
         <PropertyRef Name="lyno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysdetail1">
+    <End Role="ysbill" Type="erpsystemModel.Store.ysbill" Multiplicity="1" />
+    <End Role="ysdetail" Type="erpsystemModel.Store.ysdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysbill">
+        <PropertyRef Name="ysbillid" />
+      </Principal>
+      <Dependent Role="ysdetail">
+        <PropertyRef Name="ysbillid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

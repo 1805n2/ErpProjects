@@ -11,6 +11,7 @@ namespace DAL
         public static IQueryable GetBuyType()
         {
             erpsystemEntities e = new erpsystemEntities();
+            
             var v = from p in e.buytype
                     select new
                     {
@@ -33,8 +34,13 @@ namespace DAL
         }
         public static string GetByBillno(DateTime date)
         {
+            erpsystemEntities e = new erpsystemEntities();
+            var v = from p in e.caigouqinggou
+                    select new
+                    {
 
-
+                    };
+            return v;
         }
     }
 }

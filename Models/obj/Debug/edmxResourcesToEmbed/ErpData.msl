@@ -165,10 +165,10 @@
     <EntitySetMapping Name="clientmaster">
       <EntityTypeMapping TypeName="erpsystemModel.clientmaster">
         <MappingFragment StoreEntitySet="clientmaster">
+          <ScalarProperty Name="classid" ColumnName="classid" />
           <ScalarProperty Name="corpid" ColumnName="corpid" />
           <ScalarProperty Name="fullname" ColumnName="fullname" />
           <ScalarProperty Name="shortname" ColumnName="shortname" />
-          <ScalarProperty Name="classname" ColumnName="classname" />
           <ScalarProperty Name="chiefname" ColumnName="chiefname" />
           <ScalarProperty Name="personname" ColumnName="personname" />
           <ScalarProperty Name="taxno" ColumnName="taxno" />
@@ -437,6 +437,9 @@
     <EntitySetMapping Name="orderpay">
       <EntityTypeMapping TypeName="erpsystemModel.orderpay">
         <MappingFragment StoreEntitySet="orderpay">
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="suppildno" ColumnName="suppildno" />
+          <ScalarProperty Name="ono" ColumnName="ono" />
           <ScalarProperty Name="orid" ColumnName="orid" />
           <ScalarProperty Name="nodate" ColumnName="nodate" />
           <ScalarProperty Name="suppildname" ColumnName="suppildname" />

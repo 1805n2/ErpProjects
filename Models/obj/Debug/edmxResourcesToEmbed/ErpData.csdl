@@ -360,6 +360,14 @@
       <End Role="ysckbill" EntitySet="ysckbill" />
       <End Role="ysckdetail" EntitySet="ysckdetail" />
     </AssociationSet>
+    <AssociationSet Name="FK_buysearchdetails2" Association="erpsystemModel.FK_buysearchdetails2">
+      <End Role="buysearchmaster" EntitySet="buysearchmaster" />
+      <End Role="buysearchdetails" EntitySet="buysearchdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ysdetail1" Association="erpsystemModel.FK_ysdetail1">
+      <End Role="ysbill" EntitySet="ysbill" />
+      <End Role="ysdetail" EntitySet="ysdetail" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="assignstyle">
     <Key>
@@ -454,6 +462,7 @@
     <Property Name="sisdel" Type="Int32" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchdetails" ToRole="buysearchmaster" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="buysearchdetails" ToRole="wlzwj" />
+    <NavigationProperty Name="buysearchmaster1" Relationship="erpsystemModel.FK_buysearchdetails2" FromRole="buysearchdetails" ToRole="buysearchmaster" />
   </EntityType>
   <EntityType Name="buysearchmaster">
     <Key>
@@ -488,6 +497,7 @@
     <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails" FromRole="buysearchmaster" ToRole="buysearchdetails" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_buysearchmaster" FromRole="buysearchmaster" ToRole="gmeans" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="buysearchmaster" ToRole="user" />
+    <NavigationProperty Name="buysearchdetails1" Relationship="erpsystemModel.FK_buysearchdetails2" FromRole="buysearchmaster" ToRole="buysearchdetails" />
   </EntityType>
   <EntityType Name="buytype">
     <Key>
@@ -573,6 +583,7 @@
     <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_documents" FromRole="clientmaster" ToRole="x_documents" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysbill" FromRole="clientmaster" ToRole="ysbill" />
     <NavigationProperty Name="ysckbill" Relationship="erpsystemModel.FK_ysckbill" FromRole="clientmaster" ToRole="ysckbill" />
+    <Property Type="Int32" Name="classid" />
   </EntityType>
   <EntityType Name="closstype">
     <Key>
@@ -853,6 +864,7 @@
   <EntityType Name="orderpay">
     <Key>
       <PropertyRef Name="orid" />
+      <PropertyRef Name="ono" />
     </Key>
     <Property Name="orid" Type="Int32" Nullable="false" />
     <Property Name="nodate" Type="DateTime" Nullable="false" />
@@ -876,6 +888,9 @@
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orderpay" FromRole="orderpay" ToRole="branch" />
     <NavigationProperty Name="detailorderpay" Relationship="erpsystemModel.FK_detailorderpay" FromRole="orderpay" ToRole="detailorderpay" />
     <NavigationProperty Name="pay" Relationship="erpsystemModel.FK_pay" FromRole="orderpay" ToRole="pay" />
+    <Property Type="String" Name="ono" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="suppildno" Nullable="false" />
+    <Property Type="Single" Name="TotalMoney" Nullable="false" />
   </EntityType>
   <EntityType Name="orders">
     <Key>
@@ -1347,6 +1362,7 @@
     <NavigationProperty Name="qydetail" Relationship="erpsystemModel.FK_qydetail" FromRole="ysbill" ToRole="qydetail" />
     <NavigationProperty Name="user" Relationship="erpsystemModel.FK_ysbil2" FromRole="ysbill" ToRole="user" />
     <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_ysbill1" FromRole="ysbill" ToRole="user" />
+    <NavigationProperty Name="ysdetail" Relationship="erpsystemModel.FK_ysdetail1" FromRole="ysbill" ToRole="ysdetail" />
   </EntityType>
   <EntityType Name="ysckbill">
     <Key>
@@ -1403,6 +1419,7 @@
     <Property Name="ysmoney" Type="Single" Nullable="false" />
     <Property Name="ysyue" Type="Single" Nullable="false" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysdetail" FromRole="ysdetail" ToRole="saleck" />
+    <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysdetail1" FromRole="ysdetail" ToRole="ysbill" />
   </EntityType>
   <Association Name="FK_daassigbuymain">
     <End Role="assignstyle" Type="erpsystemModel.assignstyle" Multiplicity="1" />
@@ -2325,6 +2342,30 @@
       </Principal>
       <Dependent Role="ysckdetail">
         <PropertyRef Name="ysckbillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_buysearchdetails2">
+    <End Type="erpsystemModel.buysearchmaster" Role="buysearchmaster" Multiplicity="1" />
+    <End Type="erpsystemModel.buysearchdetails" Role="buysearchdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="buysearchmaster">
+        <PropertyRef Name="stunum" />
+      </Principal>
+      <Dependent Role="buysearchdetails">
+        <PropertyRef Name="sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ysdetail1">
+    <End Type="erpsystemModel.ysbill" Role="ysbill" Multiplicity="1" />
+    <End Type="erpsystemModel.ysdetail" Role="ysdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysbill">
+        <PropertyRef Name="ysbillid" />
+      </Principal>
+      <Dependent Role="ysdetail">
+        <PropertyRef Name="ysbillid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

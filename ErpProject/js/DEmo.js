@@ -1,6 +1,4 @@
-﻿
-
-function xiaoshoudinggou() {
+﻿function xiaoshoudinggou() {
        
 
     var fielmenu = new Ext.menu.Menu({
