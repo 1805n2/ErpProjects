@@ -1,0 +1,2693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xiangmuModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="xiangmuModelStoreContainer">
+    <EntitySet Name="adjust_price" EntityType="xiangmuModel.Store.adjust_price" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="adjust_pricedetails" EntityType="xiangmuModel.Store.adjust_pricedetails" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="allocatingdetail" EntityType="xiangmuModel.Store.allocatingdetail" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="bill" EntityType="xiangmuModel.Store.bill" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="customeraccounts" EntityType="xiangmuModel.Store.customeraccounts" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="department" EntityType="xiangmuModel.Store.department" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="funds" EntityType="xiangmuModel.Store.funds" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="fundtype" EntityType="xiangmuModel.Store.fundtype" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="inventory_addendum" EntityType="xiangmuModel.Store.inventory_addendum" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="inventory_document" EntityType="xiangmuModel.Store.inventory_document" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="material_name" EntityType="xiangmuModel.Store.material_name" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="orderdetails" EntityType="xiangmuModel.Store.orderdetails" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="prods" EntityType="xiangmuModel.Store.prods" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="purchase_inquiry" EntityType="xiangmuModel.Store.purchase_inquiry" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="purchase_inquiry_list" EntityType="xiangmuModel.Store.purchase_inquiry_list" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="purchasing_orderlist" EntityType="xiangmuModel.Store.purchasing_orderlist" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="purchasing_ordermain" EntityType="xiangmuModel.Store.purchasing_ordermain" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="quotationdetails" EntityType="xiangmuModel.Store.quotationdetails" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="quotedprice" EntityType="xiangmuModel.Store.quotedprice" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="qymx" EntityType="xiangmuModel.Store.qymx" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="r_detail" EntityType="xiangmuModel.Store.r_detail" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="record" EntityType="xiangmuModel.Store.record" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="requisition" EntityType="xiangmuModel.Store.requisition" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="returnxx" EntityType="xiangmuModel.Store.returnxx" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="returnzhubiao" EntityType="xiangmuModel.Store.returnzhubiao" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="salesorder" EntityType="xiangmuModel.Store.salesorder" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="shipment" EntityType="xiangmuModel.Store.shipment" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="shipmentdetail" EntityType="xiangmuModel.Store.shipmentdetail" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_preturn" EntityType="xiangmuModel.Store.t_preturn" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_preturn_zi" EntityType="xiangmuModel.Store.t_preturn_zi" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_store_advance" EntityType="xiangmuModel.Store.t_store_advance" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_store_advancepay" EntityType="xiangmuModel.Store.t_store_advancepay" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_store_advancerec" EntityType="xiangmuModel.Store.t_store_advancerec" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_store_amount" EntityType="xiangmuModel.Store.t_store_amount" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="t_store_particularspay" EntityType="xiangmuModel.Store.t_store_particularspay" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="td_breakdown" EntityType="xiangmuModel.Store.td_breakdown" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="td_inventory_list" EntityType="xiangmuModel.Store.td_inventory_list" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="td_personnel_table" EntityType="xiangmuModel.Store.td_personnel_table" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="td_purchase" EntityType="xiangmuModel.Store.td_purchase" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="transfers" EntityType="xiangmuModel.Store.transfers" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="typenumber" EntityType="xiangmuModel.Store.typenumber" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="userinfo" EntityType="xiangmuModel.Store.userinfo" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="usertype" EntityType="xiangmuModel.Store.usertype" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="warehouseflowtable" EntityType="xiangmuModel.Store.warehouseflowtable" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="warehousegeneralledger" EntityType="xiangmuModel.Store.warehousegeneralledger" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="warehousetable" EntityType="xiangmuModel.Store.warehousetable" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="ysbill" EntityType="xiangmuModel.Store.ysbill" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="ysckbill" EntityType="xiangmuModel.Store.ysckbill" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="ysckdetail" EntityType="xiangmuModel.Store.ysckdetail" store:Type="Tables" Schema="xiangmu" />
+    <EntitySet Name="ysmxdetail" EntityType="xiangmuModel.Store.ysmxdetail" store:Type="Tables" Schema="xiangmu" />
+    <AssociationSet Name="aa" Association="xiangmuModel.Store.aa">
+      <End Role="quotedprice" EntitySet="quotedprice" />
+      <End Role="quotationdetails" EntitySet="quotationdetails" />
+    </AssociationSet>
+    <AssociationSet Name="aaa" Association="xiangmuModel.Store.aaa">
+      <End Role="ysbill" EntitySet="ysbill" />
+      <End Role="ysmxdetail" EntitySet="ysmxdetail" />
+    </AssociationSet>
+    <AssociationSet Name="Auditor" Association="xiangmuModel.Store.Auditor">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="bb" Association="xiangmuModel.Store.bb">
+      <End Role="transfers" EntitySet="transfers" />
+      <End Role="allocatingdetail" EntitySet="allocatingdetail" />
+    </AssociationSet>
+    <AssociationSet Name="bbb" Association="xiangmuModel.Store.bbb">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="qymx" EntitySet="qymx" />
+    </AssociationSet>
+    <AssociationSet Name="bumenbianhao" Association="xiangmuModel.Store.bumenbianhao">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="cc" Association="xiangmuModel.Store.cc">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="transfers" EntitySet="transfers" />
+    </AssociationSet>
+    <AssociationSet Name="ccc" Association="xiangmuModel.Store.ccc">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="dd" Association="xiangmuModel.Store.dd">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="transfers" EntitySet="transfers" />
+    </AssociationSet>
+    <AssociationSet Name="ddd" Association="xiangmuModel.Store.ddd">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="eee" Association="xiangmuModel.Store.eee">
+      <End Role="department" EntitySet="department" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="ff" Association="xiangmuModel.Store.ff">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="fff" Association="xiangmuModel.Store.fff">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cck" Association="xiangmuModel.Store.fk_cck">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="customeraccounts" EntitySet="customeraccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cnm" Association="xiangmuModel.Store.FK_cnm">
+      <End Role="td_breakdown" EntitySet="td_breakdown" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_gnn" Association="xiangmuModel.Store.FK_gnn">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_department" Association="xiangmuModel.Store.fk_inquiry_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Making" Association="xiangmuModel.Store.fk_inquiry_Making">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Procurement" Association="xiangmuModel.Store.fk_inquiry_Procurement">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Review" Association="xiangmuModel.Store.fk_inquiry_Review">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Supplier_Id" Association="xiangmuModel.Store.fk_inquiry_Supplier_Id">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquirylist_Bill_number" Association="xiangmuModel.Store.fk_inquirylist_Bill_number">
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+      <End Role="purchase_inquiry_list" EntitySet="purchase_inquiry_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquirylist_Material_number" Association="xiangmuModel.Store.fk_inquirylist_Material_number">
+      <End Role="record" EntitySet="record" />
+      <End Role="purchase_inquiry_list" EntitySet="purchase_inquiry_list" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancegys_news_Funds" Association="xiangmuModel.Store.FK_news_advancegys_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancepay_news_amount" Association="xiangmuModel.Store.FK_news_advancepay_news_amount">
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+      <End Role="t_store_advancepay" EntitySet="t_store_advancepay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancepaygys_news_Funds" Association="xiangmuModel.Store.FK_news_advancepaygys_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancerec_news_amount" Association="xiangmuModel.Store.FK_news_advancerec_news_amount">
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+      <End Role="t_store_advancerec" EntitySet="t_store_advancerec" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_amount" Association="xiangmuModel.Store.FK_news_amount">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Bumenbianhao_news_departement" Association="xiangmuModel.Store.FK_news_Bumenbianhao_news_departement">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Funds" Association="xiangmuModel.Store.FK_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount" Association="xiangmuModel.Store.FK_news_Inventory_documen_news_amount">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount1" Association="xiangmuModel.Store.FK_news_Inventory_documen_news_amount1">
+      <End Role="department" EntitySet="department" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount2" Association="xiangmuModel.Store.FK_news_Inventory_documen_news_amount2">
+      <End Role="inventory_document" EntitySet="inventory_document" />
+      <End Role="inventory_addendum" EntitySet="inventory_addendum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_amount" Association="xiangmuModel.Store.FK_news_particularspay_news_amount">
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_amount1" Association="xiangmuModel.Store.FK_news_particularspay_news_amount1">
+      <End Role="department" EntitySet="department" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_departement" Association="xiangmuModel.Store.FK_news_particularspay_news_departement">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_td_Inrentory_list" Association="xiangmuModel.Store.FK_news_particularspay_news_td_Inrentory_list">
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_td_Personnel_table" Association="xiangmuModel.Store.FK_news_particularspay_news_td_Personnel_table">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news6_amount" Association="xiangmuModel.Store.FK_news_particularspay_news6_amount">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Single_person_ID_news_td_Personnel_tablefh" Association="xiangmuModel.Store.FK_news_Single_person_ID_news_td_Personnel_tablefh">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Single_person_ID_news_td_Personnel_tablezd" Association="xiangmuModel.Store.FK_news_Single_person_ID_news_td_Personnel_tablezd">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nmd" Association="xiangmuModel.Store.FK_nmd">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nmgb" Association="xiangmuModel.Store.FK_nmgb">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="fk_orderlist_Bill_number" Association="xiangmuModel.Store.fk_orderlist_Bill_number">
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+      <End Role="purchasing_orderlist" EntitySet="purchasing_orderlist" />
+    </AssociationSet>
+    <AssociationSet Name="fk_orderlist_Material_number" Association="xiangmuModel.Store.fk_orderlist_Material_number">
+      <End Role="record" EntitySet="record" />
+      <End Role="purchasing_orderlist" EntitySet="purchasing_orderlist" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_department" Association="xiangmuModel.Store.fk_ordermain_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Id" Association="xiangmuModel.Store.fk_ordermain_Id">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Making" Association="xiangmuModel.Store.fk_ordermain_Making">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Procurement" Association="xiangmuModel.Store.fk_ordermain_Procurement">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_rdertype" Association="xiangmuModel.Store.fk_ordermain_rdertype">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Review" Association="xiangmuModel.Store.fk_ordermain_Review">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProdID" Association="xiangmuModel.Store.fk_ProdID">
+      <End Role="record" EntitySet="record" />
+      <End Role="returnxx" EntitySet="returnxx" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rec" Association="xiangmuModel.Store.fk_rec">
+      <End Role="record" EntitySet="record" />
+      <End Role="shipmentdetail" EntitySet="shipmentdetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisition_news_amount1" Association="xiangmuModel.Store.FK_Requisition_news_amount1">
+      <End Role="requisition" EntitySet="requisition" />
+      <End Role="r_detail" EntitySet="r_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisition1_news_amount" Association="xiangmuModel.Store.FK_Requisition1_news_amount">
+      <End Role="salesorder" EntitySet="salesorder" />
+      <End Role="r_detail" EntitySet="r_detail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sc" Association="xiangmuModel.Store.fk_sc">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sd" Association="xiangmuModel.Store.fk_sd">
+      <End Role="department" EntitySet="department" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sdeail" Association="xiangmuModel.Store.fk_sdeail">
+      <End Role="shipment" EntitySet="shipment" />
+      <End Role="shipmentdetail" EntitySet="shipmentdetail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_shp" Association="xiangmuModel.Store.fk_shp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sk" Association="xiangmuModel.Store.fk_sk">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sp" Association="xiangmuModel.Store.fk_sp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_st" Association="xiangmuModel.Store.fk_st">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_syp" Association="xiangmuModel.Store.fk_syp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_inventory" Association="xiangmuModel.Store.fk_td_inventory">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_inventory_list" Association="xiangmuModel.Store.fk_td_inventory_list">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_personnel_table" Association="xiangmuModel.Store.fk_td_personnel_table">
+      <End Role="department" EntitySet="department" />
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_purchas" Association="xiangmuModel.Store.fk_td_purchas">
+      <End Role="record" EntitySet="record" />
+      <End Role="td_purchase" EntitySet="td_purchase" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_purchase" Association="xiangmuModel.Store.fk_td_purchase">
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+      <End Role="td_purchase" EntitySet="td_purchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_type" Association="xiangmuModel.Store.FK_user_type">
+      <End Role="usertype" EntitySet="usertype" />
+      <End Role="userinfo" EntitySet="userinfo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_WareID" Association="xiangmuModel.Store.fk_WareID">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="returnzhubiao" EntitySet="returnzhubiao" />
+    </AssociationSet>
+    <AssociationSet Name="FK3C0469F99FC6869" Association="xiangmuModel.Store.FK3C0469F99FC6869">
+      <End Role="material_name" EntitySet="material_name" />
+      <End Role="record" EntitySet="record" />
+    </AssociationSet>
+    <AssociationSet Name="fkck" Association="xiangmuModel.Store.fkck">
+      <End Role="warehousegeneralledger" EntitySet="warehousegeneralledger" />
+      <End Role="adjust_price" EntitySet="adjust_price" />
+    </AssociationSet>
+    <AssociationSet Name="fkgx" Association="xiangmuModel.Store.fkgx">
+      <End Role="material_name" EntitySet="material_name" />
+      <End Role="adjust_pricedetails" EntitySet="adjust_pricedetails" />
+    </AssociationSet>
+    <AssociationSet Name="fkry" Association="xiangmuModel.Store.fkry">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="adjust_price" EntitySet="adjust_price" />
+    </AssociationSet>
+    <AssociationSet Name="fktj" Association="xiangmuModel.Store.fktj">
+      <End Role="adjust_price" EntitySet="adjust_price" />
+      <End Role="adjust_pricedetails" EntitySet="adjust_pricedetails" />
+    </AssociationSet>
+    <AssociationSet Name="gg" Association="xiangmuModel.Store.gg">
+      <End Role="department" EntitySet="department" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="ggg" Association="xiangmuModel.Store.ggg">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="hhh" Association="xiangmuModel.Store.hhh">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="jj" Association="xiangmuModel.Store.jj">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="jjj" Association="xiangmuModel.Store.jjj">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="kehurenyuan" Association="xiangmuModel.Store.kehurenyuan">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="userinfo" EntitySet="userinfo" />
+    </AssociationSet>
+    <AssociationSet Name="kk" Association="xiangmuModel.Store.kk">
+      <End Role="record" EntitySet="record" />
+      <End Role="quotationdetails" EntitySet="quotationdetails" />
+    </AssociationSet>
+    <AssociationSet Name="kkk" Association="xiangmuModel.Store.kkk">
+      <End Role="department" EntitySet="department" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="ll" Association="xiangmuModel.Store.ll">
+      <End Role="record" EntitySet="record" />
+      <End Role="allocatingdetail" EntitySet="allocatingdetail" />
+    </AssociationSet>
+    <AssociationSet Name="lll" Association="xiangmuModel.Store.lll">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="matterid" Association="xiangmuModel.Store.matterid">
+      <End Role="record" EntitySet="record" />
+      <End Role="t_preturn_zi" EntitySet="t_preturn_zi" />
+    </AssociationSet>
+    <AssociationSet Name="mmm" Association="xiangmuModel.Store.mmm">
+      <End Role="shipment" EntitySet="shipment" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="Pbillno" Association="xiangmuModel.Store.Pbillno">
+      <End Role="t_preturn" EntitySet="t_preturn" />
+      <End Role="t_preturn_zi" EntitySet="t_preturn_zi" />
+    </AssociationSet>
+    <AssociationSet Name="personnel" Association="xiangmuModel.Store.personnel">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="Pesonner" Association="xiangmuModel.Store.Pesonner">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="qinggouyuan" Association="xiangmuModel.Store.qinggouyuan">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="tuihuozhubiao" Association="xiangmuModel.Store.tuihuozhubiao">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="returnzhubiao" EntitySet="returnzhubiao" />
+    </AssociationSet>
+    <AssociationSet Name="wai" Association="xiangmuModel.Store.wai">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="wai1" Association="xiangmuModel.Store.wai1">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="warehousegeneralledger" EntitySet="warehousegeneralledger" />
+    </AssociationSet>
+    <AssociationSet Name="wai2" Association="xiangmuModel.Store.wai2">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai3" Association="xiangmuModel.Store.wai3">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai4" Association="xiangmuModel.Store.wai4">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai5" Association="xiangmuModel.Store.wai5">
+      <End Role="department" EntitySet="department" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai6" Association="xiangmuModel.Store.wai6">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wail" Association="xiangmuModel.Store.wail">
+      <End Role="salesorder" EntitySet="salesorder" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="wail1" Association="xiangmuModel.Store.wail1">
+      <End Role="record" EntitySet="record" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="wail12" Association="xiangmuModel.Store.wail12">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="wain" Association="xiangmuModel.Store.wain">
+      <End Role="record" EntitySet="record" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="warehouseid" Association="xiangmuModel.Store.warehouseid">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="yinwangh" Association="xiangmuModel.Store.yinwangh">
+      <End Role="fundtype" EntitySet="fundtype" />
+      <End Role="funds" EntitySet="funds" />
+    </AssociationSet>
+    <AssociationSet Name="yinwanghong" Association="xiangmuModel.Store.yinwanghong">
+      <End Role="bill" EntitySet="bill" />
+      <End Role="prods" EntitySet="prods" />
+    </AssociationSet>
+    <AssociationSet Name="yinwanghong2" Association="xiangmuModel.Store.yinwanghong2">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="funds" EntitySet="funds" />
+    </AssociationSet>
+    <AssociationSet Name="yyy" Association="xiangmuModel.Store.yyy">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="adjust_price">
+    <Key>
+      <PropertyRef Name="billsNum" />
+    </Key>
+    <Property Name="billsdate" Type="date" />
+    <Property Name="billsNum" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="adjustment" Type="int" />
+    <Property Name="Producer" Type="varchar" MaxLength="20" />
+    <Property Name="reviewing" Type="varchar" MaxLength="20" />
+    <Property Name="remark" Type="varchar" MaxLength="50" />
+    <Property Name="Audit" Type="int" />
+    <Property Name="ckid" Type="int" />
+    <Property Name="zdry" Type="int" />
+  </EntityType>
+  <EntityType Name="adjust_pricedetails">
+    <Key>
+      <PropertyRef Name="Columnnums" />
+      <PropertyRef Name="billsNum" />
+    </Key>
+    <Property Name="Columnnums" Type="int" Nullable="false" />
+    <Property Name="billsNum" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="matterNum" Type="varchar" MaxLength="20" />
+    <Property Name="matterName" Type="varchar" MaxLength="20" />
+    <Property Name="ggyh" Type="varchar" MaxLength="20" />
+    <Property Name="unit" Type="varchar" MaxLength="20" />
+    <Property Name="kcl" Type="int" />
+    <Property Name="pjcb" Type="float" />
+    <Property Name="price" Type="float" />
+    <Property Name="tjje" Type="float" />
+    <Property Name="flbz" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="allocatingdetail">
+    <Key>
+      <PropertyRef Name="Columnno" />
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Name="Columnno" Type="int" Nullable="false" />
+    <Property Name="Receiptnumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Wuliaobianhao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Guigexinghao" Type="varchar" MaxLength="50" />
+    <Property Name="Danwei" Type="varchar" MaxLength="20" />
+    <Property Name="shul" Type="int" Nullable="false" />
+    <Property Name="Entryremarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="BillNo" />
+    </Key>
+    <Property Name="BillDate" Type="date" />
+    <Property Name="BillNo" Type="int" Nullable="false" />
+    <Property Name="AssignStyle" Type="varchar" MaxLength="50" />
+    <Property Name="VoucherNo" Type="int" />
+    <Property Name="MLAmount" Type="int" />
+    <Property Name="SerNo" Type="int" />
+    <Property Name="FeeClassID" Type="int" />
+    <Property Name="FareClassName" Type="varchar" MaxLength="50" />
+    <Property Name="CurrID" Type="varchar" MaxLength="50" />
+    <Property Name="ExchRate" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="MLAmounts" Type="int" />
+  </EntityType>
+  <EntityType Name="customeraccounts">
+    <Key>
+      <PropertyRef Name="Keid" />
+      <PropertyRef Name="Danlaiid" />
+    </Key>
+    <Property Name="Keid" Type="int" Nullable="false" />
+    <Property Name="Keming" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Danlei" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Danlaiid" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Dandate" Type="datetime" Nullable="false" />
+    <Property Name="Yuanprice" Type="float" />
+    <Property Name="Xianprice" Type="float" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="Bumenbianhao" />
+    </Key>
+    <Property Name="Bumenbianhao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Departmentname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Englishnames" Type="varchar" MaxLength="50" />
+    <Property Name="note" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="funds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FundsAttribution" Type="varchar" MaxLength="50" />
+    <Property Name="FulName" Type="varchar" MaxLength="50" />
+    <Property Name="ClassID" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="50" />
+    <Property Name="ArealID" Type="varchar" MaxLength="50" />
+    <Property Name="FundsAttriName" Type="varchar" MaxLength="50" />
+    <Property Name="CurrencyID" Type="varchar" MaxLength="50" />
+    <Property Name="EngShortName" Type="varchar" MaxLength="50" />
+    <Property Name="ChiefName" Type="int" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="LinkMan" Type="int" />
+    <Property Name="TaxNo" Type="varchar" MaxLength="50" />
+    <Property Name="Capitaliation" Type="varchar" MaxLength="50" />
+    <Property Name="IndustrialClass" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="50" />
+    <Property Name="BankAccount" Type="varchar" MaxLength="50" />
+    <Property Name="BankID" Type="varchar" MaxLength="50" />
+    <Property Name="AmountQuota" Type="varchar" MaxLength="50" />
+    <Property Name="RemainQuota" Type="varchar" MaxLength="50" />
+    <Property Name="CreditLevel" Type="varchar" MaxLength="50" />
+    <Property Name="CurAdvRecv" Type="varchar" MaxLength="50" />
+    <Property Name="CurReceivable" Type="varchar" MaxLength="50" />
+    <Property Name="NotlnvQuota" Type="varchar" MaxLength="50" />
+    <Property Name="AccReceivable" Type="varchar" MaxLength="50" />
+    <Property Name="AddrID" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="fundtype">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+    <Property Name="EngName" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="inventory_addendum">
+    <Key>
+      <PropertyRef Name="Addid" />
+      <PropertyRef Name="Inventoryid" />
+    </Key>
+    <Property Name="Addid" Type="int" Nullable="false" />
+    <Property Name="Inventoryid" Type="int" Nullable="false" />
+    <Property Name="matterID" Type="int" Nullable="false" />
+    <Property Name="matterName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stocktaking" Type="int" Nullable="false" />
+    <Property Name="Book_quantity" Type="int" Nullable="false" />
+    <Property Name="real_quantity" Type="int" Nullable="false" />
+    <Property Name="unit_price" Type="float" Nullable="false" />
+    <Property Name="cause" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="inventory_document">
+    <Key>
+      <PropertyRef Name="Inventoryid" />
+    </Key>
+    <Property Name="Inventoryid" Type="int" Nullable="false" />
+    <Property Name="storehouse" Type="int" Nullable="false" />
+    <Property Name="InventoryDate" Type="date" Nullable="false" />
+    <Property Name="Stocktaking" Type="int" Nullable="false" />
+    <Property Name="Rdepartment" Type="int" Nullable="false" />
+    <Property Name="Rproducer" Type="int" Nullable="false" />
+    <Property Name="auditor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="checkid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="material_name">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ClassName" Type="varchar" MaxLength="20" />
+    <Property Name="EngName" Type="varchar" MaxLength="20" />
+    <Property Name="AccInventoryID" Type="varchar" MaxLength="20" />
+    <Property Name="AccInventoryName" Type="varchar" MaxLength="20" />
+    <Property Name="AccsaleID" Type="varchar" MaxLength="20" />
+    <Property Name="AccsaleName" Type="varchar" MaxLength="20" />
+    <Property Name="ReturnSaleID" Type="varchar" MaxLength="20" />
+    <Property Name="ReturnSaleName" Type="varchar" MaxLength="20" />
+    <Property Name="AccsaleCostID" Type="varchar" MaxLength="20" />
+    <Property Name="AccsaleCostName" Type="varchar" MaxLength="20" />
+    <Property Name="GiftExpenseID" Type="varchar" MaxLength="20" />
+    <Property Name="GiftExpenseName" Type="varchar" MaxLength="20" />
+    <Property Name="OtherIncomeID" Type="varchar" MaxLength="20" />
+    <Property Name="OtherIncomeName" Type="varchar" MaxLength="20" />
+    <Property Name="OtherExpenseID" Type="varchar" MaxLength="20" />
+    <Property Name="OtherExpenseName" Type="varchar" MaxLength="20" />
+    <Property Name="OtherCostID" Type="varchar" MaxLength="20" />
+    <Property Name="OtherCostName" Type="varchar" MaxLength="20" />
+    <Property Name="Mmo" Type="varchar" MaxLength="20" />
+    <Property Name="SendOutWareID" Type="varchar" MaxLength="20" />
+    <Property Name="SendOutWareName" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="orderdetails">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Documentnumber" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Documentnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Materialnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Unitname" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="num" Type="float" Nullable="false" />
+    <Property Name="zkqunitprice" Type="int" Nullable="false" />
+    <Property Name="Foldnumber" Type="float" Nullable="false" />
+    <Property Name="UnitPrice" Type="float" Nullable="false" />
+    <Property Name="Amountofmoney" Type="float" Nullable="false" />
+    <Property Name="taxrate" Type="float" Nullable="false" />
+    <Property Name="Taxamount" Type="float" Nullable="false" />
+    <Property Name="Hanshuijine" Type="float" Nullable="false" />
+    <Property Name="Yuchukuri" Type="date" Nullable="false" />
+    <Property Name="Weichukunum" Type="float" Nullable="false" />
+    <Property Name="Laiyuandanbie" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Laiyuandanhao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="prods">
+    <Key>
+      <PropertyRef Name="SerNo" />
+    </Key>
+    <Property Name="SerNo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FromNo" Type="int" />
+    <Property Name="ProdID" Type="int" />
+    <Property Name="ProdName" Type="varchar" MaxLength="50" />
+    <Property Name="ProdSize" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="VQuantity" Type="int" />
+    <Property Name="SUnit" Type="int" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Measm" Type="int" />
+    <Property Name="MLAmount" Type="int" />
+  </EntityType>
+  <EntityType Name="purchase_inquiry">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Document_date" Type="timestamp" Nullable="false" />
+    <Property Name="Supplier_Id" Type="int" Nullable="false" />
+    <Property Name="Effective_data" Type="datetime" />
+    <Property Name="Coin" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Price_include_tax" Type="int" Nullable="false" />
+    <Property Name="Exchange_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Delivery_address" Type="varchar" MaxLength="100" />
+    <Property Name="Making_personnel" Type="int" Nullable="false" />
+    <Property Name="Procurement_staff" Type="int" Nullable="false" />
+    <Property Name="Review_personnel" Type="int" />
+    <Property Name="Affiliated_department" Type="int" Nullable="false" />
+    <Property Name="Audit_status" Type="int" />
+  </EntityType>
+  <EntityType Name="purchase_inquiry_list">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Column_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Column_number" Type="int" Nullable="false" />
+    <Property Name="Material_number" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="Price_before_discount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Broken_number" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Unit_price" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Amount_money" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Tax_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Amount_paid" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Tax_amount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="gift" Type="int" Nullable="false" />
+    <Property Name="Entry_remarks" Type="varchar" MaxLength="100" />
+    <Property Name="Source_list" Type="varchar" MaxLength="20" />
+    <Property Name="Source_number" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="purchasing_orderlist">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Column_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Column_number" Type="int" Nullable="false" />
+    <Property Name="Material_number" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="Price_before_discount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Broken_number" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Unit_price" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Amount_money" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Tax_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Amount_paid" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Tax_amount" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Prestorage_day" Type="datetime" Nullable="false" />
+    <Property Name="Unwarehoused_quantity" Type="int" Nullable="false" />
+    <Property Name="gift" Type="int" Nullable="false" />
+    <Property Name="Entry_remarks" Type="varchar" MaxLength="100" />
+    <Property Name="Source_list" Type="varchar" MaxLength="20" />
+    <Property Name="Source_number" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="purchasing_ordermain">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Document_date" Type="timestamp" Nullable="false" />
+    <Property Name="Supplier_Id" Type="int" Nullable="false" />
+    <Property Name="Purchase_order_type" Type="int" Nullable="false" />
+    <Property Name="Coin" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Price_include_tax" Type="int" Nullable="false" />
+    <Property Name="Exchange_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Individual_ondition" Type="int" Nullable="false" />
+    <Property Name="Delivery_address" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Making_personnel" Type="int" Nullable="false" />
+    <Property Name="Procurement_staff" Type="int" Nullable="false" />
+    <Property Name="Review_personnel" Type="int" Nullable="false" />
+    <Property Name="Affiliated_department" Type="int" Nullable="false" />
+    <Property Name="Audit_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quotationdetails">
+    <Key>
+      <PropertyRef Name="Columnno" />
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Name="Columnno" Type="int" Nullable="false" />
+    <Property Name="Receiptnumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Wuliaobianhao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Wuliaomingcheng" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="guigexinghao" Type="varchar" MaxLength="50" />
+    <Property Name="Danweimingcheng" Type="varchar" MaxLength="50" />
+    <Property Name="Shuliang" Type="int" Nullable="false" />
+    <Property Name="Zhekoqian" Type="double" />
+    <Property Name="Zheshu" Type="double" />
+    <Property Name="danjia" Type="double" Nullable="false" />
+    <Property Name="Jine" Type="double" Nullable="false" />
+    <Property Name="Suilv" Type="double" />
+    <Property Name="Suie" Type="double" />
+    <Property Name="Hangsuijine" Type="double" />
+    <Property Name="beizhu" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="quotedprice">
+    <Key>
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Name="Receiptnumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Officialcustomer" Type="int" Nullable="false" />
+    <Property Name="Documentdate" Type="datetime" Nullable="false" />
+    <Property Name="bibie" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="songhuodizhi" Type="varchar" MaxLength="200" />
+    <Property Name="youxiaoriqi" Type="datetime" />
+    <Property Name="danjiahangs" Type="int" Nullable="false" />
+    <Property Name="huilv" Type="double" Nullable="false" />
+    <Property Name="Personnel" Type="int" Nullable="false" />
+    <Property Name="Bumenbianhao" Type="int" Nullable="false" />
+    <Property Name="zhidanryuan" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="fuheryuan" Type="varchar" MaxLength="50" />
+    <Property Name="Shenhe" Type="int" Nullable="false" />
+    <Property Name="Beizhu" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="qymx">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="YSCKBillID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="LY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="LYNO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="QYMoney" Type="float" />
+    <Property Name="BZ" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="r_detail">
+    <Key>
+      <PropertyRef Name="detailID" />
+      <PropertyRef Name="RequisitionID" />
+    </Key>
+    <Property Name="detailID" Type="int" Nullable="false" />
+    <Property Name="RequisitionID" Type="int" Nullable="false" />
+    <Property Name="matterid" Type="int" Nullable="false" />
+    <Property Name="matter" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="specifications" Type="varchar" MaxLength="50" />
+    <Property Name="unit" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="Coinstop" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Standard_price" Type="float" Nullable="false" />
+    <Property Name="Demanddate" Type="date" Nullable="false" />
+    <Property Name="sourcename" Type="varchar" MaxLength="50" />
+    <Property Name="sourceid" Type="varchar" MaxLength="20" />
+    <Property Name="Recommendeddate" Type="date" />
+  </EntityType>
+  <EntityType Name="record">
+    <Key>
+      <PropertyRef Name="ProdID" />
+    </Key>
+    <Property Name="ProdID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClassID" Type="varchar" MaxLength="50" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+    <Property Name="ProdName" Type="varchar" MaxLength="50" />
+    <Property Name="ProdSize" Type="varchar" MaxLength="50" />
+    <Property Name="EngName" Type="varchar" MaxLength="50" />
+    <Property Name="CurrName" Type="varchar" MaxLength="50" />
+    <Property Name="SuggestPrice" Type="float" />
+    <Property Name="SalesPriceA" Type="float" />
+    <Property Name="SalesPriceB" Type="float" />
+    <Property Name="SalesPriceC" Type="float" />
+    <Property Name="SalesPriceD" Type="float" />
+    <Property Name="SalesPriceE" Type="float" />
+    <Property Name="StdPrice" Type="float" />
+    <Property Name="BusiTaxRate" Type="varchar" MaxLength="50" />
+    <Property Name="EffectDateUsed" Type="date" />
+    <Property Name="ValidDateUsesd" Type="date" />
+    <Property Name="DefVailDay" Type="varchar" MaxLength="50" />
+    <Property Name="ProdDesc" Type="varchar" MaxLength="50" />
+    <Property Name="ProdForm" Type="varchar" MaxLength="50" />
+    <Property Name="SafeQty" Type="varchar" MaxLength="50" />
+    <Property Name="AdvanceDays" Type="varchar" MaxLength="50" />
+    <Property Name="BOutStockDay" Type="date" />
+    <Property Name="BInStockDay" Type="date" />
+    <Property Name="BstdCost" Type="float" />
+    <Property Name="BavgCost" Type="float" />
+    <Property Name="CavgCost" Type="float" />
+    <Property Name="Ctotalcost" Type="float" />
+    <Property Name="MajorSupplier" Type="varchar" MaxLength="50" />
+    <Property Name="MajorSupplierName" Type="varchar" MaxLength="50" />
+    <Property Name="Udef1" Type="varchar" MaxLength="50" />
+    <Property Name="Udef2" Type="varchar" MaxLength="50" />
+    <Property Name="PriceOftax" Type="varchar" MaxLength="50" />
+    <Property Name="BtotalCost" Type="float" />
+    <Property Name="StdUnitID" Type="varchar" MaxLength="50" />
+    <Property Name="StdUnitName" Type="varchar" MaxLength="50" />
+    <Property Name="StdUnitEngName" Type="varchar" MaxLength="50" />
+    <Property Name="CallAmt" Type="varchar" MaxLength="50" />
+    <Property Name="BallAmt" Type="varchar" MaxLength="50" />
+    <Property Name="BcurrStock" Type="varchar" MaxLength="50" />
+    <Property Name="BsafeAllStk" Type="varchar" MaxLength="50" />
+    <Property Name="CsafeAllStk" Type="varchar" MaxLength="50" />
+    <Property Name="CStdCost" Type="float" />
+  </EntityType>
+  <EntityType Name="requisition">
+    <Key>
+      <PropertyRef Name="RequisitionID" />
+    </Key>
+    <Property Name="RequisitionID" Type="int" Nullable="false" />
+    <Property Name="RequisitionDate" Type="date" Nullable="false" />
+    <Property Name="RequisitionType" Type="int" Nullable="false" />
+    <Property Name="RCondition" Type="int" Nullable="false" />
+    <Property Name="RPersonnel" Type="int" Nullable="false" />
+    <Property Name="Rdepartment" Type="int" Nullable="false" />
+    <Property Name="Rproducer" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="auditor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="remarks" Type="varchar" MaxLength="255" />
+    <Property Name="detailid" Type="int" Nullable="false" />
+    <Property Name="checkid" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6035: 关系“fk_return1”在关系主端上有一些列不属于表的键的一部分。已排除了此关系。
+      -->
+  <EntityType Name="returnxx">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="BillNO" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="BillNO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ProdID" Type="varchar" MaxLength="50" />
+    <Property Name="ProdName" Type="varchar" MaxLength="20" />
+    <Property Name="ProdSize" Type="varchar" MaxLength="20" />
+    <Property Name="SUnit" Type="varchar" MaxLength="20" />
+    <Property Name="SQuantity" Type="float" />
+    <Property Name="OIdPrice" Type="float" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="TaxRate" Type="float" />
+    <Property Name="TaxAmt" Type="float" />
+    <Property Name="AmountWithTax" Type="float" />
+    <Property Name="ItemRemark" Type="varchar" MaxLength="20" />
+    <Property Name="TranType" Type="varchar" MaxLength="20" />
+    <Property Name="FromNo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="returnzhubiao">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="int" Nullable="false" />
+    <Property Name="CustAddress" Type="varchar" MaxLength="20" />
+    <Property Name="PriceJudge" Type="int" />
+    <Property Name="WareID" Type="int" />
+    <Property Name="AgainWare" Type="int" />
+    <Property Name="BillDate" Type="datetime" />
+    <Property Name="BillNO" Type="varchar" MaxLength="20" />
+    <Property Name="CurrID" Type="int" />
+    <Property Name="ExchangeRate" Type="float" />
+    <Property Name="ForeignTrade" Type="varchar" MaxLength="20" />
+    <Property Name="BusinessName" Type="int" />
+    <Property Name="DepartName" Type="varchar" MaxLength="20" />
+    <Property Name="projectID" Type="varchar" MaxLength="20" />
+    <Property Name="Maker" Type="varchar" MaxLength="20" />
+    <Property Name="Permitter" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="salesorder">
+    <Key>
+      <PropertyRef Name="Documentnumber" />
+    </Key>
+    <Property Name="Customer" Type="int" Nullable="false" />
+    <Property Name="BillDate" Type="date" Nullable="false" />
+    <Property Name="Documentnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="yesandno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Singlecondition" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="exchangerate" Type="float" Nullable="false" />
+    <Property Name="Ordertype" Type="int" />
+    <Property Name="Businesspersonnel" Type="int" Nullable="false" />
+    <Property Name="Producer" Type="int" Nullable="false" />
+    <Property Name="bumenbianhao" Type="int" Nullable="false" />
+    <Property Name="Compoundstaff" Type="int" />
+    <Property Name="Totalamount" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="isshenhe" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="shipment">
+    <Key>
+      <PropertyRef Name="Danid" />
+    </Key>
+    <Property Name="Danid" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Dandate" Type="datetime" Nullable="false" />
+    <Property Name="Kehuid" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="20" />
+    <Property Name="Leixingid" Type="int" />
+    <Property Name="Bi" Type="varchar" MaxLength="10" />
+    <Property Name="Han" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Huilv" Type="float" />
+    <Property Name="Cangid" Type="int" Nullable="false" />
+    <Property Name="Zhiren" Type="int" Nullable="false" />
+    <Property Name="Shenren" Type="int" />
+    <Property Name="Shentime" Type="datetime" />
+    <Property Name="Shenzk" Type="varchar" MaxLength="10" />
+    <Property Name="Buid" Type="int" Nullable="false" />
+    <Property Name="Yeren" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="shipmentdetail">
+    <Key>
+      <PropertyRef Name="Danid" />
+      <PropertyRef Name="Hanghao" />
+    </Key>
+    <Property Name="Danid" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Hanghao" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Wuid" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Wuming" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Guige" Type="varchar" MaxLength="20" />
+    <Property Name="Num" Type="float" Nullable="false" />
+    <Property Name="Zhedan" Type="float" />
+    <Property Name="Zheshu" Type="float" />
+    <Property Name="Danjia" Type="float" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Shuilv" Type="float" Nullable="false" />
+    <Property Name="Shuoprice" Type="float" />
+    <Property Name="Hanshui" Type="float" />
+    <Property Name="Lailaiid" Type="varchar" MaxLength="20" />
+    <Property Name="Laibie" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="t_preturn">
+    <Key>
+      <PropertyRef Name="Pbillno" />
+    </Key>
+    <Property Name="Pbillno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="supplierid" Type="int" Nullable="false" />
+    <Property Name="Pdata" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PriceOfTax" Type="int" Nullable="false" />
+    <Property Name="storehouseID" Type="int" Nullable="false" />
+    <Property Name="CoinId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ExchRate" Type="int" Nullable="false" />
+    <Property Name="warehouseid" Type="int" Nullable="false" />
+    <Property Name="Pesonner" Type="int" Nullable="false" />
+    <Property Name="bumenbianhao" Type="int" Nullable="false" />
+    <Property Name="personnel" Type="int" Nullable="false" />
+    <Property Name="Auditor" Type="int" Nullable="false" />
+    <Property Name="job" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_preturn_zi">
+    <Key>
+      <PropertyRef Name="Tid" />
+      <PropertyRef Name="Hid" />
+    </Key>
+    <Property Name="Tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Pbillno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Hid" Type="int" Nullable="false" />
+    <Property Name="matterid" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="COUNT" Type="int" Nullable="false" />
+    <Property Name="outside" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="t_store_advance">
+    <Key>
+      <PropertyRef Name="Bill_advance" />
+    </Key>
+    <Property Name="Bill_advance" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Document_date" Type="datetime" />
+    <Property Name="Supplier_ID" Type="int" />
+    <Property Name="Coin_stop" Type="varchar" MaxLength="50" />
+    <Property Name="Settle_accounts1" Type="varchar" MaxLength="50" />
+    <Property Name="Settle_accounts2" Type="varchar" MaxLength="50" />
+    <Property Name="Money1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Money2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Exchange_rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Deposit_rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Termination_month" Type="datetime" />
+    <Property Name="Bumenbianhao" Type="int" />
+    <Property Name="Single_person_ID" Type="int" />
+    <Property Name="Compound_human_ID" Type="int" />
+    <Property Name="Audit_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_store_advancepay">
+    <Key>
+      <PropertyRef Name="Bill_advancepay" />
+      <PropertyRef Name="Line_advancepay" />
+    </Key>
+    <Property Name="Bill_advancepay" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Line_advancepay" Type="int" Nullable="false" />
+    <Property Name="Source_name" Type="varchar" MaxLength="20" />
+    <Property Name="Source_date" Type="varchar" MaxLength="20" />
+    <Property Name="Amount_dvanced" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="summary" Type="varchar" MaxLength="200" />
+    <Property Name="Advance_alance" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="t_store_advancerec">
+    <Key>
+      <PropertyRef Name="Qyysid" />
+      <PropertyRef Name="Bill_particularspay" />
+      <PropertyRef Name="Line_advancerec" />
+    </Key>
+    <Property Name="Qyysid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Bill_particularspay" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Line_advancerec" Type="int" Nullable="false" />
+    <Property Name="yourself" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="t_store_amount">
+    <Key>
+      <PropertyRef Name="Bill_amount" />
+    </Key>
+    <Property Name="Bill_amount" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Document_date" Type="datetime" Nullable="false" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+    <Property Name="Coin_stop" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Settle_accounts1" Type="varchar" MaxLength="50" />
+    <Property Name="Settle_accounts2" Type="varchar" MaxLength="50" />
+    <Property Name="Money1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Money2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Exchange_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Deposit_rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Termination_month" Type="datetime" />
+    <Property Name="Bumenbianhao" Type="int" Nullable="false" />
+    <Property Name="Single_person_ID" Type="int" Nullable="false" />
+    <Property Name="Compound_human_ID" Type="int" Nullable="false" />
+    <Property Name="Audit_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_store_particularspay">
+    <Key>
+      <PropertyRef Name="Bill_particularspay" />
+      <PropertyRef Name="Line_particularspay" />
+    </Key>
+    <Property Name="Bill_particularspay" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Line_particularspay" Type="int" Nullable="false" />
+    <Property Name="Source_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Source_date" Type="datetime" Nullable="false" />
+    <Property Name="Source_list" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Trading_object" Type="int" />
+    <Property Name="Bumenbianhao" Type="int" />
+    <Property Name="PurchasersID" Type="int" />
+    <Property Name="Coin_stop" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Exchange_rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Payable_detail" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="Discount_amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cancellation_amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Offset_amount" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="td_breakdown">
+    <Key>
+      <PropertyRef Name="breakdown" />
+    </Key>
+    <Property Name="breakdown" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="NAME" Type="varchar" MaxLength="20" />
+    <Property Name="document_type" Type="varchar" MaxLength="20" />
+    <Property Name="Bill_number" Type="varchar" MaxLength="20" />
+    <Property Name="single_amount" Type="decimal" Scale="2" />
+    <Property Name="Current_balance" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="td_inventory_list">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Document_date" Type="date" />
+    <Property Name="ID" Type="int" />
+    <Property Name="Storage_type" Type="int" />
+    <Property Name="price_include" Type="varchar" MaxLength="20" />
+    <Property Name="storehouse" Type="int" />
+    <Property Name="Coin_stop" Type="varchar" MaxLength="20" />
+    <Property Name="exchange_rate" Type="decimal" Scale="2" />
+    <Property Name="Certificate_number" Type="varchar" MaxLength="20" />
+    <Property Name="Automatic_generation" Type="int" />
+    <Property Name="foreign_trade" Type="int" />
+    <Property Name="Procurement_staff" Type="varchar" MaxLength="20" />
+    <Property Name="Affiliated_department" Type="varchar" MaxLength="20" />
+    <Property Name="Producer" Type="varchar" MaxLength="20" />
+    <Property Name="Auditor" Type="varchar" MaxLength="20" />
+    <Property Name="belongs" Type="varchar" MaxLength="20" />
+    <Property Name="examine" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="td_personnel_table">
+    <Key>
+      <PropertyRef Name="Personnel" />
+    </Key>
+    <Property Name="Personnel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="department" Type="int" />
+    <Property Name="Personal_name" Type="varchar" MaxLength="20" />
+    <Property Name="sex" Type="varchar" MaxLength="20" />
+    <Property Name="English_name" Type="varchar" MaxLength="20" />
+    <Property Name="ID_number" Type="varchar" MaxLength="18" />
+    <Property Name="Date_of_birth" Type="date" />
+    <Property Name="political_status" Type="varchar" MaxLength="20" />
+    <Property Name="marital_status" Type="varchar" MaxLength="20" />
+    <Property Name="Entry_date" Type="date" />
+    <Property Name="blood_group" Type="varchar" MaxLength="20" />
+    <Property Name="or_origin" Type="varchar" MaxLength="20" />
+    <Property Name="nation" Type="varchar" MaxLength="20" />
+    <Property Name="post" Type="varchar" MaxLength="20" />
+    <Property Name="telephone" Type="varchar" MaxLength="20" />
+    <Property Name="contact_number" Type="varchar" MaxLength="20" />
+    <Property Name="Contact_address" Type="varchar" MaxLength="20" />
+    <Property Name="zip_code" Type="varchar" MaxLength="20" />
+    <Property Name="highest" Type="varchar" MaxLength="20" />
+    <Property Name="due_date" Type="date" />
+    <Property Name="academic" Type="varchar" MaxLength="20" />
+    <Property Name="Date_of_entry" Type="date" />
+    <Property Name="Graduation" Type="varchar" MaxLength="20" />
+    <Property Name="passport" Type="varchar" MaxLength="20" />
+    <Property Name="Study_major" Type="varchar" MaxLength="20" />
+    <Property Name="Contractstart_date" Type="date" />
+    <Property Name="language_level" Type="varchar" MaxLength="20" />
+    <Property Name="termination_date" Type="date" />
+    <Property Name="Experience_date" Type="date" />
+    <Property Name="duration" Type="varchar" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="td_purchase">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Material_number" />
+    </Key>
+    <Property Name="Bill_number" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Material_number" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="name_of_material" Type="varchar" MaxLength="50" />
+    <Property Name="specifications" Type="varchar" MaxLength="50" />
+    <Property Name="unit" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="before_discount" Type="decimal" Scale="2" />
+    <Property Name="broken_number" Type="int" />
+    <Property Name="price" Type="decimal" Scale="2" />
+    <Property Name="money" Type="decimal" Scale="2" />
+    <Property Name="tax_rate" Type="decimal" Scale="2" />
+    <Property Name="amount_of" Type="decimal" Scale="2" />
+    <Property Name="Tax_amount" Type="decimal" Scale="2" />
+    <Property Name="Uninvoiced" Type="int" />
+    <Property Name="Entry_remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Source_list" Type="varchar" MaxLength="20" />
+    <Property Name="number" Type="varchar" MaxLength="20" />
+    <Property Name="ated_expense" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="transfers">
+    <Key>
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Name="Receiptnumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Documentdate" Type="datetime" Nullable="false" />
+    <Property Name="Diaoru" Type="int" Nullable="false" />
+    <Property Name="Diaochu" Type="int" Nullable="false" />
+    <Property Name="Makingpersonnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="reviewer" Type="varchar" MaxLength="50" />
+    <Property Name="note" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="audit" Type="int" Nullable="false" />
+    <Property Name="Theeffectivedate" Type="datetime" />
+    <Property Name="shengxiao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="typenumber">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DanjuType" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Remarks" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="userinfo">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="zkgs" Type="varchar" MaxLength="20" />
+    <Property Name="username" Type="varchar" MaxLength="20" />
+    <Property Name="typeid" Type="int" />
+    <Property Name="address" Type="varchar" MaxLength="20" />
+    <Property Name="bibie" Type="varchar" MaxLength="20" />
+    <Property Name="BusinessName" Type="int" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="hangye" Type="varchar" MaxLength="20" />
+    <Property Name="meail" Type="varchar" MaxLength="20" />
+    <Property Name="yinghangid" Type="varchar" MaxLength="20" />
+    <Property Name="zked" Type="float" />
+    <Property Name="syed" Type="float" />
+    <Property Name="jzr" Type="int" />
+    <Property Name="fptype" Type="varchar" MaxLength="20" />
+    <Property Name="qcyufu" Type="float" />
+    <Property Name="qcyinfyu" Type="float" />
+    <Property Name="qwyufu" Type="float" />
+    <Property Name="qwyinfu" Type="float" />
+  </EntityType>
+  <EntityType Name="usertype">
+    <Key>
+      <PropertyRef Name="typeid" />
+    </Key>
+    <Property Name="typeid" Type="int" Nullable="false" />
+    <Property Name="typename" Type="varchar" MaxLength="20" />
+    <Property Name="beizhu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="warehouseflowtable">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Name="Warehousenumber" Type="int" Nullable="false" />
+    <Property Name="Materialnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Documenttype" Type="int" Nullable="false" />
+    <Property Name="Documentnumber" Type="int" Nullable="false" />
+    <Property Name="Dateofwarehousing" Type="date" Nullable="false" />
+    <Property Name="num" Type="float" Nullable="false" />
+    <Property Name="UnitPrice" Type="float" Nullable="false" />
+    <Property Name="money" Type="float" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="warehousegeneralledger">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Name="Warehousenumber" Type="int" Nullable="false" />
+    <Property Name="Materialnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="num" Type="float" Nullable="false" />
+    <Property Name="Costunivalent" Type="float" Nullable="false" />
+    <Property Name="Totalamount" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="warehousetable">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Name="Warehousenumber" Type="int" Nullable="false" />
+    <Property Name="Warehousename" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Contactnumber" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Warehouseaddress" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ysbill">
+    <Key>
+      <PropertyRef Name="FSBillID" />
+    </Key>
+    <Property Name="FSBillID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="FSBillDate" Type="date" Nullable="false" />
+    <Property Name="YSCKCurrName" Type="varchar" MaxLength="10" />
+    <Property Name="YSExchRate" Type="float" />
+    <Property Name="YSOne" Type="varchar" MaxLength="10" />
+    <Property Name="YSTwo" Type="varchar" MaxLength="10" />
+    <Property Name="YSThree" Type="varchar" MaxLength="10" />
+    <Property Name="YSMoney1" Type="float" />
+    <Property Name="YSMoney2" Type="float" />
+    <Property Name="YSMoney3" Type="float" />
+    <Property Name="YSZD" Type="int" />
+    <Property Name="YSSH" Type="int" />
+    <Property Name="YS_Status" Type="varchar" MaxLength="10" />
+    <Property Name="YSBuMenID" Type="int" />
+  </EntityType>
+  <EntityType Name="ysckbill">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+    </Key>
+    <Property Name="YSCKBillID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="YSCKBillDate" Type="date" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="YSCKCurrName" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="YSCKExchRate" Type="float" />
+    <Property Name="YSCKOne" Type="varchar" MaxLength="10" />
+    <Property Name="YSCKTwo" Type="varchar" MaxLength="10" />
+    <Property Name="YSThree" Type="varchar" MaxLength="10" />
+    <Property Name="YSCKMoney1" Type="float" />
+    <Property Name="YSCKMoney2" Type="float" />
+    <Property Name="YSCKMoney3" Type="float" />
+    <Property Name="YSCKZD" Type="int" Nullable="false" />
+    <Property Name="YSCKSH" Type="int" Nullable="false" />
+    <Property Name="YSCKZhe" Type="float" />
+    <Property Name="YS_Status" Type="varchar" MaxLength="10" />
+    <Property Name="YSBuMenID" Type="int" />
+  </EntityType>
+  <EntityType Name="ysckdetail">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="YSCKBillID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="LY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="LYNO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="YSKeHuID" Type="int" Nullable="false" />
+    <Property Name="YSChuKuNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ZheRangMoney" Type="float" />
+    <Property Name="ChongKuanMoney" Type="float" />
+    <Property Name="ChongDiMoney" Type="float" />
+  </EntityType>
+  <EntityType Name="ysmxdetail">
+    <Key>
+      <PropertyRef Name="FSBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Name="FSBillID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LineNo" Type="int" Nullable="false" />
+    <Property Name="LY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="LYNO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="BZ" Type="varchar" MaxLength="100" />
+    <Property Name="YSMoney" Type="float" />
+    <Property Name="YSYUE" Type="float" />
+  </EntityType>
+  <Association Name="aa">
+    <End Role="quotedprice" Type="xiangmuModel.Store.quotedprice" Multiplicity="1" />
+    <End Role="quotationdetails" Type="xiangmuModel.Store.quotationdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quotedprice">
+        <PropertyRef Name="Receiptnumber" />
+      </Principal>
+      <Dependent Role="quotationdetails">
+        <PropertyRef Name="Receiptnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aaa">
+    <End Role="ysbill" Type="xiangmuModel.Store.ysbill" Multiplicity="1" />
+    <End Role="ysmxdetail" Type="xiangmuModel.Store.ysmxdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysbill">
+        <PropertyRef Name="FSBillID" />
+      </Principal>
+      <Dependent Role="ysmxdetail">
+        <PropertyRef Name="FSBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Auditor">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="Auditor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bb">
+    <End Role="transfers" Type="xiangmuModel.Store.transfers" Multiplicity="1" />
+    <End Role="allocatingdetail" Type="xiangmuModel.Store.allocatingdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transfers">
+        <PropertyRef Name="Receiptnumber" />
+      </Principal>
+      <Dependent Role="allocatingdetail">
+        <PropertyRef Name="Receiptnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bbb">
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="1" />
+    <End Role="qymx" Type="xiangmuModel.Store.qymx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="YSCKBillID" />
+      </Principal>
+      <Dependent Role="qymx">
+        <PropertyRef Name="YSCKBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bumenbianhao">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cc">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="transfers" Type="xiangmuModel.Store.transfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="transfers">
+        <PropertyRef Name="Diaoru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ccc">
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="1" />
+    <End Role="ysckdetail" Type="xiangmuModel.Store.ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="YSCKBillID" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSCKBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dd">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="transfers" Type="xiangmuModel.Store.transfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="transfers">
+        <PropertyRef Name="Diaochu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ddd">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="ysbill" Type="xiangmuModel.Store.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eee">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="0..1" />
+    <End Role="ysbill" Type="xiangmuModel.Store.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSBuMenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ff">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="quotedprice" Type="xiangmuModel.Store.quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Officialcustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fff">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="ysbill" Type="xiangmuModel.Store.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSZD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cck">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="customeraccounts" Type="xiangmuModel.Store.customeraccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="customeraccounts">
+        <PropertyRef Name="Keid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cnm">
+    <End Role="td_breakdown" Type="xiangmuModel.Store.td_breakdown" Multiplicity="0..1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_breakdown">
+        <PropertyRef Name="breakdown" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Payable_detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_gnn">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="t_store_advance" Type="xiangmuModel.Store.t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Compound_human_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_department">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Affiliated_department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Making">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Making_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Procurement">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Procurement_staff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Review">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Review_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Supplier_Id">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="1" />
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Supplier_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquirylist_Bill_number">
+    <End Role="purchase_inquiry" Type="xiangmuModel.Store.purchase_inquiry" Multiplicity="1" />
+    <End Role="purchase_inquiry_list" Type="xiangmuModel.Store.purchase_inquiry_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchase_inquiry">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="purchase_inquiry_list">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquirylist_Material_number">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="purchase_inquiry_list" Type="xiangmuModel.Store.purchase_inquiry_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="purchase_inquiry_list">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancegys_news_Funds">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="0..1" />
+    <End Role="t_store_advance" Type="xiangmuModel.Store.t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancepay_news_amount">
+    <End Role="t_store_advance" Type="xiangmuModel.Store.t_store_advance" Multiplicity="1" />
+    <End Role="t_store_advancepay" Type="xiangmuModel.Store.t_store_advancepay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_advance">
+        <PropertyRef Name="Bill_advance" />
+      </Principal>
+      <Dependent Role="t_store_advancepay">
+        <PropertyRef Name="Bill_advancepay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancepaygys_news_Funds">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="1" />
+    <End Role="t_store_amount" Type="xiangmuModel.Store.t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancerec_news_amount">
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="1" />
+    <End Role="t_store_advancerec" Type="xiangmuModel.Store.t_store_advancerec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_particularspay">
+        <PropertyRef Name="Bill_particularspay" />
+        <PropertyRef Name="Line_particularspay" />
+      </Principal>
+      <Dependent Role="t_store_advancerec">
+        <PropertyRef Name="Bill_particularspay" />
+        <PropertyRef Name="Line_advancerec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_amount">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="inventory_document" Type="xiangmuModel.Store.inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="Stocktaking" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Bumenbianhao_news_departement">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="t_store_amount" Type="xiangmuModel.Store.t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Funds">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="0..1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Trading_object" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="inventory_document" Type="xiangmuModel.Store.inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="storehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount1">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="inventory_document" Type="xiangmuModel.Store.inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="Rdepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount2">
+    <End Role="inventory_document" Type="xiangmuModel.Store.inventory_document" Multiplicity="1" />
+    <End Role="inventory_addendum" Type="xiangmuModel.Store.inventory_addendum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventory_document">
+        <PropertyRef Name="Inventoryid" />
+      </Principal>
+      <Dependent Role="inventory_addendum">
+        <PropertyRef Name="Inventoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_amount">
+    <End Role="t_store_amount" Type="xiangmuModel.Store.t_store_amount" Multiplicity="1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_amount">
+        <PropertyRef Name="Bill_amount" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Bill_particularspay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_amount1">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="requisition" Type="xiangmuModel.Store.requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="Rdepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_departement">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="0..1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_td_Inrentory_list">
+    <End Role="td_inventory_list" Type="xiangmuModel.Store.td_inventory_list" Multiplicity="1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_inventory_list">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Source_list" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_td_Personnel_table">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="t_store_particularspay" Type="xiangmuModel.Store.t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="PurchasersID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news6_amount">
+    <End Role="typenumber" Type="xiangmuModel.Store.typenumber" Multiplicity="1" />
+    <End Role="requisition" Type="xiangmuModel.Store.requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="RequisitionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Single_person_ID_news_td_Personnel_tablefh">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="t_store_amount" Type="xiangmuModel.Store.t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Compound_human_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Single_person_ID_news_td_Personnel_tablezd">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="t_store_amount" Type="xiangmuModel.Store.t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Single_person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nmd">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="t_store_advance" Type="xiangmuModel.Store.t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Single_person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nmgb">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="0..1" />
+    <End Role="t_store_advance" Type="xiangmuModel.Store.t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_orderlist_Bill_number">
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="1" />
+    <End Role="purchasing_orderlist" Type="xiangmuModel.Store.purchasing_orderlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchasing_ordermain">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="purchasing_orderlist">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_orderlist_Material_number">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="purchasing_orderlist" Type="xiangmuModel.Store.purchasing_orderlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="purchasing_orderlist">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_department">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Affiliated_department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Id">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Supplier_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Making">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Making_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Procurement">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Procurement_staff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_rdertype">
+    <End Role="typenumber" Type="xiangmuModel.Store.typenumber" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Purchase_order_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Review">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="purchasing_ordermain" Type="xiangmuModel.Store.purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Review_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProdID">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="0..1" />
+    <End Role="returnxx" Type="xiangmuModel.Store.returnxx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="returnxx">
+        <PropertyRef Name="ProdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rec">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="shipmentdetail" Type="xiangmuModel.Store.shipmentdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="shipmentdetail">
+        <PropertyRef Name="Wuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisition_news_amount1">
+    <End Role="requisition" Type="xiangmuModel.Store.requisition" Multiplicity="1" />
+    <End Role="r_detail" Type="xiangmuModel.Store.r_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="requisition">
+        <PropertyRef Name="RequisitionID" />
+      </Principal>
+      <Dependent Role="r_detail">
+        <PropertyRef Name="RequisitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisition1_news_amount">
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="0..1" />
+    <End Role="r_detail" Type="xiangmuModel.Store.r_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="Documentnumber" />
+      </Principal>
+      <Dependent Role="r_detail">
+        <PropertyRef Name="sourceid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sc">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Cangid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sd">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Buid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sdeail">
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="1" />
+    <End Role="shipmentdetail" Type="xiangmuModel.Store.shipmentdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shipment">
+        <PropertyRef Name="Danid" />
+      </Principal>
+      <Dependent Role="shipmentdetail">
+        <PropertyRef Name="Danid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_shp">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Shenren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sk">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Kehuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sp">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Zhiren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_st">
+    <End Role="typenumber" Type="xiangmuModel.Store.typenumber" Multiplicity="0..1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Leixingid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_syp">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Yeren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_inventory">
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="0..1" />
+    <End Role="td_inventory_list" Type="xiangmuModel.Store.td_inventory_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="td_inventory_list">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_inventory_list">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="0..1" />
+    <End Role="td_inventory_list" Type="xiangmuModel.Store.td_inventory_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="td_inventory_list">
+        <PropertyRef Name="storehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_personnel_table">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="0..1" />
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="td_personnel_table">
+        <PropertyRef Name="department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_purchas">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="td_purchase" Type="xiangmuModel.Store.td_purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="td_purchase">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_purchase">
+    <End Role="td_inventory_list" Type="xiangmuModel.Store.td_inventory_list" Multiplicity="1" />
+    <End Role="td_purchase" Type="xiangmuModel.Store.td_purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_inventory_list">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="td_purchase">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_type">
+    <End Role="usertype" Type="xiangmuModel.Store.usertype" Multiplicity="0..1" />
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertype">
+        <PropertyRef Name="typeid" />
+      </Principal>
+      <Dependent Role="userinfo">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_WareID">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="0..1" />
+    <End Role="returnzhubiao" Type="xiangmuModel.Store.returnzhubiao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="returnzhubiao">
+        <PropertyRef Name="WareID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK3C0469F99FC6869">
+    <End Role="material_name" Type="xiangmuModel.Store.material_name" Multiplicity="0..1" />
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_name">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="record">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkck">
+    <End Role="warehousegeneralledger" Type="xiangmuModel.Store.warehousegeneralledger" Multiplicity="0..1" />
+    <End Role="adjust_price" Type="xiangmuModel.Store.adjust_price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousegeneralledger">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="adjust_price">
+        <PropertyRef Name="ckid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkgx">
+    <End Role="material_name" Type="xiangmuModel.Store.material_name" Multiplicity="0..1" />
+    <End Role="adjust_pricedetails" Type="xiangmuModel.Store.adjust_pricedetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_name">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="adjust_pricedetails">
+        <PropertyRef Name="matterNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkry">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="adjust_price" Type="xiangmuModel.Store.adjust_price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="adjust_price">
+        <PropertyRef Name="zdry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fktj">
+    <End Role="adjust_price" Type="xiangmuModel.Store.adjust_price" Multiplicity="1" />
+    <End Role="adjust_pricedetails" Type="xiangmuModel.Store.adjust_pricedetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="adjust_price">
+        <PropertyRef Name="billsNum" />
+      </Principal>
+      <Dependent Role="adjust_pricedetails">
+        <PropertyRef Name="billsNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gg">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="quotedprice" Type="xiangmuModel.Store.quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ggg">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="ysbill" Type="xiangmuModel.Store.ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSSH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="hhh">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jj">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="quotedprice" Type="xiangmuModel.Store.quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jjj">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSCKSH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kehurenyuan">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="userinfo">
+        <PropertyRef Name="BusinessName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kk">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="quotationdetails" Type="xiangmuModel.Store.quotationdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="quotationdetails">
+        <PropertyRef Name="Wuliaobianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kkk">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="0..1" />
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSBuMenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ll">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="allocatingdetail" Type="xiangmuModel.Store.allocatingdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="allocatingdetail">
+        <PropertyRef Name="Wuliaobianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lll">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="ysckdetail" Type="xiangmuModel.Store.ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSKeHuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="matterid">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="t_preturn_zi" Type="xiangmuModel.Store.t_preturn_zi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="t_preturn_zi">
+        <PropertyRef Name="matterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="mmm">
+    <End Role="shipment" Type="xiangmuModel.Store.shipment" Multiplicity="1" />
+    <End Role="ysckdetail" Type="xiangmuModel.Store.ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shipment">
+        <PropertyRef Name="Danid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSChuKuNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Pbillno">
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="1" />
+    <End Role="t_preturn_zi" Type="xiangmuModel.Store.t_preturn_zi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_preturn">
+        <PropertyRef Name="Pbillno" />
+      </Principal>
+      <Dependent Role="t_preturn_zi">
+        <PropertyRef Name="Pbillno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="personnel">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Pesonner">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="Pesonner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="qinggouyuan">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="requisition" Type="xiangmuModel.Store.requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="RPersonnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tuihuozhubiao">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="returnzhubiao" Type="xiangmuModel.Store.returnzhubiao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="returnzhubiao">
+        <PropertyRef Name="BusinessName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="warehouseflowtable" Type="xiangmuModel.Store.warehouseflowtable" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Warehousenumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai1">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="warehousegeneralledger" Type="xiangmuModel.Store.warehousegeneralledger" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="warehousegeneralledger">
+        <PropertyRef Name="Warehousenumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai2">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Businesspersonnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai3">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Producer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai4">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Compoundstaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai5">
+    <End Role="department" Type="xiangmuModel.Store.department" Multiplicity="1" />
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai6">
+    <End Role="userinfo" Type="xiangmuModel.Store.userinfo" Multiplicity="1" />
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail">
+    <End Role="salesorder" Type="xiangmuModel.Store.salesorder" Multiplicity="1" />
+    <End Role="orderdetails" Type="xiangmuModel.Store.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="Documentnumber" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="Documentnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail1">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="warehouseflowtable" Type="xiangmuModel.Store.warehouseflowtable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Materialnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail12">
+    <End Role="typenumber" Type="xiangmuModel.Store.typenumber" Multiplicity="1" />
+    <End Role="warehouseflowtable" Type="xiangmuModel.Store.warehouseflowtable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Documenttype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wain">
+    <End Role="record" Type="xiangmuModel.Store.record" Multiplicity="1" />
+    <End Role="orderdetails" Type="xiangmuModel.Store.orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="Materialnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="warehouseid">
+    <End Role="warehousetable" Type="xiangmuModel.Store.warehousetable" Multiplicity="1" />
+    <End Role="t_preturn" Type="xiangmuModel.Store.t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="warehouseid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwangh">
+    <End Role="fundtype" Type="xiangmuModel.Store.fundtype" Multiplicity="0..1" />
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fundtype">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="funds">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwanghong">
+    <End Role="bill" Type="xiangmuModel.Store.bill" Multiplicity="0..1" />
+    <End Role="prods" Type="xiangmuModel.Store.prods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bill">
+        <PropertyRef Name="BillNo" />
+      </Principal>
+      <Dependent Role="prods">
+        <PropertyRef Name="FromNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwanghong2">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="0..1" />
+    <End Role="funds" Type="xiangmuModel.Store.funds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="funds">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yyy">
+    <End Role="td_personnel_table" Type="xiangmuModel.Store.td_personnel_table" Multiplicity="1" />
+    <End Role="ysckbill" Type="xiangmuModel.Store.ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSCKZD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

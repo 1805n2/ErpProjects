@@ -16,7 +16,6 @@ namespace Models
     {
         public saleck()
         {
-            this.billtutype = new HashSet<billtutype>();
             this.khls = new HashSet<khls>();
             this.salemx = new HashSet<salemx>();
             this.ysckdetail = new HashSet<ysckdetail>();
@@ -37,7 +36,6 @@ namespace Models
         public string saleckdh { get; set; }
         public int checkstatus { get; set; }
     
-        public virtual ICollection<billtutype> billtutype { get; set; }
         public virtual clientmaster clientmaster { get; set; }
         public virtual ICollection<khls> khls { get; set; }
         public virtual storage storage { get; set; }

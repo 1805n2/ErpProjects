@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="erpsystemModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="erpsystemEntities" p1:LazyLoadingEnabled="true">
-    <EntitySet Name="assignstyle" EntityType="erpsystemModel.assignstyle" />
+  <EntityContainer Name="erpsystemEntities1" p1:LazyLoadingEnabled="true">
     <EntitySet Name="billtui" EntityType="erpsystemModel.billtui" />
     <EntitySet Name="billtutype" EntityType="erpsystemModel.billtutype" />
     <EntitySet Name="branch" EntityType="erpsystemModel.branch" />
@@ -52,26 +51,6 @@
     <EntitySet Name="ysckbill" EntityType="erpsystemModel.ysckbill" />
     <EntitySet Name="ysckdetail" EntityType="erpsystemModel.ysckdetail" />
     <EntitySet Name="ysdetail" EntityType="erpsystemModel.ysdetail" />
-    <AssociationSet Name="FK_daassigbuymain" Association="erpsystemModel.FK_daassigbuymain">
-      <End Role="assignstyle" EntitySet="assignstyle" />
-      <End Role="daassigbuymain" EntitySet="daassigbuymain" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui" Association="erpsystemModel.FK_billtui">
-      <End Role="clientmaster" EntitySet="clientmaster" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui1" Association="erpsystemModel.FK_billtui1">
-      <End Role="user" EntitySet="user" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui2" Association="erpsystemModel.FK_billtui2">
-      <End Role="user" EntitySet="user" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui3" Association="erpsystemModel.FK_billtui3">
-      <End Role="storage" EntitySet="storage" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
     <AssociationSet Name="FK_billtutype" Association="erpsystemModel.FK_billtutype">
       <End Role="billtui" EntitySet="billtui" />
       <End Role="billtutype" EntitySet="billtutype" />
@@ -79,14 +58,6 @@
     <AssociationSet Name="FK_khls3" Association="erpsystemModel.FK_khls3">
       <End Role="billtui" EntitySet="billtui" />
       <End Role="khls" EntitySet="khls" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtutype1" Association="erpsystemModel.FK_billtutype1">
-      <End Role="wlzwj" EntitySet="wlzwj" />
-      <End Role="billtutype" EntitySet="billtutype" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtutype2" Association="erpsystemModel.FK_billtutype2">
-      <End Role="saleck" EntitySet="saleck" />
-      <End Role="billtutype" EntitySet="billtutype" />
     </AssociationSet>
     <AssociationSet Name="FK_buysearchmaster3" Association="erpsystemModel.FK_buysearchmaster3">
       <End Role="branch" EntitySet="branch" />
@@ -357,19 +328,11 @@
       <End Role="ysckdetail" EntitySet="ysckdetail" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="assignstyle">
-    <Key>
-      <PropertyRef Name="assignstyleid" />
-    </Key>
-    <Property Type="Int32" Name="assignstyleid" Nullable="false" />
-    <Property Type="String" Name="assignstylename" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="daassigbuymain" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="assignstyle" ToRole="daassigbuymain" />
-  </EntityType>
   <EntityType Name="billtui">
     <Key>
       <PropertyRef Name="billno" />
     </Key>
-    <Property Type="Int32" Name="customerid" Nullable="false" />
+    <Property Type="String" Name="customerid" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="billdate" />
     <Property Type="String" Name="billno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="moneystyle" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -379,10 +342,6 @@
     <Property Type="Int32" Name="permitter" />
     <Property Type="String" Name="ware" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="checkstatus" Nullable="false" />
-    <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_billtui" FromRole="billtui" ToRole="clientmaster" />
-    <NavigationProperty Name="user" Relationship="erpsystemModel.FK_billtui1" FromRole="billtui" ToRole="user" />
-    <NavigationProperty Name="user1" Relationship="erpsystemModel.FK_billtui2" FromRole="billtui" ToRole="user" />
-    <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_billtui3" FromRole="billtui" ToRole="storage" />
     <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype" FromRole="billtui" ToRole="billtutype" />
     <NavigationProperty Name="khls" Relationship="erpsystemModel.FK_khls3" FromRole="billtui" ToRole="khls" />
   </EntityType>
@@ -404,8 +363,6 @@
     <Property Type="String" Name="fromno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="fromrow" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtutype" FromRole="billtutype" ToRole="billtui" />
-    <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_billtutype1" FromRole="billtutype" ToRole="wlzwj" />
-    <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_billtutype2" FromRole="billtutype" ToRole="saleck" />
   </EntityType>
   <EntityType Name="branch">
     <Key>
@@ -563,7 +520,6 @@
     <Property Type="Single" Name="curadvreceivable" Nullable="false" />
     <Property Type="String" Name="deliveraddress" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Single" Name="remainquota" Nullable="false" />
-    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui" FromRole="clientmaster" ToRole="billtui" />
     <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdanzhu" FromRole="clientmaster" ToRole="dingdanzhu" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck" FromRole="clientmaster" ToRole="saleck" />
     <NavigationProperty Name="x_documents" Relationship="erpsystemModel.FK_x_documents" FromRole="clientmaster" ToRole="x_documents" />
@@ -593,7 +549,6 @@
     <Property Type="String" Name="maker" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="permitter" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="auditstatus" Nullable="false" />
-    <NavigationProperty Name="assignstyle" Relationship="erpsystemModel.FK_daassigbuymain" FromRole="daassigbuymain" ToRole="assignstyle" />
     <NavigationProperty Name="dsassignbuysub" Relationship="erpsystemModel.FK_dsassignbuysub" FromRole="daassigbuymain" ToRole="dsassignbuysub" />
     <NavigationProperty Name="dsassignfee" Relationship="erpsystemModel.FK_dsassignfee" FromRole="daassigbuymain" ToRole="dsassignfee" />
   </EntityType>
@@ -842,6 +797,7 @@
     <Property Type="String" Name="oremark" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="origintype" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="originno" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="oweinum" />
     <NavigationProperty Name="orders" Relationship="erpsystemModel.FK_orderdetails" FromRole="orderdetails" ToRole="orders" />
     <NavigationProperty Name="wlzwj" Relationship="erpsystemModel.FK_orderdetails2" FromRole="orderdetails" ToRole="wlzwj" />
   </EntityType>
@@ -876,10 +832,10 @@
   </EntityType>
   <EntityType Name="orders">
     <Key>
-      <PropertyRef Name="orderid" />
+      <PropertyRef Name="ostoid" />
     </Key>
     <Property Type="String" Name="orderid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="ostoid" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ostoid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="ostodate" Nullable="false" />
     <Property Type="String" Name="osperid" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="ospername" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -905,6 +861,7 @@
     <Property Type="Int32" Name="ostoreorder" />
     <Property Type="Int32" Name="osisdel" />
     <Property Type="Single" Name="otax" />
+    <Property Type="Int32" Name="oweinum" />
     <NavigationProperty Name="branch" Relationship="erpsystemModel.FK_orders3" FromRole="orders" ToRole="branch" />
     <NavigationProperty Name="gmeans" Relationship="erpsystemModel.FK_orders" FromRole="orders" ToRole="gmeans" />
     <NavigationProperty Name="orderdetails" Relationship="erpsystemModel.FK_orderdetails" FromRole="orders" ToRole="orderdetails" />
@@ -1091,7 +1048,6 @@
     <Property Type="Int32" Name="salecheck" Nullable="false" />
     <Property Type="String" Name="saleckdh" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="checkstatus" Nullable="false" />
-    <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype2" FromRole="saleck" ToRole="billtutype" />
     <NavigationProperty Name="clientmaster" Relationship="erpsystemModel.FK_saleck" FromRole="saleck" ToRole="clientmaster" />
     <NavigationProperty Name="khls" Relationship="erpsystemModel.FK_khls" FromRole="saleck" ToRole="khls" />
     <NavigationProperty Name="storage" Relationship="erpsystemModel.FK_saleck1" FromRole="saleck" ToRole="storage" />
@@ -1183,7 +1139,6 @@
     <Property Type="String" Name="stoaddress" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="storemark" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="sdel" />
-    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui3" FromRole="storage" ToRole="billtui" />
     <NavigationProperty Name="returnods" Relationship="erpsystemModel.FK_returnods" FromRole="storage" ToRole="returnods" />
     <NavigationProperty Name="rk_zhubiao" Relationship="erpsystemModel.FK_rk_zhubiao" FromRole="storage" ToRole="rk_zhubiao" />
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_saleck1" FromRole="storage" ToRole="saleck" />
@@ -1220,8 +1175,6 @@
     <Property Type="Int32" Name="userid" Nullable="false" />
     <Property Type="String" Name="pwd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="userno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="billtui" Relationship="erpsystemModel.FK_billtui1" FromRole="user" ToRole="billtui" />
-    <NavigationProperty Name="billtui1" Relationship="erpsystemModel.FK_billtui2" FromRole="user" ToRole="billtui" />
     <NavigationProperty Name="buysearchmaster" Relationship="erpsystemModel.FK_buysearchmaster1" FromRole="user" ToRole="buysearchmaster" />
     <NavigationProperty Name="caigouqinggou" Relationship="erpsystemModel.FK_caigouqinggou" FromRole="user" ToRole="caigouqinggou" />
     <NavigationProperty Name="dingdanzhu" Relationship="erpsystemModel.FK_dingdanzhu1" FromRole="user" ToRole="dingdanzhu" />
@@ -1268,7 +1221,6 @@
     <Property Type="DateTime" Name="matcgdate" />
     <Property Type="Single" Name="matbzjj" />
     <Property Type="String" Name="matgys" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="billtutype" Relationship="erpsystemModel.FK_billtutype1" FromRole="wlzwj" ToRole="billtutype" />
     <NavigationProperty Name="buysearchdetails" Relationship="erpsystemModel.FK_buysearchdetails1" FromRole="wlzwj" ToRole="buysearchdetails" />
     <NavigationProperty Name="caigoumingxi" Relationship="erpsystemModel.FK_caigoumingxi2" FromRole="wlzwj" ToRole="caigoumingxi" />
     <NavigationProperty Name="dingdancong" Relationship="erpsystemModel.FK_dingdancong1" FromRole="wlzwj" ToRole="dingdancong" />
@@ -1403,66 +1355,6 @@
     <NavigationProperty Name="saleck" Relationship="erpsystemModel.FK_ysdetail" FromRole="ysdetail" ToRole="saleck" />
     <NavigationProperty Name="ysbill" Relationship="erpsystemModel.FK_ysdetail1" FromRole="ysdetail" ToRole="ysbill" />
   </EntityType>
-  <Association Name="FK_daassigbuymain">
-    <End Type="erpsystemModel.assignstyle" Role="assignstyle" Multiplicity="1" />
-    <End Type="erpsystemModel.daassigbuymain" Role="daassigbuymain" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="assignstyle">
-        <PropertyRef Name="assignstyleid" />
-      </Principal>
-      <Dependent Role="daassigbuymain">
-        <PropertyRef Name="assignstyleid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui">
-    <End Type="erpsystemModel.clientmaster" Role="clientmaster" Multiplicity="1" />
-    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="clientmaster">
-        <PropertyRef Name="corpid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="customerid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui1">
-    <End Type="erpsystemModel.user" Role="user" Multiplicity="1" />
-    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="user">
-        <PropertyRef Name="userid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="marker" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui2">
-    <End Type="erpsystemModel.user" Role="user" Multiplicity="0..1" />
-    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="user">
-        <PropertyRef Name="userid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="permitter" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui3">
-    <End Type="erpsystemModel.storage" Role="storage" Multiplicity="1" />
-    <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="storage">
-        <PropertyRef Name="stoid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="ware" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_billtutype">
     <End Type="erpsystemModel.billtui" Role="billtui" Multiplicity="1" />
     <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
@@ -1484,30 +1376,6 @@
       </Principal>
       <Dependent Role="khls">
         <PropertyRef Name="lydh" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtutype1">
-    <End Type="erpsystemModel.wlzwj" Role="wlzwj" Multiplicity="1" />
-    <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="wlzwj">
-        <PropertyRef Name="matid" />
-      </Principal>
-      <Dependent Role="billtutype">
-        <PropertyRef Name="wuliaoid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtutype2">
-    <End Type="erpsystemModel.saleck" Role="saleck" Multiplicity="1" />
-    <End Type="erpsystemModel.billtutype" Role="billtutype" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="saleck">
-        <PropertyRef Name="saleckdh" />
-      </Principal>
-      <Dependent Role="billtutype">
-        <PropertyRef Name="fromno" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1996,7 +1864,7 @@
     <End Type="erpsystemModel.orderdetails" Role="orderdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="orders">
-        <PropertyRef Name="orderid" />
+        <PropertyRef Name="ostoid" />
       </Principal>
       <Dependent Role="orderdetails">
         <PropertyRef Name="orderid" />

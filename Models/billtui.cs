@@ -20,7 +20,7 @@ namespace Models
             this.khls = new HashSet<khls>();
         }
     
-        public int customerid { get; set; }
+        public string customerid { get; set; }
         public Nullable<System.DateTime> billdate { get; set; }
         public string billno { get; set; }
         public string moneystyle { get; set; }
@@ -31,10 +31,6 @@ namespace Models
         public string ware { get; set; }
         public int checkstatus { get; set; }
     
-        public virtual clientmaster clientmaster { get; set; }
-        public virtual user user { get; set; }
-        public virtual user user1 { get; set; }
-        public virtual storage storage { get; set; }
         public virtual ICollection<billtutype> billtutype { get; set; }
         public virtual ICollection<khls> khls { get; set; }
     }

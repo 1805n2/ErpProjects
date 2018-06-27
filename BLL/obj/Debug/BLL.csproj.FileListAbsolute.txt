@@ -10,15 +10,3 @@ E:\ErpProject\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ErpProject\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 E:\ErpProject\BLL\obj\Debug\BLL.dll
 E:\ErpProject\BLL\obj\Debug\BLL.pdb
-D:\work\ErpProjects\BLL\bin\Debug\BLL.dll
-D:\work\ErpProjects\BLL\bin\Debug\BLL.pdb
-D:\work\ErpProjects\BLL\bin\Debug\DAL.dll
-D:\work\ErpProjects\BLL\bin\Debug\Models.dll
-D:\work\ErpProjects\BLL\bin\Debug\EntityFramework.dll
-D:\work\ErpProjects\BLL\bin\Debug\DAL.pdb
-D:\work\ErpProjects\BLL\bin\Debug\Models.pdb
-D:\work\ErpProjects\BLL\bin\Debug\EntityFramework.xml
-D:\work\ErpProjects\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\work\ErpProjects\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-D:\work\ErpProjects\BLL\obj\Debug\BLL.dll
-D:\work\ErpProjects\BLL\obj\Debug\BLL.pdb

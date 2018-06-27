@@ -13,10 +13,10 @@ namespace Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class erpsystemEntities : DbContext
+    public partial class erpsystemEntities1 : DbContext
     {
-        public erpsystemEntities()
-            : base("name=erpsystemEntities")
+        public erpsystemEntities1()
+            : base("name=erpsystemEntities1")
         {
         }
     
@@ -25,7 +25,6 @@ namespace Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<assignstyle> assignstyle { get; set; }
         public DbSet<billtui> billtui { get; set; }
         public DbSet<billtutype> billtutype { get; set; }
         public DbSet<branch> branch { get; set; }

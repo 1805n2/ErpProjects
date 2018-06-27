@@ -30,7 +30,6 @@ namespace Models
         public string permitter { get; set; }
         public int auditstatus { get; set; }
     
-        public virtual assignstyle assignstyle { get; set; }
         public virtual ICollection<dsassignbuysub> dsassignbuysub { get; set; }
         public virtual ICollection<dsassignfee> dsassignfee { get; set; }
     }

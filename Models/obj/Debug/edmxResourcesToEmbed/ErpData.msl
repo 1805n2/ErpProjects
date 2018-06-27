@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="erpsystemModelStoreContainer" CdmEntityContainer="erpsystemEntities">
-    <EntitySetMapping Name="assignstyle">
-      <EntityTypeMapping TypeName="erpsystemModel.assignstyle">
-        <MappingFragment StoreEntitySet="assignstyle">
-          <ScalarProperty Name="assignstylename" ColumnName="assignstylename" />
-          <ScalarProperty Name="assignstyleid" ColumnName="assignstyleid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="erpsystemModelStoreContainer" CdmEntityContainer="erpsystemEntities1">
     <EntitySetMapping Name="billtui">
       <EntityTypeMapping TypeName="erpsystemModel.billtui">
         <MappingFragment StoreEntitySet="billtui">
@@ -412,6 +404,7 @@
     <EntitySetMapping Name="orderdetails">
       <EntityTypeMapping TypeName="erpsystemModel.orderdetails">
         <MappingFragment StoreEntitySet="orderdetails">
+          <ScalarProperty Name="oweinum" ColumnName="oweinum" />
           <ScalarProperty Name="originno" ColumnName="originno" />
           <ScalarProperty Name="origintype" ColumnName="origintype" />
           <ScalarProperty Name="oremark" ColumnName="oremark" />
@@ -465,6 +458,7 @@
     <EntitySetMapping Name="orders">
       <EntityTypeMapping TypeName="erpsystemModel.orders">
         <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="oweinum" ColumnName="oweinum" />
           <ScalarProperty Name="otax" ColumnName="otax" />
           <ScalarProperty Name="osisdel" ColumnName="osisdel" />
           <ScalarProperty Name="ostoreorder" ColumnName="ostoreorder" />

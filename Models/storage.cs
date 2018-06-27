@@ -16,7 +16,6 @@ namespace Models
     {
         public storage()
         {
-            this.billtui = new HashSet<billtui>();
             this.returnods = new HashSet<returnods>();
             this.rk_zhubiao = new HashSet<rk_zhubiao>();
             this.saleck = new HashSet<saleck>();
@@ -32,7 +31,6 @@ namespace Models
         public string storemark { get; set; }
         public Nullable<int> sdel { get; set; }
     
-        public virtual ICollection<billtui> billtui { get; set; }
         public virtual ICollection<returnods> returnods { get; set; }
         public virtual ICollection<rk_zhubiao> rk_zhubiao { get; set; }
         public virtual ICollection<saleck> saleck { get; set; }

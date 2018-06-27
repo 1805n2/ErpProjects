@@ -1,0 +1,2906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xiangmuModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="xiangmuEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="adjust_price" EntityType="xiangmuModel.adjust_price" />
+    <EntitySet Name="adjust_pricedetails" EntityType="xiangmuModel.adjust_pricedetails" />
+    <EntitySet Name="allocatingdetail" EntityType="xiangmuModel.allocatingdetail" />
+    <EntitySet Name="bill" EntityType="xiangmuModel.bill" />
+    <EntitySet Name="customeraccounts" EntityType="xiangmuModel.customeraccounts" />
+    <EntitySet Name="department" EntityType="xiangmuModel.department" />
+    <EntitySet Name="funds" EntityType="xiangmuModel.funds" />
+    <EntitySet Name="fundtype" EntityType="xiangmuModel.fundtype" />
+    <EntitySet Name="inventory_addendum" EntityType="xiangmuModel.inventory_addendum" />
+    <EntitySet Name="inventory_document" EntityType="xiangmuModel.inventory_document" />
+    <EntitySet Name="material_name" EntityType="xiangmuModel.material_name" />
+    <EntitySet Name="orderdetails" EntityType="xiangmuModel.orderdetails" />
+    <EntitySet Name="prods" EntityType="xiangmuModel.prods" />
+    <EntitySet Name="purchase_inquiry" EntityType="xiangmuModel.purchase_inquiry" />
+    <EntitySet Name="purchase_inquiry_list" EntityType="xiangmuModel.purchase_inquiry_list" />
+    <EntitySet Name="purchasing_orderlist" EntityType="xiangmuModel.purchasing_orderlist" />
+    <EntitySet Name="purchasing_ordermain" EntityType="xiangmuModel.purchasing_ordermain" />
+    <EntitySet Name="quotationdetails" EntityType="xiangmuModel.quotationdetails" />
+    <EntitySet Name="quotedprice" EntityType="xiangmuModel.quotedprice" />
+    <EntitySet Name="qymx" EntityType="xiangmuModel.qymx" />
+    <EntitySet Name="r_detail" EntityType="xiangmuModel.r_detail" />
+    <EntitySet Name="record" EntityType="xiangmuModel.record" />
+    <EntitySet Name="requisition" EntityType="xiangmuModel.requisition" />
+    <EntitySet Name="returnxx" EntityType="xiangmuModel.returnxx" />
+    <EntitySet Name="returnzhubiao" EntityType="xiangmuModel.returnzhubiao" />
+    <EntitySet Name="salesorder" EntityType="xiangmuModel.salesorder" />
+    <EntitySet Name="shipment" EntityType="xiangmuModel.shipment" />
+    <EntitySet Name="shipmentdetail" EntityType="xiangmuModel.shipmentdetail" />
+    <EntitySet Name="t_preturn" EntityType="xiangmuModel.t_preturn" />
+    <EntitySet Name="t_preturn_zi" EntityType="xiangmuModel.t_preturn_zi" />
+    <EntitySet Name="t_store_advance" EntityType="xiangmuModel.t_store_advance" />
+    <EntitySet Name="t_store_advancepay" EntityType="xiangmuModel.t_store_advancepay" />
+    <EntitySet Name="t_store_advancerec" EntityType="xiangmuModel.t_store_advancerec" />
+    <EntitySet Name="t_store_amount" EntityType="xiangmuModel.t_store_amount" />
+    <EntitySet Name="t_store_particularspay" EntityType="xiangmuModel.t_store_particularspay" />
+    <EntitySet Name="td_breakdown" EntityType="xiangmuModel.td_breakdown" />
+    <EntitySet Name="td_inventory_list" EntityType="xiangmuModel.td_inventory_list" />
+    <EntitySet Name="td_personnel_table" EntityType="xiangmuModel.td_personnel_table" />
+    <EntitySet Name="td_purchase" EntityType="xiangmuModel.td_purchase" />
+    <EntitySet Name="transfers" EntityType="xiangmuModel.transfers" />
+    <EntitySet Name="typenumber" EntityType="xiangmuModel.typenumber" />
+    <EntitySet Name="userinfo" EntityType="xiangmuModel.userinfo" />
+    <EntitySet Name="usertype" EntityType="xiangmuModel.usertype" />
+    <EntitySet Name="warehouseflowtable" EntityType="xiangmuModel.warehouseflowtable" />
+    <EntitySet Name="warehousegeneralledger" EntityType="xiangmuModel.warehousegeneralledger" />
+    <EntitySet Name="warehousetable" EntityType="xiangmuModel.warehousetable" />
+    <EntitySet Name="ysbill" EntityType="xiangmuModel.ysbill" />
+    <EntitySet Name="ysckbill" EntityType="xiangmuModel.ysckbill" />
+    <EntitySet Name="ysckdetail" EntityType="xiangmuModel.ysckdetail" />
+    <EntitySet Name="ysmxdetail" EntityType="xiangmuModel.ysmxdetail" />
+    <AssociationSet Name="fkck" Association="xiangmuModel.fkck">
+      <End Role="warehousegeneralledger" EntitySet="warehousegeneralledger" />
+      <End Role="adjust_price" EntitySet="adjust_price" />
+    </AssociationSet>
+    <AssociationSet Name="fkry" Association="xiangmuModel.fkry">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="adjust_price" EntitySet="adjust_price" />
+    </AssociationSet>
+    <AssociationSet Name="fktj" Association="xiangmuModel.fktj">
+      <End Role="adjust_price" EntitySet="adjust_price" />
+      <End Role="adjust_pricedetails" EntitySet="adjust_pricedetails" />
+    </AssociationSet>
+    <AssociationSet Name="fkgx" Association="xiangmuModel.fkgx">
+      <End Role="material_name" EntitySet="material_name" />
+      <End Role="adjust_pricedetails" EntitySet="adjust_pricedetails" />
+    </AssociationSet>
+    <AssociationSet Name="bb" Association="xiangmuModel.bb">
+      <End Role="transfers" EntitySet="transfers" />
+      <End Role="allocatingdetail" EntitySet="allocatingdetail" />
+    </AssociationSet>
+    <AssociationSet Name="ll" Association="xiangmuModel.ll">
+      <End Role="record" EntitySet="record" />
+      <End Role="allocatingdetail" EntitySet="allocatingdetail" />
+    </AssociationSet>
+    <AssociationSet Name="yinwanghong" Association="xiangmuModel.yinwanghong">
+      <End Role="bill" EntitySet="bill" />
+      <End Role="prods" EntitySet="prods" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cck" Association="xiangmuModel.fk_cck">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="customeraccounts" EntitySet="customeraccounts" />
+    </AssociationSet>
+    <AssociationSet Name="bumenbianhao" Association="xiangmuModel.bumenbianhao">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="eee" Association="xiangmuModel.eee">
+      <End Role="department" EntitySet="department" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_department" Association="xiangmuModel.fk_inquiry_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Bumenbianhao_news_departement" Association="xiangmuModel.FK_news_Bumenbianhao_news_departement">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount1" Association="xiangmuModel.FK_news_Inventory_documen_news_amount1">
+      <End Role="department" EntitySet="department" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_amount1" Association="xiangmuModel.FK_news_particularspay_news_amount1">
+      <End Role="department" EntitySet="department" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_departement" Association="xiangmuModel.FK_news_particularspay_news_departement">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nmgb" Association="xiangmuModel.FK_nmgb">
+      <End Role="department" EntitySet="department" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_department" Association="xiangmuModel.fk_ordermain_department">
+      <End Role="department" EntitySet="department" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sd" Association="xiangmuModel.fk_sd">
+      <End Role="department" EntitySet="department" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_personnel_table" Association="xiangmuModel.fk_td_personnel_table">
+      <End Role="department" EntitySet="department" />
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+    </AssociationSet>
+    <AssociationSet Name="gg" Association="xiangmuModel.gg">
+      <End Role="department" EntitySet="department" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="kkk" Association="xiangmuModel.kkk">
+      <End Role="department" EntitySet="department" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="wai5" Association="xiangmuModel.wai5">
+      <End Role="department" EntitySet="department" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Supplier_Id" Association="xiangmuModel.fk_inquiry_Supplier_Id">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancegys_news_Funds" Association="xiangmuModel.FK_news_advancegys_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancepaygys_news_Funds" Association="xiangmuModel.FK_news_advancepaygys_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Funds" Association="xiangmuModel.FK_news_Funds">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Id" Association="xiangmuModel.fk_ordermain_Id">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_inventory" Association="xiangmuModel.fk_td_inventory">
+      <End Role="funds" EntitySet="funds" />
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+    </AssociationSet>
+    <AssociationSet Name="yinwangh" Association="xiangmuModel.yinwangh">
+      <End Role="fundtype" EntitySet="fundtype" />
+      <End Role="funds" EntitySet="funds" />
+    </AssociationSet>
+    <AssociationSet Name="yinwanghong2" Association="xiangmuModel.yinwanghong2">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="funds" EntitySet="funds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount2" Association="xiangmuModel.FK_news_Inventory_documen_news_amount2">
+      <End Role="inventory_document" EntitySet="inventory_document" />
+      <End Role="inventory_addendum" EntitySet="inventory_addendum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_amount" Association="xiangmuModel.FK_news_amount">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Inventory_documen_news_amount" Association="xiangmuModel.FK_news_Inventory_documen_news_amount">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="inventory_document" EntitySet="inventory_document" />
+    </AssociationSet>
+    <AssociationSet Name="FK3C0469F99FC6869" Association="xiangmuModel.FK3C0469F99FC6869">
+      <End Role="material_name" EntitySet="material_name" />
+      <End Role="record" EntitySet="record" />
+    </AssociationSet>
+    <AssociationSet Name="wail" Association="xiangmuModel.wail">
+      <End Role="salesorder" EntitySet="salesorder" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="wain" Association="xiangmuModel.wain">
+      <End Role="record" EntitySet="record" />
+      <End Role="orderdetails" EntitySet="orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Making" Association="xiangmuModel.fk_inquiry_Making">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Procurement" Association="xiangmuModel.fk_inquiry_Procurement">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquiry_Review" Association="xiangmuModel.fk_inquiry_Review">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquirylist_Bill_number" Association="xiangmuModel.fk_inquirylist_Bill_number">
+      <End Role="purchase_inquiry" EntitySet="purchase_inquiry" />
+      <End Role="purchase_inquiry_list" EntitySet="purchase_inquiry_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inquirylist_Material_number" Association="xiangmuModel.fk_inquirylist_Material_number">
+      <End Role="record" EntitySet="record" />
+      <End Role="purchase_inquiry_list" EntitySet="purchase_inquiry_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_orderlist_Bill_number" Association="xiangmuModel.fk_orderlist_Bill_number">
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+      <End Role="purchasing_orderlist" EntitySet="purchasing_orderlist" />
+    </AssociationSet>
+    <AssociationSet Name="fk_orderlist_Material_number" Association="xiangmuModel.fk_orderlist_Material_number">
+      <End Role="record" EntitySet="record" />
+      <End Role="purchasing_orderlist" EntitySet="purchasing_orderlist" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Making" Association="xiangmuModel.fk_ordermain_Making">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Procurement" Association="xiangmuModel.fk_ordermain_Procurement">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_rdertype" Association="xiangmuModel.fk_ordermain_rdertype">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ordermain_Review" Association="xiangmuModel.fk_ordermain_Review">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="purchasing_ordermain" EntitySet="purchasing_ordermain" />
+    </AssociationSet>
+    <AssociationSet Name="aa" Association="xiangmuModel.aa">
+      <End Role="quotedprice" EntitySet="quotedprice" />
+      <End Role="quotationdetails" EntitySet="quotationdetails" />
+    </AssociationSet>
+    <AssociationSet Name="kk" Association="xiangmuModel.kk">
+      <End Role="record" EntitySet="record" />
+      <End Role="quotationdetails" EntitySet="quotationdetails" />
+    </AssociationSet>
+    <AssociationSet Name="ff" Association="xiangmuModel.ff">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="jj" Association="xiangmuModel.jj">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="quotedprice" EntitySet="quotedprice" />
+    </AssociationSet>
+    <AssociationSet Name="bbb" Association="xiangmuModel.bbb">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="qymx" EntitySet="qymx" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisition_news_amount1" Association="xiangmuModel.FK_Requisition_news_amount1">
+      <End Role="requisition" EntitySet="requisition" />
+      <End Role="r_detail" EntitySet="r_detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Requisition1_news_amount" Association="xiangmuModel.FK_Requisition1_news_amount">
+      <End Role="salesorder" EntitySet="salesorder" />
+      <End Role="r_detail" EntitySet="r_detail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProdID" Association="xiangmuModel.fk_ProdID">
+      <End Role="record" EntitySet="record" />
+      <End Role="returnxx" EntitySet="returnxx" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rec" Association="xiangmuModel.fk_rec">
+      <End Role="record" EntitySet="record" />
+      <End Role="shipmentdetail" EntitySet="shipmentdetail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_purchas" Association="xiangmuModel.fk_td_purchas">
+      <End Role="record" EntitySet="record" />
+      <End Role="td_purchase" EntitySet="td_purchase" />
+    </AssociationSet>
+    <AssociationSet Name="matterid" Association="xiangmuModel.matterid">
+      <End Role="record" EntitySet="record" />
+      <End Role="t_preturn_zi" EntitySet="t_preturn_zi" />
+    </AssociationSet>
+    <AssociationSet Name="wail1" Association="xiangmuModel.wail1">
+      <End Role="record" EntitySet="record" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news6_amount" Association="xiangmuModel.FK_news_particularspay_news6_amount">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="qinggouyuan" Association="xiangmuModel.qinggouyuan">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="requisition" EntitySet="requisition" />
+    </AssociationSet>
+    <AssociationSet Name="fk_WareID" Association="xiangmuModel.fk_WareID">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="returnzhubiao" EntitySet="returnzhubiao" />
+    </AssociationSet>
+    <AssociationSet Name="tuihuozhubiao" Association="xiangmuModel.tuihuozhubiao">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="returnzhubiao" EntitySet="returnzhubiao" />
+    </AssociationSet>
+    <AssociationSet Name="wai2" Association="xiangmuModel.wai2">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai3" Association="xiangmuModel.wai3">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai4" Association="xiangmuModel.wai4">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="wai6" Association="xiangmuModel.wai6">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="salesorder" EntitySet="salesorder" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sc" Association="xiangmuModel.fk_sc">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sdeail" Association="xiangmuModel.fk_sdeail">
+      <End Role="shipment" EntitySet="shipment" />
+      <End Role="shipmentdetail" EntitySet="shipmentdetail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_shp" Association="xiangmuModel.fk_shp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sk" Association="xiangmuModel.fk_sk">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sp" Association="xiangmuModel.fk_sp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_st" Association="xiangmuModel.fk_st">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="fk_syp" Association="xiangmuModel.fk_syp">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="shipment" EntitySet="shipment" />
+    </AssociationSet>
+    <AssociationSet Name="mmm" Association="xiangmuModel.mmm">
+      <End Role="shipment" EntitySet="shipment" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="Auditor" Association="xiangmuModel.Auditor">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="Pbillno" Association="xiangmuModel.Pbillno">
+      <End Role="t_preturn" EntitySet="t_preturn" />
+      <End Role="t_preturn_zi" EntitySet="t_preturn_zi" />
+    </AssociationSet>
+    <AssociationSet Name="personnel" Association="xiangmuModel.personnel">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="Pesonner" Association="xiangmuModel.Pesonner">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="warehouseid" Association="xiangmuModel.warehouseid">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="t_preturn" EntitySet="t_preturn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_gnn" Association="xiangmuModel.FK_gnn">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancepay_news_amount" Association="xiangmuModel.FK_news_advancepay_news_amount">
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+      <End Role="t_store_advancepay" EntitySet="t_store_advancepay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_nmd" Association="xiangmuModel.FK_nmd">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_advance" EntitySet="t_store_advance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_advancerec_news_amount" Association="xiangmuModel.FK_news_advancerec_news_amount">
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+      <End Role="t_store_advancerec" EntitySet="t_store_advancerec" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_amount" Association="xiangmuModel.FK_news_particularspay_news_amount">
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Single_person_ID_news_td_Personnel_tablefh" Association="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablefh">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_Single_person_ID_news_td_Personnel_tablezd" Association="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablezd">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_amount" EntitySet="t_store_amount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cnm" Association="xiangmuModel.FK_cnm">
+      <End Role="td_breakdown" EntitySet="td_breakdown" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_td_Inrentory_list" Association="xiangmuModel.FK_news_particularspay_news_td_Inrentory_list">
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_news_particularspay_news_td_Personnel_table" Association="xiangmuModel.FK_news_particularspay_news_td_Personnel_table">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="t_store_particularspay" EntitySet="t_store_particularspay" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_inventory_list" Association="xiangmuModel.fk_td_inventory_list">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+    </AssociationSet>
+    <AssociationSet Name="fk_td_purchase" Association="xiangmuModel.fk_td_purchase">
+      <End Role="td_inventory_list" EntitySet="td_inventory_list" />
+      <End Role="td_purchase" EntitySet="td_purchase" />
+    </AssociationSet>
+    <AssociationSet Name="fff" Association="xiangmuModel.fff">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="ggg" Association="xiangmuModel.ggg">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="jjj" Association="xiangmuModel.jjj">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="kehurenyuan" Association="xiangmuModel.kehurenyuan">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="userinfo" EntitySet="userinfo" />
+    </AssociationSet>
+    <AssociationSet Name="yyy" Association="xiangmuModel.yyy">
+      <End Role="td_personnel_table" EntitySet="td_personnel_table" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="cc" Association="xiangmuModel.cc">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="transfers" EntitySet="transfers" />
+    </AssociationSet>
+    <AssociationSet Name="dd" Association="xiangmuModel.dd">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="transfers" EntitySet="transfers" />
+    </AssociationSet>
+    <AssociationSet Name="wail12" Association="xiangmuModel.wail12">
+      <End Role="typenumber" EntitySet="typenumber" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="ddd" Association="xiangmuModel.ddd">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysbill" EntitySet="ysbill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_type" Association="xiangmuModel.FK_user_type">
+      <End Role="usertype" EntitySet="usertype" />
+      <End Role="userinfo" EntitySet="userinfo" />
+    </AssociationSet>
+    <AssociationSet Name="hhh" Association="xiangmuModel.hhh">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysckbill" EntitySet="ysckbill" />
+    </AssociationSet>
+    <AssociationSet Name="lll" Association="xiangmuModel.lll">
+      <End Role="userinfo" EntitySet="userinfo" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+    <AssociationSet Name="wai" Association="xiangmuModel.wai">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="warehouseflowtable" EntitySet="warehouseflowtable" />
+    </AssociationSet>
+    <AssociationSet Name="wai1" Association="xiangmuModel.wai1">
+      <End Role="warehousetable" EntitySet="warehousetable" />
+      <End Role="warehousegeneralledger" EntitySet="warehousegeneralledger" />
+    </AssociationSet>
+    <AssociationSet Name="aaa" Association="xiangmuModel.aaa">
+      <End Role="ysbill" EntitySet="ysbill" />
+      <End Role="ysmxdetail" EntitySet="ysmxdetail" />
+    </AssociationSet>
+    <AssociationSet Name="ccc" Association="xiangmuModel.ccc">
+      <End Role="ysckbill" EntitySet="ysckbill" />
+      <End Role="ysckdetail" EntitySet="ysckdetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="adjust_price">
+    <Key>
+      <PropertyRef Name="billsNum" />
+    </Key>
+    <Property Type="DateTime" Name="billsdate" />
+    <Property Type="String" Name="billsNum" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="adjustment" />
+    <Property Type="String" Name="Producer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="reviewing" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remark" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Audit" />
+    <Property Type="Int32" Name="ckid" />
+    <Property Type="Int32" Name="zdry" />
+    <NavigationProperty Name="warehousegeneralledger" Relationship="xiangmuModel.fkck" FromRole="adjust_price" ToRole="warehousegeneralledger" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fkry" FromRole="adjust_price" ToRole="td_personnel_table" />
+    <NavigationProperty Name="adjust_pricedetails" Relationship="xiangmuModel.fktj" FromRole="adjust_price" ToRole="adjust_pricedetails" />
+  </EntityType>
+  <EntityType Name="adjust_pricedetails">
+    <Key>
+      <PropertyRef Name="Columnnums" />
+      <PropertyRef Name="billsNum" />
+    </Key>
+    <Property Type="Int32" Name="Columnnums" Nullable="false" />
+    <Property Type="String" Name="billsNum" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matterNum" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="matterName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ggyh" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unit" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="kcl" />
+    <Property Type="Single" Name="pjcb" />
+    <Property Type="Single" Name="price" />
+    <Property Type="Single" Name="tjje" />
+    <Property Type="String" Name="flbz" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="adjust_price" Relationship="xiangmuModel.fktj" FromRole="adjust_pricedetails" ToRole="adjust_price" />
+    <NavigationProperty Name="material_name" Relationship="xiangmuModel.fkgx" FromRole="adjust_pricedetails" ToRole="material_name" />
+  </EntityType>
+  <EntityType Name="allocatingdetail">
+    <Key>
+      <PropertyRef Name="Columnno" />
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Type="Int32" Name="Columnno" Nullable="false" />
+    <Property Type="String" Name="Receiptnumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wuliaobianhao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Guigexinghao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Danwei" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="shul" Nullable="false" />
+    <Property Type="String" Name="Entryremarks" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="transfers" Relationship="xiangmuModel.bb" FromRole="allocatingdetail" ToRole="transfers" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.ll" FromRole="allocatingdetail" ToRole="record" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="BillNo" />
+    </Key>
+    <Property Type="DateTime" Name="BillDate" />
+    <Property Type="Int32" Name="BillNo" Nullable="false" />
+    <Property Type="String" Name="AssignStyle" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="VoucherNo" />
+    <Property Type="Int32" Name="MLAmount" />
+    <Property Type="Int32" Name="SerNo" />
+    <Property Type="Int32" Name="FeeClassID" />
+    <Property Type="String" Name="FareClassName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ExchRate" />
+    <Property Type="Int32" Name="Amount" />
+    <Property Type="Int32" Name="MLAmounts" />
+    <NavigationProperty Name="prods" Relationship="xiangmuModel.yinwanghong" FromRole="bill" ToRole="prods" />
+  </EntityType>
+  <EntityType Name="customeraccounts">
+    <Key>
+      <PropertyRef Name="Keid" />
+      <PropertyRef Name="Danlaiid" />
+    </Key>
+    <Property Type="Int32" Name="Keid" Nullable="false" />
+    <Property Type="String" Name="Keming" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Danlei" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Danlaiid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Dandate" Nullable="false" />
+    <Property Type="Single" Name="Yuanprice" />
+    <Property Type="Single" Name="Xianprice" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.fk_cck" FromRole="customeraccounts" ToRole="userinfo" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="Bumenbianhao" />
+    </Key>
+    <Property Type="Int32" Name="Bumenbianhao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Departmentname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Englishnames" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="note" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="t_preturn" Relationship="xiangmuModel.bumenbianhao" FromRole="department" ToRole="t_preturn" />
+    <NavigationProperty Name="ysbill" Relationship="xiangmuModel.eee" FromRole="department" ToRole="ysbill" />
+    <NavigationProperty Name="purchase_inquiry" Relationship="xiangmuModel.fk_inquiry_department" FromRole="department" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="t_store_amount" Relationship="xiangmuModel.FK_news_Bumenbianhao_news_departement" FromRole="department" ToRole="t_store_amount" />
+    <NavigationProperty Name="inventory_document" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount1" FromRole="department" ToRole="inventory_document" />
+    <NavigationProperty Name="requisition" Relationship="xiangmuModel.FK_news_particularspay_news_amount1" FromRole="department" ToRole="requisition" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_particularspay_news_departement" FromRole="department" ToRole="t_store_particularspay" />
+    <NavigationProperty Name="t_store_advance" Relationship="xiangmuModel.FK_nmgb" FromRole="department" ToRole="t_store_advance" />
+    <NavigationProperty Name="purchasing_ordermain" Relationship="xiangmuModel.fk_ordermain_department" FromRole="department" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_sd" FromRole="department" ToRole="shipment" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fk_td_personnel_table" FromRole="department" ToRole="td_personnel_table" />
+    <NavigationProperty Name="quotedprice" Relationship="xiangmuModel.gg" FromRole="department" ToRole="quotedprice" />
+    <NavigationProperty Name="ysckbill" Relationship="xiangmuModel.kkk" FromRole="department" ToRole="ysckbill" />
+    <NavigationProperty Name="salesorder" Relationship="xiangmuModel.wai5" FromRole="department" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="funds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="FundsAttribution" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FulName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClassID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShortName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ArealID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FundsAttriName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrencyID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EngShortName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ChiefName" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Int32" Name="LinkMan" />
+    <Property Type="String" Name="TaxNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Capitaliation" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IndustrialClass" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WebAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BankAccount" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BankID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AmountQuota" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RemainQuota" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CreditLevel" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurAdvRecv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurReceivable" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NotlnvQuota" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccReceivable" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddrID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZipCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="purchase_inquiry" Relationship="xiangmuModel.fk_inquiry_Supplier_Id" FromRole="funds" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="t_store_advance" Relationship="xiangmuModel.FK_news_advancegys_news_Funds" FromRole="funds" ToRole="t_store_advance" />
+    <NavigationProperty Name="t_store_amount" Relationship="xiangmuModel.FK_news_advancepaygys_news_Funds" FromRole="funds" ToRole="t_store_amount" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_Funds" FromRole="funds" ToRole="t_store_particularspay" />
+    <NavigationProperty Name="purchasing_ordermain" Relationship="xiangmuModel.fk_ordermain_Id" FromRole="funds" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="td_inventory_list" Relationship="xiangmuModel.fk_td_inventory" FromRole="funds" ToRole="td_inventory_list" />
+    <NavigationProperty Name="fundtype" Relationship="xiangmuModel.yinwangh" FromRole="funds" ToRole="fundtype" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.yinwanghong2" FromRole="funds" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="fundtype">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Type="String" Name="ClassID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClassName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EngName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Memo" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.yinwangh" FromRole="fundtype" ToRole="funds" />
+  </EntityType>
+  <EntityType Name="inventory_addendum">
+    <Key>
+      <PropertyRef Name="Addid" />
+      <PropertyRef Name="Inventoryid" />
+    </Key>
+    <Property Type="Int32" Name="Addid" Nullable="false" />
+    <Property Type="Int32" Name="Inventoryid" Nullable="false" />
+    <Property Type="Int32" Name="matterID" Nullable="false" />
+    <Property Type="String" Name="matterName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Stocktaking" Nullable="false" />
+    <Property Type="Int32" Name="Book_quantity" Nullable="false" />
+    <Property Type="Int32" Name="real_quantity" Nullable="false" />
+    <Property Type="Single" Name="unit_price" Nullable="false" />
+    <Property Type="String" Name="cause" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="inventory_document" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount2" FromRole="inventory_addendum" ToRole="inventory_document" />
+  </EntityType>
+  <EntityType Name="inventory_document">
+    <Key>
+      <PropertyRef Name="Inventoryid" />
+    </Key>
+    <Property Type="Int32" Name="Inventoryid" Nullable="false" />
+    <Property Type="Int32" Name="storehouse" Nullable="false" />
+    <Property Type="DateTime" Name="InventoryDate" Nullable="false" />
+    <Property Type="Int32" Name="Stocktaking" Nullable="false" />
+    <Property Type="Int32" Name="Rdepartment" Nullable="false" />
+    <Property Type="Int32" Name="Rproducer" Nullable="false" />
+    <Property Type="String" Name="auditor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="checkid" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount1" FromRole="inventory_document" ToRole="department" />
+    <NavigationProperty Name="inventory_addendum" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount2" FromRole="inventory_document" ToRole="inventory_addendum" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.FK_news_amount" FromRole="inventory_document" ToRole="td_personnel_table" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount" FromRole="inventory_document" ToRole="warehousetable" />
+  </EntityType>
+  <EntityType Name="material_name">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Type="String" Name="ClassID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClassName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EngName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccInventoryID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccInventoryName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccsaleID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccsaleName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReturnSaleID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReturnSaleName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccsaleCostID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccsaleCostName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GiftExpenseID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GiftExpenseName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherIncomeID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherIncomeName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherExpenseID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherExpenseName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherCostID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OtherCostName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mmo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SendOutWareID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SendOutWareName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="adjust_pricedetails" Relationship="xiangmuModel.fkgx" FromRole="material_name" ToRole="adjust_pricedetails" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.FK3C0469F99FC6869" FromRole="material_name" ToRole="record" />
+  </EntityType>
+  <EntityType Name="orderdetails">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Documentnumber" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Documentnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Materialnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Unitname" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="num" Nullable="false" />
+    <Property Type="Int32" Name="zkqunitprice" Nullable="false" />
+    <Property Type="Single" Name="Foldnumber" Nullable="false" />
+    <Property Type="Single" Name="UnitPrice" Nullable="false" />
+    <Property Type="Single" Name="Amountofmoney" Nullable="false" />
+    <Property Type="Single" Name="taxrate" Nullable="false" />
+    <Property Type="Single" Name="Taxamount" Nullable="false" />
+    <Property Type="Single" Name="Hanshuijine" Nullable="false" />
+    <Property Type="DateTime" Name="Yuchukuri" Nullable="false" />
+    <Property Type="Single" Name="Weichukunum" Nullable="false" />
+    <Property Type="String" Name="Laiyuandanbie" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Laiyuandanhao" Nullable="false" />
+    <NavigationProperty Name="salesorder" Relationship="xiangmuModel.wail" FromRole="orderdetails" ToRole="salesorder" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.wain" FromRole="orderdetails" ToRole="record" />
+  </EntityType>
+  <EntityType Name="prods">
+    <Key>
+      <PropertyRef Name="SerNo" />
+    </Key>
+    <Property Type="String" Name="SerNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="FromNo" />
+    <Property Type="Int32" Name="ProdID" />
+    <Property Type="String" Name="ProdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ProdSize" />
+    <Property Type="Int32" Name="Amount" />
+    <Property Type="Int32" Name="VQuantity" />
+    <Property Type="Int32" Name="SUnit" />
+    <Property Type="Int32" Name="Weight" />
+    <Property Type="Int32" Name="Measm" />
+    <Property Type="Int32" Name="MLAmount" />
+    <NavigationProperty Name="bill" Relationship="xiangmuModel.yinwanghong" FromRole="prods" ToRole="bill" />
+  </EntityType>
+  <EntityType Name="purchase_inquiry">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Document_date" Nullable="false" />
+    <Property Type="Int32" Name="Supplier_Id" Nullable="false" />
+    <Property Type="DateTime" Name="Effective_data" />
+    <Property Type="String" Name="Coin" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Price_include_tax" Nullable="false" />
+    <Property Type="Decimal" Name="Exchange_rate" Nullable="false" />
+    <Property Type="String" Name="Delivery_address" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Making_personnel" Nullable="false" />
+    <Property Type="Int32" Name="Procurement_staff" Nullable="false" />
+    <Property Type="Int32" Name="Review_personnel" />
+    <Property Type="Int32" Name="Affiliated_department" Nullable="false" />
+    <Property Type="Int32" Name="Audit_status" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.fk_inquiry_department" FromRole="purchase_inquiry" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.fk_inquiry_Supplier_Id" FromRole="purchase_inquiry" ToRole="funds" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fk_inquiry_Making" FromRole="purchase_inquiry" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.fk_inquiry_Procurement" FromRole="purchase_inquiry" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table2" Relationship="xiangmuModel.fk_inquiry_Review" FromRole="purchase_inquiry" ToRole="td_personnel_table" />
+    <NavigationProperty Name="purchase_inquiry_list" Relationship="xiangmuModel.fk_inquirylist_Bill_number" FromRole="purchase_inquiry" ToRole="purchase_inquiry_list" />
+  </EntityType>
+  <EntityType Name="purchase_inquiry_list">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Column_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Column_number" Nullable="false" />
+    <Property Type="String" Name="Material_number" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price_before_discount" Nullable="false" />
+    <Property Type="Decimal" Name="Broken_number" Nullable="false" />
+    <Property Type="Decimal" Name="Unit_price" Nullable="false" />
+    <Property Type="Decimal" Name="Amount_money" Nullable="false" />
+    <Property Type="Decimal" Name="Tax_rate" Nullable="false" />
+    <Property Type="Decimal" Name="Amount_paid" Nullable="false" />
+    <Property Type="Decimal" Name="Tax_amount" Nullable="false" />
+    <Property Type="Int32" Name="gift" Nullable="false" />
+    <Property Type="String" Name="Entry_remarks" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_list" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="purchase_inquiry" Relationship="xiangmuModel.fk_inquirylist_Bill_number" FromRole="purchase_inquiry_list" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.fk_inquirylist_Material_number" FromRole="purchase_inquiry_list" ToRole="record" />
+  </EntityType>
+  <EntityType Name="purchasing_orderlist">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Column_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Column_number" Nullable="false" />
+    <Property Type="String" Name="Material_number" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price_before_discount" Nullable="false" />
+    <Property Type="Decimal" Name="Broken_number" Nullable="false" />
+    <Property Type="Decimal" Name="Unit_price" Nullable="false" />
+    <Property Type="Decimal" Name="Amount_money" Nullable="false" />
+    <Property Type="Decimal" Name="Tax_rate" Nullable="false" />
+    <Property Type="Decimal" Name="Amount_paid" Nullable="false" />
+    <Property Type="Decimal" Name="Tax_amount" Nullable="false" />
+    <Property Type="DateTime" Name="Prestorage_day" Nullable="false" />
+    <Property Type="Int32" Name="Unwarehoused_quantity" Nullable="false" />
+    <Property Type="Int32" Name="gift" Nullable="false" />
+    <Property Type="String" Name="Entry_remarks" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_list" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="purchasing_ordermain" Relationship="xiangmuModel.fk_orderlist_Bill_number" FromRole="purchasing_orderlist" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.fk_orderlist_Material_number" FromRole="purchasing_orderlist" ToRole="record" />
+  </EntityType>
+  <EntityType Name="purchasing_ordermain">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Document_date" Nullable="false" />
+    <Property Type="Int32" Name="Supplier_Id" Nullable="false" />
+    <Property Type="Int32" Name="Purchase_order_type" Nullable="false" />
+    <Property Type="String" Name="Coin" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Price_include_tax" Nullable="false" />
+    <Property Type="Decimal" Name="Exchange_rate" Nullable="false" />
+    <Property Type="Int32" Name="Individual_ondition" Nullable="false" />
+    <Property Type="String" Name="Delivery_address" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Making_personnel" Nullable="false" />
+    <Property Type="Int32" Name="Procurement_staff" Nullable="false" />
+    <Property Type="Int32" Name="Review_personnel" Nullable="false" />
+    <Property Type="Int32" Name="Affiliated_department" Nullable="false" />
+    <Property Type="Int32" Name="Audit_status" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.fk_ordermain_department" FromRole="purchasing_ordermain" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.fk_ordermain_Id" FromRole="purchasing_ordermain" ToRole="funds" />
+    <NavigationProperty Name="purchasing_orderlist" Relationship="xiangmuModel.fk_orderlist_Bill_number" FromRole="purchasing_ordermain" ToRole="purchasing_orderlist" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fk_ordermain_Making" FromRole="purchasing_ordermain" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.fk_ordermain_Procurement" FromRole="purchasing_ordermain" ToRole="td_personnel_table" />
+    <NavigationProperty Name="typenumber" Relationship="xiangmuModel.fk_ordermain_rdertype" FromRole="purchasing_ordermain" ToRole="typenumber" />
+    <NavigationProperty Name="td_personnel_table2" Relationship="xiangmuModel.fk_ordermain_Review" FromRole="purchasing_ordermain" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="quotationdetails">
+    <Key>
+      <PropertyRef Name="Columnno" />
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Type="Int32" Name="Columnno" Nullable="false" />
+    <Property Type="String" Name="Receiptnumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wuliaobianhao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wuliaomingcheng" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="guigexinghao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Danweimingcheng" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Shuliang" Nullable="false" />
+    <Property Type="Double" Name="Zhekoqian" />
+    <Property Type="Double" Name="Zheshu" />
+    <Property Type="Double" Name="danjia" Nullable="false" />
+    <Property Type="Double" Name="Jine" Nullable="false" />
+    <Property Type="Double" Name="Suilv" />
+    <Property Type="Double" Name="Suie" />
+    <Property Type="Double" Name="Hangsuijine" />
+    <Property Type="String" Name="beizhu" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="quotedprice" Relationship="xiangmuModel.aa" FromRole="quotationdetails" ToRole="quotedprice" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.kk" FromRole="quotationdetails" ToRole="record" />
+  </EntityType>
+  <EntityType Name="quotedprice">
+    <Key>
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Type="String" Name="Receiptnumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Officialcustomer" Nullable="false" />
+    <Property Type="DateTime" Name="Documentdate" Nullable="false" />
+    <Property Type="String" Name="bibie" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="songhuodizhi" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="youxiaoriqi" />
+    <Property Type="Int32" Name="danjiahangs" Nullable="false" />
+    <Property Type="Double" Name="huilv" Nullable="false" />
+    <Property Type="Int32" Name="Personnel" Nullable="false" />
+    <Property Type="Int32" Name="Bumenbianhao" Nullable="false" />
+    <Property Type="String" Name="zhidanryuan" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="fuheryuan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Shenhe" Nullable="false" />
+    <Property Type="String" Name="Beizhu" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.gg" FromRole="quotedprice" ToRole="department" />
+    <NavigationProperty Name="quotationdetails" Relationship="xiangmuModel.aa" FromRole="quotedprice" ToRole="quotationdetails" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.ff" FromRole="quotedprice" ToRole="userinfo" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.jj" FromRole="quotedprice" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="qymx">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="String" Name="YSCKBillID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="LY" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LYNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="QYMoney" />
+    <Property Type="String" Name="BZ" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ysckbill" Relationship="xiangmuModel.bbb" FromRole="qymx" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="r_detail">
+    <Key>
+      <PropertyRef Name="detailID" />
+      <PropertyRef Name="RequisitionID" />
+    </Key>
+    <Property Type="Int32" Name="detailID" Nullable="false" />
+    <Property Type="Int32" Name="RequisitionID" Nullable="false" />
+    <Property Type="Int32" Name="matterid" Nullable="false" />
+    <Property Type="String" Name="matter" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="specifications" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unit" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" Nullable="false" />
+    <Property Type="String" Name="Coinstop" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="Standard_price" Nullable="false" />
+    <Property Type="DateTime" Name="Demanddate" Nullable="false" />
+    <Property Type="String" Name="sourcename" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Recommendeddate" />
+    <NavigationProperty Name="requisition" Relationship="xiangmuModel.FK_Requisition_news_amount1" FromRole="r_detail" ToRole="requisition" />
+    <NavigationProperty Name="salesorder" Relationship="xiangmuModel.FK_Requisition1_news_amount" FromRole="r_detail" ToRole="salesorder" />
+  </EntityType>
+  <EntityType Name="record">
+    <Key>
+      <PropertyRef Name="ProdID" />
+    </Key>
+    <Property Type="String" Name="ProdID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClassID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ClassName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdSize" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EngName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="SuggestPrice" />
+    <Property Type="Single" Name="SalesPriceA" />
+    <Property Type="Single" Name="SalesPriceB" />
+    <Property Type="Single" Name="SalesPriceC" />
+    <Property Type="Single" Name="SalesPriceD" />
+    <Property Type="Single" Name="SalesPriceE" />
+    <Property Type="Single" Name="StdPrice" />
+    <Property Type="String" Name="BusiTaxRate" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EffectDateUsed" />
+    <Property Type="DateTime" Name="ValidDateUsesd" />
+    <Property Type="String" Name="DefVailDay" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdDesc" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdForm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SafeQty" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AdvanceDays" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="BOutStockDay" />
+    <Property Type="DateTime" Name="BInStockDay" />
+    <Property Type="Single" Name="BstdCost" />
+    <Property Type="Single" Name="BavgCost" />
+    <Property Type="Single" Name="CavgCost" />
+    <Property Type="Single" Name="Ctotalcost" />
+    <Property Type="String" Name="MajorSupplier" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MajorSupplierName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Udef1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Udef2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PriceOftax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="BtotalCost" />
+    <Property Type="String" Name="StdUnitID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StdUnitName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StdUnitEngName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CallAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BallAmt" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BcurrStock" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BsafeAllStk" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CsafeAllStk" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="CStdCost" />
+    <NavigationProperty Name="allocatingdetail" Relationship="xiangmuModel.ll" FromRole="record" ToRole="allocatingdetail" />
+    <NavigationProperty Name="material_name" Relationship="xiangmuModel.FK3C0469F99FC6869" FromRole="record" ToRole="material_name" />
+    <NavigationProperty Name="orderdetails" Relationship="xiangmuModel.wain" FromRole="record" ToRole="orderdetails" />
+    <NavigationProperty Name="purchase_inquiry_list" Relationship="xiangmuModel.fk_inquirylist_Material_number" FromRole="record" ToRole="purchase_inquiry_list" />
+    <NavigationProperty Name="purchasing_orderlist" Relationship="xiangmuModel.fk_orderlist_Material_number" FromRole="record" ToRole="purchasing_orderlist" />
+    <NavigationProperty Name="quotationdetails" Relationship="xiangmuModel.kk" FromRole="record" ToRole="quotationdetails" />
+    <NavigationProperty Name="returnxx" Relationship="xiangmuModel.fk_ProdID" FromRole="record" ToRole="returnxx" />
+    <NavigationProperty Name="shipmentdetail" Relationship="xiangmuModel.fk_rec" FromRole="record" ToRole="shipmentdetail" />
+    <NavigationProperty Name="td_purchase" Relationship="xiangmuModel.fk_td_purchas" FromRole="record" ToRole="td_purchase" />
+    <NavigationProperty Name="t_preturn_zi" Relationship="xiangmuModel.matterid" FromRole="record" ToRole="t_preturn_zi" />
+    <NavigationProperty Name="warehouseflowtable" Relationship="xiangmuModel.wail1" FromRole="record" ToRole="warehouseflowtable" />
+  </EntityType>
+  <EntityType Name="requisition">
+    <Key>
+      <PropertyRef Name="RequisitionID" />
+    </Key>
+    <Property Type="Int32" Name="RequisitionID" Nullable="false" />
+    <Property Type="DateTime" Name="RequisitionDate" Nullable="false" />
+    <Property Type="Int32" Name="RequisitionType" Nullable="false" />
+    <Property Type="Int32" Name="RCondition" Nullable="false" />
+    <Property Type="Int32" Name="RPersonnel" Nullable="false" />
+    <Property Type="Int32" Name="Rdepartment" Nullable="false" />
+    <Property Type="String" Name="Rproducer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="auditor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="detailid" Nullable="false" />
+    <Property Type="Int32" Name="checkid" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.FK_news_particularspay_news_amount1" FromRole="requisition" ToRole="department" />
+    <NavigationProperty Name="r_detail" Relationship="xiangmuModel.FK_Requisition_news_amount1" FromRole="requisition" ToRole="r_detail" />
+    <NavigationProperty Name="typenumber" Relationship="xiangmuModel.FK_news_particularspay_news6_amount" FromRole="requisition" ToRole="typenumber" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.qinggouyuan" FromRole="requisition" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="returnxx">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="BillNO" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="BillNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProdSize" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUnit" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="SQuantity" />
+    <Property Type="Single" Name="OIdPrice" />
+    <Property Type="Single" Name="Discount" />
+    <Property Type="Single" Name="Price" />
+    <Property Type="Single" Name="Amount" />
+    <Property Type="Single" Name="TaxRate" />
+    <Property Type="Single" Name="TaxAmt" />
+    <Property Type="Single" Name="AmountWithTax" />
+    <Property Type="String" Name="ItemRemark" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TranType" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FromNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.fk_ProdID" FromRole="returnxx" ToRole="record" />
+  </EntityType>
+  <EntityType Name="returnzhubiao">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Type="Int32" Name="CustID" Nullable="false" />
+    <Property Type="String" Name="CustAddress" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PriceJudge" />
+    <Property Type="Int32" Name="WareID" />
+    <Property Type="Int32" Name="AgainWare" />
+    <Property Type="DateTime" Name="BillDate" />
+    <Property Type="String" Name="BillNO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CurrID" />
+    <Property Type="Single" Name="ExchangeRate" />
+    <Property Type="String" Name="ForeignTrade" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BusinessName" />
+    <Property Type="String" Name="DepartName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="projectID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Maker" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Permitter" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.fk_WareID" FromRole="returnzhubiao" ToRole="warehousetable" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.tuihuozhubiao" FromRole="returnzhubiao" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="salesorder">
+    <Key>
+      <PropertyRef Name="Documentnumber" />
+    </Key>
+    <Property Type="Int32" Name="Customer" Nullable="false" />
+    <Property Type="DateTime" Name="BillDate" Nullable="false" />
+    <Property Type="String" Name="Documentnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yesandno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Singlecondition" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="exchangerate" Nullable="false" />
+    <Property Type="Int32" Name="Ordertype" />
+    <Property Type="Int32" Name="Businesspersonnel" Nullable="false" />
+    <Property Type="Int32" Name="Producer" Nullable="false" />
+    <Property Type="Int32" Name="bumenbianhao" Nullable="false" />
+    <Property Type="Int32" Name="Compoundstaff" />
+    <Property Type="String" Name="Totalamount" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="isshenhe" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.wai5" FromRole="salesorder" ToRole="department" />
+    <NavigationProperty Name="orderdetails" Relationship="xiangmuModel.wail" FromRole="salesorder" ToRole="orderdetails" />
+    <NavigationProperty Name="r_detail" Relationship="xiangmuModel.FK_Requisition1_news_amount" FromRole="salesorder" ToRole="r_detail" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.wai2" FromRole="salesorder" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.wai3" FromRole="salesorder" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table2" Relationship="xiangmuModel.wai4" FromRole="salesorder" ToRole="td_personnel_table" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.wai6" FromRole="salesorder" ToRole="userinfo" />
+  </EntityType>
+  <EntityType Name="shipment">
+    <Key>
+      <PropertyRef Name="Danid" />
+    </Key>
+    <Property Type="String" Name="Danid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Dandate" Nullable="false" />
+    <Property Type="Int32" Name="Kehuid" Nullable="false" />
+    <Property Type="String" Name="Address" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Leixingid" />
+    <Property Type="String" Name="Bi" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Han" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="Huilv" />
+    <Property Type="Int32" Name="Cangid" Nullable="false" />
+    <Property Type="Int32" Name="Zhiren" Nullable="false" />
+    <Property Type="Int32" Name="Shenren" />
+    <Property Type="DateTime" Name="Shentime" />
+    <Property Type="String" Name="Shenzk" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Buid" Nullable="false" />
+    <Property Type="Int32" Name="Yeren" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.fk_sd" FromRole="shipment" ToRole="department" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.fk_sc" FromRole="shipment" ToRole="warehousetable" />
+    <NavigationProperty Name="shipmentdetail" Relationship="xiangmuModel.fk_sdeail" FromRole="shipment" ToRole="shipmentdetail" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fk_shp" FromRole="shipment" ToRole="td_personnel_table" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.fk_sk" FromRole="shipment" ToRole="userinfo" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.fk_sp" FromRole="shipment" ToRole="td_personnel_table" />
+    <NavigationProperty Name="typenumber" Relationship="xiangmuModel.fk_st" FromRole="shipment" ToRole="typenumber" />
+    <NavigationProperty Name="td_personnel_table2" Relationship="xiangmuModel.fk_syp" FromRole="shipment" ToRole="td_personnel_table" />
+    <NavigationProperty Name="ysckdetail" Relationship="xiangmuModel.mmm" FromRole="shipment" ToRole="ysckdetail" />
+  </EntityType>
+  <EntityType Name="shipmentdetail">
+    <Key>
+      <PropertyRef Name="Danid" />
+      <PropertyRef Name="Hanghao" />
+    </Key>
+    <Property Type="String" Name="Danid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Hanghao" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wuid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wuming" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Guige" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="Num" Nullable="false" />
+    <Property Type="Single" Name="Zhedan" />
+    <Property Type="Single" Name="Zheshu" />
+    <Property Type="Single" Name="Danjia" Nullable="false" />
+    <Property Type="Single" Name="Price" Nullable="false" />
+    <Property Type="Single" Name="Shuilv" Nullable="false" />
+    <Property Type="Single" Name="Shuoprice" />
+    <Property Type="Single" Name="Hanshui" />
+    <Property Type="String" Name="Lailaiid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Laibie" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.fk_rec" FromRole="shipmentdetail" ToRole="record" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_sdeail" FromRole="shipmentdetail" ToRole="shipment" />
+  </EntityType>
+  <EntityType Name="t_preturn">
+    <Key>
+      <PropertyRef Name="Pbillno" />
+    </Key>
+    <Property Type="String" Name="Pbillno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="supplierid" Nullable="false" />
+    <Property Type="String" Name="Pdata" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PriceOfTax" Nullable="false" />
+    <Property Type="Int32" Name="storehouseID" Nullable="false" />
+    <Property Type="String" Name="CoinId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ExchRate" Nullable="false" />
+    <Property Type="Int32" Name="warehouseid" Nullable="false" />
+    <Property Type="Int32" Name="Pesonner" Nullable="false" />
+    <Property Type="Int32" Name="bumenbianhao" Nullable="false" />
+    <Property Type="Int32" Name="personnel" Nullable="false" />
+    <Property Type="Int32" Name="Auditor" Nullable="false" />
+    <Property Type="Int32" Name="job" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.bumenbianhao" FromRole="t_preturn" ToRole="department" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.Auditor" FromRole="t_preturn" ToRole="td_personnel_table" />
+    <NavigationProperty Name="t_preturn_zi" Relationship="xiangmuModel.Pbillno" FromRole="t_preturn" ToRole="t_preturn_zi" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.personnel" FromRole="t_preturn" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table2" Relationship="xiangmuModel.Pesonner" FromRole="t_preturn" ToRole="td_personnel_table" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.warehouseid" FromRole="t_preturn" ToRole="warehousetable" />
+  </EntityType>
+  <EntityType Name="t_preturn_zi">
+    <Key>
+      <PropertyRef Name="Tid" />
+      <PropertyRef Name="Hid" />
+    </Key>
+    <Property Type="Int32" Name="Tid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Pbillno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Hid" Nullable="false" />
+    <Property Type="String" Name="matterid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="COUNT" Nullable="false" />
+    <Property Type="String" Name="outside" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.matterid" FromRole="t_preturn_zi" ToRole="record" />
+    <NavigationProperty Name="t_preturn" Relationship="xiangmuModel.Pbillno" FromRole="t_preturn_zi" ToRole="t_preturn" />
+  </EntityType>
+  <EntityType Name="t_store_advance">
+    <Key>
+      <PropertyRef Name="Bill_advance" />
+    </Key>
+    <Property Type="String" Name="Bill_advance" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Document_date" />
+    <Property Type="Int32" Name="Supplier_ID" />
+    <Property Type="String" Name="Coin_stop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Settle_accounts1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Settle_accounts2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Money1" />
+    <Property Type="Decimal" Name="Money2" />
+    <Property Type="Decimal" Name="Exchange_rate" />
+    <Property Type="Decimal" Name="Deposit_rate" />
+    <Property Type="DateTime" Name="Termination_month" />
+    <Property Type="Int32" Name="Bumenbianhao" />
+    <Property Type="Int32" Name="Single_person_ID" />
+    <Property Type="Int32" Name="Compound_human_ID" />
+    <Property Type="Int32" Name="Audit_status" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.FK_nmgb" FromRole="t_store_advance" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.FK_news_advancegys_news_Funds" FromRole="t_store_advance" ToRole="funds" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.FK_gnn" FromRole="t_store_advance" ToRole="td_personnel_table" />
+    <NavigationProperty Name="t_store_advancepay" Relationship="xiangmuModel.FK_news_advancepay_news_amount" FromRole="t_store_advance" ToRole="t_store_advancepay" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.FK_nmd" FromRole="t_store_advance" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="t_store_advancepay">
+    <Key>
+      <PropertyRef Name="Bill_advancepay" />
+      <PropertyRef Name="Line_advancepay" />
+    </Key>
+    <Property Type="String" Name="Bill_advancepay" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Line_advancepay" Nullable="false" />
+    <Property Type="String" Name="Source_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_date" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Amount_dvanced" />
+    <Property Type="String" Name="summary" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Advance_alance" />
+    <NavigationProperty Name="t_store_advance" Relationship="xiangmuModel.FK_news_advancepay_news_amount" FromRole="t_store_advancepay" ToRole="t_store_advance" />
+  </EntityType>
+  <EntityType Name="t_store_advancerec">
+    <Key>
+      <PropertyRef Name="Qyysid" />
+      <PropertyRef Name="Bill_particularspay" />
+      <PropertyRef Name="Line_advancerec" />
+    </Key>
+    <Property Type="Int32" Name="Qyysid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Bill_particularspay" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Line_advancerec" Nullable="false" />
+    <Property Type="Decimal" Name="yourself" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_advancerec_news_amount" FromRole="t_store_advancerec" ToRole="t_store_particularspay" />
+  </EntityType>
+  <EntityType Name="t_store_amount">
+    <Key>
+      <PropertyRef Name="Bill_amount" />
+    </Key>
+    <Property Type="String" Name="Bill_amount" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Document_date" Nullable="false" />
+    <Property Type="Int32" Name="Supplier_ID" Nullable="false" />
+    <Property Type="String" Name="Coin_stop" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Settle_accounts1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Settle_accounts2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Money1" />
+    <Property Type="Decimal" Name="Money2" />
+    <Property Type="Decimal" Name="Exchange_rate" Nullable="false" />
+    <Property Type="Decimal" Name="Deposit_rate" Nullable="false" />
+    <Property Type="DateTime" Name="Termination_month" />
+    <Property Type="Int32" Name="Bumenbianhao" Nullable="false" />
+    <Property Type="Int32" Name="Single_person_ID" Nullable="false" />
+    <Property Type="Int32" Name="Compound_human_ID" Nullable="false" />
+    <Property Type="Int32" Name="Audit_status" Nullable="false" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.FK_news_Bumenbianhao_news_departement" FromRole="t_store_amount" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.FK_news_advancepaygys_news_Funds" FromRole="t_store_amount" ToRole="funds" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_particularspay_news_amount" FromRole="t_store_amount" ToRole="t_store_particularspay" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablefh" FromRole="t_store_amount" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablezd" FromRole="t_store_amount" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="t_store_particularspay">
+    <Key>
+      <PropertyRef Name="Bill_particularspay" />
+      <PropertyRef Name="Line_particularspay" />
+    </Key>
+    <Property Type="String" Name="Bill_particularspay" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Line_particularspay" Nullable="false" />
+    <Property Type="String" Name="Source_name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Source_date" Nullable="false" />
+    <Property Type="String" Name="Source_list" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Trading_object" />
+    <Property Type="Int32" Name="Bumenbianhao" />
+    <Property Type="Int32" Name="PurchasersID" />
+    <Property Type="Decimal" Name="Coin_stop" />
+    <Property Type="Decimal" Name="Exchange_rate" />
+    <Property Type="Int32" Name="Payable_detail" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Discount_amount" />
+    <Property Type="Decimal" Name="Cancellation_amount" />
+    <Property Type="Decimal" Name="Offset_amount" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.FK_news_particularspay_news_departement" FromRole="t_store_particularspay" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.FK_news_Funds" FromRole="t_store_particularspay" ToRole="funds" />
+    <NavigationProperty Name="t_store_advancerec" Relationship="xiangmuModel.FK_news_advancerec_news_amount" FromRole="t_store_particularspay" ToRole="t_store_advancerec" />
+    <NavigationProperty Name="t_store_amount" Relationship="xiangmuModel.FK_news_particularspay_news_amount" FromRole="t_store_particularspay" ToRole="t_store_amount" />
+    <NavigationProperty Name="td_breakdown" Relationship="xiangmuModel.FK_cnm" FromRole="t_store_particularspay" ToRole="td_breakdown" />
+    <NavigationProperty Name="td_inventory_list" Relationship="xiangmuModel.FK_news_particularspay_news_td_Inrentory_list" FromRole="t_store_particularspay" ToRole="td_inventory_list" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.FK_news_particularspay_news_td_Personnel_table" FromRole="t_store_particularspay" ToRole="td_personnel_table" />
+  </EntityType>
+  <EntityType Name="td_breakdown">
+    <Key>
+      <PropertyRef Name="breakdown" />
+    </Key>
+    <Property Type="Int32" Name="breakdown" Nullable="false" />
+    <Property Type="Int32" Name="ID" />
+    <Property Type="String" Name="NAME" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="document_type" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Bill_number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="single_amount" />
+    <Property Type="Decimal" Name="Current_balance" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_cnm" FromRole="td_breakdown" ToRole="t_store_particularspay" />
+  </EntityType>
+  <EntityType Name="td_inventory_list">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Document_date" />
+    <Property Type="Int32" Name="ID" />
+    <Property Type="Int32" Name="Storage_type" />
+    <Property Type="String" Name="price_include" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="storehouse" />
+    <Property Type="String" Name="Coin_stop" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="exchange_rate" />
+    <Property Type="String" Name="Certificate_number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Automatic_generation" />
+    <Property Type="Int32" Name="foreign_trade" />
+    <Property Type="String" Name="Procurement_staff" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Affiliated_department" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Producer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Auditor" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="belongs" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="examine" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.fk_td_inventory" FromRole="td_inventory_list" ToRole="funds" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_particularspay_news_td_Inrentory_list" FromRole="td_inventory_list" ToRole="t_store_particularspay" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.fk_td_inventory_list" FromRole="td_inventory_list" ToRole="warehousetable" />
+    <NavigationProperty Name="td_purchase" Relationship="xiangmuModel.fk_td_purchase" FromRole="td_inventory_list" ToRole="td_purchase" />
+  </EntityType>
+  <EntityType Name="td_personnel_table">
+    <Key>
+      <PropertyRef Name="Personnel" />
+    </Key>
+    <Property Type="Int32" Name="Personnel" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="department" />
+    <Property Type="String" Name="Personal_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sex" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="English_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ID_number" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date_of_birth" />
+    <Property Type="String" Name="political_status" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="marital_status" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Entry_date" />
+    <Property Type="String" Name="blood_group" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="or_origin" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nation" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="post" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telephone" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="contact_number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contact_address" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="zip_code" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="highest" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="due_date" />
+    <Property Type="String" Name="academic" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date_of_entry" />
+    <Property Type="String" Name="Graduation" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="passport" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Study_major" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Contractstart_date" />
+    <Property Type="String" Name="language_level" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="termination_date" />
+    <Property Type="DateTime" Name="Experience_date" />
+    <Property Type="String" Name="duration" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="adjust_price" Relationship="xiangmuModel.fkry" FromRole="td_personnel_table" ToRole="adjust_price" />
+    <NavigationProperty Name="department1" Relationship="xiangmuModel.fk_td_personnel_table" FromRole="td_personnel_table" ToRole="department" />
+    <NavigationProperty Name="funds" Relationship="xiangmuModel.yinwanghong2" FromRole="td_personnel_table" ToRole="funds" />
+    <NavigationProperty Name="inventory_document" Relationship="xiangmuModel.FK_news_amount" FromRole="td_personnel_table" ToRole="inventory_document" />
+    <NavigationProperty Name="purchase_inquiry" Relationship="xiangmuModel.fk_inquiry_Making" FromRole="td_personnel_table" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="purchase_inquiry1" Relationship="xiangmuModel.fk_inquiry_Procurement" FromRole="td_personnel_table" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="purchase_inquiry2" Relationship="xiangmuModel.fk_inquiry_Review" FromRole="td_personnel_table" ToRole="purchase_inquiry" />
+    <NavigationProperty Name="purchasing_ordermain" Relationship="xiangmuModel.fk_ordermain_Making" FromRole="td_personnel_table" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="purchasing_ordermain1" Relationship="xiangmuModel.fk_ordermain_Procurement" FromRole="td_personnel_table" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="purchasing_ordermain2" Relationship="xiangmuModel.fk_ordermain_Review" FromRole="td_personnel_table" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="quotedprice" Relationship="xiangmuModel.jj" FromRole="td_personnel_table" ToRole="quotedprice" />
+    <NavigationProperty Name="requisition" Relationship="xiangmuModel.qinggouyuan" FromRole="td_personnel_table" ToRole="requisition" />
+    <NavigationProperty Name="returnzhubiao" Relationship="xiangmuModel.tuihuozhubiao" FromRole="td_personnel_table" ToRole="returnzhubiao" />
+    <NavigationProperty Name="salesorder" Relationship="xiangmuModel.wai2" FromRole="td_personnel_table" ToRole="salesorder" />
+    <NavigationProperty Name="salesorder1" Relationship="xiangmuModel.wai3" FromRole="td_personnel_table" ToRole="salesorder" />
+    <NavigationProperty Name="salesorder2" Relationship="xiangmuModel.wai4" FromRole="td_personnel_table" ToRole="salesorder" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_shp" FromRole="td_personnel_table" ToRole="shipment" />
+    <NavigationProperty Name="shipment1" Relationship="xiangmuModel.fk_sp" FromRole="td_personnel_table" ToRole="shipment" />
+    <NavigationProperty Name="shipment2" Relationship="xiangmuModel.fk_syp" FromRole="td_personnel_table" ToRole="shipment" />
+    <NavigationProperty Name="t_preturn" Relationship="xiangmuModel.Auditor" FromRole="td_personnel_table" ToRole="t_preturn" />
+    <NavigationProperty Name="t_preturn1" Relationship="xiangmuModel.personnel" FromRole="td_personnel_table" ToRole="t_preturn" />
+    <NavigationProperty Name="t_preturn2" Relationship="xiangmuModel.Pesonner" FromRole="td_personnel_table" ToRole="t_preturn" />
+    <NavigationProperty Name="t_store_advance" Relationship="xiangmuModel.FK_gnn" FromRole="td_personnel_table" ToRole="t_store_advance" />
+    <NavigationProperty Name="t_store_advance1" Relationship="xiangmuModel.FK_nmd" FromRole="td_personnel_table" ToRole="t_store_advance" />
+    <NavigationProperty Name="t_store_amount" Relationship="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablefh" FromRole="td_personnel_table" ToRole="t_store_amount" />
+    <NavigationProperty Name="t_store_amount1" Relationship="xiangmuModel.FK_news_Single_person_ID_news_td_Personnel_tablezd" FromRole="td_personnel_table" ToRole="t_store_amount" />
+    <NavigationProperty Name="t_store_particularspay" Relationship="xiangmuModel.FK_news_particularspay_news_td_Personnel_table" FromRole="td_personnel_table" ToRole="t_store_particularspay" />
+    <NavigationProperty Name="ysbill" Relationship="xiangmuModel.fff" FromRole="td_personnel_table" ToRole="ysbill" />
+    <NavigationProperty Name="ysbill1" Relationship="xiangmuModel.ggg" FromRole="td_personnel_table" ToRole="ysbill" />
+    <NavigationProperty Name="ysckbill" Relationship="xiangmuModel.jjj" FromRole="td_personnel_table" ToRole="ysckbill" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.kehurenyuan" FromRole="td_personnel_table" ToRole="userinfo" />
+    <NavigationProperty Name="ysckbill1" Relationship="xiangmuModel.yyy" FromRole="td_personnel_table" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="td_purchase">
+    <Key>
+      <PropertyRef Name="Bill_number" />
+      <PropertyRef Name="Material_number" />
+    </Key>
+    <Property Type="String" Name="Bill_number" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Material_number" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="name_of_material" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="specifications" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="unit" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" />
+    <Property Type="Decimal" Name="before_discount" />
+    <Property Type="Int32" Name="broken_number" />
+    <Property Type="Decimal" Name="price" />
+    <Property Type="Decimal" Name="money" />
+    <Property Type="Decimal" Name="tax_rate" />
+    <Property Type="Decimal" Name="amount_of" />
+    <Property Type="Decimal" Name="Tax_amount" />
+    <Property Type="Int32" Name="Uninvoiced" />
+    <Property Type="String" Name="Entry_remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Source_list" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="number" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ated_expense" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.fk_td_purchas" FromRole="td_purchase" ToRole="record" />
+    <NavigationProperty Name="td_inventory_list" Relationship="xiangmuModel.fk_td_purchase" FromRole="td_purchase" ToRole="td_inventory_list" />
+  </EntityType>
+  <EntityType Name="transfers">
+    <Key>
+      <PropertyRef Name="Receiptnumber" />
+    </Key>
+    <Property Type="String" Name="Receiptnumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Documentdate" Nullable="false" />
+    <Property Type="Int32" Name="Diaoru" Nullable="false" />
+    <Property Type="Int32" Name="Diaochu" Nullable="false" />
+    <Property Type="String" Name="Makingpersonnel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="reviewer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="note" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="audit" Nullable="false" />
+    <Property Type="DateTime" Name="Theeffectivedate" />
+    <Property Type="Int32" Name="shengxiao" Nullable="false" />
+    <NavigationProperty Name="allocatingdetail" Relationship="xiangmuModel.bb" FromRole="transfers" ToRole="allocatingdetail" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.cc" FromRole="transfers" ToRole="warehousetable" />
+    <NavigationProperty Name="warehousetable1" Relationship="xiangmuModel.dd" FromRole="transfers" ToRole="warehousetable" />
+  </EntityType>
+  <EntityType Name="typenumber">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Type="Int32" Name="TypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TypeName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DanjuType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="purchasing_ordermain" Relationship="xiangmuModel.fk_ordermain_rdertype" FromRole="typenumber" ToRole="purchasing_ordermain" />
+    <NavigationProperty Name="requisition" Relationship="xiangmuModel.FK_news_particularspay_news6_amount" FromRole="typenumber" ToRole="requisition" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_st" FromRole="typenumber" ToRole="shipment" />
+    <NavigationProperty Name="warehouseflowtable" Relationship="xiangmuModel.wail12" FromRole="typenumber" ToRole="warehouseflowtable" />
+  </EntityType>
+  <EntityType Name="userinfo">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Type="Int32" Name="userid" Nullable="false" />
+    <Property Type="String" Name="zkgs" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="username" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="typeid" />
+    <Property Type="String" Name="address" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bibie" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BusinessName" />
+    <Property Type="String" Name="phone" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="hangye" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="meail" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="yinghangid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="zked" />
+    <Property Type="Single" Name="syed" />
+    <Property Type="Int32" Name="jzr" />
+    <Property Type="String" Name="fptype" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="qcyufu" />
+    <Property Type="Single" Name="qcyinfyu" />
+    <Property Type="Single" Name="qwyufu" />
+    <Property Type="Single" Name="qwyinfu" />
+    <NavigationProperty Name="customeraccounts" Relationship="xiangmuModel.fk_cck" FromRole="userinfo" ToRole="customeraccounts" />
+    <NavigationProperty Name="quotedprice" Relationship="xiangmuModel.ff" FromRole="userinfo" ToRole="quotedprice" />
+    <NavigationProperty Name="salesorder" Relationship="xiangmuModel.wai6" FromRole="userinfo" ToRole="salesorder" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_sk" FromRole="userinfo" ToRole="shipment" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.kehurenyuan" FromRole="userinfo" ToRole="td_personnel_table" />
+    <NavigationProperty Name="ysbill" Relationship="xiangmuModel.ddd" FromRole="userinfo" ToRole="ysbill" />
+    <NavigationProperty Name="usertype" Relationship="xiangmuModel.FK_user_type" FromRole="userinfo" ToRole="usertype" />
+    <NavigationProperty Name="ysckbill" Relationship="xiangmuModel.hhh" FromRole="userinfo" ToRole="ysckbill" />
+    <NavigationProperty Name="ysckdetail" Relationship="xiangmuModel.lll" FromRole="userinfo" ToRole="ysckdetail" />
+  </EntityType>
+  <EntityType Name="usertype">
+    <Key>
+      <PropertyRef Name="typeid" />
+    </Key>
+    <Property Type="Int32" Name="typeid" Nullable="false" />
+    <Property Type="String" Name="typename" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="beizhu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.FK_user_type" FromRole="usertype" ToRole="userinfo" />
+  </EntityType>
+  <EntityType Name="warehouseflowtable">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Type="Int32" Name="Warehousenumber" Nullable="false" />
+    <Property Type="String" Name="Materialnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Documenttype" Nullable="false" />
+    <Property Type="Int32" Name="Documentnumber" Nullable="false" />
+    <Property Type="DateTime" Name="Dateofwarehousing" Nullable="false" />
+    <Property Type="Single" Name="num" Nullable="false" />
+    <Property Type="Single" Name="UnitPrice" Nullable="false" />
+    <Property Type="Single" Name="money" Nullable="false" />
+    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="record" Relationship="xiangmuModel.wail1" FromRole="warehouseflowtable" ToRole="record" />
+    <NavigationProperty Name="typenumber" Relationship="xiangmuModel.wail12" FromRole="warehouseflowtable" ToRole="typenumber" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.wai" FromRole="warehouseflowtable" ToRole="warehousetable" />
+  </EntityType>
+  <EntityType Name="warehousegeneralledger">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Type="Int32" Name="Warehousenumber" Nullable="false" />
+    <Property Type="String" Name="Materialnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="num" Nullable="false" />
+    <Property Type="Single" Name="Costunivalent" Nullable="false" />
+    <Property Type="Single" Name="Totalamount" Nullable="false" />
+    <NavigationProperty Name="adjust_price" Relationship="xiangmuModel.fkck" FromRole="warehousegeneralledger" ToRole="adjust_price" />
+    <NavigationProperty Name="warehousetable" Relationship="xiangmuModel.wai1" FromRole="warehousegeneralledger" ToRole="warehousetable" />
+  </EntityType>
+  <EntityType Name="warehousetable">
+    <Key>
+      <PropertyRef Name="Warehousenumber" />
+    </Key>
+    <Property Type="Int32" Name="Warehousenumber" Nullable="false" />
+    <Property Type="String" Name="Warehousename" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contactnumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Warehouseaddress" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="inventory_document" Relationship="xiangmuModel.FK_news_Inventory_documen_news_amount" FromRole="warehousetable" ToRole="inventory_document" />
+    <NavigationProperty Name="returnzhubiao" Relationship="xiangmuModel.fk_WareID" FromRole="warehousetable" ToRole="returnzhubiao" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.fk_sc" FromRole="warehousetable" ToRole="shipment" />
+    <NavigationProperty Name="t_preturn" Relationship="xiangmuModel.warehouseid" FromRole="warehousetable" ToRole="t_preturn" />
+    <NavigationProperty Name="td_inventory_list" Relationship="xiangmuModel.fk_td_inventory_list" FromRole="warehousetable" ToRole="td_inventory_list" />
+    <NavigationProperty Name="transfers" Relationship="xiangmuModel.cc" FromRole="warehousetable" ToRole="transfers" />
+    <NavigationProperty Name="transfers1" Relationship="xiangmuModel.dd" FromRole="warehousetable" ToRole="transfers" />
+    <NavigationProperty Name="warehouseflowtable" Relationship="xiangmuModel.wai" FromRole="warehousetable" ToRole="warehouseflowtable" />
+    <NavigationProperty Name="warehousegeneralledger" Relationship="xiangmuModel.wai1" FromRole="warehousetable" ToRole="warehousegeneralledger" />
+  </EntityType>
+  <EntityType Name="ysbill">
+    <Key>
+      <PropertyRef Name="FSBillID" />
+    </Key>
+    <Property Type="String" Name="FSBillID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="DateTime" Name="FSBillDate" Nullable="false" />
+    <Property Type="String" Name="YSCKCurrName" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="YSExchRate" />
+    <Property Type="String" Name="YSOne" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="YSTwo" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="YSThree" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="YSMoney1" />
+    <Property Type="Single" Name="YSMoney2" />
+    <Property Type="Single" Name="YSMoney3" />
+    <Property Type="Int32" Name="YSZD" />
+    <Property Type="Int32" Name="YSSH" />
+    <Property Type="String" Name="YS_Status" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="YSBuMenID" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.eee" FromRole="ysbill" ToRole="department" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.fff" FromRole="ysbill" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.ggg" FromRole="ysbill" ToRole="td_personnel_table" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.ddd" FromRole="ysbill" ToRole="userinfo" />
+    <NavigationProperty Name="ysmxdetail" Relationship="xiangmuModel.aaa" FromRole="ysbill" ToRole="ysmxdetail" />
+  </EntityType>
+  <EntityType Name="ysckbill">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+    </Key>
+    <Property Type="String" Name="YSCKBillID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="YSCKBillDate" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="YSCKCurrName" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="YSCKExchRate" />
+    <Property Type="String" Name="YSCKOne" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="YSCKTwo" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="YSThree" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="YSCKMoney1" />
+    <Property Type="Single" Name="YSCKMoney2" />
+    <Property Type="Single" Name="YSCKMoney3" />
+    <Property Type="Int32" Name="YSCKZD" Nullable="false" />
+    <Property Type="Int32" Name="YSCKSH" Nullable="false" />
+    <Property Type="Single" Name="YSCKZhe" />
+    <Property Type="String" Name="YS_Status" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="YSBuMenID" />
+    <NavigationProperty Name="department" Relationship="xiangmuModel.kkk" FromRole="ysckbill" ToRole="department" />
+    <NavigationProperty Name="qymx" Relationship="xiangmuModel.bbb" FromRole="ysckbill" ToRole="qymx" />
+    <NavigationProperty Name="td_personnel_table" Relationship="xiangmuModel.jjj" FromRole="ysckbill" ToRole="td_personnel_table" />
+    <NavigationProperty Name="td_personnel_table1" Relationship="xiangmuModel.yyy" FromRole="ysckbill" ToRole="td_personnel_table" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.hhh" FromRole="ysckbill" ToRole="userinfo" />
+    <NavigationProperty Name="ysckdetail" Relationship="xiangmuModel.ccc" FromRole="ysckbill" ToRole="ysckdetail" />
+  </EntityType>
+  <EntityType Name="ysckdetail">
+    <Key>
+      <PropertyRef Name="YSCKBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="String" Name="YSCKBillID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="LY" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LYNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="YSKeHuID" Nullable="false" />
+    <Property Type="String" Name="YSChuKuNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="ZheRangMoney" />
+    <Property Type="Single" Name="ChongKuanMoney" />
+    <Property Type="Single" Name="ChongDiMoney" />
+    <NavigationProperty Name="shipment" Relationship="xiangmuModel.mmm" FromRole="ysckdetail" ToRole="shipment" />
+    <NavigationProperty Name="userinfo" Relationship="xiangmuModel.lll" FromRole="ysckdetail" ToRole="userinfo" />
+    <NavigationProperty Name="ysckbill" Relationship="xiangmuModel.ccc" FromRole="ysckdetail" ToRole="ysckbill" />
+  </EntityType>
+  <EntityType Name="ysmxdetail">
+    <Key>
+      <PropertyRef Name="FSBillID" />
+      <PropertyRef Name="LineNo" />
+    </Key>
+    <Property Type="String" Name="FSBillID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="LineNo" Nullable="false" />
+    <Property Type="String" Name="LY" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LYNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BZ" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="YSMoney" />
+    <Property Type="Single" Name="YSYUE" />
+    <NavigationProperty Name="ysbill" Relationship="xiangmuModel.aaa" FromRole="ysmxdetail" ToRole="ysbill" />
+  </EntityType>
+  <Association Name="fkck">
+    <End Type="xiangmuModel.warehousegeneralledger" Role="warehousegeneralledger" Multiplicity="0..1" />
+    <End Type="xiangmuModel.adjust_price" Role="adjust_price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousegeneralledger">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="adjust_price">
+        <PropertyRef Name="ckid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkry">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.adjust_price" Role="adjust_price" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="adjust_price">
+        <PropertyRef Name="zdry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fktj">
+    <End Type="xiangmuModel.adjust_price" Role="adjust_price" Multiplicity="1" />
+    <End Type="xiangmuModel.adjust_pricedetails" Role="adjust_pricedetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="adjust_price">
+        <PropertyRef Name="billsNum" />
+      </Principal>
+      <Dependent Role="adjust_pricedetails">
+        <PropertyRef Name="billsNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fkgx">
+    <End Type="xiangmuModel.material_name" Role="material_name" Multiplicity="0..1" />
+    <End Type="xiangmuModel.adjust_pricedetails" Role="adjust_pricedetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_name">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="adjust_pricedetails">
+        <PropertyRef Name="matterNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bb">
+    <End Type="xiangmuModel.transfers" Role="transfers" Multiplicity="1" />
+    <End Type="xiangmuModel.allocatingdetail" Role="allocatingdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transfers">
+        <PropertyRef Name="Receiptnumber" />
+      </Principal>
+      <Dependent Role="allocatingdetail">
+        <PropertyRef Name="Receiptnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ll">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.allocatingdetail" Role="allocatingdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="allocatingdetail">
+        <PropertyRef Name="Wuliaobianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwanghong">
+    <End Type="xiangmuModel.bill" Role="bill" Multiplicity="0..1" />
+    <End Type="xiangmuModel.prods" Role="prods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bill">
+        <PropertyRef Name="BillNo" />
+      </Principal>
+      <Dependent Role="prods">
+        <PropertyRef Name="FromNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cck">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.customeraccounts" Role="customeraccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="customeraccounts">
+        <PropertyRef Name="Keid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bumenbianhao">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eee">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="xiangmuModel.ysbill" Role="ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSBuMenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_department">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Affiliated_department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Bumenbianhao_news_departement">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_amount" Role="t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount1">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.inventory_document" Role="inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="Rdepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_amount1">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.requisition" Role="requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="Rdepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_departement">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nmgb">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_advance" Role="t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_department">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Affiliated_department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sd">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Buid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_personnel_table">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="td_personnel_table">
+        <PropertyRef Name="department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="gg">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.quotedprice" Role="quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kkk">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSBuMenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai5">
+    <End Type="xiangmuModel.department" Role="department" Multiplicity="1" />
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="department">
+        <PropertyRef Name="Bumenbianhao" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="bumenbianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Supplier_Id">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Supplier_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancegys_news_Funds">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_advance" Role="t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancepaygys_news_Funds">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_amount" Role="t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Funds">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Trading_object" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Id">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Supplier_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_inventory">
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="0..1" />
+    <End Type="xiangmuModel.td_inventory_list" Role="td_inventory_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="funds">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="td_inventory_list">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwangh">
+    <End Type="xiangmuModel.fundtype" Role="fundtype" Multiplicity="0..1" />
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fundtype">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="funds">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yinwanghong2">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.funds" Role="funds" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="funds">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount2">
+    <End Type="xiangmuModel.inventory_document" Role="inventory_document" Multiplicity="1" />
+    <End Type="xiangmuModel.inventory_addendum" Role="inventory_addendum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventory_document">
+        <PropertyRef Name="Inventoryid" />
+      </Principal>
+      <Dependent Role="inventory_addendum">
+        <PropertyRef Name="Inventoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_amount">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.inventory_document" Role="inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="Stocktaking" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Inventory_documen_news_amount">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.inventory_document" Role="inventory_document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="inventory_document">
+        <PropertyRef Name="storehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK3C0469F99FC6869">
+    <End Type="xiangmuModel.material_name" Role="material_name" Multiplicity="0..1" />
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_name">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="record">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail">
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="1" />
+    <End Type="xiangmuModel.orderdetails" Role="orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="Documentnumber" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="Documentnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wain">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.orderdetails" Role="orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="orderdetails">
+        <PropertyRef Name="Materialnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Making">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Making_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Procurement">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Procurement_staff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquiry_Review">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchase_inquiry">
+        <PropertyRef Name="Review_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquirylist_Bill_number">
+    <End Type="xiangmuModel.purchase_inquiry" Role="purchase_inquiry" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry_list" Role="purchase_inquiry_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchase_inquiry">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="purchase_inquiry_list">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inquirylist_Material_number">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.purchase_inquiry_list" Role="purchase_inquiry_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="purchase_inquiry_list">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_orderlist_Bill_number">
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_orderlist" Role="purchasing_orderlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="purchasing_ordermain">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="purchasing_orderlist">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_orderlist_Material_number">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_orderlist" Role="purchasing_orderlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="purchasing_orderlist">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Making">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Making_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Procurement">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Procurement_staff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_rdertype">
+    <End Type="xiangmuModel.typenumber" Role="typenumber" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Purchase_order_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ordermain_Review">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.purchasing_ordermain" Role="purchasing_ordermain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="purchasing_ordermain">
+        <PropertyRef Name="Review_personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aa">
+    <End Type="xiangmuModel.quotedprice" Role="quotedprice" Multiplicity="1" />
+    <End Type="xiangmuModel.quotationdetails" Role="quotationdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quotedprice">
+        <PropertyRef Name="Receiptnumber" />
+      </Principal>
+      <Dependent Role="quotationdetails">
+        <PropertyRef Name="Receiptnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kk">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.quotationdetails" Role="quotationdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="quotationdetails">
+        <PropertyRef Name="Wuliaobianhao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ff">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.quotedprice" Role="quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Officialcustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jj">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.quotedprice" Role="quotedprice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="quotedprice">
+        <PropertyRef Name="Personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="bbb">
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="1" />
+    <End Type="xiangmuModel.qymx" Role="qymx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="YSCKBillID" />
+      </Principal>
+      <Dependent Role="qymx">
+        <PropertyRef Name="YSCKBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisition_news_amount1">
+    <End Type="xiangmuModel.requisition" Role="requisition" Multiplicity="1" />
+    <End Type="xiangmuModel.r_detail" Role="r_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="requisition">
+        <PropertyRef Name="RequisitionID" />
+      </Principal>
+      <Dependent Role="r_detail">
+        <PropertyRef Name="RequisitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Requisition1_news_amount">
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="0..1" />
+    <End Type="xiangmuModel.r_detail" Role="r_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesorder">
+        <PropertyRef Name="Documentnumber" />
+      </Principal>
+      <Dependent Role="r_detail">
+        <PropertyRef Name="sourceid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProdID">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="0..1" />
+    <End Type="xiangmuModel.returnxx" Role="returnxx" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="returnxx">
+        <PropertyRef Name="ProdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rec">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.shipmentdetail" Role="shipmentdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="shipmentdetail">
+        <PropertyRef Name="Wuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_purchas">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.td_purchase" Role="td_purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="td_purchase">
+        <PropertyRef Name="Material_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="matterid">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn_zi" Role="t_preturn_zi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="t_preturn_zi">
+        <PropertyRef Name="matterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail1">
+    <End Type="xiangmuModel.record" Role="record" Multiplicity="1" />
+    <End Type="xiangmuModel.warehouseflowtable" Role="warehouseflowtable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="record">
+        <PropertyRef Name="ProdID" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Materialnumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news6_amount">
+    <End Type="xiangmuModel.typenumber" Role="typenumber" Multiplicity="1" />
+    <End Type="xiangmuModel.requisition" Role="requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="RequisitionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="qinggouyuan">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.requisition" Role="requisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="requisition">
+        <PropertyRef Name="RPersonnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_WareID">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="0..1" />
+    <End Type="xiangmuModel.returnzhubiao" Role="returnzhubiao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="returnzhubiao">
+        <PropertyRef Name="WareID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tuihuozhubiao">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.returnzhubiao" Role="returnzhubiao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="returnzhubiao">
+        <PropertyRef Name="BusinessName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai2">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Businesspersonnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai3">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Producer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai4">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Compoundstaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai6">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.salesorder" Role="salesorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="salesorder">
+        <PropertyRef Name="Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sc">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Cangid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sdeail">
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="1" />
+    <End Type="xiangmuModel.shipmentdetail" Role="shipmentdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shipment">
+        <PropertyRef Name="Danid" />
+      </Principal>
+      <Dependent Role="shipmentdetail">
+        <PropertyRef Name="Danid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_shp">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Shenren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sk">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Kehuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sp">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Zhiren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_st">
+    <End Type="xiangmuModel.typenumber" Role="typenumber" Multiplicity="0..1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Leixingid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_syp">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="shipment">
+        <PropertyRef Name="Yeren" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="mmm">
+    <End Type="xiangmuModel.shipment" Role="shipment" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckdetail" Role="ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shipment">
+        <PropertyRef Name="Danid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSChuKuNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Auditor">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="Auditor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Pbillno">
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn_zi" Role="t_preturn_zi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_preturn">
+        <PropertyRef Name="Pbillno" />
+      </Principal>
+      <Dependent Role="t_preturn_zi">
+        <PropertyRef Name="Pbillno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="personnel">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="personnel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Pesonner">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="Pesonner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="warehouseid">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.t_preturn" Role="t_preturn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="t_preturn">
+        <PropertyRef Name="warehouseid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_gnn">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_advance" Role="t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Compound_human_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancepay_news_amount">
+    <End Type="xiangmuModel.t_store_advance" Role="t_store_advance" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_advancepay" Role="t_store_advancepay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_advance">
+        <PropertyRef Name="Bill_advance" />
+      </Principal>
+      <Dependent Role="t_store_advancepay">
+        <PropertyRef Name="Bill_advancepay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_nmd">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_advance" Role="t_store_advance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_advance">
+        <PropertyRef Name="Single_person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_advancerec_news_amount">
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_advancerec" Role="t_store_advancerec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_particularspay">
+        <PropertyRef Name="Bill_particularspay" />
+        <PropertyRef Name="Line_particularspay" />
+      </Principal>
+      <Dependent Role="t_store_advancerec">
+        <PropertyRef Name="Bill_particularspay" />
+        <PropertyRef Name="Line_advancerec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_amount">
+    <End Type="xiangmuModel.t_store_amount" Role="t_store_amount" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_store_amount">
+        <PropertyRef Name="Bill_amount" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Bill_particularspay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Single_person_ID_news_td_Personnel_tablefh">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_amount" Role="t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Compound_human_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_Single_person_ID_news_td_Personnel_tablezd">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_amount" Role="t_store_amount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_amount">
+        <PropertyRef Name="Single_person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cnm">
+    <End Type="xiangmuModel.td_breakdown" Role="td_breakdown" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_breakdown">
+        <PropertyRef Name="breakdown" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Payable_detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_td_Inrentory_list">
+    <End Type="xiangmuModel.td_inventory_list" Role="td_inventory_list" Multiplicity="1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_inventory_list">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="Source_list" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_news_particularspay_news_td_Personnel_table">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.t_store_particularspay" Role="t_store_particularspay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="t_store_particularspay">
+        <PropertyRef Name="PurchasersID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_inventory_list">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="0..1" />
+    <End Type="xiangmuModel.td_inventory_list" Role="td_inventory_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="td_inventory_list">
+        <PropertyRef Name="storehouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_td_purchase">
+    <End Type="xiangmuModel.td_inventory_list" Role="td_inventory_list" Multiplicity="1" />
+    <End Type="xiangmuModel.td_purchase" Role="td_purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_inventory_list">
+        <PropertyRef Name="Bill_number" />
+      </Principal>
+      <Dependent Role="td_purchase">
+        <PropertyRef Name="Bill_number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fff">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.ysbill" Role="ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSZD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ggg">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.ysbill" Role="ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="YSSH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jjj">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSCKSH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kehurenyuan">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="0..1" />
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="userinfo">
+        <PropertyRef Name="BusinessName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yyy">
+    <End Type="xiangmuModel.td_personnel_table" Role="td_personnel_table" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="td_personnel_table">
+        <PropertyRef Name="Personnel" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="YSCKZD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cc">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.transfers" Role="transfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="transfers">
+        <PropertyRef Name="Diaoru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="dd">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.transfers" Role="transfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="transfers">
+        <PropertyRef Name="Diaochu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wail12">
+    <End Type="xiangmuModel.typenumber" Role="typenumber" Multiplicity="1" />
+    <End Type="xiangmuModel.warehouseflowtable" Role="warehouseflowtable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typenumber">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Documenttype" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ddd">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.ysbill" Role="ysbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysbill">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_type">
+    <End Type="xiangmuModel.usertype" Role="usertype" Multiplicity="0..1" />
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usertype">
+        <PropertyRef Name="typeid" />
+      </Principal>
+      <Dependent Role="userinfo">
+        <PropertyRef Name="typeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="hhh">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckbill">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lll">
+    <End Type="xiangmuModel.userinfo" Role="userinfo" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckdetail" Role="ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userinfo">
+        <PropertyRef Name="userid" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSKeHuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.warehouseflowtable" Role="warehouseflowtable" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="warehouseflowtable">
+        <PropertyRef Name="Warehousenumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="wai1">
+    <End Type="xiangmuModel.warehousetable" Role="warehousetable" Multiplicity="1" />
+    <End Type="xiangmuModel.warehousegeneralledger" Role="warehousegeneralledger" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="warehousetable">
+        <PropertyRef Name="Warehousenumber" />
+      </Principal>
+      <Dependent Role="warehousegeneralledger">
+        <PropertyRef Name="Warehousenumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aaa">
+    <End Type="xiangmuModel.ysbill" Role="ysbill" Multiplicity="1" />
+    <End Type="xiangmuModel.ysmxdetail" Role="ysmxdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysbill">
+        <PropertyRef Name="FSBillID" />
+      </Principal>
+      <Dependent Role="ysmxdetail">
+        <PropertyRef Name="FSBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ccc">
+    <End Type="xiangmuModel.ysckbill" Role="ysckbill" Multiplicity="1" />
+    <End Type="xiangmuModel.ysckdetail" Role="ysckdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ysckbill">
+        <PropertyRef Name="YSCKBillID" />
+      </Principal>
+      <Dependent Role="ysckdetail">
+        <PropertyRef Name="YSCKBillID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

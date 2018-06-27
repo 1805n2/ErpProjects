@@ -28,7 +28,5 @@ namespace Models
         public string fromrow { get; set; }
     
         public virtual billtui billtui { get; set; }
-        public virtual wlzwj wlzwj { get; set; }
-        public virtual saleck saleck { get; set; }
     }
 }

@@ -16,8 +16,6 @@ namespace Models
     {
         public user()
         {
-            this.billtui = new HashSet<billtui>();
-            this.billtui1 = new HashSet<billtui>();
             this.buysearchmaster = new HashSet<buysearchmaster>();
             this.caigouqinggou = new HashSet<caigouqinggou>();
             this.dingdanzhu = new HashSet<dingdanzhu>();
@@ -38,8 +36,6 @@ namespace Models
         public string pwd { get; set; }
         public string userno { get; set; }
     
-        public virtual ICollection<billtui> billtui { get; set; }
-        public virtual ICollection<billtui> billtui1 { get; set; }
         public virtual ICollection<buysearchmaster> buysearchmaster { get; set; }
         public virtual ICollection<caigouqinggou> caigouqinggou { get; set; }
         public virtual ICollection<dingdanzhu> dingdanzhu { get; set; }

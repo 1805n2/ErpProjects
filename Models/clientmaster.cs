@@ -16,7 +16,6 @@ namespace Models
     {
         public clientmaster()
         {
-            this.billtui = new HashSet<billtui>();
             this.dingdanzhu = new HashSet<dingdanzhu>();
             this.saleck = new HashSet<saleck>();
             this.x_documents = new HashSet<x_documents>();
@@ -41,7 +40,6 @@ namespace Models
         public string deliveraddress { get; set; }
         public float remainquota { get; set; }
     
-        public virtual ICollection<billtui> billtui { get; set; }
         public virtual ICollection<dingdanzhu> dingdanzhu { get; set; }
         public virtual ICollection<saleck> saleck { get; set; }
         public virtual ICollection<x_documents> x_documents { get; set; }

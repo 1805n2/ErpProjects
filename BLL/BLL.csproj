@@ -39,6 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FYJ\Managers.cs" />
+    <Compile Include="KW\CaigouyufuManager.cs" />
+    <Compile Include="LSH\XiaoshoudingdanManager.cs" />
+    <Compile Include="LYF\MVCManager.cs" />
+    <Compile Include="LZX\lzxManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="wxManager.cs" />
   </ItemGroup>
@@ -54,13 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CJ\" />
-    <Folder Include="FYJ\" />
     <Folder Include="HB\" />
-    <Folder Include="KW\" />
     <Folder Include="LB\" />
-    <Folder Include="LSH\" />
-    <Folder Include="LYF\" />
-    <Folder Include="LZX\" />
     <Folder Include="SHL\" />
     <Folder Include="YJH\" />
     <Folder Include="YXW\" />

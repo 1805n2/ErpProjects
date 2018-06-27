@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="erpsystemModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="erpsystemModelStoreContainer">
-    <EntitySet Name="assignstyle" EntityType="erpsystemModel.Store.assignstyle" store:Type="Tables" Schema="erpsystem" />
     <EntitySet Name="billtui" EntityType="erpsystemModel.Store.billtui" store:Type="Tables" Schema="erpsystem" />
     <EntitySet Name="billtutype" EntityType="erpsystemModel.Store.billtutype" store:Type="Tables" Schema="erpsystem" />
     <EntitySet Name="branch" EntityType="erpsystemModel.Store.branch" store:Type="Tables" Schema="erpsystem" />
@@ -89,32 +88,8 @@
     <EntitySet Name="ysckbill" EntityType="erpsystemModel.Store.ysckbill" store:Type="Tables" Schema="erpsystem" />
     <EntitySet Name="ysckdetail" EntityType="erpsystemModel.Store.ysckdetail" store:Type="Tables" Schema="erpsystem" />
     <EntitySet Name="ysdetail" EntityType="erpsystemModel.Store.ysdetail" store:Type="Tables" Schema="erpsystem" />
-    <AssociationSet Name="FK_billtui" Association="erpsystemModel.Store.FK_billtui">
-      <End Role="clientmaster" EntitySet="clientmaster" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui1" Association="erpsystemModel.Store.FK_billtui1">
-      <End Role="user" EntitySet="user" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui2" Association="erpsystemModel.Store.FK_billtui2">
-      <End Role="user" EntitySet="user" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtui3" Association="erpsystemModel.Store.FK_billtui3">
-      <End Role="storage" EntitySet="storage" />
-      <End Role="billtui" EntitySet="billtui" />
-    </AssociationSet>
     <AssociationSet Name="FK_billtutype" Association="erpsystemModel.Store.FK_billtutype">
       <End Role="billtui" EntitySet="billtui" />
-      <End Role="billtutype" EntitySet="billtutype" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtutype1" Association="erpsystemModel.Store.FK_billtutype1">
-      <End Role="wlzwj" EntitySet="wlzwj" />
-      <End Role="billtutype" EntitySet="billtutype" />
-    </AssociationSet>
-    <AssociationSet Name="FK_billtutype2" Association="erpsystemModel.Store.FK_billtutype2">
-      <End Role="saleck" EntitySet="saleck" />
       <End Role="billtutype" EntitySet="billtutype" />
     </AssociationSet>
     <AssociationSet Name="FK_buysearchdetails" Association="erpsystemModel.Store.FK_buysearchdetails">
@@ -156,10 +131,6 @@
     <AssociationSet Name="FK_caigouqinggou3" Association="erpsystemModel.Store.FK_caigouqinggou3">
       <End Role="buytype" EntitySet="buytype" />
       <End Role="caigouqinggou" EntitySet="caigouqinggou" />
-    </AssociationSet>
-    <AssociationSet Name="FK_daassigbuymain" Association="erpsystemModel.Store.FK_daassigbuymain">
-      <End Role="assignstyle" EntitySet="assignstyle" />
-      <End Role="daassigbuymain" EntitySet="daassigbuymain" />
     </AssociationSet>
     <AssociationSet Name="FK_dingdancong" Association="erpsystemModel.Store.FK_dingdancong">
       <End Role="dingdanzhu" EntitySet="dingdanzhu" />
@@ -394,18 +365,11 @@
       <End Role="ysdetail" EntitySet="ysdetail" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="assignstyle">
-    <Key>
-      <PropertyRef Name="assignstyleid" />
-    </Key>
-    <Property Name="assignstyleid" Type="int" Nullable="false" />
-    <Property Name="assignstylename" Type="varchar" MaxLength="50" />
-  </EntityType>
   <EntityType Name="billtui">
     <Key>
       <PropertyRef Name="billno" />
     </Key>
-    <Property Name="customerid" Type="int" Nullable="false" />
+    <Property Name="customerid" Type="varchar" Nullable="false" MaxLength="11" />
     <Property Name="billdate" Type="datetime" />
     <Property Name="billno" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="moneystyle" Type="varchar" MaxLength="50" />
@@ -815,6 +779,7 @@
     <Property Name="oremark" Type="varchar" MaxLength="50" />
     <Property Name="origintype" Type="varchar" MaxLength="50" />
     <Property Name="originno" Type="varchar" MaxLength="50" />
+    <Property Name="oweinum" Type="int" />
   </EntityType>
   <!--生成过程中发现错误:
       警告 6035: 关系“FK_detailorderpay”在关系主端上有一些列不属于表的键的一部分。已排除了此关系。
@@ -850,10 +815,10 @@
   </EntityType>
   <EntityType Name="orders">
     <Key>
-      <PropertyRef Name="orderid" />
+      <PropertyRef Name="ostoid" />
     </Key>
     <Property Name="orderid" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="ostoid" Type="varchar" MaxLength="50" />
+    <Property Name="ostoid" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="ostodate" Type="date" Nullable="false" />
     <Property Name="osperid" Type="varchar" MaxLength="50" />
     <Property Name="ospername" Type="varchar" MaxLength="50" />
@@ -879,6 +844,7 @@
     <Property Name="ostoreorder" Type="int" />
     <Property Name="osisdel" Type="int" />
     <Property Name="otax" Type="float" />
+    <Property Name="oweinum" Type="int" />
   </EntityType>
   <EntityType Name="pandian">
     <Key>
@@ -1304,54 +1270,6 @@
     <Property Name="ysmoney" Type="float" Nullable="false" />
     <Property Name="ysyue" Type="float" Nullable="false" />
   </EntityType>
-  <Association Name="FK_billtui">
-    <End Role="clientmaster" Type="erpsystemModel.Store.clientmaster" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.Store.billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="clientmaster">
-        <PropertyRef Name="corpid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="customerid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui1">
-    <End Role="user" Type="erpsystemModel.Store.user" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.Store.billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="user">
-        <PropertyRef Name="userid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="marker" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui2">
-    <End Role="user" Type="erpsystemModel.Store.user" Multiplicity="0..1" />
-    <End Role="billtui" Type="erpsystemModel.Store.billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="user">
-        <PropertyRef Name="userid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="permitter" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtui3">
-    <End Role="storage" Type="erpsystemModel.Store.storage" Multiplicity="1" />
-    <End Role="billtui" Type="erpsystemModel.Store.billtui" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="storage">
-        <PropertyRef Name="stoid" />
-      </Principal>
-      <Dependent Role="billtui">
-        <PropertyRef Name="ware" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_billtutype">
     <End Role="billtui" Type="erpsystemModel.Store.billtui" Multiplicity="1" />
     <End Role="billtutype" Type="erpsystemModel.Store.billtutype" Multiplicity="*" />
@@ -1361,30 +1279,6 @@
       </Principal>
       <Dependent Role="billtutype">
         <PropertyRef Name="billno" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtutype1">
-    <End Role="wlzwj" Type="erpsystemModel.Store.wlzwj" Multiplicity="1" />
-    <End Role="billtutype" Type="erpsystemModel.Store.billtutype" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="wlzwj">
-        <PropertyRef Name="matid" />
-      </Principal>
-      <Dependent Role="billtutype">
-        <PropertyRef Name="wuliaoid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_billtutype2">
-    <End Role="saleck" Type="erpsystemModel.Store.saleck" Multiplicity="1" />
-    <End Role="billtutype" Type="erpsystemModel.Store.billtutype" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="saleck">
-        <PropertyRef Name="saleckdh" />
-      </Principal>
-      <Dependent Role="billtutype">
-        <PropertyRef Name="fromno" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1505,18 +1399,6 @@
       </Principal>
       <Dependent Role="caigouqinggou">
         <PropertyRef Name="billstyleid" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_daassigbuymain">
-    <End Role="assignstyle" Type="erpsystemModel.Store.assignstyle" Multiplicity="1" />
-    <End Role="daassigbuymain" Type="erpsystemModel.Store.daassigbuymain" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="assignstyle">
-        <PropertyRef Name="assignstyleid" />
-      </Principal>
-      <Dependent Role="daassigbuymain">
-        <PropertyRef Name="assignstyleid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1753,7 +1635,7 @@
     <End Role="orderdetails" Type="erpsystemModel.Store.orderdetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="orders">
-        <PropertyRef Name="orderid" />
+        <PropertyRef Name="ostoid" />
       </Principal>
       <Dependent Role="orderdetails">
         <PropertyRef Name="orderid" />

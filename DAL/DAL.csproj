@@ -44,27 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FYJ\Services.cs" />
+    <Compile Include="KW\CaigouyufuService.cs" />
+    <Compile Include="LSH\XiaoshoudingdanService.cs" />
+    <Compile Include="LYF\MVCSerice.cs" />
+    <Compile Include="LZX\lzxServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="wxService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CJ\" />
+    <Folder Include="HB\" />
+    <Folder Include="LB\" />
+    <Folder Include="SHL\" />
+    <Folder Include="YJH\" />
+    <Folder Include="YXW\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{7b10e227-a45e-4930-b57b-8d130d7c9e0e}</Project>
       <Name>Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CJ\" />
-    <Folder Include="FYJ\" />
-    <Folder Include="HB\" />
-    <Folder Include="KW\" />
-    <Folder Include="LB\" />
-    <Folder Include="LSH\" />
-    <Folder Include="LYF\" />
-    <Folder Include="LZX\" />
-    <Folder Include="SHL\" />
-    <Folder Include="YJH\" />
-    <Folder Include="YXW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,273 @@
 ﻿
+
 function cgdd() {
+    var pageIndex = 1;
+    var pageSize = 1;
+    var pageCount = 0;
+    var osperid = 0;
+    var datas = [];
+    Ext.onReady(function () {
+
+        GetOrdernum();
+    });
+    function ShenHedingdan() {
+        $.ajax({
+            url: "/FYJ/ShenHedingdan",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: "{id:'" + Ext.getCmp("ostoid").getValue() + "'}",
+            success: function (result) {
+                if (result > 0) {
+                    alert('已审核');
+
+                }
+
+            }
+
+        });
+    }
+    function fShenHedingdan() {
+        $.ajax({
+            url: "/FYJ/fShenHedingdan",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: "{id:'" + Ext.getCmp("ostoid").getValue() + "'}",
+            success: function (result) {
+                if (result > 0) {
+                    alert('已取消审核');
+
+                }
+
+            }
+
+        });
+    }
+    function wuliaozhuwenjian() {
+        var obj = {};
+        $.ajax({
+            url: "/FYJ/GetWuliao",
+            data: "",
+            contentType: "application.json",
+            async: false,
+            success: function (bb) {
+                obj = bb;
+            },
+            error: function (xhr) {
+                alert("错误信息" + xhr.responseText)
+            }
+        });
+        var userStore = Ext.create('Ext.data.Store',
+        {
+            data: obj,
+            fields: [
+             'matid', 'matname'
+            ]
+        });
+        var kehuname = Ext.create('Ext.grid.Panel', {
+            renderTo: Ext.getBody(),
+            columns: [
+                        { text: '（物料编号）', dataIndex: 'matid', width: 80, },
+                         {
+                             text: '（物料名称）', dataIndex: 'matname', width: 120, editor: {
+                                 xtype: 'textfield'
+                             }
+                         }
+            ],
+            listeners: {
+                itemdblclick: function (dataview, record, item, index, e) {
+                    Ext.getCmp("swuname").setValue(record.get("matname"));
+                    Ext.getCmp("swuid").setValue(record.get("matid"));
+                    kehuwindowsts.close();
+                }
+            },
+            store: userStore,
+            height: 130,
+            width: 480,
+            autoScroll: false
+        });
+        var kehus = Ext.create('Ext.form.Panel', {
+            bodyPadding: 5,
+            height: '100%',
+            layout: "column",
+            baseCls: 'x-plain',
+            closeAction: 'destroy',
+            items: [
+            {
+                name: 'news.status',
+                allowBlank: false,
+                xtype: 'textfield',
+                editable: false,
+                mode: 'local',
+                triggerAction: 'all',
+                value: 1
+
+            }, {
+                style: 'margin-left:180px',
+                xtype: 'button',
+                text: '确定',
+                width: 70,
+            }, {
+                xtype: 'button',
+                text: '取回',
+                width: 70,
+            }, {
+                autoScroll: true, items: [kehuname]
+            },
+
+            ]
+
+
+        });
+        var kehuwindowsts = new Ext.Window({
+            width: 500,
+            height: 225,
+            title: "物料文件",
+            closable: true,
+            resizable: false, //设置是否可以改变大小
+            draggable: true,
+            anchor: '100%',
+            items: [kehus],
+        });
+
+        return kehuwindowsts;
+
+    }
+    var zp = "";
+    function GetddDetail(id) {
+
+        $.ajax({
+            type: "post",
+            url: "/FYJ/GetOrdersDetail",
+            data: "{id:'" + id + "'}",
+
+            contentType: "application/json",
+            success: function (result) {
+
+                datas = result;
+                $.each(datas, function (index, data) {
+                    if (data.oisprent == 0) {
+                        zp = "是";
+                    } else {
+                        zp = "否";
+                    }
+                   
+                    data.ostoragedate = new Date(parseInt(data.ostoragedate.substr(6))).toLocaleDateString().toString("yyyy-MM-dd");
+                })
+                grids.store.loadData(datas);
+            }
+        });
+    }
+    function GetOrdernum() {
+        $.ajax({
+            type: "post",
+            url: "/FYJ/GetOrdernum",
+            data: "{}",
+            dataType: "json",
+            contentType: "application/json",
+            success: function (result) {
+                pageCount = result;
+                Searchdd();
+            }
+
+
+        });
+    }
+    function state() {
+        Ext.getCmp('btnBack').disabled = false;
+        Ext.getCmp('btnNext').disabled = false;
+      
+        if (pageIndex == 1) {
+            alert("这是第一页");
+            Ext.getCmp('btnBack').disabled = true;
+
+        }
+        if (pageIndex == pageCount) {
+            alert("这是最后一页");
+            Ext.getCmp('btnNext').disabled = true;
+        }
+    }
+    function DelOrder() {
+        $.ajax({
+            url: "/FYJ/DelOrder",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: "{id:'" + Ext.getCmp("ostoid").getValue() + "'}",
+            success: function (result) {
+                if (result > 0) {
+                    alert('删除成功');
+                    GetOrdernum();
+                }
+
+            }
+
+        });
+    }
+    function addSales() {
+
+        var arr = []; //序列化表格
+        var sni = grids.store.data;
+        sni.each(function (record) {
+            arr.push(record.data);
+        })
+        //alert(Ext.encode(arr));
+        var stm1 = Ext.getCmp("ostoid").getValue();//单据编号
+        var stm2 = Ext.getCmp("gys").getValue();//
+
+        var arrys = JSON.stringify(arr);
+
+        var trm1 = Ext.getCmp("ostodate").getValue().getFullYear();
+        var trm2 = Ext.getCmp("ostodate").getValue().getMonth() + 1;
+        var trm3 = Ext.getCmp("ostodate").getValue().getDate();
+        var time = trm1 + "-" + trm2 + "-" + trm3;
+
+        $.ajax({
+            url: "/FYJ/AddOrders",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: "{info:{osperid:" + 1 + ",ostodate:'" + time + "',osperaddress:'" + Ext.getCmp("osperaddress").getValue() + "',ostoid:'" + Ext.getCmp("ostoid").getValue() + "',ospername:'" + Ext.getCmp("gys").getValue() + "',otype:'" + Ext.getCmp("otype").getValue() + "',osunittax:'" + Ext.getCmp("osunittax").getValue() + "',ostate:'" + Ext.getCmp("ostate").getValue() + "',ossongaddress:'" + Ext.getCmp("ossongaddress").getValue() + "',oscaidep:'" + Ext.getCmp("oscaidep").getValue() + "',ospercai:'" + Ext.getCmp("ospercai").getValue() + "',ostomemake:'" + Ext.getCmp("ostomemake").getValue() + "',ostoemcheck:'" + Ext.getCmp("ostoemcheck").getValue() + "',oxiangmu:'" + Ext.getCmp("oxiangmu").getValue() + "',obibie:'" + Ext.getCmp("obibie").getValue() + "',osunittax:'" + Ext.getCmp("osunittax").getValue() + "'},list:" + arrys + "}",
+            success: function (result) {
+                alert('新增成功');
+                GetOrdernum();
+            }
+
+        });
+
+    }
+    function UpdateOrders() {
+        var arr = []; //序列化表格
+        var sni = grids.store.data;
+        sni.each(function (record) {
+            arr.push(record.data);
+        })
+        //alert(Ext.encode(arr));
+        var stm1 = Ext.getCmp("ostoid").getValue();//单据编号
+        var stm2 = Ext.getCmp("gys").getValue();//
+        var trm1 = Ext.getCmp("ostodate").getValue().getFullYear();
+        var trm2 = Ext.getCmp("ostodate").getValue().getMonth() + 1;
+        var trm3 = Ext.getCmp("ostodate").getValue().getDate();
+        var time = trm1 + "-" + trm2 + "-" + trm3;
+        var arrys = JSON.stringify(arr);
+
+
+        $.ajax({
+            url: "/FYJ/UpdateOrders",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: "{info:{osperid:" + 1 + ",ostodate:'" + time + "',osperaddress:'" + Ext.getCmp("osperaddress").getValue() + "',ostoid:'" + Ext.getCmp("ostoid").getValue() + "',ospername:'" + Ext.getCmp("gys").getValue() + "',otype:'" + Ext.getCmp("otype").getValue() + "',osunittax:'" + Ext.getCmp("osunittax").getValue() + "',ostate:'" + Ext.getCmp("ostate").getValue() + "',ossongaddress:'" + Ext.getCmp("ossongaddress").getValue() + "',oscaidep:'" + Ext.getCmp("oscaidep").getValue() + "',ospercai:'" + Ext.getCmp("ospercai").getValue() + "',ostomemake:'" + Ext.getCmp("ostomemake").getValue() + "',ostoemcheck:'" + Ext.getCmp("ostoemcheck").getValue() + "',oxiangmu:'" + Ext.getCmp("oxiangmu").getValue() + "',obibie:'" + Ext.getCmp("obibie").getValue() + "',osunittax:'" + Ext.getCmp("osunittax").getValue() + "'},list:" + arrys + "}",
+            success: function (result) {
+                alert('修改成功');
+                GetOrdernum();
+            }
+
+        });
+
+    }
+
     var fielmenu = new Ext.menu.Menu({
         items: [{
             text: '历史交易查询', handler: function () {
@@ -12,7 +280,33 @@ function cgdd() {
         items: [{ text: '采购询价单转入' }, { text: '销售订单转入' }, { text: '采购请购转入' }, { text: '转采购入库单' }]
     });
     var fielmenu3 = new Ext.menu.Menu({
-        items: [{ text: '批次变更单价' }, { text: '单况状态切换' }]
+        items: [{
+            text: '新增', handler: function () {
+                addSales();
+            }
+        }, {
+            text: '删除', handler: function () {
+                DelOrder();
+
+            },
+        }, {
+            text: '修改', handler: function () {
+                UpdateOrders();
+
+            },
+        }, {
+            text: '审核', handler: function () {
+                ShenHedingdan();
+
+            },
+        }, {
+            text: '反审核', handler: function () {
+                fShenHedingdan();
+
+            },
+        }
+
+        ]
     });
 
     var stroedt = Ext.create('Ext.data.Store', {
@@ -38,12 +332,17 @@ function cgdd() {
 
 
     var grids = Ext.create('Ext.grid.Panel', {
-
         listeners: {
             containerdblclick: function (grid, e, eOpts) { //单击事件
-                grid.getStore().add({ 'name': '12', 'dizhi': '', 'bianma': '', 'lianxi': '' });
+                grid.getStore().add({
+                    'name': '1',
+                    'dizhi': '2',
+                    'bianma': '',
+                    'lianxi': ''
+                });
 
             },
+
             itemcontextmenu: function () {
 
                 e.preventDefault();
@@ -55,53 +354,172 @@ function cgdd() {
                         handler: function () {
                             alert();
                         }
+                    }, {
+                        xtype: '',
+                        text: '娓呴櫎鏂规',
+                        pressed: false,
+                        handler: function () { }
+                    }, {
+                        xtype: '',
+                        text: '閫夋嫨鏂规',
+                        pressed: false,
+                        menu: new Ext.menu.Menu({
+                            items: [{
+                                text: '棰勮鏂规',
+                                pressed: false
+                            }]
+                        }),
+                        handler: function () { }
+                    }, {
+                        xtype: '',
+                        text: '瀵煎嚭鑷矱xcel',
+                        pressed: false,
+                        handler: function () { }
+                    }, {
+                        xtype: '',
+                        text: '缃戞牸鎵撳嵃',
+                        pressed: false,
+                        handler: function () { }
                     }]
                 }
 
                 ).showAt(e.getXY());
             }
-        }, plugins: [
-                    Ext.create('Ext.grid.plugin.CellEditing', {
-                        clicksToEdit: 1
-                    })
+        },
+        plugins: [
+            Ext.create('Ext.grid.plugin.CellEditing', {
+                clicksToEdit: 1
+            })
         ],
+        store: {
+            //, 'swuid', 'swuname', 'smodel', 'sunit', 'snum', 'szprice', 'szheshu', 'sprice', 'smoney', 'sdacess', 'sdtaxmoney', 'sdtaxmoneys', 'szengping', 'sfenremark', 'sorigintype', 'soriginid'
+            fields: ['oline', 'osperid', 'ospername', 'oprodsize', 'ounitname', 'osperprice', 'oszheshu', 'oprice', 'omoney', 'otaxrate', 'otaxmoney', 'otaxmoneys', 'ostoragedate', 'oweinum', 'oisprent', 'oremark', 'origintype', 'originno', 'oweinum'],
+            data: datas,
+            autoload: true,
+        },
         columns: [
                      {
                          header: '（栏号）',
-                         xtype: 'rownumberer',
-                         dataIndex: 'lh',
+                         //xtype: 'rownumberer',
+                         dataIndex: 'oline',
                          width: 50,
-                         sortable: false
+                         sortable: true
                      },
 
-                    { header: '物料编号', dataIndex: 'name', width: 100, },
-                     {
-                         header: '物料名称', dataIndex: 'dizhi', width: 120, editor: {
-                             xtype: 'textfield',
-                             listeners: {
-                                 focus: function (grid, e, eOpts) {
-                                     windows2.show();
-                                 }
 
-                             }
+                    {
+                        header: '物料编号', dataIndex: 'osperid', width: 100, editor: {
+                            xtype: 'textfield', listeners: {
+                                focus: function (grid, e, eOpts) {
+                                    wuliaozhuwenjian().show();
+                                }
+
+                            }
+
+                        }
+                    },
+                     {
+                         header: '物料名称', dataIndex: 'ospername', width: 150, editor: {
+                             xtype: 'textfield',
+
                          }
                      },
-                         { header: '规格型号', dataIndex: 'bianma' },
-                         { header: '单位名称', dataIndex: 'lianxi' },
-                         { header: '数量', dataIndex: 'lianxi' },
-                         { header: '折扣前单价', dataIndex: 'lianxi' },
-                         { header: '折数(%)', dataIndex: 'lianxi' },
-                         { header: '单价', dataIndex: 'lianxi' },
-                         { header: '金额', dataIndex: 'lianxi' },
-                         { header: '税率', dataIndex: 'lianxi' },
-                         { header: '税额', dataIndex: 'lianxi' },
-                         { header: '含税金额', dataIndex: 'lianxi' },
-                     { header: '预入库日', dataIndex: 'lianxi' },
-                         { header: '未入库量', dataIndex: 'lianxi' },
-                         { header: '赠品', dataIndex: 'lianxi' },
-                         { header: '分录备注', dataIndex: 'lianxi' },
-                         { header: '来源单别', dataIndex: 'lianxi' },
-                         { header: '来源单号', dataIndex: 'lianxi' },
+                         {
+                             header: '规格型号', dataIndex: 'oprodsize', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '单位名称', dataIndex: 'ounitname', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '数量', dataIndex: 'onum', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '折扣前单价', dataIndex: 'osperprice', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '折数(%)', dataIndex: 'oszheshu', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '单价', dataIndex: 'oprice', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '金额', dataIndex: 'omoney', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '税率', dataIndex: 'otaxrate', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '税额', dataIndex: 'otaxmoney', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '含税金额', dataIndex: 'otaxmoneys', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                        {
+                            header: '预入库日', dataIndex: 'ostoragedate', editor: {
+                                xtype: 'textfield',
+
+                            }
+                        },
+                         {
+                             header: '未入库量', dataIndex: 'oweinum', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '赠品', dataIndex: 'oisprent', id: 'oisprent', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '分录备注', dataIndex: 'oremark', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '来源单别', dataIndex: 'origintype', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
+                         {
+                             header: '来源单号', dataIndex: 'originno', editor: {
+                                 xtype: 'textfield',
+
+                             }
+                         },
 
         ],
         height: 130,
@@ -256,6 +674,7 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'ospercai',
         }, {
             xtype: 'textfield',
             name: 'Marker',
@@ -264,6 +683,7 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'ostomemake',
         }, {
             xtype: 'textfield',
             name: 'ProdDepart',
@@ -271,6 +691,7 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'oscaidep',
         }, {
             xtype: 'textfield',
             name: 'Permitter',
@@ -279,6 +700,7 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'ostoemcheck',
         }, {
             xtype: 'textfield',
             name: 'ProdProject',
@@ -286,7 +708,31 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
-        }],
+            id: 'oxiangmu',
+        }, {
+            xtype: "button",
+            id: "btnBack",
+            text: "上一页",
+            style: 'margin-left:18px;',
+            listeners: {
+                "click": function () {
+                    pageIndex--;
+                    Searchdd();
+                }
+            }
+        }
+         , {
+             xtype: "button",
+             id: "btnNext",
+             text: "下一页",
+             style: 'margin-left:18px;',
+             listeners: {
+                 "click": function () {
+                     pageIndex++;
+                     Searchdd();
+                 }
+             }
+         }],
     });
 
 
@@ -304,15 +750,46 @@ function cgdd() {
             labelWidth: 80,
             emptyText: '请输入供应商',
             anchor: '100%',
+            id: 'gys',
+            listeners: {
+                focus: function (grid, e, eOpts) {
+                    kehuzhuwenjian().show();
+                }
+
+            }
         }, {
-            style: 'margin-left:9px;color:blue',
+            xtype: 'textfield',
+            fieldLabel: '客户id',
+            id: 'kehuid',
+            width: 250,
+            labelWidth: 80,
+            hidden: true,
+            anchor: '100%',
+        }, {
+            style: 'margin-left:9px;',
             xtype: 'datefield',
             name: 'BillDate',
             fieldLabel: '单据日期',
+            format: 'Y-m-d',
+            value: Ext.util.Format.date(Ext.Date.add(new Date(), Ext.Date.MONTH + 1, -1), "Y-m-d"),
+            listeners: {
+                blur: function () {
 
+                    var trm1 = Ext.getCmp("ostodate").getValue().getFullYear();
+                    var trm2 = Ext.getCmp("ostodate").getValue().getMonth() + 1;
+                    var trm3 = Ext.getCmp("ostodate").getValue().getDate();
+                    var time = trm1 + "-" + trm2 + "-" + trm3;
+
+                    GetTime(time); //失去焦点事件
+                },
+                focus: function () {
+                    //获取焦点
+                }
+            },
             width: 250,
             labelWidth: 70,
             anchor: '100%',
+            id: 'ostodate',
         }, {
             xtype: 'textfield',
             name: 'DeliveryAddress',
@@ -320,6 +797,7 @@ function cgdd() {
             width: 150,
             labelWidth: 80,
             anchor: '100%',
+            id: 'osperaddress',
         }, {
             xtype: 'textfield',
             name: 'dizhiton',
@@ -331,11 +809,12 @@ function cgdd() {
             style: 'margin-left:9px',
             xtype: 'textfield',
             name: 'BillNo',
-            style: "color:blue;margin-left:9px",
+            style: "margin-left:9px",
             fieldLabel: '单据号码',
             width: 250,
             labelWidth: 70,
             anchor: '100%',
+            id: 'ostoid',
         }, {
             xtype: 'textfield',
             name: 'DeliveryAddress',
@@ -343,6 +822,7 @@ function cgdd() {
             width: 250,
             labelWidth: 80,
             anchor: '100%',
+            id: 'otype',
         }, {
             style: 'margin-left:9px',
             xtype: 'textfield', //多行文本域
@@ -351,6 +831,7 @@ function cgdd() {
             labelWidth: 70,
             width: 250,
             anchor: '100%',
+            id: 'obibie',
         }, {
             fieldLabel: '单价是否含税',
             xtype: 'combo',
@@ -372,7 +853,7 @@ function cgdd() {
             mode: 'local',
             triggerAction: 'all',
             selectOnFocus: true,
-
+            id: 'osunittax',
         }, {
             style: 'margin-left:9px',
             xtype: 'textfield', //多行文本域
@@ -381,6 +862,8 @@ function cgdd() {
             labelWidth: 70,
             width: 250,
             anchor: '100%',
+            value: '1.000',
+            id: "otax",
         }, {
             fieldLabel: '单况',
             xtype: 'combo',
@@ -402,7 +885,7 @@ function cgdd() {
             mode: 'local',
             triggerAction: 'all',
             selectOnFocus: true,
-
+            id: 'ostate',
         }, {
             fieldLabel: '送货地址',
             xtype: 'combo',
@@ -410,7 +893,7 @@ function cgdd() {
             displayField: 'name',
             labelWidth: 80,
             width: 260,
-
+            id: 'ossongaddress',
 
             valueField: 'abbr',
             store: Ext.create('Ext.data.Store', {
@@ -481,4 +964,177 @@ function cgdd() {
         alert(song);// 序列化表单
     }
     return windowst;
+    function kehuzhuwenjian() {
+
+        var obj = {};
+        $.ajax({
+            url: "/FYJ/GetGYS",
+            data: "",
+            contentType: "application.json",
+            async: false,
+            success: function (bb) {
+                obj = bb;
+            },
+            error: function (xhr) {
+                alert("错误信息" + xhr.responseText)
+            }
+        });
+        var userStore = Ext.create('Ext.data.Store',
+        {
+            data: obj,
+            fields: [
+             'gid', 'gnname'
+            ]
+        });
+        var kehuname = Ext.create('Ext.grid.Panel', {
+            renderTo: Ext.getBody(),
+            columns: [
+                        { text: '（供应商编号）', dataIndex: 'gid', width: 80, },
+                         {
+                             text: '（供应商简称）', dataIndex: 'gnname', width: 120, editor: {
+                                 xtype: 'textfield'
+                             }
+                         }
+            ],
+            listeners: {
+                itemdblclick: function (dataview,
+               record, item, index, e) {
+                    Ext.getCmp("gys").setValue(record.get("gnname"));
+                    Ext.getCmp("kehuid").setValue(record.get("gid"));
+                    kehuwindowst.close();
+                }
+            },
+            store: userStore,
+            height: 130,
+            width: 480,
+            autoScroll: false
+        });
+        var kehu = Ext.create('Ext.form.Panel', {
+            bodyPadding: 5,
+            height: '100%',
+            layout: "column",
+            baseCls: 'x-plain',
+            closeAction: 'destroy',
+            items: [
+            {
+                name: 'news.status',
+                allowBlank: false,
+                xtype: 'textfield',
+                editable: false,
+                mode: 'local',
+                triggerAction: 'all',
+                value: 1
+
+            }, {
+                style: 'margin-left:180px',
+                xtype: 'button',
+                text: '确定',
+                width: 70,
+            }, {
+                xtype: 'button',
+                text: '取回',
+                width: 70,
+            }, {
+                autoScroll: true, items: [kehuname]
+            },
+
+            ]
+
+
+        });
+        var kehuwindowst = new Ext.Window({
+            width: 500,
+            height: 225,
+            title: "供应商主文件",
+            closable: true,
+            resizable: false, //设置是否可以改变大小
+            draggable: true,
+            anchor: '100%',
+            items: [kehu],
+        });
+
+        return kehuwindowst;
+
+    }
+    function GetTime(time) {
+
+        $.ajax({
+            type: "post",
+            url: "/FYJ/GetTime",
+            data: "{time:'" + time + "'}",
+            contentType: "application/json",
+            success: function (result) {
+                Ext.getCmp("ostoid").setValue(result);
+
+
+
+            }, error: function (ex) {
+                alert(ex.responseTest);
+            }
+        });
+    }
+    function ConvertTime(sj) {
+        var date = new Date(parseInt(sj.substr(6)));
+        return date.toLocaleDateString();
+    }
+    var djbh = "";
+    function Searchdd() {
+        $.ajax({
+            type: "post",
+            url: "/FYJ/GetOrderss",
+            data: "{pageIndex:" + pageIndex + ",pageSize:" + pageSize + "}",
+            contentType: "application/json",
+            success: function (result) {
+
+                $.each(result, function (index, data) {
+                    osperid = data.osperid;
+                    Ext.getCmp("ostoid").setValue(data.ostoid);
+                    Ext.getCmp("gys").setValue(data.ospername);
+                    var date = data.ostodate;
+                    var da = new Date(parseInt(date.replace("/Date(", "").replace(")/", "").split("+")[0]));
+                    var n = da.getFullYear();
+                    var y = da.getMonth() + 1;
+                    var r = da.getDate();
+                    if (y < 10) {
+                        y = "0" + y;
+                    }
+                    if (r < 10) {
+                        r = "0" + r;
+                    }
+                    var ppp = n + "-" + y + "-" + r;
+                    Ext.getCmp("ostodate").setValue(ppp);
+                    Ext.getCmp("osperaddress").setValue(data.osperaddress);
+
+
+                    Ext.getCmp("otype").setValue(data.otype);
+
+                    Ext.getCmp("obibie").setValue(data.obibie);
+                    ostomemake
+                    Ext.getCmp("ostate").setValue(data.ostate);
+                    Ext.getCmp("ossongaddress").setValue(data.ossongaddress);
+
+
+                    if (data.osunittax == 1) {
+                        Ext.getCmp("osunittax").setValue("未税");
+                    } else {
+                        Ext.getCmp("osunittax").setValue("含税");
+                    }
+                    Ext.getCmp("ostomemake").setValue(data.ostomemake);
+                    Ext.getCmp("ospercai").setValue(data.ospercai);
+                    Ext.getCmp("oscaidep").setValue(data.oscaidep);
+                    Ext.getCmp("ostoemcheck").setValue(data.ostoemcheck);
+                    Ext.getCmp("oxiangmu").setValue(data.oxiangmu);
+                    //Ext.getCmp("sodate").setValue(ConvertTime(data.sodate));
+
+                    GetddDetail(data.ostoid);
+                    state();
+                });
+
+
+            }, error: function (ex) {
+                alert(ex.responseTest);
+            }
+        });
+    }
 }
+

@@ -46,6 +46,7 @@ namespace Models
         public Nullable<int> ostoreorder { get; set; }
         public Nullable<int> osisdel { get; set; }
         public Nullable<float> otax { get; set; }
+        public Nullable<int> oweinum { get; set; }
     
         public virtual branch branch { get; set; }
         public virtual gmeans gmeans { get; set; }

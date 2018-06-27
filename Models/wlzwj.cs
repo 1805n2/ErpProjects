@@ -16,7 +16,6 @@ namespace Models
     {
         public wlzwj()
         {
-            this.billtutype = new HashSet<billtutype>();
             this.buysearchdetails = new HashSet<buysearchdetails>();
             this.caigoumingxi = new HashSet<caigoumingxi>();
             this.dingdancong = new HashSet<dingdancong>();
@@ -42,7 +41,6 @@ namespace Models
         public Nullable<float> matbzjj { get; set; }
         public string matgys { get; set; }
     
-        public virtual ICollection<billtutype> billtutype { get; set; }
         public virtual ICollection<buysearchdetails> buysearchdetails { get; set; }
         public virtual ICollection<caigoumingxi> caigoumingxi { get; set; }
         public virtual ICollection<dingdancong> dingdancong { get; set; }

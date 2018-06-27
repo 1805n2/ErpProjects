@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xiangmuModelStoreContainer" CdmEntityContainer="xiangmuEntities">
+    <EntitySetMapping Name="adjust_price">
+      <EntityTypeMapping TypeName="xiangmuModel.adjust_price">
+        <MappingFragment StoreEntitySet="adjust_price">
+          <ScalarProperty Name="zdry" ColumnName="zdry" />
+          <ScalarProperty Name="ckid" ColumnName="ckid" />
+          <ScalarProperty Name="Audit" ColumnName="Audit" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="reviewing" ColumnName="reviewing" />
+          <ScalarProperty Name="Producer" ColumnName="Producer" />
+          <ScalarProperty Name="adjustment" ColumnName="adjustment" />
+          <ScalarProperty Name="billsNum" ColumnName="billsNum" />
+          <ScalarProperty Name="billsdate" ColumnName="billsdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="adjust_pricedetails">
+      <EntityTypeMapping TypeName="xiangmuModel.adjust_pricedetails">
+        <MappingFragment StoreEntitySet="adjust_pricedetails">
+          <ScalarProperty Name="flbz" ColumnName="flbz" />
+          <ScalarProperty Name="tjje" ColumnName="tjje" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pjcb" ColumnName="pjcb" />
+          <ScalarProperty Name="kcl" ColumnName="kcl" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="ggyh" ColumnName="ggyh" />
+          <ScalarProperty Name="matterName" ColumnName="matterName" />
+          <ScalarProperty Name="matterNum" ColumnName="matterNum" />
+          <ScalarProperty Name="billsNum" ColumnName="billsNum" />
+          <ScalarProperty Name="Columnnums" ColumnName="Columnnums" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="allocatingdetail">
+      <EntityTypeMapping TypeName="xiangmuModel.allocatingdetail">
+        <MappingFragment StoreEntitySet="allocatingdetail">
+          <ScalarProperty Name="Entryremarks" ColumnName="Entryremarks" />
+          <ScalarProperty Name="shul" ColumnName="shul" />
+          <ScalarProperty Name="Danwei" ColumnName="Danwei" />
+          <ScalarProperty Name="Guigexinghao" ColumnName="Guigexinghao" />
+          <ScalarProperty Name="Wuliaobianhao" ColumnName="Wuliaobianhao" />
+          <ScalarProperty Name="Receiptnumber" ColumnName="Receiptnumber" />
+          <ScalarProperty Name="Columnno" ColumnName="Columnno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bill">
+      <EntityTypeMapping TypeName="xiangmuModel.bill">
+        <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="MLAmounts" ColumnName="MLAmounts" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+          <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+          <ScalarProperty Name="FareClassName" ColumnName="FareClassName" />
+          <ScalarProperty Name="FeeClassID" ColumnName="FeeClassID" />
+          <ScalarProperty Name="SerNo" ColumnName="SerNo" />
+          <ScalarProperty Name="MLAmount" ColumnName="MLAmount" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="AssignStyle" ColumnName="AssignStyle" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customeraccounts">
+      <EntityTypeMapping TypeName="xiangmuModel.customeraccounts">
+        <MappingFragment StoreEntitySet="customeraccounts">
+          <ScalarProperty Name="Xianprice" ColumnName="Xianprice" />
+          <ScalarProperty Name="Yuanprice" ColumnName="Yuanprice" />
+          <ScalarProperty Name="Dandate" ColumnName="Dandate" />
+          <ScalarProperty Name="Danlaiid" ColumnName="Danlaiid" />
+          <ScalarProperty Name="Danlei" ColumnName="Danlei" />
+          <ScalarProperty Name="Keming" ColumnName="Keming" />
+          <ScalarProperty Name="Keid" ColumnName="Keid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="department">
+      <EntityTypeMapping TypeName="xiangmuModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="Englishnames" ColumnName="Englishnames" />
+          <ScalarProperty Name="Departmentname" ColumnName="Departmentname" />
+          <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="funds">
+      <EntityTypeMapping TypeName="xiangmuModel.funds">
+        <MappingFragment StoreEntitySet="funds">
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddrID" ColumnName="AddrID" />
+          <ScalarProperty Name="AccReceivable" ColumnName="AccReceivable" />
+          <ScalarProperty Name="NotlnvQuota" ColumnName="NotlnvQuota" />
+          <ScalarProperty Name="CurReceivable" ColumnName="CurReceivable" />
+          <ScalarProperty Name="CurAdvRecv" ColumnName="CurAdvRecv" />
+          <ScalarProperty Name="CreditLevel" ColumnName="CreditLevel" />
+          <ScalarProperty Name="RemainQuota" ColumnName="RemainQuota" />
+          <ScalarProperty Name="AmountQuota" ColumnName="AmountQuota" />
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+          <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IndustrialClass" ColumnName="IndustrialClass" />
+          <ScalarProperty Name="Capitaliation" ColumnName="Capitaliation" />
+          <ScalarProperty Name="TaxNo" ColumnName="TaxNo" />
+          <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="ChiefName" ColumnName="ChiefName" />
+          <ScalarProperty Name="EngShortName" ColumnName="EngShortName" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="FundsAttriName" ColumnName="FundsAttriName" />
+          <ScalarProperty Name="ArealID" ColumnName="ArealID" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="FulName" ColumnName="FulName" />
+          <ScalarProperty Name="FundsAttribution" ColumnName="FundsAttribution" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fundtype">
+      <EntityTypeMapping TypeName="xiangmuModel.fundtype">
+        <MappingFragment StoreEntitySet="fundtype">
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="EngName" ColumnName="EngName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventory_addendum">
+      <EntityTypeMapping TypeName="xiangmuModel.inventory_addendum">
+        <MappingFragment StoreEntitySet="inventory_addendum">
+          <ScalarProperty Name="cause" ColumnName="cause" />
+          <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+          <ScalarProperty Name="real_quantity" ColumnName="real_quantity" />
+          <ScalarProperty Name="Book_quantity" ColumnName="Book_quantity" />
+          <ScalarProperty Name="Stocktaking" ColumnName="Stocktaking" />
+          <ScalarProperty Name="matterName" ColumnName="matterName" />
+          <ScalarProperty Name="matterID" ColumnName="matterID" />
+          <ScalarProperty Name="Inventoryid" ColumnName="Inventoryid" />
+          <ScalarProperty Name="Addid" ColumnName="Addid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventory_document">
+      <EntityTypeMapping TypeName="xiangmuModel.inventory_document">
+        <MappingFragment StoreEntitySet="inventory_document">
+          <ScalarProperty Name="checkid" ColumnName="checkid" />
+          <ScalarProperty Name="auditor" ColumnName="auditor" />
+          <ScalarProperty Name="Rproducer" ColumnName="Rproducer" />
+          <ScalarProperty Name="Rdepartment" ColumnName="Rdepartment" />
+          <ScalarProperty Name="Stocktaking" ColumnName="Stocktaking" />
+          <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+          <ScalarProperty Name="storehouse" ColumnName="storehouse" />
+          <ScalarProperty Name="Inventoryid" ColumnName="Inventoryid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="material_name">
+      <EntityTypeMapping TypeName="xiangmuModel.material_name">
+        <MappingFragment StoreEntitySet="material_name">
+          <ScalarProperty Name="SendOutWareName" ColumnName="SendOutWareName" />
+          <ScalarProperty Name="SendOutWareID" ColumnName="SendOutWareID" />
+          <ScalarProperty Name="Mmo" ColumnName="Mmo" />
+          <ScalarProperty Name="OtherCostName" ColumnName="OtherCostName" />
+          <ScalarProperty Name="OtherCostID" ColumnName="OtherCostID" />
+          <ScalarProperty Name="OtherExpenseName" ColumnName="OtherExpenseName" />
+          <ScalarProperty Name="OtherExpenseID" ColumnName="OtherExpenseID" />
+          <ScalarProperty Name="OtherIncomeName" ColumnName="OtherIncomeName" />
+          <ScalarProperty Name="OtherIncomeID" ColumnName="OtherIncomeID" />
+          <ScalarProperty Name="GiftExpenseName" ColumnName="GiftExpenseName" />
+          <ScalarProperty Name="GiftExpenseID" ColumnName="GiftExpenseID" />
+          <ScalarProperty Name="AccsaleCostName" ColumnName="AccsaleCostName" />
+          <ScalarProperty Name="AccsaleCostID" ColumnName="AccsaleCostID" />
+          <ScalarProperty Name="ReturnSaleName" ColumnName="ReturnSaleName" />
+          <ScalarProperty Name="ReturnSaleID" ColumnName="ReturnSaleID" />
+          <ScalarProperty Name="AccsaleName" ColumnName="AccsaleName" />
+          <ScalarProperty Name="AccsaleID" ColumnName="AccsaleID" />
+          <ScalarProperty Name="AccInventoryName" ColumnName="AccInventoryName" />
+          <ScalarProperty Name="AccInventoryID" ColumnName="AccInventoryID" />
+          <ScalarProperty Name="EngName" ColumnName="EngName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orderdetails">
+      <EntityTypeMapping TypeName="xiangmuModel.orderdetails">
+        <MappingFragment StoreEntitySet="orderdetails">
+          <ScalarProperty Name="Laiyuandanhao" ColumnName="Laiyuandanhao" />
+          <ScalarProperty Name="Laiyuandanbie" ColumnName="Laiyuandanbie" />
+          <ScalarProperty Name="Weichukunum" ColumnName="Weichukunum" />
+          <ScalarProperty Name="Yuchukuri" ColumnName="Yuchukuri" />
+          <ScalarProperty Name="Hanshuijine" ColumnName="Hanshuijine" />
+          <ScalarProperty Name="Taxamount" ColumnName="Taxamount" />
+          <ScalarProperty Name="taxrate" ColumnName="taxrate" />
+          <ScalarProperty Name="Amountofmoney" ColumnName="Amountofmoney" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Foldnumber" ColumnName="Foldnumber" />
+          <ScalarProperty Name="zkqunitprice" ColumnName="zkqunitprice" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="Unitname" ColumnName="Unitname" />
+          <ScalarProperty Name="Materialnumber" ColumnName="Materialnumber" />
+          <ScalarProperty Name="Documentnumber" ColumnName="Documentnumber" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prods">
+      <EntityTypeMapping TypeName="xiangmuModel.prods">
+        <MappingFragment StoreEntitySet="prods">
+          <ScalarProperty Name="MLAmount" ColumnName="MLAmount" />
+          <ScalarProperty Name="Measm" ColumnName="Measm" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="SUnit" ColumnName="SUnit" />
+          <ScalarProperty Name="VQuantity" ColumnName="VQuantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+          <ScalarProperty Name="FromNo" ColumnName="FromNo" />
+          <ScalarProperty Name="SerNo" ColumnName="SerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchase_inquiry">
+      <EntityTypeMapping TypeName="xiangmuModel.purchase_inquiry">
+        <MappingFragment StoreEntitySet="purchase_inquiry">
+          <ScalarProperty Name="Audit_status" ColumnName="Audit_status" />
+          <ScalarProperty Name="Affiliated_department" ColumnName="Affiliated_department" />
+          <ScalarProperty Name="Review_personnel" ColumnName="Review_personnel" />
+          <ScalarProperty Name="Procurement_staff" ColumnName="Procurement_staff" />
+          <ScalarProperty Name="Making_personnel" ColumnName="Making_personnel" />
+          <ScalarProperty Name="Delivery_address" ColumnName="Delivery_address" />
+          <ScalarProperty Name="Exchange_rate" ColumnName="Exchange_rate" />
+          <ScalarProperty Name="Price_include_tax" ColumnName="Price_include_tax" />
+          <ScalarProperty Name="Coin" ColumnName="Coin" />
+          <ScalarProperty Name="Effective_data" ColumnName="Effective_data" />
+          <ScalarProperty Name="Supplier_Id" ColumnName="Supplier_Id" />
+          <ScalarProperty Name="Document_date" ColumnName="Document_date" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchase_inquiry_list">
+      <EntityTypeMapping TypeName="xiangmuModel.purchase_inquiry_list">
+        <MappingFragment StoreEntitySet="purchase_inquiry_list">
+          <ScalarProperty Name="Source_number" ColumnName="Source_number" />
+          <ScalarProperty Name="Source_list" ColumnName="Source_list" />
+          <ScalarProperty Name="Entry_remarks" ColumnName="Entry_remarks" />
+          <ScalarProperty Name="gift" ColumnName="gift" />
+          <ScalarProperty Name="Tax_amount" ColumnName="Tax_amount" />
+          <ScalarProperty Name="Amount_paid" ColumnName="Amount_paid" />
+          <ScalarProperty Name="Tax_rate" ColumnName="Tax_rate" />
+          <ScalarProperty Name="Amount_money" ColumnName="Amount_money" />
+          <ScalarProperty Name="Unit_price" ColumnName="Unit_price" />
+          <ScalarProperty Name="Broken_number" ColumnName="Broken_number" />
+          <ScalarProperty Name="Price_before_discount" ColumnName="Price_before_discount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="Material_number" ColumnName="Material_number" />
+          <ScalarProperty Name="Column_number" ColumnName="Column_number" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchasing_orderlist">
+      <EntityTypeMapping TypeName="xiangmuModel.purchasing_orderlist">
+        <MappingFragment StoreEntitySet="purchasing_orderlist">
+          <ScalarProperty Name="Source_number" ColumnName="Source_number" />
+          <ScalarProperty Name="Source_list" ColumnName="Source_list" />
+          <ScalarProperty Name="Entry_remarks" ColumnName="Entry_remarks" />
+          <ScalarProperty Name="gift" ColumnName="gift" />
+          <ScalarProperty Name="Unwarehoused_quantity" ColumnName="Unwarehoused_quantity" />
+          <ScalarProperty Name="Prestorage_day" ColumnName="Prestorage_day" />
+          <ScalarProperty Name="Tax_amount" ColumnName="Tax_amount" />
+          <ScalarProperty Name="Amount_paid" ColumnName="Amount_paid" />
+          <ScalarProperty Name="Tax_rate" ColumnName="Tax_rate" />
+          <ScalarProperty Name="Amount_money" ColumnName="Amount_money" />
+          <ScalarProperty Name="Unit_price" ColumnName="Unit_price" />
+          <ScalarProperty Name="Broken_number" ColumnName="Broken_number" />
+          <ScalarProperty Name="Price_before_discount" ColumnName="Price_before_discount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="Material_number" ColumnName="Material_number" />
+          <ScalarProperty Name="Column_number" ColumnName="Column_number" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchasing_ordermain">
+      <EntityTypeMapping TypeName="xiangmuModel.purchasing_ordermain">
+        <MappingFragment StoreEntitySet="purchasing_ordermain">
+          <ScalarProperty Name="Audit_status" ColumnName="Audit_status" />
+          <ScalarProperty Name="Affiliated_department" ColumnName="Affiliated_department" />
+          <ScalarProperty Name="Review_personnel" ColumnName="Review_personnel" />
+          <ScalarProperty Name="Procurement_staff" ColumnName="Procurement_staff" />
+          <ScalarProperty Name="Making_personnel" ColumnName="Making_personnel" />
+          <ScalarProperty Name="Delivery_address" ColumnName="Delivery_address" />
+          <ScalarProperty Name="Individual_ondition" ColumnName="Individual_ondition" />
+          <ScalarProperty Name="Exchange_rate" ColumnName="Exchange_rate" />
+          <ScalarProperty Name="Price_include_tax" ColumnName="Price_include_tax" />
+          <ScalarProperty Name="Coin" ColumnName="Coin" />
+          <ScalarProperty Name="Purchase_order_type" ColumnName="Purchase_order_type" />
+          <ScalarProperty Name="Supplier_Id" ColumnName="Supplier_Id" />
+          <ScalarProperty Name="Document_date" ColumnName="Document_date" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quotationdetails">
+      <EntityTypeMapping TypeName="xiangmuModel.quotationdetails">
+        <MappingFragment StoreEntitySet="quotationdetails">
+          <ScalarProperty Name="beizhu" ColumnName="beizhu" />
+          <ScalarProperty Name="Hangsuijine" ColumnName="Hangsuijine" />
+          <ScalarProperty Name="Suie" ColumnName="Suie" />
+          <ScalarProperty Name="Suilv" ColumnName="Suilv" />
+          <ScalarProperty Name="Jine" ColumnName="Jine" />
+          <ScalarProperty Name="danjia" ColumnName="danjia" />
+          <ScalarProperty Name="Zheshu" ColumnName="Zheshu" />
+          <ScalarProperty Name="Zhekoqian" ColumnName="Zhekoqian" />
+          <ScalarProperty Name="Shuliang" ColumnName="Shuliang" />
+          <ScalarProperty Name="Danweimingcheng" ColumnName="Danweimingcheng" />
+          <ScalarProperty Name="guigexinghao" ColumnName="guigexinghao" />
+          <ScalarProperty Name="Wuliaomingcheng" ColumnName="Wuliaomingcheng" />
+          <ScalarProperty Name="Wuliaobianhao" ColumnName="Wuliaobianhao" />
+          <ScalarProperty Name="Receiptnumber" ColumnName="Receiptnumber" />
+          <ScalarProperty Name="Columnno" ColumnName="Columnno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quotedprice">
+      <EntityTypeMapping TypeName="xiangmuModel.quotedprice">
+        <MappingFragment StoreEntitySet="quotedprice">
+          <ScalarProperty Name="Beizhu" ColumnName="Beizhu" />
+          <ScalarProperty Name="Shenhe" ColumnName="Shenhe" />
+          <ScalarProperty Name="fuheryuan" ColumnName="fuheryuan" />
+          <ScalarProperty Name="zhidanryuan" ColumnName="zhidanryuan" />
+          <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="huilv" ColumnName="huilv" />
+          <ScalarProperty Name="danjiahangs" ColumnName="danjiahangs" />
+          <ScalarProperty Name="youxiaoriqi" ColumnName="youxiaoriqi" />
+          <ScalarProperty Name="songhuodizhi" ColumnName="songhuodizhi" />
+          <ScalarProperty Name="bibie" ColumnName="bibie" />
+          <ScalarProperty Name="Documentdate" ColumnName="Documentdate" />
+          <ScalarProperty Name="Officialcustomer" ColumnName="Officialcustomer" />
+          <ScalarProperty Name="Receiptnumber" ColumnName="Receiptnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qymx">
+      <EntityTypeMapping TypeName="xiangmuModel.qymx">
+        <MappingFragment StoreEntitySet="qymx">
+          <ScalarProperty Name="BZ" ColumnName="BZ" />
+          <ScalarProperty Name="QYMoney" ColumnName="QYMoney" />
+          <ScalarProperty Name="LYNO" ColumnName="LYNO" />
+          <ScalarProperty Name="LY" ColumnName="LY" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="YSCKBillID" ColumnName="YSCKBillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="r_detail">
+      <EntityTypeMapping TypeName="xiangmuModel.r_detail">
+        <MappingFragment StoreEntitySet="r_detail">
+          <ScalarProperty Name="Recommendeddate" ColumnName="Recommendeddate" />
+          <ScalarProperty Name="sourceid" ColumnName="sourceid" />
+          <ScalarProperty Name="sourcename" ColumnName="sourcename" />
+          <ScalarProperty Name="Demanddate" ColumnName="Demanddate" />
+          <ScalarProperty Name="Standard_price" ColumnName="Standard_price" />
+          <ScalarProperty Name="Coinstop" ColumnName="Coinstop" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+          <ScalarProperty Name="matter" ColumnName="matter" />
+          <ScalarProperty Name="matterid" ColumnName="matterid" />
+          <ScalarProperty Name="RequisitionID" ColumnName="RequisitionID" />
+          <ScalarProperty Name="detailID" ColumnName="detailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="record">
+      <EntityTypeMapping TypeName="xiangmuModel.record">
+        <MappingFragment StoreEntitySet="record">
+          <ScalarProperty Name="CStdCost" ColumnName="CStdCost" />
+          <ScalarProperty Name="CsafeAllStk" ColumnName="CsafeAllStk" />
+          <ScalarProperty Name="BsafeAllStk" ColumnName="BsafeAllStk" />
+          <ScalarProperty Name="BcurrStock" ColumnName="BcurrStock" />
+          <ScalarProperty Name="BallAmt" ColumnName="BallAmt" />
+          <ScalarProperty Name="CallAmt" ColumnName="CallAmt" />
+          <ScalarProperty Name="StdUnitEngName" ColumnName="StdUnitEngName" />
+          <ScalarProperty Name="StdUnitName" ColumnName="StdUnitName" />
+          <ScalarProperty Name="StdUnitID" ColumnName="StdUnitID" />
+          <ScalarProperty Name="BtotalCost" ColumnName="BtotalCost" />
+          <ScalarProperty Name="PriceOftax" ColumnName="PriceOftax" />
+          <ScalarProperty Name="Udef2" ColumnName="Udef2" />
+          <ScalarProperty Name="Udef1" ColumnName="Udef1" />
+          <ScalarProperty Name="MajorSupplierName" ColumnName="MajorSupplierName" />
+          <ScalarProperty Name="MajorSupplier" ColumnName="MajorSupplier" />
+          <ScalarProperty Name="Ctotalcost" ColumnName="Ctotalcost" />
+          <ScalarProperty Name="CavgCost" ColumnName="CavgCost" />
+          <ScalarProperty Name="BavgCost" ColumnName="BavgCost" />
+          <ScalarProperty Name="BstdCost" ColumnName="BstdCost" />
+          <ScalarProperty Name="BInStockDay" ColumnName="BInStockDay" />
+          <ScalarProperty Name="BOutStockDay" ColumnName="BOutStockDay" />
+          <ScalarProperty Name="AdvanceDays" ColumnName="AdvanceDays" />
+          <ScalarProperty Name="SafeQty" ColumnName="SafeQty" />
+          <ScalarProperty Name="ProdForm" ColumnName="ProdForm" />
+          <ScalarProperty Name="ProdDesc" ColumnName="ProdDesc" />
+          <ScalarProperty Name="DefVailDay" ColumnName="DefVailDay" />
+          <ScalarProperty Name="ValidDateUsesd" ColumnName="ValidDateUsesd" />
+          <ScalarProperty Name="EffectDateUsed" ColumnName="EffectDateUsed" />
+          <ScalarProperty Name="BusiTaxRate" ColumnName="BusiTaxRate" />
+          <ScalarProperty Name="StdPrice" ColumnName="StdPrice" />
+          <ScalarProperty Name="SalesPriceE" ColumnName="SalesPriceE" />
+          <ScalarProperty Name="SalesPriceD" ColumnName="SalesPriceD" />
+          <ScalarProperty Name="SalesPriceC" ColumnName="SalesPriceC" />
+          <ScalarProperty Name="SalesPriceB" ColumnName="SalesPriceB" />
+          <ScalarProperty Name="SalesPriceA" ColumnName="SalesPriceA" />
+          <ScalarProperty Name="SuggestPrice" ColumnName="SuggestPrice" />
+          <ScalarProperty Name="CurrName" ColumnName="CurrName" />
+          <ScalarProperty Name="EngName" ColumnName="EngName" />
+          <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requisition">
+      <EntityTypeMapping TypeName="xiangmuModel.requisition">
+        <MappingFragment StoreEntitySet="requisition">
+          <ScalarProperty Name="checkid" ColumnName="checkid" />
+          <ScalarProperty Name="detailid" ColumnName="detailid" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="auditor" ColumnName="auditor" />
+          <ScalarProperty Name="Rproducer" ColumnName="Rproducer" />
+          <ScalarProperty Name="Rdepartment" ColumnName="Rdepartment" />
+          <ScalarProperty Name="RPersonnel" ColumnName="RPersonnel" />
+          <ScalarProperty Name="RCondition" ColumnName="RCondition" />
+          <ScalarProperty Name="RequisitionType" ColumnName="RequisitionType" />
+          <ScalarProperty Name="RequisitionDate" ColumnName="RequisitionDate" />
+          <ScalarProperty Name="RequisitionID" ColumnName="RequisitionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="returnxx">
+      <EntityTypeMapping TypeName="xiangmuModel.returnxx">
+        <MappingFragment StoreEntitySet="returnxx">
+          <ScalarProperty Name="FromNo" ColumnName="FromNo" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="ItemRemark" ColumnName="ItemRemark" />
+          <ScalarProperty Name="AmountWithTax" ColumnName="AmountWithTax" />
+          <ScalarProperty Name="TaxAmt" ColumnName="TaxAmt" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="OIdPrice" ColumnName="OIdPrice" />
+          <ScalarProperty Name="SQuantity" ColumnName="SQuantity" />
+          <ScalarProperty Name="SUnit" ColumnName="SUnit" />
+          <ScalarProperty Name="ProdSize" ColumnName="ProdSize" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="ProdID" ColumnName="ProdID" />
+          <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="returnzhubiao">
+      <EntityTypeMapping TypeName="xiangmuModel.returnzhubiao">
+        <MappingFragment StoreEntitySet="returnzhubiao">
+          <ScalarProperty Name="Permitter" ColumnName="Permitter" />
+          <ScalarProperty Name="Maker" ColumnName="Maker" />
+          <ScalarProperty Name="projectID" ColumnName="projectID" />
+          <ScalarProperty Name="DepartName" ColumnName="DepartName" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="ForeignTrade" ColumnName="ForeignTrade" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="CurrID" ColumnName="CurrID" />
+          <ScalarProperty Name="BillNO" ColumnName="BillNO" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="AgainWare" ColumnName="AgainWare" />
+          <ScalarProperty Name="WareID" ColumnName="WareID" />
+          <ScalarProperty Name="PriceJudge" ColumnName="PriceJudge" />
+          <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salesorder">
+      <EntityTypeMapping TypeName="xiangmuModel.salesorder">
+        <MappingFragment StoreEntitySet="salesorder">
+          <ScalarProperty Name="isshenhe" ColumnName="isshenhe" />
+          <ScalarProperty Name="Totalamount" ColumnName="Totalamount" />
+          <ScalarProperty Name="Compoundstaff" ColumnName="Compoundstaff" />
+          <ScalarProperty Name="bumenbianhao" ColumnName="bumenbianhao" />
+          <ScalarProperty Name="Producer" ColumnName="Producer" />
+          <ScalarProperty Name="Businesspersonnel" ColumnName="Businesspersonnel" />
+          <ScalarProperty Name="Ordertype" ColumnName="Ordertype" />
+          <ScalarProperty Name="exchangerate" ColumnName="exchangerate" />
+          <ScalarProperty Name="Singlecondition" ColumnName="Singlecondition" />
+          <ScalarProperty Name="yesandno" ColumnName="yesandno" />
+          <ScalarProperty Name="Documentnumber" ColumnName="Documentnumber" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shipment">
+      <EntityTypeMapping TypeName="xiangmuModel.shipment">
+        <MappingFragment StoreEntitySet="shipment">
+          <ScalarProperty Name="Yeren" ColumnName="Yeren" />
+          <ScalarProperty Name="Buid" ColumnName="Buid" />
+          <ScalarProperty Name="Shenzk" ColumnName="Shenzk" />
+          <ScalarProperty Name="Shentime" ColumnName="Shentime" />
+          <ScalarProperty Name="Shenren" ColumnName="Shenren" />
+          <ScalarProperty Name="Zhiren" ColumnName="Zhiren" />
+          <ScalarProperty Name="Cangid" ColumnName="Cangid" />
+          <ScalarProperty Name="Huilv" ColumnName="Huilv" />
+          <ScalarProperty Name="Han" ColumnName="Han" />
+          <ScalarProperty Name="Bi" ColumnName="Bi" />
+          <ScalarProperty Name="Leixingid" ColumnName="Leixingid" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Kehuid" ColumnName="Kehuid" />
+          <ScalarProperty Name="Dandate" ColumnName="Dandate" />
+          <ScalarProperty Name="Danid" ColumnName="Danid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shipmentdetail">
+      <EntityTypeMapping TypeName="xiangmuModel.shipmentdetail">
+        <MappingFragment StoreEntitySet="shipmentdetail">
+          <ScalarProperty Name="Laibie" ColumnName="Laibie" />
+          <ScalarProperty Name="Lailaiid" ColumnName="Lailaiid" />
+          <ScalarProperty Name="Hanshui" ColumnName="Hanshui" />
+          <ScalarProperty Name="Shuoprice" ColumnName="Shuoprice" />
+          <ScalarProperty Name="Shuilv" ColumnName="Shuilv" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Danjia" ColumnName="Danjia" />
+          <ScalarProperty Name="Zheshu" ColumnName="Zheshu" />
+          <ScalarProperty Name="Zhedan" ColumnName="Zhedan" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Guige" ColumnName="Guige" />
+          <ScalarProperty Name="Wuming" ColumnName="Wuming" />
+          <ScalarProperty Name="Wuid" ColumnName="Wuid" />
+          <ScalarProperty Name="Hanghao" ColumnName="Hanghao" />
+          <ScalarProperty Name="Danid" ColumnName="Danid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_preturn">
+      <EntityTypeMapping TypeName="xiangmuModel.t_preturn">
+        <MappingFragment StoreEntitySet="t_preturn">
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+          <ScalarProperty Name="personnel" ColumnName="personnel" />
+          <ScalarProperty Name="bumenbianhao" ColumnName="bumenbianhao" />
+          <ScalarProperty Name="Pesonner" ColumnName="Pesonner" />
+          <ScalarProperty Name="warehouseid" ColumnName="warehouseid" />
+          <ScalarProperty Name="ExchRate" ColumnName="ExchRate" />
+          <ScalarProperty Name="CoinId" ColumnName="CoinId" />
+          <ScalarProperty Name="storehouseID" ColumnName="storehouseID" />
+          <ScalarProperty Name="PriceOfTax" ColumnName="PriceOfTax" />
+          <ScalarProperty Name="Pdata" ColumnName="Pdata" />
+          <ScalarProperty Name="supplierid" ColumnName="supplierid" />
+          <ScalarProperty Name="Pbillno" ColumnName="Pbillno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_preturn_zi">
+      <EntityTypeMapping TypeName="xiangmuModel.t_preturn_zi">
+        <MappingFragment StoreEntitySet="t_preturn_zi">
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+          <ScalarProperty Name="outside" ColumnName="outside" />
+          <ScalarProperty Name="COUNT" ColumnName="COUNT" />
+          <ScalarProperty Name="matterid" ColumnName="matterid" />
+          <ScalarProperty Name="Hid" ColumnName="Hid" />
+          <ScalarProperty Name="Pbillno" ColumnName="Pbillno" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_store_advance">
+      <EntityTypeMapping TypeName="xiangmuModel.t_store_advance">
+        <MappingFragment StoreEntitySet="t_store_advance">
+          <ScalarProperty Name="Audit_status" ColumnName="Audit_status" />
+          <ScalarProperty Name="Compound_human_ID" ColumnName="Compound_human_ID" />
+          <ScalarProperty Name="Single_person_ID" ColumnName="Single_person_ID" />
+          <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+          <ScalarProperty Name="Termination_month" ColumnName="Termination_month" />
+          <ScalarProperty Name="Deposit_rate" ColumnName="Deposit_rate" />
+          <ScalarProperty Name="Exchange_rate" ColumnName="Exchange_rate" />
+          <ScalarProperty Name="Money2" ColumnName="Money2" />
+          <ScalarProperty Name="Money1" ColumnName="Money1" />
+          <ScalarProperty Name="Settle_accounts2" ColumnName="Settle_accounts2" />
+          <ScalarProperty Name="Settle_accounts1" ColumnName="Settle_accounts1" />
+          <ScalarProperty Name="Coin_stop" ColumnName="Coin_stop" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Document_date" ColumnName="Document_date" />
+          <ScalarProperty Name="Bill_advance" ColumnName="Bill_advance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_store_advancepay">
+      <EntityTypeMapping TypeName="xiangmuModel.t_store_advancepay">
+        <MappingFragment StoreEntitySet="t_store_advancepay">
+          <ScalarProperty Name="Advance_alance" ColumnName="Advance_alance" />
+          <ScalarProperty Name="summary" ColumnName="summary" />
+          <ScalarProperty Name="Amount_dvanced" ColumnName="Amount_dvanced" />
+          <ScalarProperty Name="Source_date" ColumnName="Source_date" />
+          <ScalarProperty Name="Source_name" ColumnName="Source_name" />
+          <ScalarProperty Name="Line_advancepay" ColumnName="Line_advancepay" />
+          <ScalarProperty Name="Bill_advancepay" ColumnName="Bill_advancepay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_store_advancerec">
+      <EntityTypeMapping TypeName="xiangmuModel.t_store_advancerec">
+        <MappingFragment StoreEntitySet="t_store_advancerec">
+          <ScalarProperty Name="yourself" ColumnName="yourself" />
+          <ScalarProperty Name="Line_advancerec" ColumnName="Line_advancerec" />
+          <ScalarProperty Name="Bill_particularspay" ColumnName="Bill_particularspay" />
+          <ScalarProperty Name="Qyysid" ColumnName="Qyysid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_store_amount">
+      <EntityTypeMapping TypeName="xiangmuModel.t_store_amount">
+        <MappingFragment StoreEntitySet="t_store_amount">
+          <ScalarProperty Name="Audit_status" ColumnName="Audit_status" />
+          <ScalarProperty Name="Compound_human_ID" ColumnName="Compound_human_ID" />
+          <ScalarProperty Name="Single_person_ID" ColumnName="Single_person_ID" />
+          <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+          <ScalarProperty Name="Termination_month" ColumnName="Termination_month" />
+          <ScalarProperty Name="Deposit_rate" ColumnName="Deposit_rate" />
+          <ScalarProperty Name="Exchange_rate" ColumnName="Exchange_rate" />
+          <ScalarProperty Name="Money2" ColumnName="Money2" />
+          <ScalarProperty Name="Money1" ColumnName="Money1" />
+          <ScalarProperty Name="Settle_accounts2" ColumnName="Settle_accounts2" />
+          <ScalarProperty Name="Settle_accounts1" ColumnName="Settle_accounts1" />
+          <ScalarProperty Name="Coin_stop" ColumnName="Coin_stop" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Document_date" ColumnName="Document_date" />
+          <ScalarProperty Name="Bill_amount" ColumnName="Bill_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_store_particularspay">
+      <EntityTypeMapping TypeName="xiangmuModel.t_store_particularspay">
+        <MappingFragment StoreEntitySet="t_store_particularspay">
+          <ScalarProperty Name="Offset_amount" ColumnName="Offset_amount" />
+          <ScalarProperty Name="Cancellation_amount" ColumnName="Cancellation_amount" />
+          <ScalarProperty Name="Discount_amount" ColumnName="Discount_amount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Payable_detail" ColumnName="Payable_detail" />
+          <ScalarProperty Name="Exchange_rate" ColumnName="Exchange_rate" />
+          <ScalarProperty Name="Coin_stop" ColumnName="Coin_stop" />
+          <ScalarProperty Name="PurchasersID" ColumnName="PurchasersID" />
+          <ScalarProperty Name="Bumenbianhao" ColumnName="Bumenbianhao" />
+          <ScalarProperty Name="Trading_object" ColumnName="Trading_object" />
+          <ScalarProperty Name="Source_list" ColumnName="Source_list" />
+          <ScalarProperty Name="Source_date" ColumnName="Source_date" />
+          <ScalarProperty Name="Source_name" ColumnName="Source_name" />
+          <ScalarProperty Name="Line_particularspay" ColumnName="Line_particularspay" />
+          <ScalarProperty Name="Bill_particularspay" ColumnName="Bill_particularspay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="td_breakdown">
+      <EntityTypeMapping TypeName="xiangmuModel.td_breakdown">
+        <MappingFragment StoreEntitySet="td_breakdown">
+          <ScalarProperty Name="Current_balance" ColumnName="Current_balance" />
+          <ScalarProperty Name="single_amount" ColumnName="single_amount" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+          <ScalarProperty Name="document_type" ColumnName="document_type" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="breakdown" ColumnName="breakdown" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="td_inventory_list">
+      <EntityTypeMapping TypeName="xiangmuModel.td_inventory_list">
+        <MappingFragment StoreEntitySet="td_inventory_list">
+          <ScalarProperty Name="examine" ColumnName="examine" />
+          <ScalarProperty Name="belongs" ColumnName="belongs" />
+          <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+          <ScalarProperty Name="Producer" ColumnName="Producer" />
+          <ScalarProperty Name="Affiliated_department" ColumnName="Affiliated_department" />
+          <ScalarProperty Name="Procurement_staff" ColumnName="Procurement_staff" />
+          <ScalarProperty Name="foreign_trade" ColumnName="foreign_trade" />
+          <ScalarProperty Name="Automatic_generation" ColumnName="Automatic_generation" />
+          <ScalarProperty Name="Certificate_number" ColumnName="Certificate_number" />
+          <ScalarProperty Name="exchange_rate" ColumnName="exchange_rate" />
+          <ScalarProperty Name="Coin_stop" ColumnName="Coin_stop" />
+          <ScalarProperty Name="storehouse" ColumnName="storehouse" />
+          <ScalarProperty Name="price_include" ColumnName="price_include" />
+          <ScalarProperty Name="Storage_type" ColumnName="Storage_type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Document_date" ColumnName="Document_date" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="td_personnel_table">
+      <EntityTypeMapping TypeName="xiangmuModel.td_personnel_table">
+        <MappingFragment StoreEntitySet="td_personnel_table">
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="Experience_date" ColumnName="Experience_date" />
+          <ScalarProperty Name="termination_date" ColumnName="termination_date" />
+          <ScalarProperty Name="language_level" ColumnName="language_level" />
+          <ScalarProperty Name="Contractstart_date" ColumnName="Contractstart_date" />
+          <ScalarProperty Name="Study_major" ColumnName="Study_major" />
+          <ScalarProperty Name="passport" ColumnName="passport" />
+          <ScalarProperty Name="Graduation" ColumnName="Graduation" />
+          <ScalarProperty Name="Date_of_entry" ColumnName="Date_of_entry" />
+          <ScalarProperty Name="academic" ColumnName="academic" />
+          <ScalarProperty Name="due_date" ColumnName="due_date" />
+          <ScalarProperty Name="highest" ColumnName="highest" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="Contact_address" ColumnName="Contact_address" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="post" ColumnName="post" />
+          <ScalarProperty Name="nation" ColumnName="nation" />
+          <ScalarProperty Name="or_origin" ColumnName="or_origin" />
+          <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+          <ScalarProperty Name="Entry_date" ColumnName="Entry_date" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="political_status" ColumnName="political_status" />
+          <ScalarProperty Name="Date_of_birth" ColumnName="Date_of_birth" />
+          <ScalarProperty Name="ID_number" ColumnName="ID_number" />
+          <ScalarProperty Name="English_name" ColumnName="English_name" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="Personal_name" ColumnName="Personal_name" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="td_purchase">
+      <EntityTypeMapping TypeName="xiangmuModel.td_purchase">
+        <MappingFragment StoreEntitySet="td_purchase">
+          <ScalarProperty Name="ated_expense" ColumnName="ated_expense" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="Source_list" ColumnName="Source_list" />
+          <ScalarProperty Name="Entry_remarks" ColumnName="Entry_remarks" />
+          <ScalarProperty Name="Uninvoiced" ColumnName="Uninvoiced" />
+          <ScalarProperty Name="Tax_amount" ColumnName="Tax_amount" />
+          <ScalarProperty Name="amount_of" ColumnName="amount_of" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="broken_number" ColumnName="broken_number" />
+          <ScalarProperty Name="before_discount" ColumnName="before_discount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="specifications" ColumnName="specifications" />
+          <ScalarProperty Name="name_of_material" ColumnName="name_of_material" />
+          <ScalarProperty Name="Material_number" ColumnName="Material_number" />
+          <ScalarProperty Name="Bill_number" ColumnName="Bill_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transfers">
+      <EntityTypeMapping TypeName="xiangmuModel.transfers">
+        <MappingFragment StoreEntitySet="transfers">
+          <ScalarProperty Name="shengxiao" ColumnName="shengxiao" />
+          <ScalarProperty Name="Theeffectivedate" ColumnName="Theeffectivedate" />
+          <ScalarProperty Name="audit" ColumnName="audit" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="reviewer" ColumnName="reviewer" />
+          <ScalarProperty Name="Makingpersonnel" ColumnName="Makingpersonnel" />
+          <ScalarProperty Name="Diaochu" ColumnName="Diaochu" />
+          <ScalarProperty Name="Diaoru" ColumnName="Diaoru" />
+          <ScalarProperty Name="Documentdate" ColumnName="Documentdate" />
+          <ScalarProperty Name="Receiptnumber" ColumnName="Receiptnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typenumber">
+      <EntityTypeMapping TypeName="xiangmuModel.typenumber">
+        <MappingFragment StoreEntitySet="typenumber">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DanjuType" ColumnName="DanjuType" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userinfo">
+      <EntityTypeMapping TypeName="xiangmuModel.userinfo">
+        <MappingFragment StoreEntitySet="userinfo">
+          <ScalarProperty Name="qwyinfu" ColumnName="qwyinfu" />
+          <ScalarProperty Name="qwyufu" ColumnName="qwyufu" />
+          <ScalarProperty Name="qcyinfyu" ColumnName="qcyinfyu" />
+          <ScalarProperty Name="qcyufu" ColumnName="qcyufu" />
+          <ScalarProperty Name="fptype" ColumnName="fptype" />
+          <ScalarProperty Name="jzr" ColumnName="jzr" />
+          <ScalarProperty Name="syed" ColumnName="syed" />
+          <ScalarProperty Name="zked" ColumnName="zked" />
+          <ScalarProperty Name="yinghangid" ColumnName="yinghangid" />
+          <ScalarProperty Name="meail" ColumnName="meail" />
+          <ScalarProperty Name="hangye" ColumnName="hangye" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="bibie" ColumnName="bibie" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="zkgs" ColumnName="zkgs" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usertype">
+      <EntityTypeMapping TypeName="xiangmuModel.usertype">
+        <MappingFragment StoreEntitySet="usertype">
+          <ScalarProperty Name="beizhu" ColumnName="beizhu" />
+          <ScalarProperty Name="typename" ColumnName="typename" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="warehouseflowtable">
+      <EntityTypeMapping TypeName="xiangmuModel.warehouseflowtable">
+        <MappingFragment StoreEntitySet="warehouseflowtable">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="Dateofwarehousing" ColumnName="Dateofwarehousing" />
+          <ScalarProperty Name="Documentnumber" ColumnName="Documentnumber" />
+          <ScalarProperty Name="Documenttype" ColumnName="Documenttype" />
+          <ScalarProperty Name="Materialnumber" ColumnName="Materialnumber" />
+          <ScalarProperty Name="Warehousenumber" ColumnName="Warehousenumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="warehousegeneralledger">
+      <EntityTypeMapping TypeName="xiangmuModel.warehousegeneralledger">
+        <MappingFragment StoreEntitySet="warehousegeneralledger">
+          <ScalarProperty Name="Totalamount" ColumnName="Totalamount" />
+          <ScalarProperty Name="Costunivalent" ColumnName="Costunivalent" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="Materialnumber" ColumnName="Materialnumber" />
+          <ScalarProperty Name="Warehousenumber" ColumnName="Warehousenumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="warehousetable">
+      <EntityTypeMapping TypeName="xiangmuModel.warehousetable">
+        <MappingFragment StoreEntitySet="warehousetable">
+          <ScalarProperty Name="Warehouseaddress" ColumnName="Warehouseaddress" />
+          <ScalarProperty Name="Contactnumber" ColumnName="Contactnumber" />
+          <ScalarProperty Name="Warehousename" ColumnName="Warehousename" />
+          <ScalarProperty Name="Warehousenumber" ColumnName="Warehousenumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ysbill">
+      <EntityTypeMapping TypeName="xiangmuModel.ysbill">
+        <MappingFragment StoreEntitySet="ysbill">
+          <ScalarProperty Name="YSBuMenID" ColumnName="YSBuMenID" />
+          <ScalarProperty Name="YS_Status" ColumnName="YS_Status" />
+          <ScalarProperty Name="YSSH" ColumnName="YSSH" />
+          <ScalarProperty Name="YSZD" ColumnName="YSZD" />
+          <ScalarProperty Name="YSMoney3" ColumnName="YSMoney3" />
+          <ScalarProperty Name="YSMoney2" ColumnName="YSMoney2" />
+          <ScalarProperty Name="YSMoney1" ColumnName="YSMoney1" />
+          <ScalarProperty Name="YSThree" ColumnName="YSThree" />
+          <ScalarProperty Name="YSTwo" ColumnName="YSTwo" />
+          <ScalarProperty Name="YSOne" ColumnName="YSOne" />
+          <ScalarProperty Name="YSExchRate" ColumnName="YSExchRate" />
+          <ScalarProperty Name="YSCKCurrName" ColumnName="YSCKCurrName" />
+          <ScalarProperty Name="FSBillDate" ColumnName="FSBillDate" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FSBillID" ColumnName="FSBillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ysckbill">
+      <EntityTypeMapping TypeName="xiangmuModel.ysckbill">
+        <MappingFragment StoreEntitySet="ysckbill">
+          <ScalarProperty Name="YSBuMenID" ColumnName="YSBuMenID" />
+          <ScalarProperty Name="YS_Status" ColumnName="YS_Status" />
+          <ScalarProperty Name="YSCKZhe" ColumnName="YSCKZhe" />
+          <ScalarProperty Name="YSCKSH" ColumnName="YSCKSH" />
+          <ScalarProperty Name="YSCKZD" ColumnName="YSCKZD" />
+          <ScalarProperty Name="YSCKMoney3" ColumnName="YSCKMoney3" />
+          <ScalarProperty Name="YSCKMoney2" ColumnName="YSCKMoney2" />
+          <ScalarProperty Name="YSCKMoney1" ColumnName="YSCKMoney1" />
+          <ScalarProperty Name="YSThree" ColumnName="YSThree" />
+          <ScalarProperty Name="YSCKTwo" ColumnName="YSCKTwo" />
+          <ScalarProperty Name="YSCKOne" ColumnName="YSCKOne" />
+          <ScalarProperty Name="YSCKExchRate" ColumnName="YSCKExchRate" />
+          <ScalarProperty Name="YSCKCurrName" ColumnName="YSCKCurrName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="YSCKBillDate" ColumnName="YSCKBillDate" />
+          <ScalarProperty Name="YSCKBillID" ColumnName="YSCKBillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ysckdetail">
+      <EntityTypeMapping TypeName="xiangmuModel.ysckdetail">
+        <MappingFragment StoreEntitySet="ysckdetail">
+          <ScalarProperty Name="ChongDiMoney" ColumnName="ChongDiMoney" />
+          <ScalarProperty Name="ChongKuanMoney" ColumnName="ChongKuanMoney" />
+          <ScalarProperty Name="ZheRangMoney" ColumnName="ZheRangMoney" />
+          <ScalarProperty Name="YSChuKuNo" ColumnName="YSChuKuNo" />
+          <ScalarProperty Name="YSKeHuID" ColumnName="YSKeHuID" />
+          <ScalarProperty Name="LYNO" ColumnName="LYNO" />
+          <ScalarProperty Name="LY" ColumnName="LY" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="YSCKBillID" ColumnName="YSCKBillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ysmxdetail">
+      <EntityTypeMapping TypeName="xiangmuModel.ysmxdetail">
+        <MappingFragment StoreEntitySet="ysmxdetail">
+          <ScalarProperty Name="YSYUE" ColumnName="YSYUE" />
+          <ScalarProperty Name="YSMoney" ColumnName="YSMoney" />
+          <ScalarProperty Name="BZ" ColumnName="BZ" />
+          <ScalarProperty Name="LYNO" ColumnName="LYNO" />
+          <ScalarProperty Name="LY" ColumnName="LY" />
+          <ScalarProperty Name="LineNo" ColumnName="LineNo" />
+          <ScalarProperty Name="FSBillID" ColumnName="FSBillID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

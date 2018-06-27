@@ -1,0 +1,349 @@
+﻿@{
+    ViewBag.Title = "GetIndex";
+    var itme = DateTime.Now;
+}
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<style>
+    #lb
+    {
+        background-color: #b6cdde;
+        width: 600px;
+        margin-left: 300px;
+    }
+
+    .lb2
+    {
+        margin: 5px;
+        background-color: #e1eaee;
+    }
+
+    #qw
+    {
+        width: 600px;
+        height: 100px;
+    }
+</style>
+<div id="lb">
+    <form id="from">
+    <label><b>销售出库单</b></label>
+    <div class="lb2">
+               <table>
+                <tr>
+                    <td>客户:</td>
+                    <td>
+                        <input style="width: 180px" id="includerate" name="includerate" /></td>
+                    <td>单据日期:</td>
+                    <td>
+                        <input style="width: 180px" id="billdate" name="billdate" value="itme" onblur="Getdae(this)" /></td>
+                </tr>
+                <tr>
+                    <td>送货地址:</td>
+                    <td>
+                        <input style="width: 180px" id="" name="" /></td>
+                    <td>单据号码:</td>
+                    <td>
+                        <input style="width: 180px" id="billno" name="billno" /></td>
+                </tr>
+                <tr>
+                    <td>销售出库类型:</td>
+                    <td>
+                        <input style="width: 180px" id=" " name=" " /></td>
+                    <td>币别:</td>
+                    <td>
+                        <input style="width: 180px" id="huilv" name="huilv" /></td>
+                </tr>
+                <tr>
+                    <td>单价是否含税:</td>
+                    <td>
+                        <select id=" b" name =" v" style="width: 180px">
+                            <option>含税</option>
+                            <option>未税</option>
+                        </select>
+                    </td>
+                    <td>汇率:</td>
+                    <td>
+                        <input style="width: 180px" id="salerate"  name="salerate"/></td>
+                </tr>
+                <tr>
+                    <td>仓库:</td>
+                    <td>
+                        <input style="width: 180px" id="salewarehouse" name="salewarehouse" /></td>
+                    <td>国外贸易:</td>
+                    <td>
+                        <select style="width: 180px">
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </td>
+                </tr>
+            </table> 
+    </div>
+    <div id="qw" style="overflow-x: auto; width: 590px" class="lb2">
+            <textarea id="TextArea1" cols="20" rows="2" style="width: 1800px" ></textarea>
+    </div>
+    <div class="lb2">
+            <table>
+                <tr>
+                    <td>业务人员：</td>
+                    <td>
+                        <input id="moneystyle" name="moneystyle" /></td>
+                    <td>制单人员：</td>
+                    <td>
+                        <input id="ware1" name="ware" /></td>
+                </tr>
+                <tr>
+                    <td>所属部门：</td>
+                    <td>
+                        <input id=" s"  name=" "/></td>
+                    <td>复核人员：</td>
+                    <td>
+                        <input id="ware"  name="ware"/></td>
+                </tr>
+
+                <tr>
+                    <td>所属项目：</td>
+                    <td>
+                        <input id=""  /></td>
+                </tr>
+            </table>
+       
+    </div>
+    <hr />
+    <div class="lb2">
+        &nbsp;&nbsp;&nbsp;
+        <label><b>查询</b></label><select style="width: 20px"><option>历史交易查询</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        <label><b>转单</b></label><select style="width: 20px"><option>销售报价转入</option>
+            <option>销售订单转入</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        <label><b>功能</b></label><select style="width: 20px"><option>物料组合设定</option>
+            <option>批次变更单价</option>
+        </select>
+        <input id="ButShet" type="button" value="上一页"   />
+        <input id="Butxhwe" type="button" value="下一页"  />
+        <input id="Butxz" type="button" value="新增" />
+        <input id="Butxg" type="button" value="修改" />
+        <input id="Butsc" type="button" value="删除" />
+    </div>
+    <hr/>
+         </form>
+</div>
+
+<script>
+    var pageIndex = 1;
+    var pageSize = 1;
+    var pageConut = 0;
+
+    function Btn() {
+        $("#ButShet").removeAttr("disabled");
+        $("#Butxhwe").removeAttr("disabled");
+        if (pageIndex == 1) {
+            $("#ButShet").attr("disabled", "disabled");
+        }
+        if (pageIndex == pageConut) {
+            $("#Butxhwe").attr("disabled", "disabled");
+        }
+    }
+   
+    function datae(itme) {
+        var date = new Date(parseInt(itme.substr(6)));
+        return date.toLocaleDateString();
+    }
+
+    function Gelist(id) {
+     
+        $.ajax({
+            type: 'post',
+            url: '/MVC/GetWLZWJ_list',
+            data: "{billno:'" + id+ "'}",
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (exe) {
+                $("#TextArea1").val(JSON.stringify(exe));
+               
+            },
+            error: function (ex) {
+                alert("Error" + ex.responseText);
+            }
+        })
+    }
+    
+    function GetByid() {
+        $.ajax({
+            type: "post",
+            url: "/MVC/GetByid",
+            data: "{pageIndex:'" + pageIndex + "',pageSize:'" + pageSize + "'}",
+            async:false,
+            dataType: "json",
+            contentType: "Application/json",
+            success: function (exe) {
+                $.each(exe, function (Index,data) {
+                    $("#billno").val(data.billno);
+                    $("#billdate").val(datae(data.billdate));
+                    $("#ware").val(data.ware);
+                    $("#ware1").val(data.ware);
+                    $("#checkstatus").val(data.checkstatus);
+                    $("#clientmaster").val(data.storage);
+                    $("#customerid").val(data.customerid);
+                    $("#huilv").val(data.huilv);
+                    $("#includerate").val(data.includerate);
+                    $("#khls").val(data.khls);
+                    $("#marker").val(data.marker);
+                    $("#moneystyle").val(data.moneystyle);
+                    $("#permitter").val(data.permitter);
+                    $("#storage").val(data.storage);
+                    alert(data.billno)
+                    Gelist(data.billno);
+                });
+                Btn();
+            },
+            error: function (ex) {
+                alert("Error:"+ex.responseText);
+            }
+        })
+    }
+
+    function Getcount() {
+        $.ajax({
+            type: "post",
+            data: "{}",
+            url: "/MVC/GetConut",
+            dataType: "json",
+            contentType: "application/json",
+            success: function (exe) {
+               
+                pageConut = exe;
+                GetByid();
+            },
+            error: function (ex) {
+                alert("Error:"+ex.responseText);
+            }
+        })
+    }
+
+    function GetAdd() {
+        alert(1);
+        var date = $("#from").serializeArray();
+        var obj = {};
+        $.each(date, function (b,a) {
+            obj[ b.name] =b. value;
+        });
+        var jsons = JSON.stringify(obj);
+        alert(jsons);
+        $.ajax({
+            type: "post",
+            url: "~/MVC/GetAdd",
+            dataType: "json",
+            data: "{blii:" + jsons + ",list:" + $("#TextArea1").val() + "}",
+            contentType: "application/json",
+            success: function (exe) {
+                if (exe > 0) {
+                    alert("新增成功！！");
+                } else {
+                    alert("新增失败！！");
+                }
+
+            },
+            Error: function (e) {
+                alert(e.responseText);
+            }
+        })
+    }
+
+
+    function Getenid() {
+        var date = $("#from").serializeArray();
+        var obj = {};
+        $.each(date, function (a, b) {
+            obj[b.name] = b.value;
+        });
+        var jsons = JSON.stringify(obj);
+        alert(jsons);
+        $.ajax({
+            type: "post",
+            url: "/MVC/Getenid",
+            dataType: "json",
+            data: "{blii:" + jsons + ",list:" + $("#TextArea1").val() + "}",
+            contentType: 'application/json',
+            success: function (exe) {
+                if (exe > 0) {
+                    alert("修改成功！！");
+                } else {
+                    alert("修改失败！！");
+                }
+            },
+            error: function (ex) {
+                alert("Error:" + ex.responseText);
+            }
+        });
+    }
+
+
+    function Getdel() {
+        $.ajax({
+            type:"post",
+            url:"/MVC/Getdel",
+            data:"{blii:'"+$("#billno").val()+"'}",
+            dataType:"json",
+            contentType:"application/json",
+            success:function(exe){
+                if (exe >0) {
+                    alert("删除成功！！");
+                }else{
+                    alert("删除失败！！！");
+                }
+            }, error: function (ex) {
+                alert("Error:" + ex.responseText);
+            }
+        })
+        }
+
+    function Getdae(){
+        $.ajax({
+            type:"post",
+            data:"{date:'"+$("#billdate").val()+"'}",
+            dataType:"json",
+            url:"/MVC/Getdae",
+            contentType:"application/json",
+            success:function(exe){
+                $("#billno").val(exe);
+            },
+            error:function(ex){
+                alert("Error:"+ex.responseText);
+            }
+        })
+    }
+
+
+    
+    $(function () {
+        Getcount();
+        $("#ButShet").click(function () {
+            pageIndex--;
+            GetByid();
+        });
+
+        $("#Butxhwe").click(function () {
+            pageIndex++;
+            GetByid();
+        });
+
+        $("#Butxz").click(function () {
+            GetAdd();
+        });
+
+        $("#Butxg").click(function () {
+            Getenid();
+        });
+
+        $("#Butsc").click(function () {
+            Getenid();
+        });
+       
+    });
+
+</script>
+

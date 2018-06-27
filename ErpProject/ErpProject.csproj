@@ -126,6 +126,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CaigouyufuController.cs" />
+    <Compile Include="Controllers\FYJController.cs" />
+    <Compile Include="Controllers\LZXController.cs" />
+    <Compile Include="Controllers\MVCController.cs" />
+    <Compile Include="Controllers\XiaoshoudingdanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1451,6 +1456,7 @@
     <Content Include="extjs\resources\themes\templates\resources\sass\config.rb" />
     <Content Include="extjs\resources\themes\templates\resources\sass\my-ext-theme.scss" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="img.jpg" />
     <Content Include="js\asd.js" />
     <Content Include="js\bumen.js" />
     <Content Include="js\cangku.js" />
@@ -1498,7 +1504,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1510,6 +1518,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\MVC\GetIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

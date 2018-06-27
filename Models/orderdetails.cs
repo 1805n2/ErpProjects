@@ -33,6 +33,7 @@ namespace Models
         public string oremark { get; set; }
         public string origintype { get; set; }
         public string originno { get; set; }
+        public Nullable<int> oweinum { get; set; }
     
         public virtual orders orders { get; set; }
         public virtual wlzwj wlzwj { get; set; }
